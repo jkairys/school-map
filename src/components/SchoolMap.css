@@ -1,0 +1,65 @@
+.map-container {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.school-popup h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.school-popup p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  min-width: 180px;
+}
+
+.legend h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin-right: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .legend {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    min-width: 150px;
+  }
+
+  .legend h4 {
+    font-size: 12px;
+  }
+
+  .legend-item {
+    font-size: 11px;
+  }
+}
