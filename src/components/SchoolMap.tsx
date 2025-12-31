@@ -1,8 +1,9 @@
 import { MapContainer, TileLayer, Polygon, Marker, Popup, useMap } from 'react-leaflet'
 import { LatLngExpression } from 'leaflet'
-import { useEffect, useMemo } from 'react'
-import { School, FilterState } from '../types'
+import { useEffect, useMemo, useState } from 'react'
+import { School, FilterState, CatchmentFeature } from '../types'
 import { schools } from '../data/schools'
+import { catchments, catchmentMetadata } from '../data/catchmentLoader'
 import './SchoolMap.css'
 import L from 'leaflet'
 
@@ -41,6 +42,7 @@ function MapUpdater({ selectedSchool }: { selectedSchool: School | null }) {
 
 function SchoolMap({ filters, selectedSchoolId, setSelectedSchoolId }: SchoolMapProps) {
   const brisbaneCenter: LatLngExpression = [-27.4698, 153.0251]
+  const [selectedCatchment, setSelectedCatchment] = useState<string | null>(null)
 
   const filteredSchools = useMemo(() => {
     return schools.filter(school => {
@@ -75,19 +77,38 @@ function SchoolMap({ filters, selectedSchoolId, setSelectedSchoolId }: SchoolMap
     })
   }, [filters])
 
+  // Convert catchment coordinates to Leaflet format
+  const getCatchmentPositions = (catchment: CatchmentFeature): LatLngExpression[][] => {
+    const geometry = catchment.geometry
+    if (geometry.type === 'Polygon') {
+      return geometry.coordinates.map(ring =>
+        ring.map(coord => [coord[1], coord[0]] as LatLngExpression)
+      )
+    } else {
+      // MultiPolygon - flatten to array of rings
+      return geometry.coordinates.flatMap(polygon =>
+        polygon.map(ring =>
+          ring.map(coord => [coord[1], coord[0]] as LatLngExpression)
+        )
+      )
+    }
+  }
+
+  // Generate consistent color for catchment based on name
+  const getCatchmentColor = (name: string): string => {
+    let hash = 0
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash)
+    }
+    const h = hash % 360
+    return `hsl(${h}, 60%, 50%)`
+  }
+
   const selectedSchool = selectedSchoolId
     ? schools.find(s => s.id === selectedSchoolId) || null
     : null
 
-  const getColorByICSEA = (icsea?: number): string => {
-    if (!icsea) return '#999999'
-    if (icsea >= 1100) return '#2E7D32' // Dark green - high socio-educational advantage
-    if (icsea >= 1050) return '#66BB6A' // Green
-    if (icsea >= 1000) return '#FFA726' // Orange - average
-    if (icsea >= 950) return '#FF7043' // Deep orange
-    return '#E53935' // Red - low socio-educational advantage
-  }
-
+  
   return (
     <div className="map-container">
       <MapContainer
@@ -102,79 +123,93 @@ function SchoolMap({ filters, selectedSchoolId, setSelectedSchoolId }: SchoolMap
 
         <MapUpdater selectedSchool={selectedSchool} />
 
-        {filteredSchools.map(school => (
-          <div key={school.id}>
-            {school.catchmentBoundary && (
-              <Polygon
-                positions={
-                  school.catchmentBoundary.type === 'Polygon'
-                    ? school.catchmentBoundary.coordinates[0].map(
-                        coord => [coord[1], coord[0]] as LatLngExpression
-                      )
-                    : school.catchmentBoundary.coordinates.flatMap(poly =>
-                        poly[0].map(coord => [coord[1], coord[0]] as LatLngExpression)
-                      )
-                }
-                pathOptions={{
-                  color: getColorByICSEA(school.icsea),
-                  fillColor: getColorByICSEA(school.icsea),
-                  fillOpacity: selectedSchoolId === school.id ? 0.4 : 0.2,
-                  weight: selectedSchoolId === school.id ? 3 : 2
-                }}
-                eventHandlers={{
-                  click: () => setSelectedSchoolId(school.id)
-                }}
-              />
-            )}
-            <Marker
-              position={[school.latitude, school.longitude]}
+        {/* Render official catchment boundaries */}
+        {filters.showCatchments && catchments.map(catchment => {
+          const positions = getCatchmentPositions(catchment)
+          const name = catchment.properties.name
+          const color = getCatchmentColor(name)
+          const isSelected = selectedCatchment === name
+
+          return positions.map((ring, idx) => (
+            <Polygon
+              key={`${name}-${idx}`}
+              positions={ring}
+              pathOptions={{
+                color: color,
+                fillColor: color,
+                fillOpacity: isSelected ? 0.4 : 0.15,
+                weight: isSelected ? 3 : 1
+              }}
               eventHandlers={{
-                click: () => setSelectedSchoolId(school.id)
+                click: () => setSelectedCatchment(isSelected ? null : name),
+                mouseover: (e) => {
+                  e.target.setStyle({ fillOpacity: 0.35, weight: 2 })
+                },
+                mouseout: (e) => {
+                  e.target.setStyle({
+                    fillOpacity: isSelected ? 0.4 : 0.15,
+                    weight: isSelected ? 3 : 1
+                  })
+                }
               }}
             >
               <Popup>
-                <div className="school-popup">
-                  <h3>{school.name}</h3>
-                  <p><strong>Type:</strong> {school.type}</p>
-                  <p><strong>Suburb:</strong> {school.suburb}</p>
-                  {school.icsea && (
-                    <p><strong>ICSEA:</strong> {school.icsea}</p>
-                  )}
-                  {school.naplanAverage && (
-                    <p><strong>NAPLAN Average:</strong> {school.naplanAverage.toFixed(1)}</p>
-                  )}
-                  {school.enrollment && (
-                    <p><strong>Enrollment:</strong> {school.enrollment}</p>
-                  )}
+                <div className="catchment-popup">
+                  <h3>{name}</h3>
+                  <p><strong>Type:</strong> State School Catchment</p>
+                  <p><strong>Years:</strong> 11-12 (Senior Secondary)</p>
+                  <p className="data-source">
+                    <em>Source: {catchmentMetadata.description}</em>
+                  </p>
                 </div>
               </Popup>
-            </Marker>
-          </div>
+            </Polygon>
+          ))
+        })}
+
+        {/* Render school markers */}
+        {filteredSchools.map(school => (
+          <Marker
+            key={school.id}
+            position={[school.latitude, school.longitude]}
+            eventHandlers={{
+              click: () => setSelectedSchoolId(school.id)
+            }}
+          >
+            <Popup>
+              <div className="school-popup">
+                <h3>{school.name}</h3>
+                <p><strong>Type:</strong> {school.type}</p>
+                <p><strong>Suburb:</strong> {school.suburb}</p>
+                {school.icsea && (
+                  <p><strong>ICSEA:</strong> {school.icsea}</p>
+                )}
+                {school.naplanAverage && (
+                  <p><strong>NAPLAN Average:</strong> {school.naplanAverage.toFixed(1)}</p>
+                )}
+                {school.enrollment && (
+                  <p><strong>Enrollment:</strong> {school.enrollment}</p>
+                )}
+              </div>
+            </Popup>
+          </Marker>
         ))}
       </MapContainer>
 
       <div className="legend">
-        <h4>ICSEA Score</h4>
+        <h4>Catchment Areas</h4>
+        <p className="legend-info">
+          {catchments.length} state school catchment boundaries<br />
+          (Years 11-12 Senior Secondary)
+        </p>
         <div className="legend-item">
-          <span className="legend-color" style={{ backgroundColor: '#2E7D32' }}></span>
-          <span>1100+ (Very High)</span>
+          <span className="legend-color" style={{ backgroundColor: '#888', opacity: 0.3 }}></span>
+          <span>Click catchment for details</span>
         </div>
-        <div className="legend-item">
-          <span className="legend-color" style={{ backgroundColor: '#66BB6A' }}></span>
-          <span>1050-1099 (High)</span>
-        </div>
-        <div className="legend-item">
-          <span className="legend-color" style={{ backgroundColor: '#FFA726' }}></span>
-          <span>1000-1049 (Average)</span>
-        </div>
-        <div className="legend-item">
-          <span className="legend-color" style={{ backgroundColor: '#FF7043' }}></span>
-          <span>950-999 (Below Average)</span>
-        </div>
-        <div className="legend-item">
-          <span className="legend-color" style={{ backgroundColor: '#E53935' }}></span>
-          <span>&lt;950 (Low)</span>
-        </div>
+        <p className="legend-source">
+          Data: QLD Open Data Portal<br />
+          Updated: 2025
+        </p>
       </div>
     </div>
   )

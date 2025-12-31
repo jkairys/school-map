@@ -7,7 +7,8 @@ import './App.css'
 function App() {
   const [filters, setFilters] = useState<FilterState>({
     schoolType: ['State', 'Catholic', 'Independent'],
-    searchQuery: ''
+    searchQuery: '',
+    showCatchments: true
   })
 
   const [selectedSchoolId, setSelectedSchoolId] = useState<string | null>(null)

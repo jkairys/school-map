@@ -68,6 +68,18 @@ function Sidebar({ filters, setFilters, selectedSchoolId }: SidebarProps) {
         </div>
 
         <div className="filter-section">
+          <h3>Display Options</h3>
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              checked={filters.showCatchments}
+              onChange={() => setFilters({ ...filters, showCatchments: !filters.showCatchments })}
+            />
+            <span>Show Catchment Boundaries</span>
+          </label>
+        </div>
+
+        <div className="filter-section">
           <h3>ICSEA Range</h3>
           <div className="range-inputs">
             <input

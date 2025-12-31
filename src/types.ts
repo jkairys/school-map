@@ -23,4 +23,27 @@ export interface FilterState {
   minICSEA?: number;
   maxICSEA?: number;
   searchQuery: string;
+  showCatchments: boolean;
+}
+
+export interface CatchmentFeature {
+  type: 'Feature';
+  properties: {
+    name: string;
+    description?: string | { '@type': string; value: string };
+    [key: string]: unknown;
+  };
+  geometry: GeoJSON.Polygon | GeoJSON.MultiPolygon;
+}
+
+export interface CatchmentData {
+  type: 'FeatureCollection';
+  metadata: {
+    source: string;
+    description: string;
+    license: string;
+    downloadedAt: string;
+    originalUrl: string;
+  };
+  features: CatchmentFeature[];
 }
