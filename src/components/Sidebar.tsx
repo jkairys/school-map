@@ -1,30 +1,23 @@
 import { FilterState } from '../types'
-import { schools } from '../data/schools'
+import { schoolSites } from '../data/schoolSitesLoader'
 import './Sidebar.css'
 
 interface SidebarProps {
   filters: FilterState;
   setFilters: (filters: FilterState) => void;
-  selectedSchoolId: string | null;
+  selectedSchoolName: string | null;
 }
 
-function Sidebar({ filters, setFilters, selectedSchoolId }: SidebarProps) {
-  const selectedSchool = selectedSchoolId
-    ? schools.find(s => s.id === selectedSchoolId)
+function Sidebar({ filters, setFilters, selectedSchoolName }: SidebarProps) {
+  const selectedSchool = selectedSchoolName
+    ? schoolSites.find(s => s.name === selectedSchoolName)
     : null
-
-  const handleTypeToggle = (type: string) => {
-    const newTypes = filters.schoolType.includes(type)
-      ? filters.schoolType.filter(t => t !== type)
-      : [...filters.schoolType, type]
-    setFilters({ ...filters, schoolType: newTypes })
-  }
 
   return (
     <div className="sidebar">
       <div className="sidebar-header">
         <h1>Brisbane Schools</h1>
-        <p className="subtitle">Secondary School Catchments & Rankings</p>
+        <p className="subtitle">Senior Secondary School Catchments</p>
       </div>
 
       <div className="sidebar-content">
@@ -32,39 +25,11 @@ function Sidebar({ filters, setFilters, selectedSchoolId }: SidebarProps) {
           <h3>Search</h3>
           <input
             type="text"
-            placeholder="Search by school or suburb..."
+            placeholder="Search by school name..."
             value={filters.searchQuery}
             onChange={(e) => setFilters({ ...filters, searchQuery: e.target.value })}
             className="search-input"
           />
-        </div>
-
-        <div className="filter-section">
-          <h3>School Type</h3>
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              checked={filters.schoolType.includes('State')}
-              onChange={() => handleTypeToggle('State')}
-            />
-            <span>State Schools</span>
-          </label>
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              checked={filters.schoolType.includes('Catholic')}
-              onChange={() => handleTypeToggle('Catholic')}
-            />
-            <span>Catholic Schools</span>
-          </label>
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              checked={filters.schoolType.includes('Independent')}
-              onChange={() => handleTypeToggle('Independent')}
-            />
-            <span>Independent Schools</span>
-          </label>
         </div>
 
         <div className="filter-section">
@@ -80,31 +45,10 @@ function Sidebar({ filters, setFilters, selectedSchoolId }: SidebarProps) {
         </div>
 
         <div className="filter-section">
-          <h3>ICSEA Range</h3>
-          <div className="range-inputs">
-            <input
-              type="number"
-              placeholder="Min"
-              value={filters.minICSEA || ''}
-              onChange={(e) => setFilters({
-                ...filters,
-                minICSEA: e.target.value ? parseInt(e.target.value) : undefined
-              })}
-              className="range-input"
-            />
-            <span>to</span>
-            <input
-              type="number"
-              placeholder="Max"
-              value={filters.maxICSEA || ''}
-              onChange={(e) => setFilters({
-                ...filters,
-                maxICSEA: e.target.value ? parseInt(e.target.value) : undefined
-              })}
-              className="range-input"
-            />
-          </div>
-          <p className="help-text">ICSEA average is 1000</p>
+          <p className="stats-info">
+            <strong>{schoolSites.length}</strong> state schools<br />
+            Years 11-12 (Senior Secondary)
+          </p>
         </div>
 
         {selectedSchool && (
@@ -113,51 +57,30 @@ function Sidebar({ filters, setFilters, selectedSchoolId }: SidebarProps) {
             <h2>{selectedSchool.name}</h2>
             <div className="detail-row">
               <span className="label">Type:</span>
-              <span className="value">{selectedSchool.type}</span>
+              <span className="value">State School</span>
             </div>
             <div className="detail-row">
-              <span className="label">Address:</span>
-              <span className="value">{selectedSchool.address}, {selectedSchool.suburb} {selectedSchool.postcode}</span>
+              <span className="label">Years:</span>
+              <span className="value">11-12 (Senior Secondary)</span>
             </div>
-            {selectedSchool.icsea && (
+            {selectedSchool.code && (
               <div className="detail-row">
-                <span className="label">ICSEA:</span>
-                <span className="value">{selectedSchool.icsea}</span>
+                <span className="label">School Code:</span>
+                <span className="value">{selectedSchool.code}</span>
               </div>
             )}
-            {selectedSchool.naplanAverage && (
-              <div className="detail-row">
-                <span className="label">NAPLAN Average:</span>
-                <span className="value">{selectedSchool.naplanAverage.toFixed(1)}</span>
-              </div>
-            )}
-            {selectedSchool.enrollment && (
-              <div className="detail-row">
-                <span className="label">Enrollment:</span>
-                <span className="value">{selectedSchool.enrollment}</span>
-              </div>
-            )}
-            {selectedSchool.website && (
-              <div className="detail-row">
-                <a
-                  href={selectedSchool.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="website-link"
-                >
-                  Visit Website
-                </a>
-              </div>
-            )}
+            <div className="detail-row">
+              <span className="label">Location:</span>
+              <span className="value">{selectedSchool.latitude.toFixed(4)}, {selectedSchool.longitude.toFixed(4)}</span>
+            </div>
           </div>
         )}
 
         <div className="info-section">
-          <h4>About ICSEA</h4>
+          <h4>About This Data</h4>
           <p className="info-text">
-            The Index of Community Socio-Educational Advantage (ICSEA) is a scale that enables
-            meaningful comparisons of test achievement by students in schools across Australia.
-            The average ICSEA score is 1000.
+            School locations and catchment boundaries are sourced from the Queensland Government
+            Open Data Portal. Catchments show the areas for Years 11-12 (Senior Secondary) state schools.
           </p>
         </div>
       </div>

@@ -1,0 +1,1136 @@
+{
+  "metadata": {
+    "source": "Queensland Government Open Data Portal",
+    "description": "Senior Secondary School Sites (Years 11-12) - 2025",
+    "license": "Creative Commons Attribution 4.0",
+    "downloadedAt": "2025-12-31T23:51:44.047Z",
+    "originalUrl": "https://www.data.qld.gov.au/dataset/b01b50fc-b8ab-4c88-bc4a-34d42930fea8/resource/9ca39d88-29ca-43ab-a928-3372024163b9/download/senior-secondary-sites-2025.kml"
+  },
+  "schools": [
+    {
+      "name": "Albany Creek SHS",
+      "code": "2155",
+      "latitude": -27.357633994187,
+      "longitude": 152.96860599724027,
+      "rawProperties": {
+        "name": "Albany Creek SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Albany Creek SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2155</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Alexandra Hills SHS",
+      "code": "2175",
+      "latitude": -27.523768001604,
+      "longitude": 153.21542799949125,
+      "rawProperties": {
+        "name": "Alexandra Hills SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Alexandra Hills SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2175</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Aspley SHS",
+      "code": "2076",
+      "latitude": -27.357168997756,
+      "longitude": 153.02421300571586,
+      "rawProperties": {
+        "name": "Aspley SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Aspley SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2076</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Aviation High",
+      "code": "2078",
+      "latitude": -27.414323002359,
+      "longitude": 153.06299599825104,
+      "rawProperties": {
+        "name": "Aviation High",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Aviation High</td></tr>\r\n      <tr><td>Centre_code</td><td>2078</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Balmoral SHS",
+      "code": "2043",
+      "latitude": -27.456010004235,
+      "longitude": 153.0727860026327,
+      "rawProperties": {
+        "name": "Balmoral SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Balmoral SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2043</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Bracken Ridge SHS",
+      "code": "2118",
+      "latitude": -27.307357002044,
+      "longitude": 153.04409600785897,
+      "rawProperties": {
+        "name": "Bracken Ridge SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Bracken Ridge SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2118</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Bray Park SHS",
+      "code": "2173",
+      "latitude": -27.299893003313,
+      "longitude": 152.9619650015013,
+      "rawProperties": {
+        "name": "Bray Park SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Bray Park SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2173</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Bremer SHS",
+      "code": "2050",
+      "latitude": -27.633358999014,
+      "longitude": 152.75533200015823,
+      "rawProperties": {
+        "name": "Bremer SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Bremer SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2050</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Bribie Island SHS",
+      "code": "2181",
+      "latitude": -27.082964999188,
+      "longitude": 153.16607700636607,
+      "rawProperties": {
+        "name": "Bribie Island SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Bribie Island SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2181</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Brisbane Bayside State College",
+      "code": "2104",
+      "latitude": -27.461983004141,
+      "longitude": 153.14999599569268,
+      "rawProperties": {
+        "name": "Brisbane Bayside State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Brisbane Bayside State College</td></tr>\r\n      <tr><td>Centre_code</td><td>2104</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Brisbane SHS",
+      "code": "2003",
+      "latitude": -27.481773999682,
+      "longitude": 153.0180990030056,
+      "rawProperties": {
+        "name": "Brisbane SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Brisbane SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2003</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Browns Plains SHS",
+      "code": "2164",
+      "latitude": -27.669921999909,
+      "longitude": 153.05400300619766,
+      "rawProperties": {
+        "name": "Browns Plains SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Browns Plains SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2164</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Bundamba State Secondary College",
+      "code": "2130",
+      "latitude": -27.614915997749,
+      "longitude": 152.81367899462177,
+      "rawProperties": {
+        "name": "Bundamba State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Bundamba State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>2130</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Burpengary State Secondary College",
+      "code": "9676",
+      "latitude": -27.17060900376,
+      "longitude": 152.97739299733402,
+      "rawProperties": {
+        "name": "Burpengary State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Burpengary State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>9676</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Caboolture SHS",
+      "code": "2066",
+      "latitude": -27.08413899549,
+      "longitude": 152.96107399703786,
+      "rawProperties": {
+        "name": "Caboolture SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Caboolture SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2066</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Calamvale Community College",
+      "code": "1699",
+      "latitude": -27.625695996113,
+      "longitude": 153.0428990007308,
+      "rawProperties": {
+        "name": "Calamvale Community College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Calamvale Community College</td></tr>\r\n      <tr><td>Centre_code</td><td>1699</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Capalaba State College",
+      "code": "5534",
+      "latitude": -27.536409993314,
+      "longitude": 153.18982599530517,
+      "rawProperties": {
+        "name": "Capalaba State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Capalaba State College</td></tr>\r\n      <tr><td>Centre_code</td><td>5534</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Cavendish Road SHS",
+      "code": "2025",
+      "latitude": -27.516824001053,
+      "longitude": 153.07298400718167,
+      "rawProperties": {
+        "name": "Cavendish Road SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Cavendish Road SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2025</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Centenary SHS",
+      "code": "1668",
+      "latitude": -27.5386820051,
+      "longitude": 152.94033699823385,
+      "rawProperties": {
+        "name": "Centenary SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Centenary SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>1668</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Cleveland District SHS",
+      "code": "2070",
+      "latitude": -27.529881000563,
+      "longitude": 153.26029699878228,
+      "rawProperties": {
+        "name": "Cleveland District SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Cleveland District SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2070</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Clontarf Beach SHS",
+      "code": "2091",
+      "latitude": -27.247946001252,
+      "longitude": 153.08614500299387,
+      "rawProperties": {
+        "name": "Clontarf Beach SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Clontarf Beach SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2091</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Coorparoo Secondary College",
+      "code": "2077",
+      "latitude": -27.486362998767,
+      "longitude": 153.05373399532866,
+      "rawProperties": {
+        "name": "Coorparoo Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Coorparoo Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>2077</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Corinda SHS",
+      "code": "2055",
+      "latitude": -27.544345997338,
+      "longitude": 152.9864850076687,
+      "rawProperties": {
+        "name": "Corinda SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Corinda SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2055</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Craigslea SHS",
+      "code": "2023",
+      "latitude": -27.383377996558,
+      "longitude": 153.01537899354773,
+      "rawProperties": {
+        "name": "Craigslea SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Craigslea SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2023</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Dakabin SHS",
+      "code": "2142",
+      "latitude": -27.229625001708,
+      "longitude": 152.98083099337583,
+      "rawProperties": {
+        "name": "Dakabin SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Dakabin SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2142</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Deception Bay SHS",
+      "code": "2107",
+      "latitude": -27.199997994629,
+      "longitude": 153.03049999429197,
+      "rawProperties": {
+        "name": "Deception Bay SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Deception Bay SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2107</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Earnshaw State College",
+      "code": "5180",
+      "latitude": -27.379373002008,
+      "longitude": 153.0814670054651,
+      "rawProperties": {
+        "name": "Earnshaw State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Earnshaw State College</td></tr>\r\n      <tr><td>Centre_code</td><td>5180</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Everton Park SHS",
+      "code": "2061",
+      "latitude": -27.407629004359,
+      "longitude": 152.99759000555932,
+      "rawProperties": {
+        "name": "Everton Park SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Everton Park SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2061</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Ferny Grove SHS",
+      "code": "2148",
+      "latitude": -27.405718994368,
+      "longitude": 152.93379199548437,
+      "rawProperties": {
+        "name": "Ferny Grove SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Ferny Grove SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2148</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Forest Lake SHS",
+      "code": "1726",
+      "latitude": -27.624510001589,
+      "longitude": 152.97152399524026,
+      "rawProperties": {
+        "name": "Forest Lake SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Forest Lake SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>1726</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Glenala SHS",
+      "code": "1592",
+      "latitude": -27.586155998807,
+      "longitude": 152.98032399288405,
+      "rawProperties": {
+        "name": "Glenala SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Glenala SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>1592</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Holland Park SHS",
+      "code": "2125",
+      "latitude": -27.530973005056,
+      "longitude": 153.05941299629097,
+      "rawProperties": {
+        "name": "Holland Park SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Holland Park SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2125</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Indooroopilly SHS",
+      "code": "2034",
+      "latitude": -27.500586997596,
+      "longitude": 152.98407700343864,
+      "rawProperties": {
+        "name": "Indooroopilly SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Indooroopilly SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2034</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Ipswich SHS",
+      "code": "2069",
+      "latitude": -27.591069995269,
+      "longitude": 152.74645200035312,
+      "rawProperties": {
+        "name": "Ipswich SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Ipswich SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2069</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Kedron SHS",
+      "code": "2039",
+      "latitude": -27.415375994812,
+      "longitude": 153.0397740023406,
+      "rawProperties": {
+        "name": "Kedron SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Kedron SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2039</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Kelvin Grove State College",
+      "code": "2409",
+      "latitude": -27.450106997916,
+      "longitude": 153.01306200418148,
+      "rawProperties": {
+        "name": "Kelvin Grove State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Kelvin Grove State College</td></tr>\r\n      <tr><td>Centre_code</td><td>2409</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Kenmore SHS",
+      "code": "2132",
+      "latitude": -27.508328000817,
+      "longitude": 152.92969499804562,
+      "rawProperties": {
+        "name": "Kenmore SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Kenmore SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2132</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Kingston State College",
+      "code": "2139",
+      "latitude": -27.664134996199,
+      "longitude": 153.11216200038413,
+      "rawProperties": {
+        "name": "Kingston State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Kingston State College</td></tr>\r\n      <tr><td>Centre_code</td><td>2139</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Loganlea SHS",
+      "code": "2153",
+      "latitude": -27.673714994195,
+      "longitude": 153.1423839933289,
+      "rawProperties": {
+        "name": "Loganlea SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Loganlea SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2153</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Mabel Park SHS",
+      "code": "2161",
+      "latitude": -27.639651995058,
+      "longitude": 153.12885599280386,
+      "rawProperties": {
+        "name": "Mabel Park SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Mabel Park SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2161</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "MacGregor SHS",
+      "code": "2124",
+      "latitude": -27.566037000393,
+      "longitude": 153.07662500190494,
+      "rawProperties": {
+        "name": "MacGregor SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>MacGregor SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2124</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Mansfield SHS",
+      "code": "2059",
+      "latitude": -27.545491993829,
+      "longitude": 153.10582100474673,
+      "rawProperties": {
+        "name": "Mansfield SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Mansfield SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2059</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Marsden SHS",
+      "code": "2176",
+      "latitude": -27.684753999717,
+      "longitude": 153.11142099597149,
+      "rawProperties": {
+        "name": "Marsden SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Marsden SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2176</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Mitchelton SHS",
+      "code": "2040",
+      "latitude": -27.410488002417,
+      "longitude": 152.96591199888928,
+      "rawProperties": {
+        "name": "Mitchelton SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Mitchelton SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2040</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Morayfield SHS",
+      "code": "2154",
+      "latitude": -27.109045997158,
+      "longitude": 152.9533729966715,
+      "rawProperties": {
+        "name": "Morayfield SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Morayfield SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2154</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Mount Gravatt SHS",
+      "code": "2056",
+      "latitude": -27.535011000655,
+      "longitude": 153.07354099701917,
+      "rawProperties": {
+        "name": "Mount Gravatt SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Mount Gravatt SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2056</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Murrumba State Secondary College",
+      "code": "7574",
+      "latitude": -27.259200000653,
+      "longitude": 153.0077670071908,
+      "rawProperties": {
+        "name": "Murrumba State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Murrumba State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>7574</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Narangba Valley SHS",
+      "code": "0444",
+      "latitude": -27.17323200511,
+      "longitude": 152.9423500017966,
+      "rawProperties": {
+        "name": "Narangba Valley SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Narangba Valley SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>0444</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "North Lakes State College",
+      "code": "2324",
+      "latitude": -27.240435993498,
+      "longitude": 153.01800400243988,
+      "rawProperties": {
+        "name": "North Lakes State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>North Lakes State College</td></tr>\r\n      <tr><td>Centre_code</td><td>2324</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Pine Rivers SHS",
+      "code": "2102",
+      "latitude": -27.296398004466,
+      "longitude": 152.98949499694945,
+      "rawProperties": {
+        "name": "Pine Rivers SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Pine Rivers SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2102</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Redbank Plains SHS",
+      "code": "2174",
+      "latitude": -27.653409999585,
+      "longitude": 152.86886899303195,
+      "rawProperties": {
+        "name": "Redbank Plains SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Redbank Plains SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2174</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Redcliffe SHS",
+      "code": "2045",
+      "latitude": -27.223687996467,
+      "longitude": 153.11100600276728,
+      "rawProperties": {
+        "name": "Redcliffe SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Redcliffe SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2045</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Rochedale SHS",
+      "code": "2158",
+      "latitude": -27.585625998149,
+      "longitude": 153.11149200229156,
+      "rawProperties": {
+        "name": "Rochedale SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Rochedale SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2158</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Runcorn SHS",
+      "code": "2167",
+      "latitude": -27.59269200042,
+      "longitude": 153.0780099933033,
+      "rawProperties": {
+        "name": "Runcorn SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Runcorn SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2167</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Sandgate District SHS",
+      "code": "2047",
+      "latitude": -27.329055999953,
+      "longitude": 153.05723099256426,
+      "rawProperties": {
+        "name": "Sandgate District SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Sandgate District SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2047</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Shailer Park SHS",
+      "code": "2149",
+      "latitude": -27.662078999923,
+      "longitude": 153.18671700374998,
+      "rawProperties": {
+        "name": "Shailer Park SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Shailer Park SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2149</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Springfield Central SHS",
+      "code": "7131",
+      "latitude": -27.691122002467,
+      "longitude": 152.90831999881217,
+      "rawProperties": {
+        "name": "Springfield Central SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Springfield Central SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>7131</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Springwood SHS",
+      "code": "2140",
+      "latitude": -27.612606993426,
+      "longitude": 153.13596299553018,
+      "rawProperties": {
+        "name": "Springwood SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Springwood SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2140</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Stretton State College",
+      "code": "5554",
+      "latitude": -27.639592003949,
+      "longitude": 153.05373999789177,
+      "rawProperties": {
+        "name": "Stretton State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Stretton State College</td></tr>\r\n      <tr><td>Centre_code</td><td>5554</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Sunnybank SHS",
+      "code": "2080",
+      "latitude": -27.576218002384,
+      "longitude": 153.059782994282,
+      "rawProperties": {
+        "name": "Sunnybank SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Sunnybank SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2080</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "The Gap SHS",
+      "code": "2053",
+      "latitude": -27.445011994617,
+      "longitude": 152.95048400305654,
+      "rawProperties": {
+        "name": "The Gap SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>The Gap SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2053</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Tullawong SHS",
+      "code": "2188",
+      "latitude": -27.070593003106,
+      "longitude": 152.92895000793104,
+      "rawProperties": {
+        "name": "Tullawong SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Tullawong SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2188</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Victoria Point SHS",
+      "code": "0234",
+      "latitude": -27.595587005023,
+      "longitude": 153.28784599434357,
+      "rawProperties": {
+        "name": "Victoria Point SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Victoria Point SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>0234</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Wavell SHS",
+      "code": "2048",
+      "latitude": -27.397980996642,
+      "longitude": 153.03784900435667,
+      "rawProperties": {
+        "name": "Wavell SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Wavell SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2048</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Wellington Point SHS",
+      "code": "2178",
+      "latitude": -27.491030996044,
+      "longitude": 153.22885099517873,
+      "rawProperties": {
+        "name": "Wellington Point SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Wellington Point SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2178</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Whites Hill State College",
+      "code": "2410",
+      "latitude": -27.500676996139,
+      "longitude": 153.08212699928583,
+      "rawProperties": {
+        "name": "Whites Hill State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Whites Hill State College</td></tr>\r\n      <tr><td>Centre_code</td><td>2410</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Woodcrest State College",
+      "code": "0456",
+      "latitude": -27.657283001815,
+      "longitude": 152.91847300619798,
+      "rawProperties": {
+        "name": "Woodcrest State College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Woodcrest State College</td></tr>\r\n      <tr><td>Centre_code</td><td>0456</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Woodridge SHS",
+      "code": "2128",
+      "latitude": -27.643319994008,
+      "longitude": 153.09915700718585,
+      "rawProperties": {
+        "name": "Woodridge SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Woodridge SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2128</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Wynnum SHS",
+      "code": "2021",
+      "latitude": -27.454980996346,
+      "longitude": 153.1766070067298,
+      "rawProperties": {
+        "name": "Wynnum SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Wynnum SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2021</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Yeronga SHS",
+      "code": "2054",
+      "latitude": -27.517477001303,
+      "longitude": 153.02250000225467,
+      "rawProperties": {
+        "name": "Yeronga SHS",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Yeronga SHS</td></tr>\r\n      <tr><td>Centre_code</td><td>2054</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Bellbird Park State Secondary College",
+      "code": "9322",
+      "latitude": -27.640516995571,
+      "longitude": 152.88378699509474,
+      "rawProperties": {
+        "name": "Bellbird Park State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Bellbird Park State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>9322</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Ripley Valley State Secondary College",
+      "code": "A797",
+      "latitude": -27.694209002376,
+      "longitude": 152.81006500342914,
+      "rawProperties": {
+        "name": "Ripley Valley State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Ripley Valley State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>A797</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Mango Hill State Secondary College",
+      "code": "A787",
+      "latitude": -27.243843001426,
+      "longitude": 153.0427499931038,
+      "rawProperties": {
+        "name": "Mango Hill State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Mango Hill State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>A787</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Fortitude Valley State Secondary College",
+      "code": "A722",
+      "latitude": -27.452551000054,
+      "longitude": 153.0352500065714,
+      "rawProperties": {
+        "name": "Fortitude Valley State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Fortitude Valley State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>A722</td></tr>\r\n        "
+        }
+      }
+    },
+    {
+      "name": "Brisbane South State Secondary College",
+      "code": "A792",
+      "latitude": -27.496030001689,
+      "longitude": 153.02757000717256,
+      "rawProperties": {
+        "name": "Brisbane South State Secondary College",
+        "visibility": true,
+        "open": "0",
+        "description": {
+          "@type": "html",
+          "value": "<br><br><br>\r\n    <table border=\"1\" padding=\"0\">\r\n      <tr><td>Centre_name</td><td>Brisbane South State Secondary College</td></tr>\r\n      <tr><td>Centre_code</td><td>A792</td></tr>\r\n        "
+        }
+      }
+    }
+  ]
+}

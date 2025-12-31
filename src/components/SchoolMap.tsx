@@ -1,32 +1,18 @@
-import { MapContainer, TileLayer, Polygon, Marker, Popup, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Polygon, CircleMarker, Popup, Tooltip, useMap } from 'react-leaflet'
 import { LatLngExpression } from 'leaflet'
 import { useEffect, useMemo, useState } from 'react'
-import { School, FilterState, CatchmentFeature } from '../types'
-import { schools } from '../data/schools'
+import { FilterState, CatchmentFeature } from '../types'
+import { schoolSites, SchoolSite } from '../data/schoolSitesLoader'
 import { catchments, catchmentMetadata } from '../data/catchmentLoader'
 import './SchoolMap.css'
-import L from 'leaflet'
-
-// Fix for default marker icon in React-Leaflet
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-
-let DefaultIcon = L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41]
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
 
 interface SchoolMapProps {
   filters: FilterState;
-  selectedSchoolId: string | null;
-  setSelectedSchoolId: (id: string | null) => void;
+  selectedSchoolName: string | null;
+  setSelectedSchoolName: (name: string | null) => void;
 }
 
-function MapUpdater({ selectedSchool }: { selectedSchool: School | null }) {
+function MapUpdater({ selectedSchool }: { selectedSchool: SchoolSite | null }) {
   const map = useMap()
 
   useEffect(() => {
@@ -40,39 +26,17 @@ function MapUpdater({ selectedSchool }: { selectedSchool: School | null }) {
   return null
 }
 
-function SchoolMap({ filters, selectedSchoolId, setSelectedSchoolId }: SchoolMapProps) {
+function SchoolMap({ filters, selectedSchoolName, setSelectedSchoolName }: SchoolMapProps) {
   const brisbaneCenter: LatLngExpression = [-27.4698, 153.0251]
   const [selectedCatchment, setSelectedCatchment] = useState<string | null>(null)
 
   const filteredSchools = useMemo(() => {
-    return schools.filter(school => {
-      // Only show secondary schools
-      if (school.level !== 'Secondary' && school.level !== 'Combined') {
-        return false
-      }
-
-      // Filter by school type
-      if (!filters.schoolType.includes(school.type)) {
-        return false
-      }
-
-      // Filter by ICSEA
-      if (filters.minICSEA && school.icsea && school.icsea < filters.minICSEA) {
-        return false
-      }
-      if (filters.maxICSEA && school.icsea && school.icsea > filters.maxICSEA) {
-        return false
-      }
-
+    return schoolSites.filter(school => {
       // Filter by search query
       if (filters.searchQuery) {
         const query = filters.searchQuery.toLowerCase()
-        return (
-          school.name.toLowerCase().includes(query) ||
-          school.suburb.toLowerCase().includes(query)
-        )
+        return school.name.toLowerCase().includes(query)
       }
-
       return true
     })
   }, [filters])
@@ -104,8 +68,8 @@ function SchoolMap({ filters, selectedSchoolId, setSelectedSchoolId }: SchoolMap
     return `hsl(${h}, 60%, 50%)`
   }
 
-  const selectedSchool = selectedSchoolId
-    ? schools.find(s => s.id === selectedSchoolId) || null
+  const selectedSchool = selectedSchoolName
+    ? schoolSites.find(s => s.name === selectedSchoolName) || null
     : null
 
   
@@ -169,30 +133,39 @@ function SchoolMap({ filters, selectedSchoolId, setSelectedSchoolId }: SchoolMap
 
         {/* Render school markers */}
         {filteredSchools.map(school => (
-          <Marker
-            key={school.id}
-            position={[school.latitude, school.longitude]}
+          <CircleMarker
+            key={school.name}
+            center={[school.latitude, school.longitude]}
+            radius={6}
+            pathOptions={{
+              color: '#1a56db',
+              fillColor: '#3b82f6',
+              fillOpacity: 0.8,
+              weight: 2
+            }}
             eventHandlers={{
-              click: () => setSelectedSchoolId(school.id)
+              click: () => setSelectedSchoolName(school.name)
             }}
           >
+            <Tooltip
+              permanent
+              direction="right"
+              offset={[8, 0]}
+              className="school-label"
+            >
+              {school.name.replace(' SHS', '').replace(' State College', '').replace(' State Secondary College', '')}
+            </Tooltip>
             <Popup>
               <div className="school-popup">
                 <h3>{school.name}</h3>
-                <p><strong>Type:</strong> {school.type}</p>
-                <p><strong>Suburb:</strong> {school.suburb}</p>
-                {school.icsea && (
-                  <p><strong>ICSEA:</strong> {school.icsea}</p>
-                )}
-                {school.naplanAverage && (
-                  <p><strong>NAPLAN Average:</strong> {school.naplanAverage.toFixed(1)}</p>
-                )}
-                {school.enrollment && (
-                  <p><strong>Enrollment:</strong> {school.enrollment}</p>
+                <p><strong>Type:</strong> State School</p>
+                <p><strong>Years:</strong> 11-12 (Senior Secondary)</p>
+                {school.code && (
+                  <p><strong>School Code:</strong> {school.code}</p>
                 )}
               </div>
             </Popup>
-          </Marker>
+          </CircleMarker>
         ))}
       </MapContainer>
 

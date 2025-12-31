@@ -11,19 +11,19 @@ function App() {
     showCatchments: true
   })
 
-  const [selectedSchoolId, setSelectedSchoolId] = useState<string | null>(null)
+  const [selectedSchoolName, setSelectedSchoolName] = useState<string | null>(null)
 
   return (
     <div className="app">
       <Sidebar
         filters={filters}
         setFilters={setFilters}
-        selectedSchoolId={selectedSchoolId}
+        selectedSchoolName={selectedSchoolName}
       />
       <SchoolMap
         filters={filters}
-        selectedSchoolId={selectedSchoolId}
-        setSelectedSchoolId={setSelectedSchoolId}
+        selectedSchoolName={selectedSchoolName}
+        setSelectedSchoolName={setSelectedSchoolName}
       />
     </div>
   )

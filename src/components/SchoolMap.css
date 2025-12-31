@@ -80,6 +80,22 @@
   margin-top: 8px;
 }
 
+/* School label tooltip styling */
+.school-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  color: #1e40af !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+}
+
+.school-label::before {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .legend {
     bottom: 10px;

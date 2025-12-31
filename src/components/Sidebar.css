@@ -104,6 +104,13 @@
   color: #6c757d;
 }
 
+.stats-info {
+  margin: 0;
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.5;
+}
+
 .school-details {
   background: white;
   padding: 16px;
