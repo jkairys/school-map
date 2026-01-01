@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -11,23 +11,41 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
-const MapComponent = () => {
+const MapComponent = ({ onSchoolHover }) => {
   const [geoData, setGeoData] = useState(null);
+  const [schoolData, setSchoolData] = useState(null);
 
   useEffect(() => {
+    // Load Catchments
     fetch('/data/catchments.geojson')
       .then(res => res.json())
       .then(data => setGeoData(data))
       .catch(err => console.error("Error loading GeoJSON:", err));
+
+    // Load NAPLAN Data
+    fetch('/data/naplan_data.json')
+      .then(res => res.json())
+      .then(data => setSchoolData(data))
+      .catch(err => console.error("Error loading NAPLAN data:", err));
   }, []);
 
-  const onEachFeature = (feature, layer) => {
-    const { name, rank, locality } = feature.properties;
+  // Hash function to generate color from string
+  const getColorFromName = (name) => {
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    // Generate HSL: Hue = hash % 360, Saturation = 70%, Lightness = 60%
+    const hue = Math.abs(hash % 360);
+    return `hsl(${hue}, 70%, 60%)`;
+  };
+
+  const onEachFeature = useCallback((feature, layer) => {
+    const { name, locality } = feature.properties;
     layer.bindTooltip(`
       <div class="text-sm font-sans">
         <strong class="block text-base">${name}</strong>
         <span class="text-gray-600">${locality || 'QLD'}</span>
-        ${rank ? `<div class="mt-1 font-bold ${getRankColor(rank)}">Rank: ${rank}/100</div>` : ''}
       </div>
     `, { sticky: true });
 
@@ -36,54 +54,49 @@ const MapComponent = () => {
         const layer = e.target;
         layer.setStyle({
           weight: 3,
-          color: '#666',
+          color: '#333',
           dashArray: '',
-          fillOpacity: 0.7
+          fillOpacity: 0.8
         });
         layer.bringToFront();
+
+        // Pass data to parent
+        if (onSchoolHover) {
+          const data = schoolData ? schoolData[name] : null;
+          onSchoolHover(data || { name });
+        }
       },
       mouseout: (e) => {
+        // Reset style is handled by GeoJSON component usually passing style prop again?? 
+        // Actually Leaflet's resetStyle requires reference to the GeoJSON layer group which we don't easily have here.
+        // But if we simply re-apply the feature style manually using the same function:
         const layer = e.target;
-        // Reset style
-        if (geoData) {
-          // This is a simplified reset, ideally use geojson ref to resetStyle
-          layer.setStyle(style(feature));
+        layer.setStyle({
+          fillColor: getColorFromName(name),
+          weight: 1,
+          opacity: 1,
+          color: 'white',
+          dashArray: '3',
+          fillOpacity: 0.35
+        });
+
+        if (onSchoolHover) {
+          onSchoolHover(null);
         }
       }
     });
-  };
+  }, [schoolData, onSchoolHover]); // Re-create if schoolData changes
 
-  const getRankColor = (rank) => {
-    const r = parseInt(rank);
-    if (!r) return 'text-gray-500';
-    if (r >= 99) return 'text-green-600';
-    if (r >= 95) return 'text-green-500';
-    if (r >= 90) return 'text-lime-500';
-    return 'text-yellow-500';
-  };
-
-  const style = (feature) => {
-    const rank = parseInt(feature.properties.rank);
-    let color = '#3388ff';
-    let fillOpacity = 0.2;
-
-    if (rank) {
-      if (rank >= 99) color = '#15803d'; // green-700
-      else if (rank >= 95) color = '#22c55e'; // green-500
-      else if (rank >= 90) color = '#84cc16'; // lime-500
-      else color = '#eab308'; // yellow-500
-      fillOpacity = 0.4;
-    }
-
+  const style = useCallback((feature) => {
     return {
-      fillColor: color,
+      fillColor: getColorFromName(feature.properties.name),
       weight: 1,
       opacity: 1,
       color: 'white',
       dashArray: '3',
-      fillOpacity: fillOpacity
+      fillOpacity: 0.35
     };
-  };
+  }, []); // Empty deps = stable style function
 
   return (
     <MapContainer
