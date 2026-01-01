@@ -1,0 +1,39 @@
+{
+  "acaraId": "50536",
+  "schoolName": "Pimpama State Secondary College, Pimpama, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1222",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "504",
+        "490",
+        "530",
+        "511",
+        "497"
+      ],
+      [
+        "Year 9",
+        "512",
+        "516",
+        "551",
+        "508",
+        "510"
+      ]
+    ]
+  }
+}

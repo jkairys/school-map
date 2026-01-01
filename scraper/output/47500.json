@@ -1,0 +1,39 @@
+{
+  "acaraId": "47500",
+  "schoolName": "Mirani State High School, Mirani, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "786",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "486",
+        "480",
+        "507",
+        "486",
+        "493"
+      ],
+      [
+        "Year 9",
+        "516",
+        "504",
+        "536",
+        "494",
+        "509"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47546",
+  "schoolName": "Runcorn State High School, Runcorn, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "838",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "499",
+        "482",
+        "512",
+        "491",
+        "502"
+      ],
+      [
+        "Year 9",
+        "553",
+        "547",
+        "561",
+        "528",
+        "541"
+      ]
+    ]
+  }
+}

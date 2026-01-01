@@ -1,0 +1,39 @@
+{
+  "acaraId": "47496",
+  "schoolName": "Clifton State High School, Clifton, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "310",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "513",
+        "497",
+        "510",
+        "514",
+        "515"
+      ],
+      [
+        "Year 9",
+        "545",
+        "550",
+        "555",
+        "545",
+        "553"
+      ]
+    ]
+  }
+}

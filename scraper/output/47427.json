@@ -1,0 +1,39 @@
+{
+  "acaraId": "47427",
+  "schoolName": "Glenmore State High School, Kawana, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "646",
+    "indigenousPercent": "22",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "460",
+        "443",
+        "477",
+        "457",
+        "459"
+      ],
+      [
+        "Year 9",
+        "492",
+        "474",
+        "517",
+        "463",
+        "481"
+      ]
+    ]
+  }
+}

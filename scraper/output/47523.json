@@ -1,0 +1,39 @@
+{
+  "acaraId": "47523",
+  "schoolName": "Miles State High School, Miles, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "164",
+    "indigenousPercent": "28",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "435",
+        "436",
+        "458",
+        "430",
+        "467"
+      ],
+      [
+        "Year 9",
+        "514",
+        "528",
+        "533",
+        "498",
+        "505"
+      ]
+    ]
+  }
+}

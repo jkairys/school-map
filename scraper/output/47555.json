@@ -1,0 +1,39 @@
+{
+  "acaraId": "47555",
+  "schoolName": "Maleny State High School, Maleny, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "647",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "542",
+        "517",
+        "510",
+        "533",
+        "513"
+      ],
+      [
+        "Year 9",
+        "551",
+        "563",
+        "566",
+        "542",
+        "552"
+      ]
+    ]
+  }
+}

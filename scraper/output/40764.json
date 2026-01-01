@@ -1,0 +1,39 @@
+{
+  "acaraId": "40764",
+  "schoolName": "Queensland Academy for Science Mathematics and Technology, Toowong, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1358",
+    "indigenousPercent": "0",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "674",
+        "682",
+        "663",
+        "719",
+        "729"
+      ],
+      [
+        "Year 9",
+        "675",
+        "716",
+        "680",
+        "729",
+        "733"
+      ]
+    ]
+  }
+}

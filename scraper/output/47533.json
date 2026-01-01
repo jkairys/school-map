@@ -1,0 +1,39 @@
+{
+  "acaraId": "47533",
+  "schoolName": "Morayfield State High School, Morayfield, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1654",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "464",
+        "458",
+        "503",
+        "466",
+        "465"
+      ],
+      [
+        "Year 9",
+        "494",
+        "486",
+        "540",
+        "479",
+        "493"
+      ]
+    ]
+  }
+}

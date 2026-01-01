@@ -1,0 +1,39 @@
+{
+  "acaraId": "47428",
+  "schoolName": "Gladstone State High School, West Gladstone, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1239",
+    "indigenousPercent": "16",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "494",
+        "492",
+        "507",
+        "497",
+        "500"
+      ],
+      [
+        "Year 9",
+        "516",
+        "512",
+        "535",
+        "501",
+        "512"
+      ]
+    ]
+  }
+}

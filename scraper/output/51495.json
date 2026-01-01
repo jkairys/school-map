@@ -1,0 +1,39 @@
+{
+  "acaraId": "51495",
+  "schoolName": "Burpengary State Secondary College, Burpengary, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1121",
+    "indigenousPercent": "8",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "480",
+        "487",
+        "502",
+        "476",
+        "487"
+      ],
+      [
+        "Year 9",
+        "504",
+        "508",
+        "527",
+        "483",
+        "510"
+      ]
+    ]
+  }
+}

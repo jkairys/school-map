@@ -1,0 +1,39 @@
+{
+  "acaraId": "47472",
+  "schoolName": "Chinchilla State High School, Chinchilla, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "572",
+    "indigenousPercent": "16",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "499",
+        "491",
+        "494",
+        "492",
+        "498"
+      ],
+      [
+        "Year 9",
+        "522",
+        "541",
+        "550",
+        "518",
+        "528"
+      ]
+    ]
+  }
+}

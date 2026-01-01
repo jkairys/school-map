@@ -1,0 +1,39 @@
+{
+  "acaraId": "53148",
+  "schoolName": "Palmview State Secondary College, Palmview, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "379",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "514",
+        "490",
+        "509",
+        "504",
+        "519"
+      ],
+      [
+        "Year 9",
+        "547",
+        "524",
+        "555",
+        "525",
+        "516"
+      ]
+    ]
+  }
+}

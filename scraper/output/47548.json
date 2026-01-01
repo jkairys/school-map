@@ -1,0 +1,39 @@
+{
+  "acaraId": "47548",
+  "schoolName": "Nerang State High School, Nerang, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "998",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "488",
+        "482",
+        "515",
+        "485",
+        "497"
+      ],
+      [
+        "Year 9",
+        "521",
+        "523",
+        "545",
+        "515",
+        "526"
+      ]
+    ]
+  }
+}

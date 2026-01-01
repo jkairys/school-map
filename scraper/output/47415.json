@@ -1,0 +1,39 @@
+{
+  "acaraId": "47415",
+  "schoolName": "Mount Morgan State High School, Mount Morgan, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "230",
+    "indigenousPercent": "37",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "473",
+        "450",
+        "478",
+        "461",
+        "482"
+      ],
+      [
+        "Year 9",
+        "518",
+        "487",
+        "500",
+        "458",
+        "515"
+      ]
+    ]
+  }
+}

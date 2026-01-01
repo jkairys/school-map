@@ -1,0 +1,39 @@
+{
+  "acaraId": "47217",
+  "schoolName": "Centenary State High School, Jindalee, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1719",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "550",
+        "551",
+        "554",
+        "550",
+        "554"
+      ],
+      [
+        "Year 9",
+        "566",
+        "567",
+        "566",
+        "563",
+        "574"
+      ]
+    ]
+  }
+}

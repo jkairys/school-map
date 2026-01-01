@@ -1,0 +1,39 @@
+{
+  "acaraId": "47529",
+  "schoolName": "Benowa State High School, Benowa, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2129",
+    "indigenousPercent": "2",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "553",
+        "553",
+        "555",
+        "564",
+        "563"
+      ],
+      [
+        "Year 9",
+        "587",
+        "591",
+        "585",
+        "577",
+        "600"
+      ]
+    ]
+  }
+}

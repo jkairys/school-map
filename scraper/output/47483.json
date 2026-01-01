@@ -1,0 +1,49 @@
+{
+  "acaraId": "47483",
+  "schoolName": "Monto State High School, Monto, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "149",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "476",
+        "441",
+        "484",
+        "479",
+        "492"
+      ],
+      [
+        "Year 9",
+        "556",
+        "559\n559\n528 - 590\n\n\nSIM\n559\nALL\n575",
+        "559\n528 - 590",
+        "SIM\n559",
+        "ALL\n575",
+        "558",
+        "557",
+        "534"
+      ],
+      [
+        "559\n528 - 590"
+      ],
+      [
+        "SIM\n559",
+        "ALL\n575"
+      ]
+    ]
+  }
+}

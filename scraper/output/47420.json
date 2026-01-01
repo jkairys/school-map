@@ -1,0 +1,39 @@
+{
+  "acaraId": "47420",
+  "schoolName": "Bundaberg North State High School, Bundaberg North, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "676",
+    "indigenousPercent": "13",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "480",
+        "464",
+        "500",
+        "485",
+        "490"
+      ],
+      [
+        "Year 9",
+        "507",
+        "493",
+        "523",
+        "495",
+        "513"
+      ]
+    ]
+  }
+}

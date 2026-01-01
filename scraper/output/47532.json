@@ -1,0 +1,49 @@
+{
+  "acaraId": "47532",
+  "schoolName": "Loganlea State High School, Loganlea, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "928",
+    "indigenousPercent": "11",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "478",
+        "459",
+        "505",
+        "463",
+        "471"
+      ],
+      [
+        "Year 9",
+        "518\n518\n508 - 529\n\n\nSIM\n527\nALL\n568",
+        "518\n508 - 529",
+        "SIM\n527",
+        "ALL\n568",
+        "499",
+        "547",
+        "498",
+        "509"
+      ],
+      [
+        "518\n508 - 529"
+      ],
+      [
+        "SIM\n527",
+        "ALL\n568"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47442",
+  "schoolName": "Wavell State High School, Wavell Heights, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1522",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "524",
+        "530",
+        "541",
+        "527",
+        "534"
+      ],
+      [
+        "Year 9",
+        "554",
+        "565",
+        "570",
+        "543",
+        "552"
+      ]
+    ]
+  }
+}

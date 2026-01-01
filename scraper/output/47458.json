@@ -1,0 +1,39 @@
+{
+  "acaraId": "47458",
+  "schoolName": "Bowen State High School, Bowen, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "679",
+    "indigenousPercent": "23",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "492",
+        "497",
+        "504",
+        "496",
+        "502"
+      ],
+      [
+        "Year 9",
+        "517",
+        "505",
+        "539",
+        "505",
+        "506"
+      ]
+    ]
+  }
+}

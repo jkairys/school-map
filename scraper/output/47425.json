@@ -1,0 +1,39 @@
+{
+  "acaraId": "47425",
+  "schoolName": "Cavendish Road State High School, Holland Park, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2037",
+    "indigenousPercent": "2",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "577",
+        "567",
+        "569",
+        "583",
+        "586"
+      ],
+      [
+        "Year 9",
+        "598",
+        "617",
+        "589",
+        "605",
+        "611"
+      ]
+    ]
+  }
+}

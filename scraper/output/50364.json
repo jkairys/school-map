@@ -1,0 +1,39 @@
+{
+  "acaraId": "50364",
+  "schoolName": "Springfield Central State High School, Springfield Central, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1998",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "523",
+        "532",
+        "540",
+        "533",
+        "522"
+      ],
+      [
+        "Year 9",
+        "562",
+        "573",
+        "572",
+        "561",
+        "561"
+      ]
+    ]
+  }
+}

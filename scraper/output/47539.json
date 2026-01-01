@@ -1,0 +1,39 @@
+{
+  "acaraId": "47539",
+  "schoolName": "Lowood State High School, Lowood, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "643",
+    "indigenousPercent": "16",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "478",
+        "467",
+        "494",
+        "471",
+        "465"
+      ],
+      [
+        "Year 9",
+        "513",
+        "500",
+        "526",
+        "478",
+        "478"
+      ]
+    ]
+  }
+}

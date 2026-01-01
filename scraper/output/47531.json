@@ -1,0 +1,39 @@
+{
+  "acaraId": "47531",
+  "schoolName": "Toolooa State High School, South Gladstone, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1165",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "517",
+        "529",
+        "524",
+        "532",
+        "525"
+      ],
+      [
+        "Year 9",
+        "558",
+        "565",
+        "550",
+        "540",
+        "547"
+      ]
+    ]
+  }
+}

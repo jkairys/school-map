@@ -1,0 +1,39 @@
+{
+  "acaraId": "47493",
+  "schoolName": "Sunshine Beach State High School, Sunshine Beach, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1405",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "546",
+        "540",
+        "536",
+        "553",
+        "548"
+      ],
+      [
+        "Year 9",
+        "561",
+        "558",
+        "562",
+        "568",
+        "573"
+      ]
+    ]
+  }
+}

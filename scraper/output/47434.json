@@ -1,0 +1,39 @@
+{
+  "acaraId": "47434",
+  "schoolName": "Kedron State High School, Kedron, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1700",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "578",
+        "566",
+        "574",
+        "589",
+        "587"
+      ],
+      [
+        "Year 9",
+        "594",
+        "603",
+        "587",
+        "596",
+        "591"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "acaraId": "46578",
+  "schoolName": "Victoria Point State High School, Victoria Point, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1111",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "490",
+        "482",
+        "510",
+        "497",
+        "498"
+      ],
+      [
+        "Year 9",
+        "530",
+        "515",
+        "552",
+        "528",
+        "523\n523\n513 - 533\n\n\nSIM\n544\nALL\n573",
+        "523\n513 - 533",
+        "SIM\n544",
+        "ALL\n573"
+      ],
+      [
+        "523\n513 - 533"
+      ],
+      [
+        "SIM\n544",
+        "ALL\n573"
+      ]
+    ]
+  }
+}

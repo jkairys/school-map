@@ -1,0 +1,49 @@
+{
+  "acaraId": "47538",
+  "schoolName": "Tropical North Learning Academy - Smithfield State High School, Smithfield, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1135",
+    "indigenousPercent": "13",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "507",
+        "516",
+        "530",
+        "513",
+        "510"
+      ],
+      [
+        "Year 9",
+        "543",
+        "553\n553\n539 - 566\n\n\nSIM\n551\nALL\n575",
+        "553\n539 - 566",
+        "SIM\n551",
+        "ALL\n575",
+        "558",
+        "546",
+        "534"
+      ],
+      [
+        "553\n539 - 566"
+      ],
+      [
+        "SIM\n551",
+        "ALL\n575"
+      ]
+    ]
+  }
+}

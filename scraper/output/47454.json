@@ -1,0 +1,49 @@
+{
+  "acaraId": "47454",
+  "schoolName": "Everton Park State High School, Everton Park, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "482",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "529",
+        "498",
+        "533",
+        "529",
+        "515"
+      ],
+      [
+        "Year 9",
+        "559",
+        "554",
+        "559\n559\n545 - 574\n\n\nSIM\n564\nALL\n569",
+        "559\n545 - 574",
+        "SIM\n564",
+        "ALL\n569",
+        "533",
+        "562"
+      ],
+      [
+        "559\n545 - 574"
+      ],
+      [
+        "SIM\n564",
+        "ALL\n569"
+      ]
+    ]
+  }
+}

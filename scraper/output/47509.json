@@ -1,0 +1,39 @@
+{
+  "acaraId": "47509",
+  "schoolName": "Woodridge State High School, Logan Central, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1088",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "443",
+        "429",
+        "466",
+        "440",
+        "447"
+      ],
+      [
+        "Year 9",
+        "490",
+        "475",
+        "511",
+        "465",
+        "486"
+      ]
+    ]
+  }
+}

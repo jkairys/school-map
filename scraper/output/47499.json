@@ -1,0 +1,39 @@
+{
+  "acaraId": "47499",
+  "schoolName": "Caloundra State High School, Caloundra, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1316",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "525",
+        "522",
+        "528",
+        "527",
+        "529"
+      ],
+      [
+        "Year 9",
+        "532",
+        "533",
+        "534",
+        "508",
+        "541"
+      ]
+    ]
+  }
+}

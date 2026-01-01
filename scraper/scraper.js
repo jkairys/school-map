@@ -312,7 +312,7 @@ async function run() {
 
     for (let i = 0; i < schools.length; i++) {
       // Context rotation every 5 requests
-      if (requestCount >= 5) {
+      if (requestCount >= 4) {
         console.log('Rotating context...');
         await createNewContext();
       }
@@ -349,7 +349,7 @@ async function run() {
       }
 
       if (i < schools.length - 1 && !skipped) {
-        const delay = Math.floor(Math.random() * 7000) + 8000; // 8-15 second delay
+        const delay = Math.floor(Math.random() * 7000) + 3000; // 3-10 second delay
         console.log(`Waiting ${delay}ms before next school...`);
         await new Promise(resolve => setTimeout(resolve, delay));
       }

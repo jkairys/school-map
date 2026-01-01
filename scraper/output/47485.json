@@ -1,0 +1,49 @@
+{
+  "acaraId": "47485",
+  "schoolName": "Townsville State High School, Railway Estate, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "841",
+    "indigenousPercent": "25",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "480\n480\n468 - 492\n\n\nSIM\n486\nALL\n538",
+        "480\n468 - 492",
+        "SIM\n486",
+        "ALL\n538",
+        "467",
+        "477",
+        "462",
+        "471"
+      ],
+      [
+        "480\n468 - 492"
+      ],
+      [
+        "SIM\n486",
+        "ALL\n538"
+      ],
+      [
+        "Year 9",
+        "526",
+        "518",
+        "530",
+        "506",
+        "509"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47461",
+  "schoolName": "Charleville State High School, Charleville, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "216",
+    "indigenousPercent": "37",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "487",
+        "520",
+        "521",
+        "523",
+        "509"
+      ],
+      [
+        "Year 9",
+        "522",
+        "521",
+        "529",
+        "509",
+        "524"
+      ]
+    ]
+  }
+}

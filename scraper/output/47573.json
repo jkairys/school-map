@@ -1,0 +1,39 @@
+{
+  "acaraId": "47573",
+  "schoolName": "Flagstone State Community College, Flagstone, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "861",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "469",
+        "462",
+        "504",
+        "472",
+        "474"
+      ],
+      [
+        "Year 9",
+        "520",
+        "506",
+        "547",
+        "507",
+        "507"
+      ]
+    ]
+  }
+}

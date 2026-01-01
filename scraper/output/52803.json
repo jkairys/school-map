@@ -1,0 +1,39 @@
+{
+  "acaraId": "52803",
+  "schoolName": "Mango Hill State Secondary College, Mango Hill, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1005",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "523",
+        "535",
+        "527",
+        "524",
+        "529"
+      ],
+      [
+        "Year 9",
+        "544",
+        "562",
+        "559",
+        "534",
+        "542"
+      ]
+    ]
+  }
+}

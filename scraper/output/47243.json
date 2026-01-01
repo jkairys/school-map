@@ -1,0 +1,39 @@
+{
+  "acaraId": "47243",
+  "schoolName": "Forest Lake State High School, Forest Lake, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1673",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "519",
+        "521",
+        "532",
+        "524",
+        "520"
+      ],
+      [
+        "Year 9",
+        "539",
+        "543",
+        "554",
+        "531",
+        "535"
+      ]
+    ]
+  }
+}

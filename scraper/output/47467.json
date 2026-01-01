@@ -1,0 +1,39 @@
+{
+  "acaraId": "47467",
+  "schoolName": "Sunnybank State High School, Sunnybank, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "641",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "499",
+        "514",
+        "530",
+        "500",
+        "500"
+      ],
+      [
+        "Year 9",
+        "524",
+        "543",
+        "556",
+        "515",
+        "532"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47506",
+  "schoolName": "Yeppoon State High School, Yeppoon, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1062",
+    "indigenousPercent": "11",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "471",
+        "462",
+        "508",
+        "479",
+        "461"
+      ],
+      [
+        "Year 9",
+        "534",
+        "506",
+        "541",
+        "517",
+        "514"
+      ]
+    ]
+  }
+}

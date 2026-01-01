@@ -1,0 +1,31 @@
+{
+  "acaraId": "53370",
+  "schoolName": "Collingwood Park State Secondary College, Collingwood Park, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "256",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "485",
+        "476",
+        "504",
+        "484",
+        "481"
+      ]
+    ]
+  }
+}

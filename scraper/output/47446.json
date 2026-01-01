@@ -1,0 +1,39 @@
+{
+  "acaraId": "47446",
+  "schoolName": "Murgon State High School, Murgon, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "318",
+    "indigenousPercent": "58",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "426",
+        "422",
+        "473",
+        "437",
+        "453"
+      ],
+      [
+        "Year 9",
+        "472",
+        "456",
+        "520",
+        "471",
+        "489"
+      ]
+    ]
+  }
+}

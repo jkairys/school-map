@@ -1,0 +1,39 @@
+{
+  "acaraId": "47562",
+  "schoolName": "Clermont State High School, Clermont, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "171",
+    "indigenousPercent": "12",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "449",
+        "443",
+        "455",
+        "443",
+        "465"
+      ],
+      [
+        "Year 9",
+        "487",
+        "478",
+        "518",
+        "453",
+        "472"
+      ]
+    ]
+  }
+}

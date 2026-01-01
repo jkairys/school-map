@@ -1,0 +1,39 @@
+{
+  "acaraId": "47545",
+  "schoolName": "Coombabah State High School, Coombabah, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1113",
+    "indigenousPercent": "8",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "508",
+        "497",
+        "519",
+        "498",
+        "508"
+      ],
+      [
+        "Year 9",
+        "542",
+        "536",
+        "551",
+        "523",
+        "534"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47407",
+  "schoolName": "Mossman State High School, Mossman, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "553",
+    "indigenousPercent": "22",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "504",
+        "516",
+        "515",
+        "495",
+        "502"
+      ],
+      [
+        "Year 9",
+        "525",
+        "548",
+        "555",
+        "521",
+        "521"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47452",
+  "schoolName": "Mareeba State High School, Mareeba, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "721",
+    "indigenousPercent": "36",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "467",
+        "451",
+        "496",
+        "463",
+        "484"
+      ],
+      [
+        "Year 9",
+        "479",
+        "449",
+        "519",
+        "476",
+        "489"
+      ]
+    ]
+  }
+}

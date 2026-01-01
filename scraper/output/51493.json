@@ -1,0 +1,39 @@
+{
+  "acaraId": "51493",
+  "schoolName": "Highfields State Secondary College, Highfields, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "795",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "541",
+        "527",
+        "530",
+        "535",
+        "538"
+      ],
+      [
+        "Year 9",
+        "559",
+        "556",
+        "559",
+        "540",
+        "547"
+      ]
+    ]
+  }
+}

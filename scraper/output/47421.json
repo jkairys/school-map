@@ -1,0 +1,49 @@
+{
+  "acaraId": "47421",
+  "schoolName": "Maryborough State High School, Maryborough, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1214",
+    "indigenousPercent": "13",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "493",
+        "482",
+        "500",
+        "486",
+        "493\n493\n485 - 500\n\n\nSIM\n500\nALL\n545",
+        "493\n485 - 500",
+        "SIM\n500",
+        "ALL\n545"
+      ],
+      [
+        "493\n485 - 500"
+      ],
+      [
+        "SIM\n500",
+        "ALL\n545"
+      ],
+      [
+        "Year 9",
+        "527",
+        "520",
+        "541",
+        "519",
+        "525"
+      ]
+    ]
+  }
+}

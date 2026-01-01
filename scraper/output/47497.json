@@ -1,0 +1,39 @@
+{
+  "acaraId": "47497",
+  "schoolName": "Longreach State High School, Longreach, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "205",
+    "indigenousPercent": "21",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "494",
+        "487",
+        "490",
+        "482",
+        "487"
+      ],
+      [
+        "Year 9",
+        "548",
+        "512",
+        "532",
+        "527",
+        "535"
+      ]
+    ]
+  }
+}

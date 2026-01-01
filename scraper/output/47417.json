@@ -1,0 +1,39 @@
+{
+  "acaraId": "47417",
+  "schoolName": "Toowoomba State High School, Mount Lofty, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "775",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "510",
+        "484",
+        "511",
+        "509",
+        "500"
+      ],
+      [
+        "Year 9",
+        "524",
+        "522",
+        "531",
+        "501",
+        "518"
+      ]
+    ]
+  }
+}

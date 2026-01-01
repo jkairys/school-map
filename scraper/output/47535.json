@@ -1,0 +1,39 @@
+{
+  "acaraId": "47535",
+  "schoolName": "Dysart State High School, Dysart, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "197",
+    "indigenousPercent": "23",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "438",
+        "451",
+        "468",
+        "467",
+        "456"
+      ],
+      [
+        "Year 9",
+        "483",
+        "476",
+        "519",
+        "489",
+        "485"
+      ]
+    ]
+  }
+}

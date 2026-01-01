@@ -1,0 +1,39 @@
+{
+  "acaraId": "47547",
+  "schoolName": "Pioneer State High School, Andergrove, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "536",
+    "indigenousPercent": "35",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "458",
+        "443",
+        "490",
+        "451",
+        "440"
+      ],
+      [
+        "Year 9",
+        "497",
+        "480",
+        "527",
+        "482",
+        "485"
+      ]
+    ]
+  }
+}

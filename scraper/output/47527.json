@@ -1,0 +1,49 @@
+{
+  "acaraId": "47527",
+  "schoolName": "Ferny Grove State High School, Ferny Grove, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1881",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "552",
+        "543",
+        "543",
+        "561",
+        "554"
+      ],
+      [
+        "Year 9",
+        "571\n571\n564 - 579\n\n\nSIM\n583\nALL\n568",
+        "571\n564 - 579",
+        "SIM\n583",
+        "ALL\n568",
+        "579",
+        "570",
+        "560",
+        "566"
+      ],
+      [
+        "571\n564 - 579"
+      ],
+      [
+        "SIM\n583",
+        "ALL\n568"
+      ]
+    ]
+  }
+}

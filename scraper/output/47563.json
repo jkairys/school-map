@@ -1,0 +1,39 @@
+{
+  "acaraId": "47563",
+  "schoolName": "William Ross State High School, Annandale, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "862",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "500",
+        "499",
+        "512",
+        "495",
+        "492"
+      ],
+      [
+        "Year 9",
+        "522",
+        "515",
+        "543",
+        "517",
+        "526"
+      ]
+    ]
+  }
+}

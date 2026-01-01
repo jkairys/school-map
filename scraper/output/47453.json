@@ -1,0 +1,39 @@
+{
+  "acaraId": "47453",
+  "schoolName": "Mansfield State High School, Mansfield, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "3807",
+    "indigenousPercent": "1",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "573",
+        "581",
+        "581",
+        "593",
+        "600"
+      ],
+      [
+        "Year 9",
+        "604",
+        "625",
+        "605",
+        "612",
+        "622"
+      ]
+    ]
+  }
+}

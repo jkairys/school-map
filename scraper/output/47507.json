@@ -1,0 +1,39 @@
+{
+  "acaraId": "47507",
+  "schoolName": "MacGregor State High School, Macgregor, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1297",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "553",
+        "557",
+        "559",
+        "564",
+        "569"
+      ],
+      [
+        "Year 9",
+        "571",
+        "601",
+        "580",
+        "578",
+        "588"
+      ]
+    ]
+  }
+}

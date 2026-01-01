@@ -1,0 +1,39 @@
+{
+  "acaraId": "47544",
+  "schoolName": "Coolum State High School, Coolum Beach, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1551",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "526",
+        "536",
+        "537",
+        "534",
+        "533"
+      ],
+      [
+        "Year 9",
+        "555",
+        "574",
+        "560",
+        "561",
+        "574"
+      ]
+    ]
+  }
+}

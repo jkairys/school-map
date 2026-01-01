@@ -1,0 +1,39 @@
+{
+  "acaraId": "50481",
+  "schoolName": "Murrumba State Secondary College, Murrumba Downs, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1682",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "514",
+        "501",
+        "526",
+        "515",
+        "510"
+      ],
+      [
+        "Year 9",
+        "532",
+        "533",
+        "549",
+        "523",
+        "524"
+      ]
+    ]
+  }
+}

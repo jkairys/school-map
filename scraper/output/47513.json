@@ -1,0 +1,49 @@
+{
+  "acaraId": "47513",
+  "schoolName": "Kenmore State High School, Kenmore, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1973",
+    "indigenousPercent": "1",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "569",
+        "567",
+        "559",
+        "579",
+        "575"
+      ],
+      [
+        "Year 9",
+        "600\n600\n592 - 607\n\n\nSIM\n601\nALL\n568",
+        "600\n592 - 607",
+        "SIM\n601",
+        "ALL\n568",
+        "619",
+        "586",
+        "613",
+        "592"
+      ],
+      [
+        "600\n592 - 607"
+      ],
+      [
+        "SIM\n601",
+        "ALL\n568"
+      ]
+    ]
+  }
+}

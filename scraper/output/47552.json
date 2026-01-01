@@ -1,0 +1,39 @@
+{
+  "acaraId": "47552",
+  "schoolName": "Redbank Plains State High School, Redbank Plains, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1539",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "486",
+        "482",
+        "512",
+        "481",
+        "479"
+      ],
+      [
+        "Year 9",
+        "521",
+        "522",
+        "551",
+        "510",
+        "502"
+      ]
+    ]
+  }
+}

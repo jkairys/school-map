@@ -1,0 +1,39 @@
+{
+  "acaraId": "47447",
+  "schoolName": "The Gap State High School, The Gap, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1702",
+    "indigenousPercent": "1",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "566",
+        "569",
+        "557",
+        "572",
+        "574"
+      ],
+      [
+        "Year 9",
+        "600",
+        "614",
+        "589",
+        "607",
+        "604"
+      ]
+    ]
+  }
+}

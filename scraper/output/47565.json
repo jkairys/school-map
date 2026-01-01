@@ -1,0 +1,39 @@
+{
+  "acaraId": "47565",
+  "schoolName": "Tullawong State High School, Caboolture, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "897",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "472",
+        "455",
+        "498",
+        "475",
+        "475"
+      ],
+      [
+        "Year 9",
+        "510",
+        "482",
+        "533",
+        "477",
+        "491"
+      ]
+    ]
+  }
+}

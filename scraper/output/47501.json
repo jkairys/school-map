@@ -1,0 +1,39 @@
+{
+  "acaraId": "47501",
+  "schoolName": "Bracken Ridge State High School, Bracken Ridge, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "626",
+    "indigenousPercent": "12",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "507",
+        "502",
+        "519",
+        "503",
+        "495"
+      ],
+      [
+        "Year 9",
+        "534",
+        "523",
+        "536",
+        "509",
+        "529"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "acaraId": "47543",
+  "schoolName": "Browns Plains State High School, Browns Plains, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1185",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "473",
+        "481",
+        "509",
+        "484\n484\n476 - 493\n\n\nSIM\n491\nALL\n539",
+        "484\n476 - 493",
+        "SIM\n491",
+        "ALL\n539",
+        "478"
+      ],
+      [
+        "484\n476 - 493"
+      ],
+      [
+        "SIM\n491",
+        "ALL\n539"
+      ],
+      [
+        "Year 9",
+        "528",
+        "535",
+        "556",
+        "526",
+        "509"
+      ]
+    ]
+  }
+}

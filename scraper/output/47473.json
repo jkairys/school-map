@@ -1,0 +1,49 @@
+{
+  "acaraId": "47473",
+  "schoolName": "Noosa District State High School, Cooroy, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "882",
+    "indigenousPercent": "6",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "533",
+        "534",
+        "528",
+        "534",
+        "539\n539\n528 - 550\n\n\nSIM\n528\nALL\n545",
+        "539\n528 - 550",
+        "SIM\n528",
+        "ALL\n545"
+      ],
+      [
+        "539\n528 - 550"
+      ],
+      [
+        "SIM\n528",
+        "ALL\n545"
+      ],
+      [
+        "Year 9",
+        "543",
+        "556",
+        "540",
+        "537",
+        "545"
+      ]
+    ]
+  }
+}

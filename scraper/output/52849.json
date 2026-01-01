@@ -1,0 +1,39 @@
+{
+  "acaraId": "52849",
+  "schoolName": "Brisbane South State Secondary College, Dutton Park, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1236",
+    "indigenousPercent": "2",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "590",
+        "590",
+        "579",
+        "598",
+        "616"
+      ],
+      [
+        "Year 9",
+        "604",
+        "611",
+        "591",
+        "604",
+        "609"
+      ]
+    ]
+  }
+}

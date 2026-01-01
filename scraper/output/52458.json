@@ -1,0 +1,39 @@
+{
+  "acaraId": "52458",
+  "schoolName": "Bellbird Park State Secondary College, Bellbird Park, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1795",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "483",
+        "478",
+        "508",
+        "483",
+        "475"
+      ],
+      [
+        "Year 9",
+        "518",
+        "525",
+        "548",
+        "509",
+        "514"
+      ]
+    ]
+  }
+}

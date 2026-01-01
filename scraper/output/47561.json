@@ -1,0 +1,39 @@
+{
+  "acaraId": "47561",
+  "schoolName": "Helensvale State High School, Helensvale, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1875",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "521",
+        "521",
+        "525",
+        "524",
+        "528"
+      ],
+      [
+        "Year 9",
+        "551",
+        "561",
+        "559",
+        "534",
+        "553"
+      ]
+    ]
+  }
+}

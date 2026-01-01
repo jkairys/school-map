@@ -1,0 +1,39 @@
+{
+  "acaraId": "47569",
+  "schoolName": "Tamborine Mountain State High School, Tamborine Mountain, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "943",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "551",
+        "534",
+        "538",
+        "554",
+        "547"
+      ],
+      [
+        "Year 9",
+        "568",
+        "579",
+        "560",
+        "570",
+        "570"
+      ]
+    ]
+  }
+}

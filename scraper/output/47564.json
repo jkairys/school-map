@@ -1,0 +1,39 @@
+{
+  "acaraId": "47564",
+  "schoolName": "Park Ridge State High School, Park Ridge, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1696",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "508",
+        "508",
+        "524",
+        "511",
+        "514"
+      ],
+      [
+        "Year 9",
+        "530",
+        "535",
+        "546",
+        "518",
+        "537"
+      ]
+    ]
+  }
+}

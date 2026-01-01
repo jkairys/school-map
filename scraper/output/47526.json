@@ -1,0 +1,39 @@
+{
+  "acaraId": "47526",
+  "schoolName": "Merrimac State High School, Mermaid Waters, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "930",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "535",
+        "535",
+        "535",
+        "537",
+        "543"
+      ],
+      [
+        "Year 9",
+        "560",
+        "589",
+        "562",
+        "557",
+        "573"
+      ]
+    ]
+  }
+}

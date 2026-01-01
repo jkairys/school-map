@@ -1,0 +1,39 @@
+{
+  "acaraId": "47530",
+  "schoolName": "Rosewood State High School, Rosewood, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "485",
+    "indigenousPercent": "18",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "472",
+        "448",
+        "492",
+        "466",
+        "446"
+      ],
+      [
+        "Year 9",
+        "498",
+        "505",
+        "517",
+        "476",
+        "502"
+      ]
+    ]
+  }
+}

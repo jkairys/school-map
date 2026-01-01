@@ -1,0 +1,39 @@
+{
+  "acaraId": "47465",
+  "schoolName": "Coorparoo Secondary College, Coorparoo, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "407",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "524",
+        "512",
+        "538",
+        "527",
+        "535"
+      ],
+      [
+        "Year 9",
+        "553",
+        "562",
+        "562",
+        "544",
+        "545"
+      ]
+    ]
+  }
+}

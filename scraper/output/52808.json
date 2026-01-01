@@ -1,0 +1,39 @@
+{
+  "acaraId": "52808",
+  "schoolName": "Ripley Valley State Secondary College, South Ripley, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1268",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "500",
+        "505",
+        "521",
+        "510",
+        "512"
+      ],
+      [
+        "Year 9",
+        "536",
+        "540",
+        "546",
+        "531",
+        "532"
+      ]
+    ]
+  }
+}

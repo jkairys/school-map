@@ -1,0 +1,39 @@
+{
+  "acaraId": "47440",
+  "schoolName": "Keebra Park State High School, Southport, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1001",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "475",
+        "482",
+        "512",
+        "475",
+        "493"
+      ],
+      [
+        "Year 9",
+        "504",
+        "500",
+        "545",
+        "493",
+        "513"
+      ]
+    ]
+  }
+}

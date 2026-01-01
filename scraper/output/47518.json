@@ -1,0 +1,49 @@
+{
+  "acaraId": "47518",
+  "schoolName": "James Nash State High School, Gympie, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1027",
+    "indigenousPercent": "12",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "525",
+        "517",
+        "525",
+        "525",
+        "538"
+      ],
+      [
+        "Year 9",
+        "560",
+        "553",
+        "550",
+        "545\n545\n530 - 560\n\n\nSIM\n532\nALL\n559",
+        "545\n530 - 560",
+        "SIM\n532",
+        "ALL\n559",
+        "562"
+      ],
+      [
+        "545\n530 - 560"
+      ],
+      [
+        "SIM\n532",
+        "ALL\n559"
+      ]
+    ]
+  }
+}

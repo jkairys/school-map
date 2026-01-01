@@ -1,0 +1,39 @@
+{
+  "acaraId": "47489",
+  "schoolName": "Brisbane Bayside State College, Wynnum West, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "910",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "509",
+        "521",
+        "518",
+        "512",
+        "505"
+      ],
+      [
+        "Year 9",
+        "550",
+        "558",
+        "562",
+        "537",
+        "543"
+      ]
+    ]
+  }
+}

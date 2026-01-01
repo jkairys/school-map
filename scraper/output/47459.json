@@ -1,0 +1,39 @@
+{
+  "acaraId": "47459",
+  "schoolName": "Caboolture State High School, Caboolture, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1373",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "476",
+        "451",
+        "485",
+        "468",
+        "466"
+      ],
+      [
+        "Year 9",
+        "502",
+        "492",
+        "525",
+        "477",
+        "491"
+      ]
+    ]
+  }
+}

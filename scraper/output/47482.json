@@ -1,0 +1,39 @@
+{
+  "acaraId": "47482",
+  "schoolName": "Maroochydore State High School, Maroochydore, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1205",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "536",
+        "519",
+        "528",
+        "533",
+        "543"
+      ],
+      [
+        "Year 9",
+        "550",
+        "554",
+        "556",
+        "544",
+        "560"
+      ]
+    ]
+  }
+}

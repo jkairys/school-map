@@ -1,0 +1,39 @@
+{
+  "acaraId": "47508",
+  "schoolName": "Holland Park State High School, Holland Park West, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "529",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "532",
+        "542",
+        "546",
+        "537",
+        "547"
+      ],
+      [
+        "Year 9",
+        "529",
+        "547",
+        "550",
+        "531",
+        "532"
+      ]
+    ]
+  }
+}

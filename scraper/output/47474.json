@@ -1,0 +1,39 @@
+{
+  "acaraId": "47474",
+  "schoolName": "Burnett State College, Gayndah, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "158",
+    "indigenousPercent": "21",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "501",
+        "497",
+        "523",
+        "505",
+        "519"
+      ],
+      [
+        "Year 9",
+        "514",
+        "493",
+        "525",
+        "490",
+        "520"
+      ]
+    ]
+  }
+}

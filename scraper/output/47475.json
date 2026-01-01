@@ -1,0 +1,39 @@
+{
+  "acaraId": "47475",
+  "schoolName": "Proserpine State High School, Proserpine, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1116",
+    "indigenousPercent": "8",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "506",
+        "512",
+        "511",
+        "505",
+        "516"
+      ],
+      [
+        "Year 9",
+        "532",
+        "528",
+        "536",
+        "507",
+        "526"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "40766",
+  "schoolName": "Spinifex State College - Mount Isa Education and Training Precinct, Parkside, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "926",
+    "indigenousPercent": "42",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "448",
+        "434",
+        "484",
+        "434",
+        "435"
+      ],
+      [
+        "Year 9",
+        "498",
+        "491",
+        "533",
+        "458",
+        "483"
+      ]
+    ]
+  }
+}

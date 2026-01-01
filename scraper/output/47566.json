@@ -1,0 +1,39 @@
+{
+  "acaraId": "47566",
+  "schoolName": "Windaroo Valley State High School, Bahrs Scrub, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1202",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "508",
+        "516",
+        "534",
+        "519",
+        "517"
+      ],
+      [
+        "Year 9",
+        "552",
+        "563",
+        "567",
+        "549",
+        "546"
+      ]
+    ]
+  }
+}

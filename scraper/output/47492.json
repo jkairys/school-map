@@ -1,0 +1,39 @@
+{
+  "acaraId": "47492",
+  "schoolName": "Deception Bay State High School, Deception Bay, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1374",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "482",
+        "464",
+        "489",
+        "463",
+        "469"
+      ],
+      [
+        "Year 9",
+        "512",
+        "509",
+        "537",
+        "493",
+        "500"
+      ]
+    ]
+  }
+}

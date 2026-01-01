@@ -1,0 +1,39 @@
+{
+  "acaraId": "47456",
+  "schoolName": "Isis District State High School, Childers, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "392",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "498",
+        "499",
+        "495",
+        "484",
+        "489"
+      ],
+      [
+        "Year 9",
+        "523",
+        "498",
+        "546",
+        "491",
+        "508"
+      ]
+    ]
+  }
+}

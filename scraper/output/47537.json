@@ -1,0 +1,39 @@
+{
+  "acaraId": "47537",
+  "schoolName": "Rochedale State High School, Rochedale, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1547",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "539",
+        "534",
+        "538",
+        "536",
+        "547"
+      ],
+      [
+        "Year 9",
+        "550",
+        "564",
+        "561",
+        "542",
+        "550"
+      ]
+    ]
+  }
+}

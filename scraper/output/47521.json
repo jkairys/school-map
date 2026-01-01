@@ -1,0 +1,49 @@
+{
+  "acaraId": "47521",
+  "schoolName": "Dakabin State High School, Dakabin, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "980",
+    "indigenousPercent": "12",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "485",
+        "460",
+        "503",
+        "485\n485\n475 - 495\n\n\nSIM\n497\nALL\n539",
+        "485\n475 - 495",
+        "SIM\n497",
+        "ALL\n539",
+        "481"
+      ],
+      [
+        "485\n475 - 495"
+      ],
+      [
+        "SIM\n497",
+        "ALL\n539"
+      ],
+      [
+        "Year 9",
+        "511",
+        "488",
+        "536",
+        "496",
+        "496"
+      ]
+    ]
+  }
+}

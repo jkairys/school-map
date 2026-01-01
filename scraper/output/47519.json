@@ -1,0 +1,39 @@
+{
+  "acaraId": "47519",
+  "schoolName": "Kingston State College, Kingston, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "866",
+    "indigenousPercent": "16",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "467",
+        "454",
+        "491",
+        "474",
+        "457"
+      ],
+      [
+        "Year 9",
+        "495",
+        "461",
+        "535",
+        "485",
+        "479"
+      ]
+    ]
+  }
+}

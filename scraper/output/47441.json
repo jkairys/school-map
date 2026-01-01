@@ -1,0 +1,49 @@
+{
+  "acaraId": "47441",
+  "schoolName": "Sandgate District State High School, Deagon, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "993",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "521",
+        "528",
+        "538",
+        "529",
+        "524"
+      ],
+      [
+        "Year 9",
+        "537\n537\n528 - 545\n\n\nSIM\n561\nALL\n568",
+        "537\n528 - 545",
+        "SIM\n561",
+        "ALL\n568",
+        "556",
+        "549",
+        "520",
+        "532"
+      ],
+      [
+        "537\n528 - 545"
+      ],
+      [
+        "SIM\n561",
+        "ALL\n568"
+      ]
+    ]
+  }
+}

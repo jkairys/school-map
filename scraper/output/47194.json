@@ -1,0 +1,39 @@
+{
+  "acaraId": "47194",
+  "schoolName": "Glenala State High School, Durack, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1133",
+    "indigenousPercent": "11",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "487",
+        "483",
+        "516",
+        "486",
+        "484"
+      ],
+      [
+        "Year 9",
+        "532",
+        "522",
+        "552",
+        "507",
+        "522"
+      ]
+    ]
+  }
+}

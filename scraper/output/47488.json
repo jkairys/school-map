@@ -1,0 +1,39 @@
+{
+  "acaraId": "47488",
+  "schoolName": "Tully State High School, Tully, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "721",
+    "indigenousPercent": "17",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "503",
+        "501",
+        "521",
+        "506",
+        "510"
+      ],
+      [
+        "Year 9",
+        "513",
+        "484",
+        "534",
+        "491",
+        "515"
+      ]
+    ]
+  }
+}

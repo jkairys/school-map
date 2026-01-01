@@ -1,0 +1,39 @@
+{
+  "acaraId": "47541",
+  "schoolName": "Woree State High School, Woree, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "750",
+    "indigenousPercent": "48",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "453",
+        "448",
+        "506",
+        "464",
+        "457"
+      ],
+      [
+        "Year 9",
+        "501",
+        "491",
+        "530",
+        "487",
+        "495"
+      ]
+    ]
+  }
+}

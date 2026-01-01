@@ -1,0 +1,39 @@
+{
+  "acaraId": "47477",
+  "schoolName": "Goondiwindi State High School, Goondiwindi, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "453",
+    "indigenousPercent": "26",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "500",
+        "502",
+        "498",
+        "502",
+        "502"
+      ],
+      [
+        "Year 9",
+        "485",
+        "511",
+        "509",
+        "485",
+        "499"
+      ]
+    ]
+  }
+}

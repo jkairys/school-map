@@ -1,0 +1,39 @@
+{
+  "acaraId": "47516",
+  "schoolName": "Moranbah State High School, Moranbah, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "756",
+    "indigenousPercent": "12",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "485",
+        "468",
+        "504",
+        "481",
+        "488"
+      ],
+      [
+        "Year 9",
+        "519",
+        "461",
+        "534",
+        "494",
+        "505"
+      ]
+    ]
+  }
+}

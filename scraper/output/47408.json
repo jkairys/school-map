@@ -1,0 +1,39 @@
+{
+  "acaraId": "47408",
+  "schoolName": "Brisbane State High School, South Brisbane, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "3594",
+    "indigenousPercent": "1",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "599",
+        "605",
+        "598",
+        "621",
+        "626"
+      ],
+      [
+        "Year 9",
+        "615",
+        "630",
+        "605",
+        "629",
+        "646"
+      ]
+    ]
+  }
+}

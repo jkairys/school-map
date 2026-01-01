@@ -1,0 +1,39 @@
+{
+  "acaraId": "47251",
+  "schoolName": "Pacific Pines State High School, Pacific Pines, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2193",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "519",
+        "513",
+        "527",
+        "530",
+        "525"
+      ],
+      [
+        "Year 9",
+        "553",
+        "559",
+        "567",
+        "557",
+        "560"
+      ]
+    ]
+  }
+}

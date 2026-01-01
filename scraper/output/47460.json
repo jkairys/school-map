@@ -1,0 +1,39 @@
+{
+  "acaraId": "47460",
+  "schoolName": "Malanda State High School, Malanda, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "538",
+    "indigenousPercent": "8",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "519",
+        "505",
+        "523",
+        "532",
+        "530"
+      ],
+      [
+        "Year 9",
+        "536",
+        "561",
+        "557",
+        "537",
+        "534"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47559",
+  "schoolName": "Capella State High School, Capella, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "149",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "448",
+        "416",
+        "453",
+        "429",
+        "474"
+      ],
+      [
+        "Year 9",
+        "530",
+        "511",
+        "528",
+        "517",
+        "518"
+      ]
+    ]
+  }
+}

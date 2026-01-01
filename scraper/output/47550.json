@@ -1,0 +1,39 @@
+{
+  "acaraId": "47550",
+  "schoolName": "Thuringowa State High School, Condon, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "659",
+    "indigenousPercent": "46",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "451",
+        "435",
+        "464",
+        "428",
+        "451"
+      ],
+      [
+        "Year 9",
+        "499",
+        "460",
+        "514",
+        "459",
+        "477"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47449",
+  "schoolName": "Corinda State High School, Corinda, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2125",
+    "indigenousPercent": "2",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "558",
+        "567",
+        "560",
+        "575",
+        "576"
+      ],
+      [
+        "Year 9",
+        "586",
+        "605",
+        "583",
+        "584",
+        "596"
+      ]
+    ]
+  }
+}

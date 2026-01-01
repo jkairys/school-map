@@ -1,0 +1,39 @@
+{
+  "acaraId": "47524",
+  "schoolName": "Burnside State High School, Burnside, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "809",
+    "indigenousPercent": "6",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "531",
+        "524",
+        "524",
+        "527",
+        "534"
+      ],
+      [
+        "Year 9",
+        "540",
+        "555",
+        "553",
+        "538",
+        "550"
+      ]
+    ]
+  }
+}

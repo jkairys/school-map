@@ -1,0 +1,39 @@
+{
+  "acaraId": "47439",
+  "schoolName": "Redcliffe State High School, Redcliffe, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1444",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "519",
+        "516",
+        "530",
+        "513",
+        "512"
+      ],
+      [
+        "Year 9",
+        "560",
+        "557",
+        "572",
+        "558",
+        "566"
+      ]
+    ]
+  }
+}

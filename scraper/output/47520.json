@@ -1,0 +1,39 @@
+{
+  "acaraId": "47520",
+  "schoolName": "Springwood State High School, Springwood, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "577",
+    "indigenousPercent": "8",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "504",
+        "507",
+        "521",
+        "509",
+        "508"
+      ],
+      [
+        "Year 9",
+        "549",
+        "571",
+        "569",
+        "542",
+        "547"
+      ]
+    ]
+  }
+}

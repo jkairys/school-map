@@ -1,0 +1,39 @@
+{
+  "acaraId": "47525",
+  "schoolName": "Kirwan State High School, Kirwan, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1922",
+    "indigenousPercent": "31",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "482",
+        "486",
+        "504",
+        "487",
+        "480"
+      ],
+      [
+        "Year 9",
+        "507",
+        "505",
+        "538",
+        "503",
+        "502"
+      ]
+    ]
+  }
+}

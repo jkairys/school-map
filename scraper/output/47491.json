@@ -1,0 +1,39 @@
+{
+  "acaraId": "47491",
+  "schoolName": "Gordonvale State High School, Gordonvale, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "623",
+    "indigenousPercent": "40",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "452",
+        "453",
+        "485",
+        "474",
+        "470"
+      ],
+      [
+        "Year 9",
+        "512",
+        "478",
+        "539",
+        "504",
+        "498"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47450",
+  "schoolName": "Mount Gravatt State High School, Mount Gravatt, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1217",
+    "indigenousPercent": "2",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "564",
+        "564",
+        "558",
+        "569",
+        "569"
+      ],
+      [
+        "Year 9",
+        "582",
+        "611",
+        "588",
+        "598",
+        "591"
+      ]
+    ]
+  }
+}

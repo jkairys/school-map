@@ -1,0 +1,39 @@
+{
+  "acaraId": "47495",
+  "schoolName": "Urangan State High School, Urangan, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1342",
+    "indigenousPercent": "12",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "497",
+        "483",
+        "515",
+        "497",
+        "495"
+      ],
+      [
+        "Year 9",
+        "527",
+        "515",
+        "547",
+        "508",
+        "523"
+      ]
+    ]
+  }
+}

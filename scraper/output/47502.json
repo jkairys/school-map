@@ -1,0 +1,39 @@
+{
+  "acaraId": "47502",
+  "schoolName": "Pittsworth State High School, Pittsworth, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "506",
+    "indigenousPercent": "12",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "504",
+        "505",
+        "520",
+        "506",
+        "518"
+      ],
+      [
+        "Year 9",
+        "533",
+        "538",
+        "551",
+        "520",
+        "511"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "acaraId": "47433",
+  "schoolName": "Harristown State High School, Harristown, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1641",
+    "indigenousPercent": "18",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "497",
+        "483",
+        "511",
+        "498",
+        "500"
+      ],
+      [
+        "Year 9",
+        "525\n525\n518 - 533\n\n\nSIM\n523\nALL\n568",
+        "525\n518 - 533",
+        "SIM\n523",
+        "ALL\n568",
+        "520",
+        "543",
+        "516",
+        "522"
+      ],
+      [
+        "525\n518 - 533"
+      ],
+      [
+        "SIM\n523",
+        "ALL\n568"
+      ]
+    ]
+  }
+}

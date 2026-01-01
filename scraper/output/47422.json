@@ -1,0 +1,39 @@
+{
+  "acaraId": "47422",
+  "schoolName": "Wynnum State High School, Wynnum, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1109",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "544",
+        "537",
+        "535",
+        "541",
+        "536"
+      ],
+      [
+        "Year 9",
+        "570",
+        "576",
+        "570",
+        "566",
+        "566"
+      ]
+    ]
+  }
+}

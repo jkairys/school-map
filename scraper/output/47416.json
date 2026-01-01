@@ -1,0 +1,39 @@
+{
+  "acaraId": "47416",
+  "schoolName": "Rockhampton State High School, Wandal, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1256",
+    "indigenousPercent": "24",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "466",
+        "453",
+        "476",
+        "452",
+        "468"
+      ],
+      [
+        "Year 9",
+        "516",
+        "501",
+        "536",
+        "509",
+        "510"
+      ]
+    ]
+  }
+}

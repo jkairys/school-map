@@ -1,0 +1,39 @@
+{
+  "acaraId": "47476",
+  "schoolName": "Clontarf Beach State High School, Clontarf, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "877",
+    "indigenousPercent": "13",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "496",
+        "470",
+        "510",
+        "494",
+        "498"
+      ],
+      [
+        "Year 9",
+        "539",
+        "532",
+        "548",
+        "527",
+        "529"
+      ]
+    ]
+  }
+}

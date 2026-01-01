@@ -1,0 +1,39 @@
+{
+  "acaraId": "47554",
+  "schoolName": "Marsden State High School, Waterford West, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "3857",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "488",
+        "503",
+        "523",
+        "500",
+        "489"
+      ],
+      [
+        "Year 9",
+        "518",
+        "525",
+        "549",
+        "506",
+        "515"
+      ]
+    ]
+  }
+}

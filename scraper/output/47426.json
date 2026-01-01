@@ -1,0 +1,39 @@
+{
+  "acaraId": "47426",
+  "schoolName": "Ingham State High School, Ingham, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "422",
+    "indigenousPercent": "23",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "509",
+        "510",
+        "519",
+        "507",
+        "499"
+      ],
+      [
+        "Year 9",
+        "544",
+        "556",
+        "551",
+        "523",
+        "526"
+      ]
+    ]
+  }
+}

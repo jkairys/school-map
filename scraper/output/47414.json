@@ -1,0 +1,39 @@
+{
+  "acaraId": "47414",
+  "schoolName": "Mackay State High School, South Mackay, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1254",
+    "indigenousPercent": "19",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "483",
+        "486",
+        "499",
+        "479",
+        "484"
+      ],
+      [
+        "Year 9",
+        "527",
+        "533",
+        "550",
+        "519",
+        "528"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47430",
+  "schoolName": "Dalby State High School, Dalby, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1090",
+    "indigenousPercent": "18",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "483",
+        "489",
+        "515",
+        "493",
+        "495"
+      ],
+      [
+        "Year 9",
+        "511",
+        "523",
+        "547",
+        "508",
+        "507"
+      ]
+    ]
+  }
+}

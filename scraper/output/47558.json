@@ -1,0 +1,39 @@
+{
+  "acaraId": "47558",
+  "schoolName": "Bribie Island State High School, Bongaree, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1020",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "495",
+        "490",
+        "510",
+        "492",
+        "498"
+      ],
+      [
+        "Year 9",
+        "511",
+        "502",
+        "541",
+        "515",
+        "527"
+      ]
+    ]
+  }
+}

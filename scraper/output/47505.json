@@ -1,0 +1,39 @@
+{
+  "acaraId": "47505",
+  "schoolName": "Emerald State High School, Emerald, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "847",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "492",
+        "480",
+        "508",
+        "498",
+        "503"
+      ],
+      [
+        "Year 9",
+        "525",
+        "522",
+        "547",
+        "524",
+        "531"
+      ]
+    ]
+  }
+}

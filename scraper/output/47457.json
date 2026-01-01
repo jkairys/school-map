@@ -1,0 +1,39 @@
+{
+  "acaraId": "47457",
+  "schoolName": "Stanthorpe State High School, Stanthorpe, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "523",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "506",
+        "487",
+        "505",
+        "512",
+        "506"
+      ],
+      [
+        "Year 9",
+        "528",
+        "524",
+        "540",
+        "528",
+        "534"
+      ]
+    ]
+  }
+}

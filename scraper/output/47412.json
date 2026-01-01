@@ -1,0 +1,39 @@
+{
+  "acaraId": "47412",
+  "schoolName": "Gympie State High School, Gympie, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1012",
+    "indigenousPercent": "11",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "484",
+        "466",
+        "509",
+        "469",
+        "476"
+      ],
+      [
+        "Year 9",
+        "537",
+        "514",
+        "541",
+        "514",
+        "524"
+      ]
+    ]
+  }
+}

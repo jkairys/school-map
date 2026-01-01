@@ -1,0 +1,39 @@
+{
+  "acaraId": "47435",
+  "schoolName": "Mitchelton State High School, Mitchelton, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "712",
+    "indigenousPercent": "13",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "509",
+        "516",
+        "520",
+        "512",
+        "510"
+      ],
+      [
+        "Year 9",
+        "564",
+        "540",
+        "569",
+        "570",
+        "570"
+      ]
+    ]
+  }
+}

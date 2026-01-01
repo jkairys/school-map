@@ -1,0 +1,39 @@
+{
+  "acaraId": "47471",
+  "schoolName": "Miami State High School, Miami, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1542",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "521",
+        "513",
+        "530",
+        "529",
+        "528"
+      ],
+      [
+        "Year 9",
+        "552",
+        "561",
+        "567",
+        "551",
+        "550"
+      ]
+    ]
+  }
+}

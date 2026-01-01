@@ -1,0 +1,39 @@
+{
+  "acaraId": "47418",
+  "schoolName": "Warwick State High School, Warwick, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "702",
+    "indigenousPercent": "25",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "492",
+        "482",
+        "486",
+        "494",
+        "495"
+      ],
+      [
+        "Year 9",
+        "548",
+        "526",
+        "544",
+        "530",
+        "540"
+      ]
+    ]
+  }
+}

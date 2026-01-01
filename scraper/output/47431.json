@@ -1,0 +1,39 @@
+{
+  "acaraId": "47431",
+  "schoolName": "Indooroopilly State High School, Indooroopilly, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2924",
+    "indigenousPercent": "1",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "576",
+        "559",
+        "572",
+        "582",
+        "595"
+      ],
+      [
+        "Year 9",
+        "610",
+        "622",
+        "603",
+        "621",
+        "632"
+      ]
+    ]
+  }
+}

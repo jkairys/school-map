@@ -1,0 +1,39 @@
+{
+  "acaraId": "47444",
+  "schoolName": "Bremer State High School, Ipswich, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2020",
+    "indigenousPercent": "17",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "488",
+        "478",
+        "506",
+        "488",
+        "493"
+      ],
+      [
+        "Year 9",
+        "526",
+        "533",
+        "548",
+        "516",
+        "521"
+      ]
+    ]
+  }
+}

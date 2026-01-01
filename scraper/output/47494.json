@@ -1,0 +1,39 @@
+{
+  "acaraId": "47494",
+  "schoolName": "Beerwah State High School, Beerwah, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "855",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "504",
+        "501",
+        "511",
+        "498",
+        "499"
+      ],
+      [
+        "Year 9",
+        "535",
+        "531",
+        "544",
+        "515",
+        "518"
+      ]
+    ]
+  }
+}

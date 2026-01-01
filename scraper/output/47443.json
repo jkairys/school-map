@@ -1,0 +1,39 @@
+{
+  "acaraId": "47443",
+  "schoolName": "Pimlico State High School, Gulliver, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1465",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "520",
+        "512",
+        "520",
+        "516",
+        "516"
+      ],
+      [
+        "Year 9",
+        "547",
+        "549",
+        "560",
+        "536",
+        "539"
+      ]
+    ]
+  }
+}

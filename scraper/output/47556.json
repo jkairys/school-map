@@ -1,0 +1,39 @@
+{
+  "acaraId": "47556",
+  "schoolName": "Wellington Point State High School, Wellington Point, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "767",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "512",
+        "513",
+        "520",
+        "509",
+        "530"
+      ],
+      [
+        "Year 9",
+        "522",
+        "493",
+        "536",
+        "513",
+        "523"
+      ]
+    ]
+  }
+}

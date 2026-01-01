@@ -1,0 +1,39 @@
+{
+  "acaraId": "47410",
+  "schoolName": "Cairns State High School, Cairns North, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1636",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "533",
+        "526",
+        "544",
+        "542",
+        "549"
+      ],
+      [
+        "Year 9",
+        "577",
+        "595",
+        "583",
+        "576",
+        "585"
+      ]
+    ]
+  }
+}

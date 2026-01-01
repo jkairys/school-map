@@ -1,0 +1,39 @@
+{
+  "acaraId": "47462",
+  "schoolName": "Ipswich State High School, Brassall, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1776",
+    "indigenousPercent": "16",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "468",
+        "467",
+        "500",
+        "465",
+        "461"
+      ],
+      [
+        "Year 9",
+        "493",
+        "489",
+        "527",
+        "466",
+        "485"
+      ]
+    ]
+  }
+}

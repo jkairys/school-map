@@ -1,0 +1,39 @@
+{
+  "acaraId": "47451",
+  "schoolName": "Trinity Bay State High School, Manunda, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1784",
+    "indigenousPercent": "34",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "473",
+        "474",
+        "461",
+        "475",
+        "467"
+      ],
+      [
+        "Year 9",
+        "511",
+        "511",
+        "526",
+        "487",
+        "509"
+      ]
+    ]
+  }
+}

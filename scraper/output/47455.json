@@ -1,0 +1,39 @@
+{
+  "acaraId": "47455",
+  "schoolName": "Lockyer District State High School, Gatton, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "950",
+    "indigenousPercent": "11",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "478",
+        "453",
+        "493",
+        "479",
+        "496"
+      ],
+      [
+        "Year 9",
+        "524",
+        "512",
+        "529",
+        "504",
+        "525"
+      ]
+    ]
+  }
+}

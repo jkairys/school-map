@@ -1,0 +1,39 @@
+{
+  "acaraId": "47536",
+  "schoolName": "Nanango State High School, Nanango, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "488",
+    "indigenousPercent": "17",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "489",
+        "483",
+        "500",
+        "471",
+        "485"
+      ],
+      [
+        "Year 9",
+        "559",
+        "547",
+        "555",
+        "542",
+        "529"
+      ]
+    ]
+  }
+}

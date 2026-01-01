@@ -1,0 +1,39 @@
+{
+  "acaraId": "47486",
+  "schoolName": "Sarina State High School, Sarina, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "775",
+    "indigenousPercent": "16",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "485",
+        "465",
+        "491",
+        "485",
+        "489"
+      ],
+      [
+        "Year 9",
+        "518",
+        "505",
+        "536",
+        "502",
+        "512"
+      ]
+    ]
+  }
+}

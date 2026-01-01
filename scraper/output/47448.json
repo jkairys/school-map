@@ -1,0 +1,39 @@
+{
+  "acaraId": "47448",
+  "schoolName": "Yeronga State High School, Yeronga, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1020",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "526",
+        "516",
+        "536",
+        "518",
+        "527"
+      ],
+      [
+        "Year 9",
+        "561",
+        "549",
+        "551",
+        "541",
+        "542"
+      ]
+    ]
+  }
+}

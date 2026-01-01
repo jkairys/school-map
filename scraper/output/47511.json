@@ -1,0 +1,39 @@
+{
+  "acaraId": "47511",
+  "schoolName": "Bundamba State Secondary College, Bundamba, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "794",
+    "indigenousPercent": "22",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "471",
+        "458",
+        "479",
+        "457",
+        "463"
+      ],
+      [
+        "Year 9",
+        "524",
+        "492",
+        "538",
+        "500",
+        "510"
+      ]
+    ]
+  }
+}

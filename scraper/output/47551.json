@@ -1,0 +1,39 @@
+{
+  "acaraId": "47551",
+  "schoolName": "Bray Park State High School, Bray Park, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1830",
+    "indigenousPercent": "9",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "511",
+        "497",
+        "517",
+        "518",
+        "512"
+      ],
+      [
+        "Year 9",
+        "554",
+        "564",
+        "565",
+        "548",
+        "548"
+      ]
+    ]
+  }
+}

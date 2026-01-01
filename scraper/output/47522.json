@@ -1,0 +1,39 @@
+{
+  "acaraId": "47522",
+  "schoolName": "St George State High School, St George, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "189",
+    "indigenousPercent": "54",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "464",
+        "433",
+        "481",
+        "443",
+        "478"
+      ],
+      [
+        "Year 9",
+        "496",
+        "444",
+        "488",
+        "466",
+        "495"
+      ]
+    ]
+  }
+}

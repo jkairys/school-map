@@ -1,0 +1,39 @@
+{
+  "acaraId": "47480",
+  "schoolName": "Kepnock State High School, Kepnock, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1074",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "465",
+        "443",
+        "492",
+        "462",
+        "470"
+      ],
+      [
+        "Year 9",
+        "516",
+        "468",
+        "516",
+        "474",
+        "501"
+      ]
+    ]
+  }
+}

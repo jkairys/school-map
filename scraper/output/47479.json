@@ -1,0 +1,39 @@
+{
+  "acaraId": "47479",
+  "schoolName": "Home Hill State High School, Home Hill, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "165",
+    "indigenousPercent": "26",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "469",
+        "477",
+        "506",
+        "510",
+        "457"
+      ],
+      [
+        "Year 9",
+        "478",
+        "472",
+        "480",
+        "406",
+        "485"
+      ]
+    ]
+  }
+}

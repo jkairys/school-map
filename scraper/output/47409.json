@@ -1,0 +1,39 @@
+{
+  "acaraId": "47409",
+  "schoolName": "Bundaberg State High School, Bundaberg South, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1593",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "498",
+        "481",
+        "508",
+        "499",
+        "496"
+      ],
+      [
+        "Year 9",
+        "534",
+        "524",
+        "545",
+        "527",
+        "521"
+      ]
+    ]
+  }
+}

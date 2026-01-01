@@ -1,0 +1,39 @@
+{
+  "acaraId": "47515",
+  "schoolName": "Blackwater State High School, Blackwater, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "307",
+    "indigenousPercent": "26",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "469",
+        "447",
+        "488",
+        "468",
+        "468"
+      ],
+      [
+        "Year 9",
+        "517",
+        "520",
+        "530",
+        "506",
+        "497"
+      ]
+    ]
+  }
+}

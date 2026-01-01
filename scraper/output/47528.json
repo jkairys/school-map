@@ -1,0 +1,39 @@
+{
+  "acaraId": "47528",
+  "schoolName": "Shailer Park State High School, Shailer Park, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "958",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "507",
+        "509",
+        "520",
+        "505",
+        "505"
+      ],
+      [
+        "Year 9",
+        "552",
+        "567",
+        "563",
+        "550",
+        "559"
+      ]
+    ]
+  }
+}

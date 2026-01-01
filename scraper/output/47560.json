@@ -1,0 +1,39 @@
+{
+  "acaraId": "47560",
+  "schoolName": "Elanora State High School, Elanora, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "949",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "535",
+        "516",
+        "537",
+        "534",
+        "528"
+      ],
+      [
+        "Year 9",
+        "563",
+        "581",
+        "561",
+        "555",
+        "562"
+      ]
+    ]
+  }
+}

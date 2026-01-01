@@ -1,0 +1,39 @@
+{
+  "acaraId": "47463",
+  "schoolName": "Cleveland District State High School, Cleveland, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2302",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "524",
+        "528",
+        "530",
+        "523",
+        "529"
+      ],
+      [
+        "Year 9",
+        "562",
+        "567",
+        "566",
+        "552",
+        "571"
+      ]
+    ]
+  }
+}

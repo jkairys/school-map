@@ -1,0 +1,39 @@
+{
+  "acaraId": "47514",
+  "schoolName": "Kilcoy State High School, Kilcoy, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "432",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "506",
+        "503",
+        "508",
+        "499",
+        "503"
+      ],
+      [
+        "Year 9",
+        "519",
+        "515",
+        "542",
+        "505",
+        "529"
+      ]
+    ]
+  }
+}

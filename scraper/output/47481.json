@@ -1,0 +1,39 @@
+{
+  "acaraId": "47481",
+  "schoolName": "Mackay North State High School, North Mackay, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1253",
+    "indigenousPercent": "14",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "503",
+        "508",
+        "522",
+        "518",
+        "516"
+      ],
+      [
+        "Year 9",
+        "519",
+        "549",
+        "554",
+        "532",
+        "533"
+      ]
+    ]
+  }
+}

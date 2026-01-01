@@ -1,0 +1,39 @@
+{
+  "acaraId": "46705",
+  "schoolName": "Narangba Valley State High School, Narangba, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1821",
+    "indigenousPercent": "5",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "516",
+        "520",
+        "519",
+        "514",
+        "524"
+      ],
+      [
+        "Year 9",
+        "557",
+        "571",
+        "562",
+        "552",
+        "557"
+      ]
+    ]
+  }
+}

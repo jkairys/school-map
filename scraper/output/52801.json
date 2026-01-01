@@ -1,0 +1,39 @@
+{
+  "acaraId": "52801",
+  "schoolName": "Calliope State High School, Calliope, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "437",
+    "indigenousPercent": "10",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "487",
+        "471",
+        "483",
+        "481",
+        "481"
+      ],
+      [
+        "Year 9",
+        "515",
+        "472",
+        "518",
+        "484",
+        "496"
+      ]
+    ]
+  }
+}

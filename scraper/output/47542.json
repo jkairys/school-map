@@ -1,0 +1,39 @@
+{
+  "acaraId": "47542",
+  "schoolName": "Laidley State High School, Laidley, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "672",
+    "indigenousPercent": "18",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "475",
+        "469",
+        "489",
+        "459",
+        "478"
+      ],
+      [
+        "Year 9",
+        "506",
+        "472",
+        "533",
+        "477",
+        "490"
+      ]
+    ]
+  }
+}

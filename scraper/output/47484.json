@@ -1,0 +1,39 @@
+{
+  "acaraId": "47484",
+  "schoolName": "Oakey State High School, Oakey, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "455",
+    "indigenousPercent": "17",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "500",
+        "491",
+        "506",
+        "511",
+        "501"
+      ],
+      [
+        "Year 9",
+        "551",
+        "575",
+        "563",
+        "538",
+        "546"
+      ]
+    ]
+  }
+}
