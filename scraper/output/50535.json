@@ -1,0 +1,41 @@
+{
+  "acaraId": "50535",
+  "schoolName": "Mackay Northern Beaches State High School, Rural View, QLD",
+  "profileData": {
+    "icsea": "950",
+    "icseaPercentile": "25",
+    "enrolmentsBoys": "548",
+    "enrolmentsGirls": "464",
+    "totalEnrolments": "1012",
+    "indigenousPercent": "013",
+    "lbotePercent": "10"
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "484",
+        "476",
+        "511",
+        "486",
+        "493"
+      ],
+      [
+        "Year 9",
+        "506",
+        "508",
+        "532",
+        "476",
+        "500"
+      ]
+    ]
+  }
+}
