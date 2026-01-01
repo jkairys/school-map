@@ -1,5 +1,6 @@
 import { chromium } from 'playwright-extra';
 import stealthPlugin from 'puppeteer-extra-plugin-stealth';
+import UserAgent from 'user-agents';
 import fs from 'fs';
 import path from 'path';
 
@@ -60,10 +61,41 @@ async function acceptTermsOfUse(page) {
   return false;
 }
 
+
+
+async function humanLikeInteraction(page) {
+  try {
+    const viewport = page.viewportSize();
+    if (!viewport) return; // Should not happen but safety first
+
+    // Random mouse movements
+    await page.mouse.move(
+      Math.floor(Math.random() * viewport.width),
+      Math.floor(Math.random() * viewport.height)
+    );
+    await new Promise(r => setTimeout(r, Math.random() * 500 + 200));
+
+    await page.mouse.move(
+      Math.floor(Math.random() * viewport.width),
+      Math.floor(Math.random() * viewport.height)
+    );
+    await new Promise(r => setTimeout(r, Math.random() * 500 + 200));
+
+    // Scroll
+    await page.evaluate(() => window.scrollBy(0, window.innerHeight / 2));
+    await new Promise(r => setTimeout(r, Math.random() * 1000 + 500));
+  } catch (e) {
+    // Ignore errors here, just an enhancement
+  }
+}
+
 async function navigateWithTermsHandling(page, url, options = {}) {
   const { timeout = 60000 } = options;
 
   await page.goto(url, { waitUntil: 'networkidle', timeout });
+
+  await page.goto(url, { waitUntil: 'networkidle', timeout });
+  await humanLikeInteraction(page);
 
   // Check and handle terms page after navigation
   const acceptedTerms = await acceptTermsOfUse(page);
@@ -232,12 +264,38 @@ async function run() {
   }
 
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36',
-    viewport: { width: 1280, height: 720 }
-  });
+  let context = null;
+  let page = null;
+  let requestCount = 0;
 
-  const page = await context.newPage();
+  const closeContext = async () => {
+    if (context) {
+      await context.close().catch(() => { });
+      context = null;
+      page = null;
+    }
+  };
+
+  const createNewContext = async () => {
+    await closeContext();
+    const userAgent = new UserAgent({ deviceCategory: 'desktop' });
+    console.log(`Creating new context with UA: ${userAgent.toString()}`);
+    context = await browser.newContext({
+      userAgent: userAgent.toString(),
+      viewport: { width: 1280, height: 720 }
+    });
+    page = await context.newPage();
+
+    console.log('Navigating to site to accept terms of use (new context)...');
+    try {
+      await page.goto('https://myschool.edu.au', { waitUntil: 'networkidle', timeout: 60000 });
+      await humanLikeInteraction(page);
+      await acceptTermsOfUse(page);
+    } catch (e) {
+      console.log('Initial terms acceptance failed for new context:', e.message);
+    }
+    requestCount = 0;
+  };
 
   if (isBatch) {
     if (!fs.existsSync(SCHOOLS_FILE)) {
@@ -247,18 +305,18 @@ async function run() {
     const schools = JSON.parse(fs.readFileSync(SCHOOLS_FILE, 'utf8'));
     console.log(`Found ${schools.length} schools. Starting batch processing...`);
 
-    // Accept terms of use before starting batch
-    console.log('Navigating to site to accept terms of use...');
-    try {
-      await page.goto('https://myschool.edu.au', { waitUntil: 'networkidle', timeout: 60000 });
-      await acceptTermsOfUse(page);
-    } catch (e) {
-      console.log('Initial terms acceptance navigation failed, will retry per-school:', e.message);
-    }
+    // Initial context
+    await createNewContext();
 
     const failedSchools = [];
 
     for (let i = 0; i < schools.length; i++) {
+      // Context rotation every 5 requests
+      if (requestCount >= 5) {
+        console.log('Rotating context...');
+        await createNewContext();
+      }
+
       const school = schools[i];
       const acaraId = school.ACARAId;
 
@@ -270,6 +328,9 @@ async function run() {
         attempts++;
         if (attempts > 1) {
           console.log(`[${acaraId}] Retry attempt ${attempts}/${MAX_RETRIES}...`);
+          // Force new context on retry
+          console.log(`[${acaraId}] Forcing new context for retry...`);
+          await createNewContext();
           // Wait longer between retries
           await new Promise(resolve => setTimeout(resolve, 10000));
         }
@@ -278,15 +339,8 @@ async function run() {
         success = result.success;
         skipped = result.skipped;
 
-        // If failed, check if we need to re-accept terms (session might have expired)
-        if (!success && attempts < MAX_RETRIES) {
-          console.log(`[${acaraId}] Attempting to refresh session...`);
-          try {
-            await page.goto('https://myschool.edu.au', { waitUntil: 'networkidle', timeout: 60000 });
-            await acceptTermsOfUse(page);
-          } catch (e) {
-            console.log(`[${acaraId}] Session refresh failed:`, e.message);
-          }
+        if (!skipped) {
+          requestCount++;
         }
       }
 
@@ -295,7 +349,7 @@ async function run() {
       }
 
       if (i < schools.length - 1 && !skipped) {
-        const delay = Math.floor(Math.random() * 5000) + 5000; // 5-10 second delay
+        const delay = Math.floor(Math.random() * 7000) + 8000; // 8-15 second delay
         console.log(`Waiting ${delay}ms before next school...`);
         await new Promise(resolve => setTimeout(resolve, delay));
       }
@@ -307,14 +361,7 @@ async function run() {
       fs.writeFileSync(path.join(OUTPUT_DIR, 'failed_schools.json'), JSON.stringify(failedSchools, null, 2));
     }
   } else {
-    // Accept terms of use before scraping single school
-    console.log('Navigating to site to accept terms of use...');
-    try {
-      await page.goto('https://myschool.edu.au', { waitUntil: 'networkidle', timeout: 60000 });
-      await acceptTermsOfUse(page);
-    } catch (e) {
-      console.log('Initial terms acceptance failed, will handle during scrape:', e.message);
-    }
+    await createNewContext();
     await scrapeSchool(page, singleId);
   }
 

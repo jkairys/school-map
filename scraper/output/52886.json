@@ -1,0 +1,39 @@
+{
+  "acaraId": "52886",
+  "schoolName": "Baringa State Secondary College, Baringa, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "677",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "500",
+        "500",
+        "517",
+        "502",
+        "488"
+      ],
+      [
+        "Year 9",
+        "543",
+        "541",
+        "560",
+        "544",
+        "536"
+      ]
+    ]
+  }
+}

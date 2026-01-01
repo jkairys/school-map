@@ -1,0 +1,39 @@
+{
+  "acaraId": "47468",
+  "schoolName": "Beaudesert State High School, Beaudesert, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1257",
+    "indigenousPercent": "13",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "474",
+        "475",
+        "493",
+        "467",
+        "467"
+      ],
+      [
+        "Year 9",
+        "504",
+        "497",
+        "522",
+        "469",
+        "486"
+      ]
+    ]
+  }
+}

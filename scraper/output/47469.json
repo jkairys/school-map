@@ -1,0 +1,39 @@
+{
+  "acaraId": "47469",
+  "schoolName": "Beenleigh State High School, Beenleigh, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2358",
+    "indigenousPercent": "13",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "493",
+        "495",
+        "505",
+        "495",
+        "491"
+      ],
+      [
+        "Year 9",
+        "525",
+        "510",
+        "539",
+        "499",
+        "501"
+      ]
+    ]
+  }
+}

@@ -5,6 +5,7 @@
   "dependencies": {
     "playwright": "^1.49.1",
     "playwright-extra": "^4.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "user-agents": "^1.1.669"
   }
 }
