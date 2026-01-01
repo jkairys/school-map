@@ -4,6 +4,7 @@ import './index.css';
 
 function App() {
   const [hoveredSchool, setHoveredSchool] = React.useState(null);
+  const [selectedCompetency, setSelectedCompetency] = React.useState('Reading');
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-gray-50 text-gray-900 font-sans">
@@ -16,6 +17,27 @@ function App() {
           <p className="text-sm text-gray-500 mt-1">
             Catchment zones & property insights
           </p>
+
+          <div className="mt-4">
+            <label htmlFor="competency" className="block text-xs font-semibold text-gray-500 mb-1 uppercase">
+              NAPLAN Competency
+            </label>
+            <select
+              id="competency"
+              className="block w-full pl-3 pr-10 py-2 text-sm border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
+              value={selectedCompetency}
+              onChange={(e) => setSelectedCompetency(e.target.value)}
+            >
+              {['Reading', 'Writing', 'Spelling', 'Grammar', 'Numeracy'].map((comp) => (
+                <option key={comp} value={comp}>
+                  {comp}
+                </option>
+              ))}
+            </select>
+            <p className="text-xs text-gray-400 mt-1">
+              Map colors compare schools to state average.
+            </p>
+          </div>
         </div>
 
         <div className="p-6 flex-1 overflow-y-auto">
@@ -116,7 +138,10 @@ function App() {
 
       {/* Map Area */}
       <main className="flex-1 relative">
-        <MapComponent onSchoolHover={setHoveredSchool} />
+        <MapComponent
+          onSchoolHover={setHoveredSchool}
+          selectedCompetency={selectedCompetency}
+        />
       </main>
     </div>
   );
