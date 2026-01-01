@@ -8,9 +8,79 @@ chromium.use(stealthPlugin());
 
 const OUTPUT_DIR = path.join(process.cwd(), 'output');
 const SCHOOLS_FILE = path.join(process.cwd(), 'schools.json');
+const MAX_RETRIES = 3;
 
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);
+}
+
+async function acceptTermsOfUse(page) {
+  // Check if we're on the terms of use page
+  const isTermsPage = await page.evaluate(() => {
+    return document.body.innerText.includes('My School – terms of use') ||
+      document.body.innerText.includes('terms of use') &&
+      document.body.innerText.includes('Please accept the terms of use');
+  });
+
+  if (isTermsPage) {
+    console.log('Terms of use page detected, accepting...');
+
+    // Find and check the checkbox by clicking its label
+    // The actual input is hidden (opacity: 0), so we must click the label
+    const label = await page.$('label.tou-checkbox-inline');
+    if (label) {
+      await label.click();
+    } else {
+      // Fallback: try checking with force: true if label is missing (unlikely)
+      const checkbox = await page.$('input[type="checkbox"]');
+      if (checkbox) {
+        await checkbox.check({ force: true });
+      }
+    }
+
+    // click the Accept button
+    // Wait for button to be enabled first
+    const acceptButton = await page.waitForSelector('button:has-text("Accept"), input[type="submit"][value*="Accept"], a:has-text("Accept")', { state: 'visible' });
+
+    if (acceptButton) {
+      // Ensure it's not disabled (sometimes there's a slight delay after checking)
+      await page.waitForFunction(btn => !btn.disabled, acceptButton, { timeout: 5000 }).catch(() => { });
+
+      await acceptButton.click();
+      await page.waitForLoadState('networkidle', { timeout: 30000 });
+      console.log('Terms accepted successfully.');
+      return true;
+    } else {
+      // Try finding by text content as last resort
+      await page.click('text=Accept', { timeout: 5000 }).catch(() => { });
+      await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => { });
+      return true;
+    }
+  }
+  return false;
+}
+
+async function navigateWithTermsHandling(page, url, options = {}) {
+  const { timeout = 60000 } = options;
+
+  await page.goto(url, { waitUntil: 'networkidle', timeout });
+
+  // Check and handle terms page after navigation
+  const acceptedTerms = await acceptTermsOfUse(page);
+
+  if (acceptedTerms) {
+    // If we accepted terms, we may have been redirected. Navigate again.
+    await page.goto(url, { waitUntil: 'networkidle', timeout });
+  }
+
+  // Final check - if still on terms page, throw error
+  const stillOnTerms = await page.evaluate(() => {
+    return document.body.innerText.includes('My School – terms of use');
+  });
+
+  if (stillOnTerms) {
+    throw new Error('Failed to navigate past terms of use page');
+  }
 }
 
 async function scrapeSchool(page, acaraId) {
@@ -19,19 +89,36 @@ async function scrapeSchool(page, acaraId) {
   const outputPath = path.join(OUTPUT_DIR, `${acaraId}.json`);
   if (fs.existsSync(outputPath)) {
     console.log(`[${acaraId}] Already scraped. Skipping.`);
-    return true;
+    return { success: true, skipped: true };
   }
 
   try {
     // 1. Navigate to School Profile
     const profileUrl = `https://myschool.edu.au/school/${acaraId}`;
-    await page.goto(profileUrl, { waitUntil: 'networkidle', timeout: 60000 });
+    await navigateWithTermsHandling(page, profileUrl);
 
     // Handle potential Cloudflare/Turnstile wall
     const wallText = await page.evaluate(() => document.body.innerText.includes('Checking your browser'));
     if (wallText) {
       console.log(`[${acaraId}] Cloudflare wall detected, waiting for challenge to resolve...`);
       await page.waitForTimeout(10000);
+    }
+
+    // Validate we're on the school page, not an error page or terms page
+    const pageValidation = await page.evaluate(() => {
+      const bodyText = document.body.innerText;
+      const isTermsPage = bodyText.includes('terms of use') && bodyText.includes('Please accept');
+      const isNotFoundPage = bodyText.includes('Page not found') || bodyText.includes('404');
+      const isErrorPage = bodyText.includes('Something went wrong') || bodyText.includes('Error');
+      const hasSchoolContent = document.querySelector('.school-name, .cmp-school-header, h1') !== null;
+      return { isTermsPage, isNotFoundPage, isErrorPage, hasSchoolContent };
+    });
+
+    if (pageValidation.isTermsPage) {
+      throw new Error('Still on terms of use page after navigation');
+    }
+    if (pageValidation.isNotFoundPage) {
+      throw new Error('School page not found (404)');
     }
 
     // Extract School Name and Profile Data
@@ -96,7 +183,7 @@ async function scrapeSchool(page, acaraId) {
 
     // 2. Navigate to NAPLAN Results
     const naplanUrl = `${profileUrl}/naplan/results`;
-    await page.goto(naplanUrl, { waitUntil: 'networkidle', timeout: 60000 });
+    await navigateWithTermsHandling(page, naplanUrl);
 
     // Wait for the results table or specific content to load
     await page.waitForSelector('.naplan-results-container, .cmp-naplan-results, table', { timeout: 30000 }).catch(() => {
@@ -126,12 +213,12 @@ async function scrapeSchool(page, acaraId) {
     });
 
     fs.writeFileSync(outputPath, JSON.stringify({ acaraId, schoolName, profileData, results }, null, 2));
-    return true;
+    return { success: true, skipped: false };
 
   } catch (error) {
     console.error(`[${acaraId}] Error:`, error.message);
     await page.screenshot({ path: path.join(OUTPUT_DIR, `error_${acaraId}.png`) }).catch(() => { });
-    return false;
+    return { success: false, skipped: false };
   }
 }
 
@@ -160,19 +247,74 @@ async function run() {
     const schools = JSON.parse(fs.readFileSync(SCHOOLS_FILE, 'utf8'));
     console.log(`Found ${schools.length} schools. Starting batch processing...`);
 
+    // Accept terms of use before starting batch
+    console.log('Navigating to site to accept terms of use...');
+    try {
+      await page.goto('https://myschool.edu.au', { waitUntil: 'networkidle', timeout: 60000 });
+      await acceptTermsOfUse(page);
+    } catch (e) {
+      console.log('Initial terms acceptance navigation failed, will retry per-school:', e.message);
+    }
+
+    const failedSchools = [];
+
     for (let i = 0; i < schools.length; i++) {
       const school = schools[i];
       const acaraId = school.ACARAId;
 
-      const success = await scrapeSchool(page, acaraId);
+      let success = false;
+      let skipped = false;
+      let attempts = 0;
 
-      if (success && i < schools.length - 1) {
+      while (!success && attempts < MAX_RETRIES) {
+        attempts++;
+        if (attempts > 1) {
+          console.log(`[${acaraId}] Retry attempt ${attempts}/${MAX_RETRIES}...`);
+          // Wait longer between retries
+          await new Promise(resolve => setTimeout(resolve, 10000));
+        }
+
+        const result = await scrapeSchool(page, acaraId);
+        success = result.success;
+        skipped = result.skipped;
+
+        // If failed, check if we need to re-accept terms (session might have expired)
+        if (!success && attempts < MAX_RETRIES) {
+          console.log(`[${acaraId}] Attempting to refresh session...`);
+          try {
+            await page.goto('https://myschool.edu.au', { waitUntil: 'networkidle', timeout: 60000 });
+            await acceptTermsOfUse(page);
+          } catch (e) {
+            console.log(`[${acaraId}] Session refresh failed:`, e.message);
+          }
+        }
+      }
+
+      if (!success) {
+        failedSchools.push(acaraId);
+      }
+
+      if (i < schools.length - 1 && !skipped) {
         const delay = Math.floor(Math.random() * 5000) + 5000; // 5-10 second delay
         console.log(`Waiting ${delay}ms before next school...`);
         await new Promise(resolve => setTimeout(resolve, delay));
       }
     }
+
+    if (failedSchools.length > 0) {
+      console.log(`\n=== Failed schools (${failedSchools.length}): ===`);
+      console.log(failedSchools.join(', '));
+      fs.writeFileSync(path.join(OUTPUT_DIR, 'failed_schools.json'), JSON.stringify(failedSchools, null, 2));
+    }
   } else {
+    // Accept terms of use before scraping single school
+    console.log('Navigating to site to accept terms of use...');
+    try {
+      await page.goto('https://myschool.edu.au', { waitUntil: 'networkidle', timeout: 60000 });
+      await acceptTermsOfUse(page);
+    } catch (e) {
+      console.log('Initial terms acceptance failed, will handle during scrape:', e.message);
+    }
     await scrapeSchool(page, singleId);
   }
 

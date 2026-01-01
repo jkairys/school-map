@@ -1,0 +1,39 @@
+{
+  "acaraId": "47466",
+  "schoolName": "Aviation High, Hendra, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "610",
+    "indigenousPercent": "3",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "566",
+        "571",
+        "564",
+        "564",
+        "569"
+      ],
+      [
+        "Year 9",
+        "560",
+        "569",
+        "569",
+        "555",
+        "566"
+      ]
+    ]
+  }
+}

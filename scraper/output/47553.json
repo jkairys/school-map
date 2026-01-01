@@ -1,0 +1,41 @@
+{
+  "acaraId": "47553",
+  "schoolName": "Alexandra Hills State High School, Alexandra Hills, QLD",
+  "profileData": {
+    "icsea": "984",
+    "icseaPercentile": "39",
+    "enrolmentsBoys": "775",
+    "enrolmentsGirls": "685",
+    "totalEnrolments": "1460",
+    "indigenousPercent": "09",
+    "lbotePercent": "11"
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "497",
+        "474",
+        "506",
+        "490",
+        "501"
+      ],
+      [
+        "Year 9",
+        "541",
+        "530",
+        "554",
+        "538",
+        "534"
+      ]
+    ]
+  }
+}

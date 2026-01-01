@@ -1,0 +1,39 @@
+{
+  "acaraId": "47413",
+  "schoolName": "Ayr State High School, Ayr, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "497",
+    "indigenousPercent": "25",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "471",
+        "470",
+        "484",
+        "487",
+        "491"
+      ],
+      [
+        "Year 9",
+        "512",
+        "508",
+        "532",
+        "515",
+        "528"
+      ]
+    ]
+  }
+}

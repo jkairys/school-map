@@ -1,0 +1,41 @@
+{
+  "acaraId": "47419",
+  "schoolName": "Aldridge State High School, Maryborough, QLD",
+  "profileData": {
+    "icsea": "932",
+    "icseaPercentile": "19",
+    "enrolmentsBoys": "275",
+    "enrolmentsGirls": "306",
+    "totalEnrolments": "581",
+    "indigenousPercent": "016",
+    "lbotePercent": "5"
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "476",
+        "472",
+        "488",
+        "467",
+        "463"
+      ],
+      [
+        "Year 9",
+        "523",
+        "545",
+        "540",
+        "533",
+        "523"
+      ]
+    ]
+  }
+}

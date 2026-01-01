@@ -1,0 +1,39 @@
+{
+  "acaraId": "47464",
+  "schoolName": "Aspley State High School, Aspley, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1144",
+    "indigenousPercent": "6",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "516",
+        "506",
+        "525",
+        "511",
+        "517"
+      ],
+      [
+        "Year 9",
+        "543",
+        "545",
+        "552",
+        "539",
+        "541"
+      ]
+    ]
+  }
+}

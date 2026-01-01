@@ -1,0 +1,41 @@
+{
+  "acaraId": "47534",
+  "schoolName": "Albany Creek State High School, Albany Creek, QLD",
+  "profileData": {
+    "icsea": "1055",
+    "icseaPercentile": "70",
+    "enrolmentsBoys": "765",
+    "enrolmentsGirls": "785",
+    "totalEnrolments": "1550",
+    "indigenousPercent": "03",
+    "lbotePercent": "11"
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "533",
+        "524",
+        "539",
+        "543",
+        "537"
+      ],
+      [
+        "Year 9",
+        "573",
+        "583",
+        "570",
+        "570",
+        "578"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "acaraId": "47445",
+  "schoolName": "Atherton State High School, Atherton, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "781",
+    "indigenousPercent": "15",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "473",
+        "462",
+        "485",
+        "476",
+        "468"
+      ],
+      [
+        "Year 9",
+        "509",
+        "509",
+        "536",
+        "493",
+        "509"
+      ]
+    ]
+  }
+}
