@@ -85,11 +85,20 @@
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  font-size: 10px !important;
-  font-weight: 500 !important;
+  font-size: var(--label-font-size, 10px) !important;
+  font-weight: 600 !important;
   color: #1e40af !important;
   white-space: nowrap !important;
   padding: 0 !important;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white,
+    0 -1px 0 white,
+    0 1px 0 white,
+    -1px 0 0 white,
+    1px 0 0 white !important;
 }
 
 .school-label::before {

@@ -26,9 +26,58 @@ function MapUpdater({ selectedSchool }: { selectedSchool: SchoolSite | null }) {
   return null
 }
 
+function ZoomTracker({ onZoomChange }: { onZoomChange: (zoom: number) => void }) {
+  const map = useMap()
+
+  useEffect(() => {
+    const updateZoom = () => {
+      const zoom = map.getZoom()
+      onZoomChange(zoom)
+      // Set CSS variable for font scaling
+      const container = map.getContainer()
+      container.style.setProperty('--label-font-size', `${getLabelFontSize(zoom)}px`)
+    }
+
+    updateZoom()
+    map.on('zoomend', updateZoom)
+    return () => {
+      map.off('zoomend', updateZoom)
+    }
+  }, [map, onZoomChange])
+
+  return null
+}
+
+// Calculate label font size based on zoom level
+function getLabelFontSize(zoom: number): number {
+  // Scale from 8px at zoom 9 to 13px at zoom 15
+  const minZoom = 9
+  const maxZoom = 15
+  const minSize = 8
+  const maxSize = 13
+
+  const clampedZoom = Math.max(minZoom, Math.min(maxZoom, zoom))
+  const ratio = (clampedZoom - minZoom) / (maxZoom - minZoom)
+  return minSize + ratio * (maxSize - minSize)
+}
+
 function SchoolMap({ filters, selectedSchoolName, setSelectedSchoolName }: SchoolMapProps) {
   const brisbaneCenter: LatLngExpression = [-27.4698, 153.0251]
   const [selectedCatchment, setSelectedCatchment] = useState<string | null>(null)
+  const [zoomLevel, setZoomLevel] = useState(11)
+
+  // Calculate circle radius based on zoom level
+  const getCircleRadius = (zoom: number): number => {
+    // Scale from 3px at zoom 9 to 10px at zoom 15
+    const minZoom = 9
+    const maxZoom = 15
+    const minRadius = 3
+    const maxRadius = 10
+
+    const clampedZoom = Math.max(minZoom, Math.min(maxZoom, zoom))
+    const ratio = (clampedZoom - minZoom) / (maxZoom - minZoom)
+    return minRadius + ratio * (maxRadius - minRadius)
+  }
 
   const filteredSchools = useMemo(() => {
     return schoolSites.filter(school => {
@@ -86,6 +135,7 @@ function SchoolMap({ filters, selectedSchoolName, setSelectedSchoolName }: Schoo
         />
 
         <MapUpdater selectedSchool={selectedSchool} />
+        <ZoomTracker onZoomChange={setZoomLevel} />
 
         {/* Render official catchment boundaries */}
         {filters.showCatchments && catchments.map(catchment => {
@@ -136,12 +186,11 @@ function SchoolMap({ filters, selectedSchoolName, setSelectedSchoolName }: Schoo
           <CircleMarker
             key={school.name}
             center={[school.latitude, school.longitude]}
-            radius={6}
+            radius={getCircleRadius(zoomLevel)}
             pathOptions={{
-              color: '#1a56db',
               fillColor: '#3b82f6',
-              fillOpacity: 0.8,
-              weight: 2
+              fillOpacity: 1,
+              stroke: false
             }}
             eventHandlers={{
               click: () => setSelectedSchoolName(school.name)
