@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, useMap, Pane } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -13,10 +13,27 @@ L.Icon.Default.mergeOptions({
 
 import { calculateStateAverages, getSchoolRelativeScore } from '../utils/naplanUtils';
 
+// Component to handle zoom classes on map container
+const ZoomHandler = () => {
+  const map = useMap();
+  useEffect(() => {
+    const updateZoom = () => {
+      const z = Math.round(map.getZoom());
+      map.getContainer().setAttribute('data-zoom', z);
+    };
+    map.on('zoom', updateZoom);
+    updateZoom(); // Init
+    return () => map.off('zoom', updateZoom);
+  }, [map]);
+  return null;
+};
+
+
 const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
   const [geoData, setGeoData] = useState(null);
   const [schoolData, setSchoolData] = useState(null);
   const [stateAverages, setStateAverages] = useState(null);
+  const [schoolSites, setSchoolSites] = useState(null);
 
   useEffect(() => {
     // Load Catchments
@@ -34,6 +51,12 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
         setStateAverages(averages);
       })
       .catch(err => console.error("Error loading NAPLAN data:", err));
+
+    // Load School Sites
+    fetch('/data/school_sites.geojson')
+      .then(res => res.json())
+      .then(data => setSchoolSites(data))
+      .catch(err => console.error("Error loading School Sites:", err));
   }, []);
 
   const getSchoolColor = (name) => {
@@ -131,6 +154,33 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
     };
   }, [schoolData, stateAverages, selectedCompetency]);
 
+  const onEachSchoolSite = useCallback((feature, layer) => {
+    // Label with school name
+    if (feature.properties && feature.properties.name) {
+      layer.bindTooltip(feature.properties.name, {
+        permanent: true,
+        direction: 'right',
+        className: 'school-site-label',
+        offset: [0, 0], // Center it better relative to the larger dot
+        pane: 'school-sites-pane' // Ensure labels are also on top
+      });
+    }
+  }, []);
+
+  const pointToLayerSchoolSite = useCallback((feature, latlng) => {
+    // Blue dot, no border. Using Circle (meters) so it scales with map.
+    // Radius: 150 meters (approx size of a school) to be visible at lower zooms
+    return L.circle(latlng, {
+      radius: 150,
+      stroke: false,
+      color: '#2563eb', // blue-600
+      fillColor: '#2563eb',
+      fillOpacity: 1,
+      pane: 'school-sites-pane' // Custom pane for Z-index
+    });
+  }, []);
+
+
   return (
     <MapContainer
       center={[-27.47, 153.02]}
@@ -138,15 +188,24 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
       style={{ height: '100%', width: '100%' }}
       className="z-0"
     >
+      <ZoomHandler />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <Pane name="school-sites-pane" style={{ zIndex: 650 }} />
       {geoData && (
         <GeoJSON
           data={geoData}
           style={style}
           onEachFeature={onEachFeature}
+        />
+      )}
+      {schoolSites && (
+        <GeoJSON
+          data={schoolSites}
+          pointToLayer={pointToLayerSchoolSite}
+          onEachFeature={onEachSchoolSite}
         />
       )}
     </MapContainer>

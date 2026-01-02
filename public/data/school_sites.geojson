@@ -1,0 +1,4115 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.96860599912344,
+          -27.357633999768,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Albany Creek SHS",
+        "centreCode": "2155"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.6885450034411,
+          -25.516557000693,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aldridge SHS",
+        "centreCode": "2017"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.21542799927528,
+          -27.52376800287,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Alexandra Hills SHS",
+        "centreCode": "2175"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.98618299373115,
+          -28.036193998675,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Allora P-10 SS",
+        "centreCode": "0003"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.6422630044492,
+          -23.650790995427,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Alpha SS",
+        "centreCode": "0517"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.2426839964774,
+          -22.974428998441,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aramac SS",
+        "centreCode": "0312"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.024213004084,
+          -27.357168993625,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aspley SHS",
+        "centreCode": "2076"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.48609200803244,
+          -17.260063998772,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Atherton SHS",
+        "centreCode": "2051"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.7293929957664,
+          -13.353032000893,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aurukun SS",
+        "centreCode": "0274"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.06299600633082,
+          -27.414323002196,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aviation High",
+        "centreCode": "2078"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.40961800459192,
+          -19.577044998422,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ayr SHS",
+        "centreCode": "2008"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.9126479936177,
+          -17.345974999493,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Babinda SS",
+        "centreCode": "1466"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0727860025809,
+          -27.456009996101,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Balmoral SHS",
+        "centreCode": "2043"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.80975600260467,
+          -24.181073000953,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Baralaba SS",
+        "centreCode": "1605"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.2940110015036,
+          -23.558838003615,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Barcaldine Prep-12 SS",
+        "centreCode": "0531"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.99700099573926,
+          -27.970748995869,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Beaudesert SHS",
+        "centreCode": "2083"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.2044180048821,
+          -27.715327003343,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Beenleigh SHS",
+        "centreCode": "2084"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.95403799233108,
+          -26.862791995001,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Beerwah SHS",
+        "centreCode": "2109"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.45299199465435,
+          -26.939739001801,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bell SS",
+        "centreCode": "0781"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.88378699396748,
+          -27.640517001292,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bellbird Park State Secondary College",
+        "centreCode": "9322"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.38850599360345,
+          -28.004752997243,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Benowa SHS",
+        "centreCode": "2150"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.74008100760716,
+          -17.009375999593,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bentley Park College",
+        "centreCode": "0452"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.047434004181,
+          -25.510708994224,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Biggenden SS",
+        "centreCode": "0666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.51783600476693,
+          -24.398895004588,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Biloela SHS",
+        "centreCode": "2085"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.46968099812042,
+          -24.425602997675,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Blackall SS",
+        "centreCode": "0299"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.88274000462695,
+          -23.572480003846,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Blackwater SHS",
+        "centreCode": "2134"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.68917200771295,
+          -27.995421998814,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Boonah SHS",
+        "centreCode": "2105"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.23557700619497,
+          -19.999110994118,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bowen SHS",
+        "centreCode": "2065"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.04409599237465,
+          -27.30735699659,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bracken Ridge SHS",
+        "centreCode": "2118"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.96196500537556,
+          -27.299893002872,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bray Park SHS",
+        "centreCode": "2173"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.75533200562612,
+          -27.633359002752,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bremer SHS",
+        "centreCode": "2050"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1660770067185,
+          -27.082965004224,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bribie Island SHS",
+        "centreCode": "2181"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1499960042308,
+          -27.461983000561,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Brisbane Bayside State College",
+        "centreCode": "2104"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.01809899944442,
+          -27.481774004464,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Brisbane SHS",
+        "centreCode": "2003"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0540030007933,
+          -27.669922003258,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Browns Plains SHS",
+        "centreCode": "2164"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.3396149953884,
+          -24.849463995642,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bundaberg North SHS",
+        "centreCode": "2019"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.34988900471285,
+          -24.877041003845,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bundaberg SHS",
+        "centreCode": "2004"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.81367900319188,
+          -27.614916004707,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bundamba State Secondary College",
+        "centreCode": "2130"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.60632099347492,
+          -25.631897993249,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Burnett State College",
+        "centreCode": "2089"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9472680049193,
+          -26.630400994658,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Burnside SHS",
+        "centreCode": "2145"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.97739300817202,
+          -27.170609000721,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Burpengary State Secondary College",
+        "centreCode": "9676"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.57819899786438,
+          -18.736203996532,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bwgcolman COM S",
+        "centreCode": "0379"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9610739984424,
+          -27.084139005194,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Caboolture SHS",
+        "centreCode": "2066"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.76802500172533,
+          -16.916645001999,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cairns SHS",
+        "centreCode": "2005"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.04289900657008,
+          -27.625696002117,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Calamvale Community College",
+        "centreCode": "1699"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.7704550030937,
+          -20.899302997176,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Calen District State College",
+        "centreCode": "1550"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1255450011821,
+          -26.793825998608,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Caloundra SHS",
+        "centreCode": "2116"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.18982600231794,
+          -27.536409994858,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Capalaba State College",
+        "centreCode": "5534"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.03048099791263,
+          -23.08815800456,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Capella SHS",
+        "centreCode": "2182"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.07298400047927,
+          -27.51682400517,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cavendish Road SHS",
+        "centreCode": "2025"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.19281800294848,
+          -27.532320995519,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cecil Plains SS",
+        "centreCode": "0734"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.9637279996284,
+          -27.579430000699,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Centenary Heights SHS",
+        "centreCode": "2121"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9403369967001,
+          -27.538681993545,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Centenary SHS",
+        "centreCode": "1668"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.06857500688096,
+          -26.714807994364,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Chancellor State College",
+        "centreCode": "2282"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.2574199966332,
+          -26.397434996264,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Charleville SHS",
+        "centreCode": "2068"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.25847300780703,
+          -20.080195994994,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Charters Towers SHS",
+        "centreCode": "2006"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.6199920042114,
+          -26.748743994108,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Chinchilla SHS",
+        "centreCode": "2087"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.6389310079763,
+          -22.827714993923,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Clermont SHS",
+        "centreCode": "2185"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.26029699470402,
+          -27.529880999241,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cleveland District SHS",
+        "centreCode": "2070"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.91681400388632,
+          -27.933979996146,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Clifton SHS",
+        "centreCode": "2111"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.50564000609972,
+          -20.704254000282,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cloncurry SS P-12",
+        "centreCode": "0411"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0861449929017,
+          -27.247945995414,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Clontarf Beach SHS",
+        "centreCode": "2091"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.83468800611564,
+          -20.548483995345,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Collinsville SHS",
+        "centreCode": "2171"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.25070599278524,
+          -15.482007000146,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cooktown SS",
+        "centreCode": "0177"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.08620599854552,
+          -26.501985995462,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Coolum SHS",
+        "centreCode": "2165"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.37838200702433,
+          -27.924341993216,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Coombabah SHS",
+        "centreCode": "2166"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.05373399901285,
+          -27.486362995764,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Coorparoo Secondary College",
+        "centreCode": "2077"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.98648499626813,
+          -27.544345999178,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Corinda SHS",
+        "centreCode": "2055"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0153790033157,
+          -27.383378004075,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Craigslea SHS",
+        "centreCode": "2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.05218600291334,
+          -27.264826001759,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Crow's Nest SS",
+        "centreCode": "0293"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.6793729998373,
+          -28.071136001798,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cunnamulla P-12 SS",
+        "centreCode": "0289"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9808309925406,
+          -27.22962500387,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Dakabin SHS",
+        "centreCode": "2142"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.25951000547963,
+          -27.178149994854,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Dalby SHS",
+        "centreCode": "2033"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0304999946358,
+          -27.199997999442,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Deception Bay SHS",
+        "centreCode": "2107"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.11319399379104,
+          -17.148985998282,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Dimbulah SS",
+        "centreCode": "1226"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.2300589948981,
+          -28.577085997534,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Dirranbandi P-10 SS",
+        "centreCode": "1001"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.8277869990405,
+          -17.942059004225,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Doomadgee SS",
+        "centreCode": "0330"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.35482099462396,
+          -22.584027003801,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Dysart SHS",
+        "centreCode": "2156"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.08146699752294,
+          -27.379372997451,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Earnshaw State College",
+        "centreCode": "5180"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.12123899268764,
+          -25.372305002995,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Eidsvold SS",
+        "centreCode": "0581"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.44951299786848,
+          -28.128473001882,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Elanora SHS",
+        "centreCode": "2183"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.15825099220032,
+          -23.513696996269,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Emerald SHS",
+        "centreCode": "2122"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.99759000670576,
+          -27.407629000477,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Everton Park SHS",
+        "centreCode": "2061"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.93379200242993,
+          -27.405718996164,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ferny Grove SHS",
+        "centreCode": "2148"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.95636099283925,
+          -27.807222998796,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Flagstone State Community College",
+        "centreCode": "2323"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.97152399315053,
+          -27.624509998713,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Forest Lake SHS",
+        "centreCode": "1726"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.96892400209154,
+          -24.990612993324,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Gin Gin SHS",
+        "centreCode": "2131"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2508700033144,
+          -23.851616993511,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Gladstone SHS",
+        "centreCode": "2030"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9803239999088,
+          -27.586155996748,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Glenala SHS",
+        "centreCode": "1592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.11580599587657,
+          -21.353964003378,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Glenden SS",
+        "centreCode": "1918"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.5167300029304,
+          -23.336348001779,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Glenmore SHS",
+        "centreCode": "2028"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.06489499301432,
+          -26.179649997094,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Goomeri SS",
+        "centreCode": "1310"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.29746699916208,
+          -28.53753699338,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Goondiwindi SHS",
+        "centreCode": "2092"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.778388995194,
+          -17.088716002259,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Gordonvale SHS",
+        "centreCode": "2106"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.67812000432858,
+          -26.188369005169,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Gympie SHS",
+        "centreCode": "2007"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.9317770066516,
+          -27.574685002082,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Harristown SHS",
+        "centreCode": "2038"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.7552030053214,
+          -19.286631995875,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Heatley Secondary College",
+        "centreCode": "2120"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.3267750021556,
+          -27.898194004258,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Helensvale SHS",
+        "centreCode": "2184"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.38258500074275,
+          -17.380502997695,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Herberton SS",
+        "centreCode": "0254"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.8322750051432,
+          -25.281911002071,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Hervey Bay SHS",
+        "centreCode": "2093"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.95111099331925,
+          -27.446666995238,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Highfields State Secondary College",
+        "centreCode": "9340"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.059412998336,
+          -27.530973001821,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Holland Park SHS",
+        "centreCode": "2125"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.42332199969437,
+          -19.667787994124,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Home Hill SHS",
+        "centreCode": "2094"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.19654100584873,
+          -20.845947996012,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Hughenden SS",
+        "centreCode": "0388"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.98407699434432,
+          -27.500586998506,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Indooroopilly SHS",
+        "centreCode": "2034"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.16863400196212,
+          -18.653758999524,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ingham SHS",
+        "centreCode": "2027"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.07706000682222,
+          -28.416158995545,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Inglewood SS",
+        "centreCode": "0055"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.56511800448854,
+          -25.846756003777,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Injune P-10 SS",
+        "centreCode": "1723"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.03696600600324,
+          -17.515997997853,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Innisfail State College",
+        "centreCode": "6463"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.74645199657132,
+          -27.59107000228,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ipswich SHS",
+        "centreCode": "2069"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.27397400438346,
+          -25.23309999828,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Isis District SHS",
+        "centreCode": "2063"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.65606900461313,
+          -26.175894998611,
+          0
+        ]
+      },
+      "properties": {
+        "name": "James Nash SHS",
+        "centreCode": "2137"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.11274299793425,
+          -26.779723005205,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jandowae Prep-10 SS",
+        "centreCode": "0537"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.12643499190088,
+          -26.740975999539,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kawana Waters State College",
+        "centreCode": "5653"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.03977399983967,
+          -27.415375993827,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kedron SHS",
+        "centreCode": "2039"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.39932600507942,
+          -27.984784996964,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Keebra Park SHS",
+        "centreCode": "2046"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.01306200175046,
+          -27.450106999759,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kelvin Grove State College",
+        "centreCode": "2409"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.92969500303656,
+          -27.50832799672,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kenmore SHS",
+        "centreCode": "2132"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.37726700020303,
+          -24.876216994815,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kepnock SHS",
+        "centreCode": "2095"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.5672789942562,
+          -26.939739998964,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kilcoy SHS",
+        "centreCode": "2133"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.2413729947963,
+          -26.087733000422,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kilkivan SS",
+        "centreCode": "0168"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.29786600757092,
+          -28.341321997139,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Killarney P-10 SS",
+        "centreCode": "0163"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.83231199205437,
+          -26.542982004272,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kingaroy SHS",
+        "centreCode": "2044"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.11216199869895,
+          -27.66413499396,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kingston State College",
+        "centreCode": "2139"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.7339000049511,
+          -19.308900997683,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kirwan SHS",
+        "centreCode": "2146"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.74519599805924,
+          -15.472102000828,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kowanyama SS",
+        "centreCode": "0460"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.61749200203468,
+          -16.804496000148,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kuranda District State College",
+        "centreCode": "5689"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.40447199339047,
+          -27.636226003547,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Laidley SHS",
+        "centreCode": "2163"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.34419499807112,
+          -12.785447002868,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Lockhart SS",
+        "centreCode": "0505"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.2769769998262,
+          -27.566932001434,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Lockyer District SHS",
+        "centreCode": "2062"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.14238400125322,
+          -27.673715003368,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Loganlea SHS",
+        "centreCode": "2153"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.26198199930764,
+          -23.438258003456,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Longreach SHS",
+        "centreCode": "2112"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.5824970012684,
+          -27.467169000454,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Lowood SHS",
+        "centreCode": "2160"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.12885600792498,
+          -27.639651999148,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mabel Park SHS",
+        "centreCode": "2161"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.07662499825588,
+          -27.566036999286,
+          0
+        ]
+      },
+      "properties": {
+        "name": "MacGregor SHS",
+        "centreCode": "2124"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.17389499629428,
+          -21.115652994125,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mackay North SHS",
+        "centreCode": "2096"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.16161999529535,
+          -21.067096996449,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mackay Northern Beaches SHS",
+        "centreCode": "7873"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.17675100124424,
+          -21.152514000346,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mackay SHS",
+        "centreCode": "2009"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.59343499513508,
+          -17.359076002488,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Malanda SHS",
+        "centreCode": "2067"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.85697699675293,
+          -26.765727997225,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Maleny SHS",
+        "centreCode": "2177"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1058210012701,
+          -27.54549199447,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mansfield SHS",
+        "centreCode": "2059"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.416362999658,
+          -16.995837996133,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mareeba SHS",
+        "centreCode": "2058"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.07554499183877,
+          -26.654743997558,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Maroochydore SHS",
+        "centreCode": "2097"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.11142099812056,
+          -27.684753995544,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Marsden SHS",
+        "centreCode": "2176"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.67924700246544,
+          -26.461765998108,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mary Valley State College",
+        "centreCode": "0465"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.69756000510276,
+          -25.534425000687,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Maryborough SHS",
+        "centreCode": "2020"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1028849940236,
+          -26.773775002776,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Meridan State College",
+        "centreCode": "1733"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.4163169947624,
+          -28.039802997949,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Merrimac SHS",
+        "centreCode": "2147"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.43789899515141,
+          -28.062822997021,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Miami SHS",
+        "centreCode": "2086"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.70081299578254,
+          -22.810862993256,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Middlemount Community School",
+        "centreCode": "1905"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.18513600573291,
+          -26.653516003877,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Miles SHS",
+        "centreCode": "2144"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.26545300746412,
+          -27.878235002764,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Millmerran SS",
+        "centreCode": "0176"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.86237100361427,
+          -21.157627000635,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mirani SHS",
+        "centreCode": "2117"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.56162699999655,
+          -24.329777001688,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Miriam Vale SS",
+        "centreCode": "0792"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.97151999378474,
+          -26.488566994856,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mitchell SS",
+        "centreCode": "0027"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.96591199841416,
+          -27.410487999649,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mitchelton SHS",
+        "centreCode": "2040"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.1185640050216,
+          -24.869914999635,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Monto SHS",
+        "centreCode": "2098"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.05944299298025,
+          -22.000422003601,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Moranbah SHS",
+        "centreCode": "2135"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9533729947539,
+          -27.109046000874,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Morayfield SHS",
+        "centreCode": "2154"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.1825960039624,
+          -16.666362993958,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mornington Island SS",
+        "centreCode": "0291"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.37356000084287,
+          -16.463414000045,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mossman SHS",
+        "centreCode": "2002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.07354100069284,
+          -27.535010999937,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mount Gravatt SHS",
+        "centreCode": "2056"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.97457799924877,
+          -23.807143002876,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mount Larcom SS",
+        "centreCode": "0300"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.38730400535934,
+          -23.643906000573,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mount Morgan SHS",
+        "centreCode": "2010"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1029469994913,
+          -26.688101995602,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mountain Creek SHS",
+        "centreCode": "2190"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.98237099654935,
+          -24.575044996078,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Moura SHS",
+        "centreCode": "2136"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.29359799895212,
+          -25.585463994241,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mundubbera State College",
+        "centreCode": "1420"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.9446340034597,
+          -26.237247001266,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Murgon SHS",
+        "centreCode": "2052"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.00776700033813,
+          -27.259199997752,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Murrumba State Secondary College",
+        "centreCode": "7574"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.96238399712024,
+          -26.623206003815,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Nambour State College",
+        "centreCode": "2031"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.99303299983,
+          -26.667820995686,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Nanango SHS",
+        "centreCode": "2157"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.942350002651,
+          -27.173232000672,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Narangba Valley SHS",
+        "centreCode": "0444"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.32789600134953,
+          -28.000553993835,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Nerang SHS",
+        "centreCode": "2169"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.07904600099835,
+          -17.672072003642,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Normanton SS",
+        "centreCode": "0360"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.02518099745166,
+          -27.238365998166,
+          0
+        ]
+      },
+      "properties": {
+        "name": "North Lakes State College",
+        "centreCode": "2324"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.5316990046386,
+          -23.352104996217,
+          0
+        ]
+      },
+      "properties": {
+        "name": "North Rockhampton SHS",
+        "centreCode": "2041"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.6735599979109,
+          -19.247947993866,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Northern Beaches SHS",
+        "centreCode": "0211"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.38580200433518,
+          -10.89520499509,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Northern Peninsula Area State College - Senior Campus",
+        "centreCode": "5971"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.7193399968198,
+          -27.445058997452,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Oakey SHS",
+        "centreCode": "2099"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.26411999319782,
+          -27.770320002298,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ormeau Woods SHS",
+        "centreCode": "6136"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.32061200614862,
+          -27.943120998603,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pacific Pines SHS",
+        "centreCode": "1745"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.47427699494588,
+          -28.131675000695,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Palm Beach-Currumbin SHS",
+        "centreCode": "2129"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0337000045436,
+          -27.700349996851,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Park Ridge SHS",
+        "centreCode": "2187"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.7826570038128,
+          -19.288734002646,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pimlico SHS",
+        "centreCode": "2049"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.3184569924335,
+          -27.834461993172,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pimpama State Secondary College",
+        "centreCode": "8044"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9894950068682,
+          -27.296397996318,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pine Rivers SHS",
+        "centreCode": "2102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1806350053819,
+          -21.095847993462,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pioneer SHS",
+        "centreCode": "2168"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.645500007909,
+          -27.709083001685,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pittsworth SHS",
+        "centreCode": "2119"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.58180999767637,
+          -20.40598499748,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Proserpine SHS",
+        "centreCode": "2090"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.60017599429676,
+          -26.167725998717,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Proston SS",
+        "centreCode": "1155"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.2714839971246,
+          -26.614936995801,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Quilpie State College",
+        "centreCode": "1594"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.6222049978881,
+          -27.107657999064,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Quinalow Prep-10 SS",
+        "centreCode": "0958"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.48871100556434,
+          -17.610596997321,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ravenshoe SS",
+        "centreCode": "1315"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.86886899966487,
+          -27.653409998584,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Redbank Plains SHS",
+        "centreCode": "2174"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1110060056712,
+          -27.223687994552,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Redcliffe SHS",
+        "centreCode": "2045"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.6958150042879,
+          -16.90926599816,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Redlynch State College",
+        "centreCode": "1336"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.1430809930518,
+          -20.73414499745,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Richmond SS",
+        "centreCode": "0576"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.3768150044519,
+          -28.073544003746,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Robina SHS",
+        "centreCode": "0195"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.11149200200268,
+          -27.585626004783,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Rochedale SHS",
+        "centreCode": "2158"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.499255000173,
+          -23.369589003455,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Rockhampton SHS",
+        "centreCode": "2011"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.77926600791403,
+          -26.567043004701,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Roma State College",
+        "centreCode": "5666"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.91474900709653,
+          -24.623707994173,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Rosedale SS",
+        "centreCode": "0759"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.5856220079988,
+          -27.635897000665,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Rosewood SHS",
+        "centreCode": "2151"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.07801000011114,
+          -27.592691996825,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Runcorn SHS",
+        "centreCode": "2167"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0572310057682,
+          -27.32905599832,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sandgate District SHS",
+        "centreCode": "2047"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.2136979991382,
+          -21.420889002332,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sarina SHS",
+        "centreCode": "2101"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1867169927687,
+          -27.662079002599,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Shailer Park SHS",
+        "centreCode": "2149"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.40243899753338,
+          -27.962810997223,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Southport SHS",
+        "centreCode": "2037"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.4871230000508,
+          -20.734863003222,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Spinifex State College - Mount Isa - Junior Campus",
+        "centreCode": "5149"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9083199989603,
+          -27.69112199803,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Springfield Central SHS",
+        "centreCode": "7131"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.08853499792616,
+          -24.115795995738,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Springsure SS",
+        "centreCode": "0102"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.13596300152784,
+          -27.612607001556,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Springwood SHS",
+        "centreCode": "2140"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.59274200581123,
+          -28.030464995059,
+          0
+        ]
+      },
+      "properties": {
+        "name": "St George SHS",
+        "centreCode": "2143"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.93177500700395,
+          -28.645690996716,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Stanthorpe SHS",
+        "centreCode": "2064"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0537399979558,
+          -27.63959199914,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Stretton State College",
+        "centreCode": "5554"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0597829987133,
+          -27.576217993777,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sunnybank SHS",
+        "centreCode": "2080"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.10070500110345,
+          -26.410406003295,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sunshine Beach SHS",
+        "centreCode": "2108"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.06706200129491,
+          -27.154328994457,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Surat SS",
+        "centreCode": "0142"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.21383199510063,
+          -10.57746100383,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tagai State College - Thursday Island Secondary",
+        "centreCode": "2114"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.2537570027324,
+          -24.884525998781,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tambo SS",
+        "centreCode": "0150"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1900960039222,
+          -27.932894000862,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tamborine Mountain SHS",
+        "centreCode": "2265"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.3643149971707,
+          -23.959627004124,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tannum Sands SHS",
+        "centreCode": "0231"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.45889899641082,
+          -27.279912002997,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tara Shire State College",
+        "centreCode": "1357"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.80057799687853,
+          -25.638957005152,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Taroom SS",
+        "centreCode": "0105"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.17425099588812,
+          -28.850629999006,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Texas P-10 SS",
+        "centreCode": "0437"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.95048399561773,
+          -27.44501199704,
+          0
+        ]
+      },
+      "properties": {
+        "name": "The Gap SHS",
+        "centreCode": "2053"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.07508800346835,
+          -24.946014004698,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Theodore SS",
+        "centreCode": "0676"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.71905299814003,
+          -19.336550993331,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Thuringowa SHS",
+        "centreCode": "2172"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.99506299296573,
+          -25.925433002705,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tin Can Bay SS",
+        "centreCode": "0577"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.38835499724507,
+          -27.102603004458,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Toogoolawah SHS",
+        "centreCode": "2179"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2704479961669,
+          -23.873237997663,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Toolooa SHS",
+        "centreCode": "2152"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.9648410002317,
+          -27.545246996463,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Toowoomba SHS",
+        "centreCode": "2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.8105149966915,
+          -19.272274993521,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Townsville SHS",
+        "centreCode": "2100"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.75240400014965,
+          -16.923761995264,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Trinity Bay SHS",
+        "centreCode": "2057"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.6956609986378,
+          -16.811916994265,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tropical North Learning Academy - Smithfield SHS",
+        "centreCode": "2159"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.92895000316287,
+          -27.070593000112,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tullawong SHS",
+        "centreCode": "2188"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.93076799747575,
+          -17.940106000312,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tully SHS",
+        "centreCode": "2103"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.29615700380464,
+          -27.870569995643,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Upper Coomera State College",
+        "centreCode": "2340"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.87603099996863,
+          -25.296639994747,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Urangan SHS",
+        "centreCode": "2110"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.4116990052037,
+          -28.078148998291,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Varsity College",
+        "centreCode": "1759"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.28784599284933,
+          -27.595587003298,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Victoria Point SHS",
+        "centreCode": "0234"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.18619299324118,
+          -26.584368998136,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wallumbilla SS",
+        "centreCode": "0182"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.96146900748545,
+          -26.118781995315,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wandoan SS P-10",
+        "centreCode": "1296"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.033529995142,
+          -28.210316004482,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Warwick SHS",
+        "centreCode": "2015"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.03784899477586,
+          -27.397981001599,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wavell SHS",
+        "centreCode": "2048"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.2288509947114,
+          -27.491030993966,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wellington Point SHS",
+        "centreCode": "2178"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.88011799441244,
+          -12.626861995522,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Western Cape College - Weipa",
+        "centreCode": "1407"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.082126995981,
+          -27.500676998518,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Whites Hill State College",
+        "centreCode": "2410"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.80057099479134,
+          -19.314852003761,
+          0
+        ]
+      },
+      "properties": {
+        "name": "William Ross SHS",
+        "centreCode": "2186"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.9243600021009,
+          -27.537615005155,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wilsonton SHS",
+        "centreCode": "0468"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.19011600039872,
+          -27.740465997433,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Windaroo Valley SHS",
+        "centreCode": "2189"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.0387300033298,
+          -22.385624998751,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Winton SS",
+        "centreCode": "0478"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.8821250015614,
+          -26.32072199436,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wondai SS",
+        "centreCode": "1065"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.91847299682092,
+          -27.657283002758,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Woodcrest State College",
+        "centreCode": "0456"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.78067599886506,
+          -26.961774995875,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Woodford SS",
+        "centreCode": "0370"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0991569951837,
+          -27.643320001267,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Woodridge SHS",
+        "centreCode": "2128"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.7418939996215,
+          -16.960249004677,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Woree SHS",
+        "centreCode": "2162"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.17660700372312,
+          -27.454980997178,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wynnum SHS",
+        "centreCode": "2021"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.87463300358309,
+          -16.92884899636,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Yarrabah SS",
+        "centreCode": "1303"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.97673300314364,
+          -26.841541996169,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Yarraman SS",
+        "centreCode": "0967"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.73555300226315,
+          -23.134966000377,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Yeppoon SHS",
+        "centreCode": "2123"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0224999944521,
+          -27.517477000799,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Yeronga SHS",
+        "centreCode": "2054"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.03524999372044,
+          -27.452550996848,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Fortitude Valley State Secondary College",
+        "centreCode": "A722"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2149580033749,
+          -23.999774001873,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Calliope SHS",
+        "centreCode": "9790"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1214999926276,
+          -27.808936002677,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Yarrabilba State Secondary College",
+        "centreCode": "A789"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.33131800492748,
+          -27.853279997348,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Foxwell State Secondary College",
+        "centreCode": "A788"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.8100650006585,
+          -27.694208994801,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ripley Valley State Secondary College",
+        "centreCode": "A797"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.04275000003912,
+          -27.243842999315,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mango Hill State Secondary College",
+        "centreCode": "A787"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.02757000272283,
+          -27.496030001535,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Brisbane South State Secondary College",
+        "centreCode": "A792"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.07697400233286,
+          -26.805068995676,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Baringa State Secondary College",
+        "centreCode": "A908"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0698880050303,
+          -26.739852002629,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Palmview State Secondary College",
+        "centreCode": "A906"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.96655000095956,
+          -29.041095999737,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Norfolk Island Central School",
+        "centreCode": "B059"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.8636649986111,
+          -26.352752002763,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Noosa District SHS - Pomona Campus",
+        "centreCode": "2292"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.86248699306864,
+          -27.624085000682,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Collingwood Park State Secondary College",
+        "centreCode": "B421"
+      }
+    }
+  ]
+}
