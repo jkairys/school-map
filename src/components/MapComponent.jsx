@@ -44,6 +44,7 @@ const MapComponent = ({
   // schoolData and stateAverages are now props
   const [schoolSites, setSchoolSites] = useState(null);
   const [railwayStations, setRailwayStations] = useState(null);
+  const [transitTimes, setTransitTimes] = useState(null);
 
   useEffect(() => {
     // Load Catchments
@@ -65,6 +66,19 @@ const MapComponent = ({
       .then(res => res.json())
       .then(data => setRailwayStations(data))
       .catch(err => console.error("Error loading Railway Stations:", err));
+
+    // Load Transit Times
+    fetch('/data/station-transit-times.json')
+      .then(res => res.json())
+      .then(data => {
+        // Create lookup map from station name to transit data
+        const lookup = {};
+        data.stations.forEach(station => {
+          lookup[station.name] = station.transitToCentral;
+        });
+        setTransitTimes(lookup);
+      })
+      .catch(err => console.error("Error loading Transit Times:", err));
   }, []);
 
   // Helper to ensure stable function reference if needed, though simple function is fine
@@ -221,6 +235,23 @@ const MapComponent = ({
     });
   }, [getSchoolColor]);
 
+  const getStationColor = useCallback((stationName) => {
+    if (!transitTimes || !transitTimes[stationName]) {
+      return '#9ca3af'; // gray-400 for stations without transit data
+    }
+
+    const durationSeconds = transitTimes[stationName].durationSeconds;
+    const durationMinutes = durationSeconds / 60;
+
+    if (durationMinutes < 40) {
+      return '#22c55e'; // green-500
+    } else if (durationMinutes < 60) {
+      return '#f97316'; // orange-500
+    } else {
+      return '#ef4444'; // red-500
+    }
+  }, [transitTimes]);
+
   const pointToLayerRailwayStation = useCallback((feature, latlng) => {
     // Square marker. Using rectangle relative to center point to scale with map.
     // Radius ~150m effectively means a square with side ~300m
@@ -235,25 +266,35 @@ const MapComponent = ({
       [latlng.lat + latOffset, latlng.lng + lngOffset]
     ];
 
+    const color = getStationColor(feature.properties.name);
+
     return L.rectangle(bounds, {
       stroke: false,
-      color: '#ea580c', // orange-600
-      fillColor: '#ea580c',
+      color: color,
+      fillColor: color,
       fillOpacity: 1,
       pane: 'school-sites-pane'
     });
-  }, []);
+  }, [getStationColor]);
 
   const onEachRailwayStation = useCallback((feature, layer) => {
     if (feature.properties && feature.properties.name) {
-      layer.bindTooltip(feature.properties.name, {
+      const stationName = feature.properties.name;
+      const transit = transitTimes ? transitTimes[stationName] : null;
+
+      let tooltipContent = `<strong>${stationName}</strong>`;
+      if (transit) {
+        tooltipContent += `<br/><span style="font-size: 0.85em;">→ Central: ${transit.durationText}</span>`;
+      }
+
+      layer.bindTooltip(tooltipContent, {
         permanent: false,
         direction: 'top',
         className: 'station-label',
         offset: [0, -10]
       });
     }
-  }, []);
+  }, [transitTimes]);
 
 
   return (
@@ -285,6 +326,7 @@ const MapComponent = ({
       )}
       {showRailwayStations && railwayStations && (
         <GeoJSON
+          key={transitTimes ? 'stations-with-times' : 'stations-loading'}
           data={railwayStations}
           pointToLayer={pointToLayerRailwayStation}
           onEachFeature={onEachRailwayStation}
