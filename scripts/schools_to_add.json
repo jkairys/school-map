@@ -1,0 +1,257 @@
+[
+  {
+    "RefId": "manually-added-40330",
+    "LocalId": "40330",
+    "StateProvinceId": "000000456",
+    "CommonwealthId": "40330",
+    "ACARAId": "40330",
+    "SchoolName": "Woodcrest State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "40330",
+      "SchoolCampusId": "40330",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47619",
+    "LocalId": "47619",
+    "StateProvinceId": "000002410",
+    "CommonwealthId": "47619",
+    "ACARAId": "47619",
+    "SchoolName": "Whites Hill State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47619",
+      "SchoolCampusId": "47619",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-40404",
+    "LocalId": "40404",
+    "StateProvinceId": "000001336",
+    "CommonwealthId": "40404",
+    "ACARAId": "40404",
+    "SchoolName": "Redlynch State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "40404",
+      "SchoolCampusId": "40404",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47544",
+    "LocalId": "47544",
+    "StateProvinceId": "000005534",
+    "CommonwealthId": "47544",
+    "ACARAId": "47544",
+    "SchoolName": "Capalaba State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47544",
+      "SchoolCampusId": "47544",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47575",
+    "LocalId": "47575",
+    "StateProvinceId": "000002031",
+    "CommonwealthId": "47575",
+    "ACARAId": "47575",
+    "SchoolName": "Nambour State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47575",
+      "SchoolCampusId": "47575",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47557",
+    "LocalId": "47557",
+    "StateProvinceId": "000005180",
+    "CommonwealthId": "47557",
+    "ACARAId": "47557",
+    "SchoolName": "Earnshaw State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47557",
+      "SchoolCampusId": "47557",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47581",
+    "LocalId": "47581",
+    "StateProvinceId": "000001733",
+    "CommonwealthId": "47581",
+    "ACARAId": "47581",
+    "SchoolName": "Meridan State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47581",
+      "SchoolCampusId": "47581",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47596",
+    "LocalId": "47596",
+    "StateProvinceId": "000002324",
+    "CommonwealthId": "47596",
+    "ACARAId": "47596",
+    "SchoolName": "North Lakes State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47596",
+      "SchoolCampusId": "47596",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47567",
+    "LocalId": "47567",
+    "StateProvinceId": "000005653",
+    "CommonwealthId": "47567",
+    "ACARAId": "47567",
+    "SchoolName": "Kawana Waters State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47567",
+      "SchoolCampusId": "47567",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-40326",
+    "LocalId": "40326",
+    "StateProvinceId": "000000452",
+    "CommonwealthId": "40326",
+    "ACARAId": "40326",
+    "SchoolName": "Bentley Park College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "40326",
+      "SchoolCampusId": "40326",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47510",
+    "LocalId": "47510",
+    "StateProvinceId": "000002409",
+    "CommonwealthId": "47510",
+    "ACARAId": "47510",
+    "SchoolName": "Kelvin Grove State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47510",
+      "SchoolCampusId": "47510",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47634",
+    "LocalId": "47634",
+    "StateProvinceId": "000005554",
+    "CommonwealthId": "47634",
+    "ACARAId": "47634",
+    "SchoolName": "Stretton State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47634",
+      "SchoolCampusId": "47634",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47590",
+    "LocalId": "47590",
+    "StateProvinceId": "000002340",
+    "CommonwealthId": "47590",
+    "ACARAId": "47590",
+    "SchoolName": "Upper Coomera State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47590",
+      "SchoolCampusId": "47590",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47259",
+    "LocalId": "47259",
+    "StateProvinceId": "000001759",
+    "CommonwealthId": "47259",
+    "ACARAId": "47259",
+    "SchoolName": "Varsity College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47259",
+      "SchoolCampusId": "47259",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47524",
+    "LocalId": "47524",
+    "StateProvinceId": "000002282",
+    "CommonwealthId": "47524",
+    "ACARAId": "47524",
+    "SchoolName": "Chancellor State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47524",
+      "SchoolCampusId": "47524",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  }
+]

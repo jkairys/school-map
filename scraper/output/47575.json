@@ -1,0 +1,65 @@
+{
+  "acaraId": "47575",
+  "schoolName": "Upper Coomera State College, Upper Coomera, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "1682",
+    "indigenousPercent": "7",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "369",
+        "380",
+        "376\n376\n363 - 389\n\n\nSIM\n383\nALL\n405",
+        "376\n363 - 389",
+        "SIM\n383",
+        "ALL\n405",
+        "354",
+        "369"
+      ],
+      [
+        "376\n363 - 389"
+      ],
+      [
+        "SIM\n383",
+        "ALL\n405"
+      ],
+      [
+        "Year 5",
+        "464",
+        "456",
+        "476",
+        "463",
+        "449"
+      ],
+      [
+        "Year 7",
+        "480",
+        "468",
+        "511",
+        "469",
+        "480"
+      ],
+      [
+        "Year 9",
+        "521",
+        "525",
+        "544",
+        "489",
+        "504"
+      ]
+    ]
+  }
+}

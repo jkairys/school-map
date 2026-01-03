@@ -1,4 +1,20 @@
 {
+  "Bentley Park College": {
+    "acaraId": "40326",
+    "schoolName": "Lyons Early Childhood School, Lyons, ACT",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "91",
+      "indigenousPercent": "4",
+      "lbotePercent": null
+    }
+  },
+  "Redlynch State College": {
+    "acaraId": "40404",
+    "schoolName": "Internal Server Error",
+    "profile": {}
+  },
   "Beenleigh SHS": {
     "acaraId": "47469",
     "schoolName": "Beenleigh State High School, Beenleigh, QLD",
@@ -37,7 +53,7 @@
     ]
   },
   "Innisfail State College": {
-    "acaraId": "50485",
+    "acaraId": "40838",
     "schoolName": "Innisfail State College, Innisfail Estate, QLD",
     "profile": {
       "icsea": null,
@@ -45,7 +61,49 @@
       "totalEnrolments": "951",
       "indigenousPercent": "35",
       "lbotePercent": null
-    }
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "-",
+        "-",
+        "-",
+        "-",
+        "-"
+      ],
+      [
+        "Year 5",
+        "-",
+        "-",
+        "-",
+        "-",
+        "-"
+      ],
+      [
+        "Year 7",
+        "493",
+        "492",
+        "529",
+        "498",
+        "496"
+      ],
+      [
+        "Year 9",
+        "514",
+        "526",
+        "543",
+        "505",
+        "525"
+      ]
+    ]
   },
   "Robina SHS": {
     "acaraId": "46550",
@@ -387,6 +445,59 @@
         "567",
         "557",
         "560"
+      ]
+    ]
+  },
+  "Varsity College": {
+    "acaraId": "47259",
+    "schoolName": "Varsity College, Varsity Lakes, QLD",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "3304",
+      "indigenousPercent": "2",
+      "lbotePercent": null
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "394",
+        "423",
+        "406",
+        "410",
+        "403"
+      ],
+      [
+        "Year 5",
+        "508",
+        "493",
+        "509",
+        "522",
+        "513"
+      ],
+      [
+        "Year 7",
+        "539",
+        "540",
+        "548",
+        "549",
+        "559"
+      ],
+      [
+        "Year 9",
+        "568",
+        "594",
+        "573",
+        "575",
+        "578"
       ]
     ]
   },
@@ -1180,7 +1291,7 @@
     ]
   },
   "Dalby SHS": {
-    "acaraId": "50533",
+    "acaraId": "47430",
     "schoolName": "Dalby State High School, Dalby, QLD",
     "profile": {
       "icsea": null,
@@ -1188,7 +1299,33 @@
       "totalEnrolments": "1090",
       "indigenousPercent": "18",
       "lbotePercent": null
-    }
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "483",
+        "489",
+        "515",
+        "493",
+        "495"
+      ],
+      [
+        "Year 9",
+        "511",
+        "523",
+        "547",
+        "508",
+        "507"
+      ]
+    ]
   },
   "Indooroopilly SHS": {
     "acaraId": "47431",
@@ -1951,7 +2088,7 @@
     ]
   },
   "Trinity Bay SHS": {
-    "acaraId": "50534",
+    "acaraId": "47451",
     "schoolName": "Trinity Bay State High School, Manunda, QLD",
     "profile": {
       "icsea": null,
@@ -1959,7 +2096,33 @@
       "totalEnrolments": "1784",
       "indigenousPercent": "34",
       "lbotePercent": null
-    }
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "473",
+        "474",
+        "461",
+        "475",
+        "467"
+      ],
+      [
+        "Year 9",
+        "511",
+        "511",
+        "526",
+        "487",
+        "509"
+      ]
+    ]
   },
   "Mareeba SHS": {
     "acaraId": "47452",
@@ -2453,7 +2616,7 @@
     ]
   },
   "Coorparoo Secondary College": {
-    "acaraId": "50520",
+    "acaraId": "47465",
     "schoolName": "Coorparoo Secondary College, Coorparoo, QLD",
     "profile": {
       "icsea": null,
@@ -2461,7 +2624,33 @@
       "totalEnrolments": "407",
       "indigenousPercent": "7",
       "lbotePercent": null
-    }
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "524",
+        "512",
+        "538",
+        "527",
+        "535"
+      ],
+      [
+        "Year 9",
+        "553",
+        "562",
+        "562",
+        "544",
+        "545"
+      ]
+    ]
   },
   "Aviation High": {
     "acaraId": "47466",
@@ -4291,7 +4480,7 @@
     ]
   },
   "Kingston State College": {
-    "acaraId": "50522",
+    "acaraId": "47519",
     "schoolName": "Kingston State College, Kingston, QLD",
     "profile": {
       "icsea": null,
@@ -4299,7 +4488,33 @@
       "totalEnrolments": "866",
       "indigenousPercent": "16",
       "lbotePercent": null
-    }
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "467",
+        "454",
+        "491",
+        "474",
+        "457"
+      ],
+      [
+        "Year 9",
+        "495",
+        "461",
+        "535",
+        "485",
+        "479"
+      ]
+    ]
   },
   "Springwood SHS": {
     "acaraId": "47520",
@@ -5575,9 +5790,43 @@
     ]
   },
   "Alexandra Hills SHS": {
-    "acaraId": "53127",
+    "acaraId": "47553",
     "schoolName": "Alexandra Hills State High School, Alexandra Hills, QLD",
-    "profile": {}
+    "profile": {
+      "icsea": "984",
+      "icseaPercentile": "39",
+      "enrolmentsBoys": "775",
+      "enrolmentsGirls": "685",
+      "totalEnrolments": "1460",
+      "indigenousPercent": "09",
+      "lbotePercent": "11"
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 7",
+        "497",
+        "474",
+        "506",
+        "490",
+        "501"
+      ],
+      [
+        "Year 9",
+        "541",
+        "530",
+        "554",
+        "538",
+        "534"
+      ]
+    ]
   },
   "Marsden SHS": {
     "acaraId": "47554",
@@ -6182,6 +6431,113 @@
       ]
     ]
   },
+  "Nambour State College": {
+    "acaraId": "47575",
+    "schoolName": "Upper Coomera State College, Upper Coomera, QLD",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "1682",
+      "indigenousPercent": "7",
+      "lbotePercent": null
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "369",
+        "380",
+        "376\n376\n363 - 389\n\n\nSIM\n383\nALL\n405",
+        "376\n363 - 389",
+        "SIM\n383",
+        "ALL\n405",
+        "354",
+        "369"
+      ],
+      [
+        "376\n363 - 389"
+      ],
+      [
+        "SIM\n383",
+        "ALL\n405"
+      ],
+      [
+        "Year 5",
+        "464",
+        "456",
+        "476",
+        "463",
+        "449"
+      ],
+      [
+        "Year 7",
+        "480",
+        "468",
+        "511",
+        "469",
+        "480"
+      ],
+      [
+        "Year 9",
+        "521",
+        "525",
+        "544",
+        "489",
+        "504"
+      ]
+    ]
+  },
+  "Meridan State College": {
+    "acaraId": "47581",
+    "schoolName": "Rosella Park School, West Gladstone, QLD",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "87",
+      "indigenousPercent": "20",
+      "lbotePercent": null
+    }
+  },
+  "Upper Coomera State College": {
+    "acaraId": "47590",
+    "schoolName": "Western Suburbs State Special School, Inala, QLD",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "220",
+      "indigenousPercent": "13",
+      "lbotePercent": null
+    }
+  },
+  "North Lakes State College": {
+    "acaraId": "47596",
+    "schoolName": "Bundaberg Special School, Norville, QLD",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "106",
+      "indigenousPercent": "16",
+      "lbotePercent": null
+    }
+  },
+  "Whites Hill State College": {
+    "acaraId": "47619",
+    "schoolName": "Clifford Park Special School, Newtown, QLD",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "183",
+      "indigenousPercent": "25",
+      "lbotePercent": null
+    }
+  },
   "Spinifex State College - Mount Isa - Junior Campus": {
     "acaraId": "47630",
     "schoolName": "Spinifex State College - Mount Isa Education and Training Precinct, Parkside, QLD",
@@ -6192,6 +6548,59 @@
       "indigenousPercent": "42",
       "lbotePercent": null
     }
+  },
+  "Stretton State College": {
+    "acaraId": "47634",
+    "schoolName": "Stretton State College, Stretton, QLD",
+    "profile": {
+      "icsea": null,
+      "icseaPercentile": null,
+      "totalEnrolments": "3578",
+      "indigenousPercent": "2",
+      "lbotePercent": null
+    },
+    "naplan": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "425",
+        "424",
+        "437",
+        "434",
+        "414"
+      ],
+      [
+        "Year 5",
+        "500",
+        "501",
+        "512",
+        "522",
+        "508"
+      ],
+      [
+        "Year 7",
+        "544",
+        "561",
+        "556",
+        "561",
+        "562"
+      ],
+      [
+        "Year 9",
+        "563",
+        "577",
+        "580",
+        "572",
+        "575"
+      ]
+    ]
   },
   "Roma State College": {
     "acaraId": "47637",

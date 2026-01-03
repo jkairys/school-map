@@ -27,8 +27,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4035",
         "GridLocation": {
-          "Latitude": -27.357300000000000,
-          "Longitude": 152.969000000000000
+          "Latitude": -27.3573,
+          "Longitude": 152.969
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -64,8 +64,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4650",
         "GridLocation": {
-          "Latitude": -25.516600000000000,
-          "Longitude": 152.689000000000000
+          "Latitude": -25.5166,
+          "Longitude": 152.689
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -101,8 +101,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4161",
         "GridLocation": {
-          "Latitude": -27.524000000000000,
-          "Longitude": 153.215000000000000
+          "Latitude": -27.524,
+          "Longitude": 153.215
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -138,8 +138,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4157",
         "GridLocation": {
-          "Latitude": -27.526064689999998,
-          "Longitude": 153.210728200000005
+          "Latitude": -27.52606469,
+          "Longitude": 153.2107282
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -175,8 +175,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4034",
         "GridLocation": {
-          "Latitude": -27.357200000000000,
-          "Longitude": 153.024000000000000
+          "Latitude": -27.3572,
+          "Longitude": 153.024
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -212,8 +212,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4883",
         "GridLocation": {
-          "Latitude": -17.260100000000000,
-          "Longitude": 145.486000000000000
+          "Latitude": -17.2601,
+          "Longitude": 145.486
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -249,8 +249,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4011",
         "GridLocation": {
-          "Latitude": -27.414300000000000,
-          "Longitude": 153.063000000000000
+          "Latitude": -27.4143,
+          "Longitude": 153.063
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -286,8 +286,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4807",
         "GridLocation": {
-          "Latitude": -19.577000000000000,
-          "Longitude": 147.410000000000000
+          "Latitude": -19.577,
+          "Longitude": 147.41
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -323,8 +323,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4171",
         "GridLocation": {
-          "Latitude": -27.456300000000000,
-          "Longitude": 153.073000000000000
+          "Latitude": -27.4563,
+          "Longitude": 153.073
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -360,8 +360,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4551",
         "GridLocation": {
-          "Latitude": -26.805130000000000,
-          "Longitude": 153.077460000000000
+          "Latitude": -26.80513,
+          "Longitude": 153.07746
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -397,8 +397,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4285",
         "GridLocation": {
-          "Latitude": -27.970800000000000,
-          "Longitude": 152.997000000000000
+          "Latitude": -27.9708,
+          "Longitude": 152.997
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -434,8 +434,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4207",
         "GridLocation": {
-          "Latitude": -27.715000000000000,
-          "Longitude": 153.204000000000000
+          "Latitude": -27.715,
+          "Longitude": 153.204
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -471,8 +471,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4207",
         "GridLocation": {
-          "Latitude": -27.694600000000000,
-          "Longitude": 153.213000000000000
+          "Latitude": -27.6946,
+          "Longitude": 153.213
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -508,8 +508,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4519",
         "GridLocation": {
-          "Latitude": -26.862800000000000,
-          "Longitude": 152.954000000000000
+          "Latitude": -26.8628,
+          "Longitude": 152.954
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -545,8 +545,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4300",
         "GridLocation": {
-          "Latitude": -27.641200000000000,
-          "Longitude": 152.888000000000000
+          "Latitude": -27.6412,
+          "Longitude": 152.888
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -582,8 +582,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4217",
         "GridLocation": {
-          "Latitude": -28.004800000000000,
-          "Longitude": 153.389000000000000
+          "Latitude": -28.0048,
+          "Longitude": 153.389
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -619,8 +619,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4715",
         "GridLocation": {
-          "Latitude": -24.398600000000000,
-          "Longitude": 150.518000000000000
+          "Latitude": -24.3986,
+          "Longitude": 150.518
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -656,8 +656,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4717",
         "GridLocation": {
-          "Latitude": -23.572500000000000,
-          "Longitude": 148.883000000000000
+          "Latitude": -23.5725,
+          "Longitude": 148.883
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -693,8 +693,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4310",
         "GridLocation": {
-          "Latitude": -27.995100000000000,
-          "Longitude": 152.689000000000000
+          "Latitude": -27.9951,
+          "Longitude": 152.689
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -730,8 +730,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4805",
         "GridLocation": {
-          "Latitude": -19.999100000000000,
-          "Longitude": 148.236000000000000
+          "Latitude": -19.9991,
+          "Longitude": 148.236
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -767,8 +767,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4017",
         "GridLocation": {
-          "Latitude": -27.307400000000000,
-          "Longitude": 153.044000000000000
+          "Latitude": -27.3074,
+          "Longitude": 153.044
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -804,8 +804,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4500",
         "GridLocation": {
-          "Latitude": -27.299900000000000,
-          "Longitude": 152.962000000000000
+          "Latitude": -27.2999,
+          "Longitude": 152.962
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -841,8 +841,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4305",
         "GridLocation": {
-          "Latitude": -27.633400000000000,
-          "Longitude": 152.755000000000000
+          "Latitude": -27.6334,
+          "Longitude": 152.755
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -878,8 +878,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4507",
         "GridLocation": {
-          "Latitude": -27.083000000000000,
-          "Longitude": 153.166000000000000
+          "Latitude": -27.083,
+          "Longitude": 153.166
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -915,8 +915,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4178",
         "GridLocation": {
-          "Latitude": -27.462000000000000,
-          "Longitude": 153.150000000000000
+          "Latitude": -27.462,
+          "Longitude": 153.15
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -952,8 +952,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4102",
         "GridLocation": {
-          "Latitude": -27.496230000000000,
-          "Longitude": 153.027110000000000
+          "Latitude": -27.49623,
+          "Longitude": 153.02711
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -989,8 +989,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4101",
         "GridLocation": {
-          "Latitude": -27.479400000000000,
-          "Longitude": 153.019000000000000
+          "Latitude": -27.4794,
+          "Longitude": 153.019
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1026,8 +1026,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4118",
         "GridLocation": {
-          "Latitude": -27.670200000000000,
-          "Longitude": 153.054000000000000
+          "Latitude": -27.6702,
+          "Longitude": 153.054
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1063,8 +1063,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4670",
         "GridLocation": {
-          "Latitude": -24.849500000000000,
-          "Longitude": 152.340000000000000
+          "Latitude": -24.8495,
+          "Longitude": 152.34
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1100,8 +1100,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4670",
         "GridLocation": {
-          "Latitude": -24.877000000000000,
-          "Longitude": 152.350000000000000
+          "Latitude": -24.877,
+          "Longitude": 152.35
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1137,8 +1137,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4304",
         "GridLocation": {
-          "Latitude": -27.614900000000000,
-          "Longitude": 152.814000000000000
+          "Latitude": -27.6149,
+          "Longitude": 152.814
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1174,8 +1174,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4625",
         "GridLocation": {
-          "Latitude": -25.631900000000000,
-          "Longitude": 151.606000000000000
+          "Latitude": -25.6319,
+          "Longitude": 151.606
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1211,8 +1211,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4560",
         "GridLocation": {
-          "Latitude": -26.630000000000000,
-          "Longitude": 152.947000000000000
+          "Latitude": -26.63,
+          "Longitude": 152.947
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1248,8 +1248,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4505",
         "GridLocation": {
-          "Latitude": -27.170600000000000,
-          "Longitude": 152.977000000000000
+          "Latitude": -27.1706,
+          "Longitude": 152.977
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1285,8 +1285,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4510",
         "GridLocation": {
-          "Latitude": -27.084100000000000,
-          "Longitude": 152.961000000000000
+          "Latitude": -27.0841,
+          "Longitude": 152.961
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1322,8 +1322,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4870",
         "GridLocation": {
-          "Latitude": -16.916400000000000,
-          "Longitude": 145.768000000000000
+          "Latitude": -16.9164,
+          "Longitude": 145.768
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1359,8 +1359,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4680",
         "GridLocation": {
-          "Latitude": -23.997580000000000,
-          "Longitude": 151.215670000000000
+          "Latitude": -23.99758,
+          "Longitude": 151.21567
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1396,8 +1396,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4551",
         "GridLocation": {
-          "Latitude": -26.793800000000000,
-          "Longitude": 153.126000000000000
+          "Latitude": -26.7938,
+          "Longitude": 153.126
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1433,8 +1433,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4723",
         "GridLocation": {
-          "Latitude": -23.087800000000000,
-          "Longitude": 148.030000000000000
+          "Latitude": -23.0878,
+          "Longitude": 148.03
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1470,8 +1470,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4121",
         "GridLocation": {
-          "Latitude": -27.516800000000000,
-          "Longitude": 153.073000000000000
+          "Latitude": -27.5168,
+          "Longitude": 153.073
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1507,8 +1507,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4350",
         "GridLocation": {
-          "Latitude": -27.579500000000000,
-          "Longitude": 151.964000000000000
+          "Latitude": -27.5795,
+          "Longitude": 151.964
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1544,8 +1544,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4074",
         "GridLocation": {
-          "Latitude": -27.538500000000000,
-          "Longitude": 152.940000000000000
+          "Latitude": -27.5385,
+          "Longitude": 152.94
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1581,8 +1581,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4470",
         "GridLocation": {
-          "Latitude": -26.397400000000000,
-          "Longitude": 146.257000000000000
+          "Latitude": -26.3974,
+          "Longitude": 146.257
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1618,8 +1618,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4820",
         "GridLocation": {
-          "Latitude": -20.079800000000000,
-          "Longitude": 146.259000000000000
+          "Latitude": -20.0798,
+          "Longitude": 146.259
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1655,8 +1655,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4413",
         "GridLocation": {
-          "Latitude": -26.748900000000000,
-          "Longitude": 150.620000000000000
+          "Latitude": -26.7489,
+          "Longitude": 150.62
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1692,8 +1692,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4721",
         "GridLocation": {
-          "Latitude": -22.827900000000000,
-          "Longitude": 147.639000000000000
+          "Latitude": -22.8279,
+          "Longitude": 147.639
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1729,8 +1729,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4163",
         "GridLocation": {
-          "Latitude": -27.530100000000000,
-          "Longitude": 153.260000000000000
+          "Latitude": -27.5301,
+          "Longitude": 153.26
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1766,8 +1766,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4361",
         "GridLocation": {
-          "Latitude": -27.934000000000000,
-          "Longitude": 151.917000000000000
+          "Latitude": -27.934,
+          "Longitude": 151.917
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1803,8 +1803,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4019",
         "GridLocation": {
-          "Latitude": -27.248000000000001,
-          "Longitude": 153.089348946048005
+          "Latitude": -27.248,
+          "Longitude": 153.089348946048
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1840,8 +1840,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4301",
         "GridLocation": {
-          "Latitude": -27.623708570256699,
-          "Longitude": 152.863909293993004
+          "Latitude": -27.6237085702567,
+          "Longitude": 152.863909293993
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1877,8 +1877,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4804",
         "GridLocation": {
-          "Latitude": -20.548500000000000,
-          "Longitude": 147.835000000000000
+          "Latitude": -20.5485,
+          "Longitude": 147.835
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1914,8 +1914,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4573",
         "GridLocation": {
-          "Latitude": -26.502000000000000,
-          "Longitude": 153.086000000000000
+          "Latitude": -26.502,
+          "Longitude": 153.086
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1951,8 +1951,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4216",
         "GridLocation": {
-          "Latitude": -27.924000000000000,
-          "Longitude": 153.378000000000000
+          "Latitude": -27.924,
+          "Longitude": 153.378
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -1988,8 +1988,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4151",
         "GridLocation": {
-          "Latitude": -27.486100000000000,
-          "Longitude": 153.054000000000000
+          "Latitude": -27.4861,
+          "Longitude": 153.054
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2025,8 +2025,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4151",
         "GridLocation": {
-          "Latitude": -27.486100000000000,
-          "Longitude": 153.054000000000000
+          "Latitude": -27.4861,
+          "Longitude": 153.054
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2062,8 +2062,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4075",
         "GridLocation": {
-          "Latitude": -27.544300000000000,
-          "Longitude": 152.987000000000000
+          "Latitude": -27.5443,
+          "Longitude": 152.987
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2099,8 +2099,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4032",
         "GridLocation": {
-          "Latitude": -27.383400000000000,
-          "Longitude": 153.015000000000000
+          "Latitude": -27.3834,
+          "Longitude": 153.015
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2136,8 +2136,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4503",
         "GridLocation": {
-          "Latitude": -27.229600000000000,
-          "Longitude": 152.981000000000000
+          "Latitude": -27.2296,
+          "Longitude": 152.981
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2173,8 +2173,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4405",
         "GridLocation": {
-          "Latitude": -27.175859700000000,
-          "Longitude": 151.261511600000006
+          "Latitude": -27.1758597,
+          "Longitude": 151.2615116
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2210,8 +2210,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4405",
         "GridLocation": {
-          "Latitude": -27.151600000000000,
-          "Longitude": 151.293000000000000
+          "Latitude": -27.1516,
+          "Longitude": 151.293
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2247,8 +2247,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4508",
         "GridLocation": {
-          "Latitude": -27.200000000000000,
-          "Longitude": 153.031000000000000
+          "Latitude": -27.2,
+          "Longitude": 153.031
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2284,8 +2284,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4745",
         "GridLocation": {
-          "Latitude": -22.584000000000000,
-          "Longitude": 148.355000000000000
+          "Latitude": -22.584,
+          "Longitude": 148.355
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2321,8 +2321,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4221",
         "GridLocation": {
-          "Latitude": -28.128900000000000,
-          "Longitude": 153.450000000000000
+          "Latitude": -28.1289,
+          "Longitude": 153.45
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2358,8 +2358,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4720",
         "GridLocation": {
-          "Latitude": -23.513500000000000,
-          "Longitude": 148.158000000000000
+          "Latitude": -23.5135,
+          "Longitude": 148.158
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2395,8 +2395,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4053",
         "GridLocation": {
-          "Latitude": -27.407600000000000,
-          "Longitude": 152.998000000000000
+          "Latitude": -27.4076,
+          "Longitude": 152.998
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2432,8 +2432,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4055",
         "GridLocation": {
-          "Latitude": -27.406000000000000,
-          "Longitude": 152.934000000000000
+          "Latitude": -27.406,
+          "Longitude": 152.934
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2469,8 +2469,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4280",
         "GridLocation": {
-          "Latitude": -27.807100000000000,
-          "Longitude": 152.956000000000000
+          "Latitude": -27.8071,
+          "Longitude": 152.956
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2506,8 +2506,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4078",
         "GridLocation": {
-          "Latitude": -27.624500000000000,
-          "Longitude": 152.972000000000000
+          "Latitude": -27.6245,
+          "Longitude": 152.972
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2543,8 +2543,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4006",
         "GridLocation": {
-          "Latitude": -27.452400000000000,
-          "Longitude": 153.035710000000000
+          "Latitude": -27.4524,
+          "Longitude": 153.03571
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2580,8 +2580,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4209",
         "GridLocation": {
-          "Latitude": -27.854400000000000,
-          "Longitude": 153.331000000000000
+          "Latitude": -27.8544,
+          "Longitude": 153.331
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2617,8 +2617,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4671",
         "GridLocation": {
-          "Latitude": -24.990600000000000,
-          "Longitude": 151.969000000000000
+          "Latitude": -24.9906,
+          "Longitude": 151.969
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2654,8 +2654,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4680",
         "GridLocation": {
-          "Latitude": -23.851600000000000,
-          "Longitude": 151.251000000000000
+          "Latitude": -23.8516,
+          "Longitude": 151.251
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2691,8 +2691,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4077",
         "GridLocation": {
-          "Latitude": -27.586100000000000,
-          "Longitude": 152.980000000000000
+          "Latitude": -27.5861,
+          "Longitude": 152.98
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2728,8 +2728,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4701",
         "GridLocation": {
-          "Latitude": -23.336200000000000,
-          "Longitude": 150.517000000000000
+          "Latitude": -23.3362,
+          "Longitude": 150.517
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2765,8 +2765,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4390",
         "GridLocation": {
-          "Latitude": -28.537500000000000,
-          "Longitude": 150.298000000000000
+          "Latitude": -28.5375,
+          "Longitude": 150.298
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2802,8 +2802,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4865",
         "GridLocation": {
-          "Latitude": -17.088700000000000,
-          "Longitude": 145.778000000000000
+          "Latitude": -17.0887,
+          "Longitude": 145.778
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2839,8 +2839,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4570",
         "GridLocation": {
-          "Latitude": -26.189100000000000,
-          "Longitude": 152.679000000000000
+          "Latitude": -26.1891,
+          "Longitude": 152.679
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2876,8 +2876,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4350",
         "GridLocation": {
-          "Latitude": -27.574600000000000,
-          "Longitude": 151.932000000000000
+          "Latitude": -27.5746,
+          "Longitude": 151.932
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2913,8 +2913,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4814",
         "GridLocation": {
-          "Latitude": -19.286900000000000,
-          "Longitude": 146.755000000000000
+          "Latitude": -19.2869,
+          "Longitude": 146.755
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2950,8 +2950,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4814",
         "GridLocation": {
-          "Latitude": -19.286900000000000,
-          "Longitude": 146.755000000000000
+          "Latitude": -19.2869,
+          "Longitude": 146.755
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -2987,8 +2987,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4212",
         "GridLocation": {
-          "Latitude": -27.898200000000000,
-          "Longitude": 153.327000000000000
+          "Latitude": -27.8982,
+          "Longitude": 153.327
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3024,8 +3024,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4887",
         "GridLocation": {
-          "Latitude": -17.380600000000000,
-          "Longitude": 145.382000000000000
+          "Latitude": -17.3806,
+          "Longitude": 145.382
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3061,8 +3061,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4655",
         "GridLocation": {
-          "Latitude": -25.281900000000000,
-          "Longitude": 152.832000000000000
+          "Latitude": -25.2819,
+          "Longitude": 152.832
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3098,8 +3098,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4352",
         "GridLocation": {
-          "Latitude": -27.446700000000000,
-          "Longitude": 151.951000000000000
+          "Latitude": -27.4467,
+          "Longitude": 151.951
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3135,8 +3135,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4121",
         "GridLocation": {
-          "Latitude": -27.530800000000000,
-          "Longitude": 153.059000000000000
+          "Latitude": -27.5308,
+          "Longitude": 153.059
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3172,8 +3172,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4806",
         "GridLocation": {
-          "Latitude": -19.667500000000000,
-          "Longitude": 147.423000000000000
+          "Latitude": -19.6675,
+          "Longitude": 147.423
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3209,8 +3209,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4068",
         "GridLocation": {
-          "Latitude": -27.500800000000000,
-          "Longitude": 152.984000000000000
+          "Latitude": -27.5008,
+          "Longitude": 152.984
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3246,8 +3246,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4850",
         "GridLocation": {
-          "Latitude": -18.653800000000000,
-          "Longitude": 146.169000000000000
+          "Latitude": -18.6538,
+          "Longitude": 146.169
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3283,8 +3283,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4860",
         "GridLocation": {
-          "Latitude": -17.516000000000000,
-          "Longitude": 146.037000000000000
+          "Latitude": -17.516,
+          "Longitude": 146.037
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3320,8 +3320,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4860",
         "GridLocation": {
-          "Latitude": -17.518300000000000,
-          "Longitude": 146.035000000000000
+          "Latitude": -17.5183,
+          "Longitude": 146.035
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3357,8 +3357,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4305",
         "GridLocation": {
-          "Latitude": -27.591100000000000,
-          "Longitude": 152.747000000000000
+          "Latitude": -27.5911,
+          "Longitude": 152.747
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3394,8 +3394,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4660",
         "GridLocation": {
-          "Latitude": -25.233400000000000,
-          "Longitude": 152.274000000000000
+          "Latitude": -25.2334,
+          "Longitude": 152.274
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3431,8 +3431,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4570",
         "GridLocation": {
-          "Latitude": -26.175900000000000,
-          "Longitude": 152.656000000000000
+          "Latitude": -26.1759,
+          "Longitude": 152.656
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3468,8 +3468,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4031",
         "GridLocation": {
-          "Latitude": -27.415400000000000,
-          "Longitude": 153.040000000000000
+          "Latitude": -27.4154,
+          "Longitude": 153.04
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3505,8 +3505,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4215",
         "GridLocation": {
-          "Latitude": -27.984800000000000,
-          "Longitude": 153.399000000000000
+          "Latitude": -27.9848,
+          "Longitude": 153.399
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3542,8 +3542,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4069",
         "GridLocation": {
-          "Latitude": -27.508300000000000,
-          "Longitude": 152.930000000000000
+          "Latitude": -27.5083,
+          "Longitude": 152.93
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3579,8 +3579,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4670",
         "GridLocation": {
-          "Latitude": -24.876200000000000,
-          "Longitude": 152.377000000000000
+          "Latitude": -24.8762,
+          "Longitude": 152.377
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3616,8 +3616,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4515",
         "GridLocation": {
-          "Latitude": -26.939700000000000,
-          "Longitude": 152.567000000000000
+          "Latitude": -26.9397,
+          "Longitude": 152.567
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3653,8 +3653,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4610",
         "GridLocation": {
-          "Latitude": -26.542700000000000,
-          "Longitude": 151.832000000000000
+          "Latitude": -26.5427,
+          "Longitude": 151.832
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3690,8 +3690,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4114",
         "GridLocation": {
-          "Latitude": -27.664100000000000,
-          "Longitude": 153.112000000000000
+          "Latitude": -27.6641,
+          "Longitude": 153.112
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3727,8 +3727,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4114",
         "GridLocation": {
-          "Latitude": -27.664100000000000,
-          "Longitude": 153.112000000000000
+          "Latitude": -27.6641,
+          "Longitude": 153.112
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3764,8 +3764,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4817",
         "GridLocation": {
-          "Latitude": -19.308900000000000,
-          "Longitude": 146.734000000000000
+          "Latitude": -19.3089,
+          "Longitude": 146.734
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3801,8 +3801,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4341",
         "GridLocation": {
-          "Latitude": -27.636500000000000,
-          "Longitude": 152.405000000000000
+          "Latitude": -27.6365,
+          "Longitude": 152.405
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3838,8 +3838,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4343",
         "GridLocation": {
-          "Latitude": -27.566900000000000,
-          "Longitude": 152.277000000000000
+          "Latitude": -27.5669,
+          "Longitude": 152.277
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3875,8 +3875,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4131",
         "GridLocation": {
-          "Latitude": -27.673700000000000,
-          "Longitude": 153.142000000000000
+          "Latitude": -27.6737,
+          "Longitude": 153.142
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3912,8 +3912,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4730",
         "GridLocation": {
-          "Latitude": -23.437900000000000,
-          "Longitude": 144.262000000000000
+          "Latitude": -23.4379,
+          "Longitude": 144.262
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3949,8 +3949,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4311",
         "GridLocation": {
-          "Latitude": -27.467200000000000,
-          "Longitude": 152.583000000000000
+          "Latitude": -27.4672,
+          "Longitude": 152.583
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -3986,8 +3986,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4127",
         "GridLocation": {
-          "Latitude": -27.639400000000000,
-          "Longitude": 153.129000000000000
+          "Latitude": -27.6394,
+          "Longitude": 153.129
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4023,8 +4023,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4109",
         "GridLocation": {
-          "Latitude": -27.565900000000000,
-          "Longitude": 153.077000000000000
+          "Latitude": -27.5659,
+          "Longitude": 153.077
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4060,8 +4060,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4740",
         "GridLocation": {
-          "Latitude": -21.115600000000000,
-          "Longitude": 149.174000000000000
+          "Latitude": -21.1156,
+          "Longitude": 149.174
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4097,8 +4097,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4740",
         "GridLocation": {
-          "Latitude": -21.067100000000000,
-          "Longitude": 149.162000000000000
+          "Latitude": -21.0671,
+          "Longitude": 149.162
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4134,8 +4134,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4740",
         "GridLocation": {
-          "Latitude": -21.152600000000000,
-          "Longitude": 149.177000000000000
+          "Latitude": -21.1526,
+          "Longitude": 149.177
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4171,8 +4171,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4885",
         "GridLocation": {
-          "Latitude": -17.359100000000000,
-          "Longitude": 145.593000000000000
+          "Latitude": -17.3591,
+          "Longitude": 145.593
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4208,8 +4208,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4552",
         "GridLocation": {
-          "Latitude": -26.765600000000000,
-          "Longitude": 152.857000000000000
+          "Latitude": -26.7656,
+          "Longitude": 152.857
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4245,8 +4245,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4509",
         "GridLocation": {
-          "Latitude": -27.242600000000000,
-          "Longitude": 153.043000000000000
+          "Latitude": -27.2426,
+          "Longitude": 153.043
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4282,8 +4282,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4122",
         "GridLocation": {
-          "Latitude": -27.545100000000000,
-          "Longitude": 153.106000000000000
+          "Latitude": -27.5451,
+          "Longitude": 153.106
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4319,8 +4319,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4880",
         "GridLocation": {
-          "Latitude": -16.995800000000000,
-          "Longitude": 145.416000000000000
+          "Latitude": -16.9958,
+          "Longitude": 145.416
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4356,8 +4356,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4558",
         "GridLocation": {
-          "Latitude": -26.654700000000000,
-          "Longitude": 153.076000000000000
+          "Latitude": -26.6547,
+          "Longitude": 153.076
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4393,8 +4393,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4133",
         "GridLocation": {
-          "Latitude": -27.684800000000000,
-          "Longitude": 153.111000000000000
+          "Latitude": -27.6848,
+          "Longitude": 153.111
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4430,8 +4430,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4650",
         "GridLocation": {
-          "Latitude": -25.534400000000000,
-          "Longitude": 152.698000000000000
+          "Latitude": -25.5344,
+          "Longitude": 152.698
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4467,8 +4467,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4218",
         "GridLocation": {
-          "Latitude": -28.039800000000000,
-          "Longitude": 153.416000000000000
+          "Latitude": -28.0398,
+          "Longitude": 153.416
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4504,8 +4504,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4220",
         "GridLocation": {
-          "Latitude": -28.063000000000000,
-          "Longitude": 153.438000000000000
+          "Latitude": -28.063,
+          "Longitude": 153.438
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4541,8 +4541,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4415",
         "GridLocation": {
-          "Latitude": -26.653500000000000,
-          "Longitude": 150.185000000000000
+          "Latitude": -26.6535,
+          "Longitude": 150.185
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4578,8 +4578,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4068",
         "GridLocation": {
-          "Latitude": -27.514000000000000,
-          "Longitude": 152.978000000000000
+          "Latitude": -27.514,
+          "Longitude": 152.978
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4615,8 +4615,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4754",
         "GridLocation": {
-          "Latitude": -21.157800000000000,
-          "Longitude": 148.862000000000000
+          "Latitude": -21.1578,
+          "Longitude": 148.862
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4652,8 +4652,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4053",
         "GridLocation": {
-          "Latitude": -27.410500000000000,
-          "Longitude": 152.966000000000000
+          "Latitude": -27.4105,
+          "Longitude": 152.966
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4689,8 +4689,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4630",
         "GridLocation": {
-          "Latitude": -24.870200000000000,
-          "Longitude": 151.119000000000000
+          "Latitude": -24.8702,
+          "Longitude": 151.119
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4726,8 +4726,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4744",
         "GridLocation": {
-          "Latitude": -22.000400000000000,
-          "Longitude": 148.059000000000000
+          "Latitude": -22.0004,
+          "Longitude": 148.059
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4763,8 +4763,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4506",
         "GridLocation": {
-          "Latitude": -27.109000000000000,
-          "Longitude": 152.953000000000000
+          "Latitude": -27.109,
+          "Longitude": 152.953
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4800,8 +4800,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4873",
         "GridLocation": {
-          "Latitude": -16.463700000000000,
-          "Longitude": 145.374000000000000
+          "Latitude": -16.4637,
+          "Longitude": 145.374
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4837,8 +4837,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4122",
         "GridLocation": {
-          "Latitude": -27.535000000000000,
-          "Longitude": 153.074000000000000
+          "Latitude": -27.535,
+          "Longitude": 153.074
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4874,8 +4874,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4714",
         "GridLocation": {
-          "Latitude": -23.644000000000000,
-          "Longitude": 150.387000000000000
+          "Latitude": -23.644,
+          "Longitude": 150.387
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4911,8 +4911,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4557",
         "GridLocation": {
-          "Latitude": -26.688800000000000,
-          "Longitude": 153.104000000000000
+          "Latitude": -26.6888,
+          "Longitude": 153.104
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4948,8 +4948,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4718",
         "GridLocation": {
-          "Latitude": -24.575000000000000,
-          "Longitude": 149.982000000000000
+          "Latitude": -24.575,
+          "Longitude": 149.982
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -4985,8 +4985,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4605",
         "GridLocation": {
-          "Latitude": -26.237000000000000,
-          "Longitude": 151.945000000000000
+          "Latitude": -26.237,
+          "Longitude": 151.945
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5022,8 +5022,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4503",
         "GridLocation": {
-          "Latitude": -27.259200000000000,
-          "Longitude": 153.008000000000000
+          "Latitude": -27.2592,
+          "Longitude": 153.008
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5059,8 +5059,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4615",
         "GridLocation": {
-          "Latitude": -26.667400000000000,
-          "Longitude": 151.993000000000000
+          "Latitude": -26.6674,
+          "Longitude": 151.993
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5096,8 +5096,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4504",
         "GridLocation": {
-          "Latitude": -27.173500000000000,
-          "Longitude": 152.942000000000000
+          "Latitude": -27.1735,
+          "Longitude": 152.942
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5133,8 +5133,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4211",
         "GridLocation": {
-          "Latitude": -28.001000000000000,
-          "Longitude": 153.328000000000000
+          "Latitude": -28.001,
+          "Longitude": 153.328
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5170,8 +5170,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4563",
         "GridLocation": {
-          "Latitude": -26.424500000000000,
-          "Longitude": 152.910000000000000
+          "Latitude": -26.4245,
+          "Longitude": 152.91
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5207,8 +5207,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4568",
         "GridLocation": {
-          "Latitude": -26.352800000000000,
-          "Longitude": 152.864000000000000
+          "Latitude": -26.3528,
+          "Longitude": 152.864
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5244,8 +5244,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4701",
         "GridLocation": {
-          "Latitude": -23.352100000000000,
-          "Longitude": 150.532000000000000
+          "Latitude": -23.3521,
+          "Longitude": 150.532
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5281,8 +5281,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4818",
         "GridLocation": {
-          "Latitude": -19.247900000000000,
-          "Longitude": 146.674000000000000
+          "Latitude": -19.2479,
+          "Longitude": 146.674
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5318,8 +5318,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4876",
         "GridLocation": {
-          "Latitude": -10.895200000000000,
-          "Longitude": 142.386000000000000
+          "Latitude": -10.8952,
+          "Longitude": 142.386
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5355,8 +5355,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4401",
         "GridLocation": {
-          "Latitude": -27.444700000000000,
-          "Longitude": 151.719000000000000
+          "Latitude": -27.4447,
+          "Longitude": 151.719
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5392,8 +5392,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4208",
         "GridLocation": {
-          "Latitude": -27.770700000000000,
-          "Longitude": 153.264000000000000
+          "Latitude": -27.7707,
+          "Longitude": 153.264
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5429,8 +5429,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4211",
         "GridLocation": {
-          "Latitude": -27.943100000000000,
-          "Longitude": 153.321000000000000
+          "Latitude": -27.9431,
+          "Longitude": 153.321
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5466,8 +5466,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4221",
         "GridLocation": {
-          "Latitude": -28.131700000000000,
-          "Longitude": 153.474000000000000
+          "Latitude": -28.1317,
+          "Longitude": 153.474
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5504,7 +5504,7 @@
         "PostalCode": "4553",
         "GridLocation": {
           "Latitude": -26.739350138636105,
-          "Longitude": 153.068975797963986
+          "Longitude": 153.068975797964
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5540,8 +5540,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4125",
         "GridLocation": {
-          "Latitude": -27.700700000000000,
-          "Longitude": 153.034000000000000
+          "Latitude": -27.7007,
+          "Longitude": 153.034
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5577,8 +5577,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4812",
         "GridLocation": {
-          "Latitude": -19.288700000000000,
-          "Longitude": 146.783000000000000
+          "Latitude": -19.2887,
+          "Longitude": 146.783
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5614,8 +5614,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4209",
         "GridLocation": {
-          "Latitude": -27.834500000000000,
-          "Longitude": 153.320000000000000
+          "Latitude": -27.8345,
+          "Longitude": 153.32
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5651,8 +5651,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4500",
         "GridLocation": {
-          "Latitude": -27.296400000000000,
-          "Longitude": 152.989000000000000
+          "Latitude": -27.2964,
+          "Longitude": 152.989
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5688,8 +5688,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4740",
         "GridLocation": {
-          "Latitude": -21.095800000000000,
-          "Longitude": 149.181000000000000
+          "Latitude": -21.0958,
+          "Longitude": 149.181
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5725,8 +5725,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4356",
         "GridLocation": {
-          "Latitude": -27.709600000000000,
-          "Longitude": 151.646000000000000
+          "Latitude": -27.7096,
+          "Longitude": 151.646
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5762,8 +5762,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4800",
         "GridLocation": {
-          "Latitude": -20.406200000000000,
-          "Longitude": 148.582000000000000
+          "Latitude": -20.4062,
+          "Longitude": 148.582
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5799,8 +5799,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4059",
         "GridLocation": {
-          "Latitude": -27.453100000000000,
-          "Longitude": 153.014000000000000
+          "Latitude": -27.4531,
+          "Longitude": 153.014
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5836,8 +5836,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4215",
         "GridLocation": {
-          "Latitude": -27.967000000000000,
-          "Longitude": 153.383000000000000
+          "Latitude": -27.967,
+          "Longitude": 153.383
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5873,8 +5873,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4066",
         "GridLocation": {
-          "Latitude": -27.486400000000000,
-          "Longitude": 152.979000000000000
+          "Latitude": -27.4864,
+          "Longitude": 152.979
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5910,8 +5910,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4151",
         "GridLocation": {
-          "Latitude": -27.494100000000000,
-          "Longitude": 153.062000000000000
+          "Latitude": -27.4941,
+          "Longitude": 153.062
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5947,8 +5947,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4017",
         "GridLocation": {
-          "Latitude": -27.319900000000000,
-          "Longitude": 153.025000000000000
+          "Latitude": -27.3199,
+          "Longitude": 153.025
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -5984,8 +5984,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4304",
         "GridLocation": {
-          "Latitude": -27.603999999999999,
-          "Longitude": 152.810455399999995
+          "Latitude": -27.604,
+          "Longitude": 152.8104554
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6021,8 +6021,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4151",
         "GridLocation": {
-          "Latitude": -27.494400000000000,
-          "Longitude": 153.060000000000000
+          "Latitude": -27.4944,
+          "Longitude": 153.06
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6058,8 +6058,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4300",
         "GridLocation": {
-          "Latitude": -27.612900000000000,
-          "Longitude": 152.896000000000000
+          "Latitude": -27.6129,
+          "Longitude": 152.896
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6095,8 +6095,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4503",
         "GridLocation": {
-          "Latitude": -27.251506838359099,
-          "Longitude": 152.992264393972988
+          "Latitude": -27.2515068383591,
+          "Longitude": 152.992264393973
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6132,8 +6132,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4825",
         "GridLocation": {
-          "Latitude": -20.741161247259001,
-          "Longitude": 139.499298951342013
+          "Latitude": -20.741161247259,
+          "Longitude": 139.499298951342
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6169,8 +6169,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4122",
         "GridLocation": {
-          "Latitude": -27.526000000000000,
-          "Longitude": 153.092000000000000
+          "Latitude": -27.526,
+          "Longitude": 153.092
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6206,8 +6206,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4350",
         "GridLocation": {
-          "Latitude": -27.561194755648600,
-          "Longitude": 151.925270206747001
+          "Latitude": -27.5611947556486,
+          "Longitude": 151.925270206747
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6243,8 +6243,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4812",
         "GridLocation": {
-          "Latitude": -19.284700000000000,
-          "Longitude": 146.781000000000000
+          "Latitude": -19.2847,
+          "Longitude": 146.781
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6280,8 +6280,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4888",
         "GridLocation": {
-          "Latitude": -17.610400000000000,
-          "Longitude": 145.489000000000000
+          "Latitude": -17.6104,
+          "Longitude": 145.489
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6317,8 +6317,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4301",
         "GridLocation": {
-          "Latitude": -27.653200000000000,
-          "Longitude": 152.869000000000000
+          "Latitude": -27.6532,
+          "Longitude": 152.869
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6354,8 +6354,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4020",
         "GridLocation": {
-          "Latitude": -27.223700000000000,
-          "Longitude": 153.111000000000000
+          "Latitude": -27.2237,
+          "Longitude": 153.111
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6391,8 +6391,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4306",
         "GridLocation": {
-          "Latitude": -27.694268000000001,
-          "Longitude": 152.810637000000014
+          "Latitude": -27.694268,
+          "Longitude": 152.810637
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6428,8 +6428,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4226",
         "GridLocation": {
-          "Latitude": -28.073900000000000,
-          "Longitude": 153.377000000000000
+          "Latitude": -28.0739,
+          "Longitude": 153.377
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6465,8 +6465,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4123",
         "GridLocation": {
-          "Latitude": -27.585600000000000,
-          "Longitude": 153.112000000000000
+          "Latitude": -27.5856,
+          "Longitude": 153.112
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6502,8 +6502,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4700",
         "GridLocation": {
-          "Latitude": -23.369200000000000,
-          "Longitude": 150.499000000000000
+          "Latitude": -23.3692,
+          "Longitude": 150.499
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6539,8 +6539,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4455",
         "GridLocation": {
-          "Latitude": -26.567000000000000,
-          "Longitude": 148.779000000000000
+          "Latitude": -26.567,
+          "Longitude": 148.779
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6576,8 +6576,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4340",
         "GridLocation": {
-          "Latitude": -27.636100000000000,
-          "Longitude": 152.586000000000000
+          "Latitude": -27.6361,
+          "Longitude": 152.586
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6613,8 +6613,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4113",
         "GridLocation": {
-          "Latitude": -27.592700000000000,
-          "Longitude": 153.078000000000000
+          "Latitude": -27.5927,
+          "Longitude": 153.078
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6650,8 +6650,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4017",
         "GridLocation": {
-          "Latitude": -27.329100000000000,
-          "Longitude": 153.057000000000000
+          "Latitude": -27.3291,
+          "Longitude": 153.057
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6687,8 +6687,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4737",
         "GridLocation": {
-          "Latitude": -21.420400000000000,
-          "Longitude": 149.214000000000000
+          "Latitude": -21.4204,
+          "Longitude": 149.214
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6724,8 +6724,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4128",
         "GridLocation": {
-          "Latitude": -27.662200000000000,
-          "Longitude": 153.187000000000000
+          "Latitude": -27.6622,
+          "Longitude": 153.187
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6761,8 +6761,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4215",
         "GridLocation": {
-          "Latitude": -27.962800000000000,
-          "Longitude": 153.402000000000000
+          "Latitude": -27.9628,
+          "Longitude": 153.402
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6798,8 +6798,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4825",
         "GridLocation": {
-          "Latitude": -20.734800000000000,
-          "Longitude": 139.487000000000000
+          "Latitude": -20.7348,
+          "Longitude": 139.487
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6835,8 +6835,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4825",
         "GridLocation": {
-          "Latitude": -20.734800000000000,
-          "Longitude": 139.487000000000000
+          "Latitude": -20.7348,
+          "Longitude": 139.487
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6872,8 +6872,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4825",
         "GridLocation": {
-          "Latitude": -20.722300000000000,
-          "Longitude": 139.510000000000000
+          "Latitude": -20.7223,
+          "Longitude": 139.51
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6909,8 +6909,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4300",
         "GridLocation": {
-          "Latitude": -27.690500000000000,
-          "Longitude": 152.910000000000000
+          "Latitude": -27.6905,
+          "Longitude": 152.91
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6946,8 +6946,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4127",
         "GridLocation": {
-          "Latitude": -27.612600000000000,
-          "Longitude": 153.136000000000000
+          "Latitude": -27.6126,
+          "Longitude": 153.136
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -6983,8 +6983,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4487",
         "GridLocation": {
-          "Latitude": -28.030500000000000,
-          "Longitude": 148.593000000000000
+          "Latitude": -28.0305,
+          "Longitude": 148.593
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7020,8 +7020,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4380",
         "GridLocation": {
-          "Latitude": -28.645700000000000,
-          "Longitude": 151.932000000000000
+          "Latitude": -28.6457,
+          "Longitude": 151.932
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7057,8 +7057,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4109",
         "GridLocation": {
-          "Latitude": -27.576000000000000,
-          "Longitude": 153.060000000000000
+          "Latitude": -27.576,
+          "Longitude": 153.06
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7094,8 +7094,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4567",
         "GridLocation": {
-          "Latitude": -26.410400000000000,
-          "Longitude": 153.101000000000000
+          "Latitude": -26.4104,
+          "Longitude": 153.101
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7131,8 +7131,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4875",
         "GridLocation": {
-          "Latitude": -10.577700000000000,
-          "Longitude": 142.214000000000000
+          "Latitude": -10.5777,
+          "Longitude": 142.214
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7168,8 +7168,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4272",
         "GridLocation": {
-          "Latitude": -27.932800000000000,
-          "Longitude": 153.190000000000000
+          "Latitude": -27.9328,
+          "Longitude": 153.19
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7205,8 +7205,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4680",
         "GridLocation": {
-          "Latitude": -23.959600000000000,
-          "Longitude": 151.364000000000000
+          "Latitude": -23.9596,
+          "Longitude": 151.364
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7242,8 +7242,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4061",
         "GridLocation": {
-          "Latitude": -27.445000000000000,
-          "Longitude": 152.951000000000000
+          "Latitude": -27.445,
+          "Longitude": 152.951
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7279,8 +7279,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4815",
         "GridLocation": {
-          "Latitude": -19.336000000000000,
-          "Longitude": 146.719000000000000
+          "Latitude": -19.336,
+          "Longitude": 146.719
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7316,8 +7316,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4313",
         "GridLocation": {
-          "Latitude": -27.102600000000000,
-          "Longitude": 152.388000000000000
+          "Latitude": -27.1026,
+          "Longitude": 152.388
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7353,8 +7353,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4680",
         "GridLocation": {
-          "Latitude": -23.873200000000000,
-          "Longitude": 151.270000000000000
+          "Latitude": -23.8732,
+          "Longitude": 151.27
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7390,8 +7390,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4350",
         "GridLocation": {
-          "Latitude": -27.545200000000000,
-          "Longitude": 151.965000000000000
+          "Latitude": -27.5452,
+          "Longitude": 151.965
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7427,8 +7427,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4810",
         "GridLocation": {
-          "Latitude": -19.272300000000000,
-          "Longitude": 146.811000000000000
+          "Latitude": -19.2723,
+          "Longitude": 146.811
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7464,8 +7464,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4870",
         "GridLocation": {
-          "Latitude": -16.923400000000000,
-          "Longitude": 145.752000000000000
+          "Latitude": -16.9234,
+          "Longitude": 145.752
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7501,8 +7501,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4870",
         "GridLocation": {
-          "Latitude": -16.921700000000000,
-          "Longitude": 145.754000000000000
+          "Latitude": -16.9217,
+          "Longitude": 145.754
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7538,8 +7538,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4878",
         "GridLocation": {
-          "Latitude": -16.811900000000000,
-          "Longitude": 145.696000000000000
+          "Latitude": -16.8119,
+          "Longitude": 145.696
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7575,8 +7575,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4510",
         "GridLocation": {
-          "Latitude": -27.070500000000000,
-          "Longitude": 152.929000000000000
+          "Latitude": -27.0705,
+          "Longitude": 152.929
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7612,8 +7612,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4854",
         "GridLocation": {
-          "Latitude": -17.940100000000000,
-          "Longitude": 145.931000000000000
+          "Latitude": -17.9401,
+          "Longitude": 145.931
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7649,8 +7649,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4655",
         "GridLocation": {
-          "Latitude": -25.296500000000000,
-          "Longitude": 152.876000000000000
+          "Latitude": -25.2965,
+          "Longitude": 152.876
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7686,8 +7686,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4165",
         "GridLocation": {
-          "Latitude": -27.595600000000000,
-          "Longitude": 153.288000000000000
+          "Latitude": -27.5956,
+          "Longitude": 153.288
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7723,8 +7723,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4370",
         "GridLocation": {
-          "Latitude": -28.210300000000000,
-          "Longitude": 152.034000000000000
+          "Latitude": -28.2103,
+          "Longitude": 152.034
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7760,8 +7760,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4012",
         "GridLocation": {
-          "Latitude": -27.398000000000000,
-          "Longitude": 153.038000000000000
+          "Latitude": -27.398,
+          "Longitude": 153.038
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7797,8 +7797,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4160",
         "GridLocation": {
-          "Latitude": -27.491100000000000,
-          "Longitude": 153.229000000000000
+          "Latitude": -27.4911,
+          "Longitude": 153.229
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7834,8 +7834,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4814",
         "GridLocation": {
-          "Latitude": -19.314900000000000,
-          "Longitude": 146.801000000000000
+          "Latitude": -19.3149,
+          "Longitude": 146.801
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7871,8 +7871,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4350",
         "GridLocation": {
-          "Latitude": -27.537600000000000,
-          "Longitude": 151.924000000000000
+          "Latitude": -27.5376,
+          "Longitude": 151.924
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7908,8 +7908,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4207",
         "GridLocation": {
-          "Latitude": -27.740300000000000,
-          "Longitude": 153.190000000000000
+          "Latitude": -27.7403,
+          "Longitude": 153.19
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7945,8 +7945,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4114",
         "GridLocation": {
-          "Latitude": -27.643100000000000,
-          "Longitude": 153.099000000000000
+          "Latitude": -27.6431,
+          "Longitude": 153.099
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -7982,8 +7982,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4868",
         "GridLocation": {
-          "Latitude": -16.960600000000000,
-          "Longitude": 145.742000000000000
+          "Latitude": -16.9606,
+          "Longitude": 145.742
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -8019,8 +8019,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4178",
         "GridLocation": {
-          "Latitude": -27.455000000000000,
-          "Longitude": 153.177000000000000
+          "Latitude": -27.455,
+          "Longitude": 153.177
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -8056,8 +8056,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4871",
         "GridLocation": {
-          "Latitude": -16.928800000000000,
-          "Longitude": 145.875000000000000
+          "Latitude": -16.9288,
+          "Longitude": 145.875
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -8093,8 +8093,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4207",
         "GridLocation": {
-          "Latitude": -27.809000000000000,
-          "Longitude": 153.122000000000000
+          "Latitude": -27.809,
+          "Longitude": 153.122
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -8130,8 +8130,8 @@
         "StateProvince": "QLD",
         "PostalCode": "4703",
         "GridLocation": {
-          "Latitude": -23.135000000000000,
-          "Longitude": 150.736000000000000
+          "Latitude": -23.135,
+          "Longitude": 150.736
         },
         "Country": "1101",
         "StatisticalAreas": []
@@ -8167,13 +8167,183 @@
         "StateProvince": "QLD",
         "PostalCode": "4104",
         "GridLocation": {
-          "Latitude": -27.517200000000000,
-          "Longitude": 153.023000000000000
+          "Latitude": -27.5172,
+          "Longitude": 153.023
         },
         "Country": "1101",
         "StatisticalAreas": []
       }
     ],
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-40330",
+    "LocalId": "40330",
+    "StateProvinceId": "000000456",
+    "CommonwealthId": "40330",
+    "ACARAId": "40330",
+    "SchoolName": "Woodcrest State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "40330",
+      "SchoolCampusId": "40330",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47619",
+    "LocalId": "47619",
+    "StateProvinceId": "000002410",
+    "CommonwealthId": "47619",
+    "ACARAId": "47619",
+    "SchoolName": "Whites Hill State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47619",
+      "SchoolCampusId": "47619",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-40404",
+    "LocalId": "40404",
+    "StateProvinceId": "000001336",
+    "CommonwealthId": "40404",
+    "ACARAId": "40404",
+    "SchoolName": "Redlynch State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "40404",
+      "SchoolCampusId": "40404",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47575",
+    "LocalId": "47575",
+    "StateProvinceId": "000002031",
+    "CommonwealthId": "47575",
+    "ACARAId": "47575",
+    "SchoolName": "Nambour State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47575",
+      "SchoolCampusId": "47575",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47581",
+    "LocalId": "47581",
+    "StateProvinceId": "000001733",
+    "CommonwealthId": "47581",
+    "ACARAId": "47581",
+    "SchoolName": "Meridan State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47581",
+      "SchoolCampusId": "47581",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47596",
+    "LocalId": "47596",
+    "StateProvinceId": "000002324",
+    "CommonwealthId": "47596",
+    "ACARAId": "47596",
+    "SchoolName": "North Lakes State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47596",
+      "SchoolCampusId": "47596",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-40326",
+    "LocalId": "40326",
+    "StateProvinceId": "000000452",
+    "CommonwealthId": "40326",
+    "ACARAId": "40326",
+    "SchoolName": "Bentley Park College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "40326",
+      "SchoolCampusId": "40326",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47634",
+    "LocalId": "47634",
+    "StateProvinceId": "000005554",
+    "CommonwealthId": "47634",
+    "ACARAId": "47634",
+    "SchoolName": "Stretton State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47634",
+      "SchoolCampusId": "47634",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47590",
+    "LocalId": "47590",
+    "StateProvinceId": "000002340",
+    "CommonwealthId": "47590",
+    "ACARAId": "47590",
+    "SchoolName": "Upper Coomera State College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47590",
+      "SchoolCampusId": "47590",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
+    "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47259",
+    "LocalId": "47259",
+    "StateProvinceId": "000001759",
+    "CommonwealthId": "47259",
+    "ACARAId": "47259",
+    "SchoolName": "Varsity College",
+    "SchoolType": "Sec",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47259",
+      "SchoolCampusId": "47259",
+      "CampusType": "Sec"
+    },
+    "SchoolSector": "Gov",
     "SessionType": "0827"
   }
 ]
