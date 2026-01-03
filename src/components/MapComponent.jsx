@@ -306,8 +306,9 @@ const MapComponent = ({
     >
       <ZoomHandler />
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.google.com/maps">Google Maps</a>'
+        url={`https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}`}
+        subdomains={['0', '1', '2', '3']}
       />
       <Pane name="school-sites-pane" style={{ zIndex: 650 }} />
       {showCatchments && geoData && (
