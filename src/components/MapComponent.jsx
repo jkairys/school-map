@@ -101,7 +101,7 @@ const MapComponent = ({
 
     if (score < 0.95) return '#ef4444'; // Red 500
     if (score < 1.0) return '#f97316'; // Orange 500
-    if (score < 1.05) return '#86efac'; // Green 300
+    if (score < 1.05) return '#22c55e'; // Green 500
     return '#15803d'; // Green 700
   }, [schoolData, stateAverages, selectedCompetency]);
 
@@ -191,7 +191,7 @@ const MapComponent = ({
     // Label with school name (Permanent)
     if (name) {
       const color = getSchoolColor(name);
-      const content = `<span style="color: ${color}; text-shadow: 0 0 2px white; font-weight: bold;">${name}</span>`;
+      const content = `<span style="color: ${color};">${name}</span>`;
 
       layer.bindTooltip(content, {
         permanent: true,
@@ -224,13 +224,14 @@ const MapComponent = ({
   const pointToLayerSchoolSite = useCallback((feature, latlng) => {
     const color = getSchoolColor(feature.properties.name);
 
-    // Colored dot
-    return L.circle(latlng, {
-      radius: 150,
-      stroke: false,
-      color: color,
+    // Fixed pixel size marker
+    return L.circleMarker(latlng, {
+      radius: 10,
+      stroke: true,
+      weight: 2,
+      color: 'white', // White border for contrast
       fillColor: color,
-      fillOpacity: 0.9,
+      fillOpacity: 1,
       pane: 'school-sites-pane'
     });
   }, [getSchoolColor]);
@@ -273,7 +274,7 @@ const MapComponent = ({
       color: color,
       fillColor: color,
       fillOpacity: 1,
-      pane: 'school-sites-pane'
+      pane: 'railway-pane'
     });
   }, [getStationColor]);
 
@@ -291,7 +292,8 @@ const MapComponent = ({
         permanent: false,
         direction: 'top',
         className: 'station-label',
-        offset: [0, -10]
+        offset: [0, -10],
+        pane: 'railway-pane'
       });
     }
   }, [transitTimes]);
@@ -306,10 +308,13 @@ const MapComponent = ({
     >
       <ZoomHandler />
       <TileLayer
-        attribution='&copy; <a href="https://www.google.com/maps">Google Maps</a>'
-        url={`https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}`}
-        subdomains={['0', '1', '2', '3']}
+        attribution='&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        url={`https://api.mapbox.com/styles/v1/mapbox/light-v11/tiles/{z}/{x}/{y}?access_token=${import.meta.env.VITE_MAPBOX_ACCESS_TOKEN}`}
+        tileSize={512}
+        zoomOffset={-1}
+        maxZoom={19}
       />
+      <Pane name="railway-pane" style={{ zIndex: 640 }} />
       <Pane name="school-sites-pane" style={{ zIndex: 650 }} />
       {showCatchments && geoData && (
         <GeoJSON

@@ -67,7 +67,7 @@ body {
 
 [data-zoom="13"] .school-site-label {
   font-size: 16px;
-  margin-left: 18px;
+  margin-left: 25px;
 }
 
 [data-zoom="14"] .school-site-label {
@@ -77,22 +77,22 @@ body {
 
 [data-zoom="15"] .school-site-label {
   font-size: 24px;
-  margin-left: 40px;
+  margin-left: 25px;
 }
 
 [data-zoom="16"] .school-site-label {
   font-size: 32px;
-  margin-left: 70px;
+  margin-left: 25px;
 }
 
 [data-zoom="17"] .school-site-label {
   font-size: 48px;
-  margin-left: 130px;
+  margin-left: 25px;
 }
 
 [data-zoom="18"] .school-site-label {
   font-size: 64px;
-  margin-left: 250px;
+  margin-left: 25px;
 }
 
 /* Remove default blue outline on click for interactive paths */
