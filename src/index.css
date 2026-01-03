@@ -53,31 +53,17 @@ body {
 [data-zoom="5"] .school-site-label,
 [data-zoom="6"] .school-site-label,
 [data-zoom="7"] .school-site-label,
-[data-zoom="8"] .school-site-label {
+[data-zoom="8"] .school-site-label,
+[data-zoom="9"] .school-site-label,
+[data-zoom="10"] .school-site-label,
+[data-zoom="11"] .school-site-label,
+[data-zoom="12"] .school-site-label {
   display: none;
 }
 
 /* Hide at low zoom to reduce clutter */
 
-[data-zoom="9"] .school-site-label {
-  font-size: 8px;
-  margin-left: 5px;
-}
 
-[data-zoom="10"] .school-site-label {
-  font-size: 10px;
-  margin-left: 6px;
-}
-
-[data-zoom="11"] .school-site-label {
-  font-size: 12px;
-  margin-left: 8px;
-}
-
-[data-zoom="12"] .school-site-label {
-  font-size: 14px;
-  margin-left: 12px;
-}
 
 [data-zoom="13"] .school-site-label {
   font-size: 16px;
@@ -107,4 +93,9 @@ body {
 [data-zoom="18"] .school-site-label {
   font-size: 64px;
   margin-left: 250px;
+}
+
+/* Remove default blue outline on click for interactive paths */
+path.leaflet-interactive:focus {
+  outline: none;
 }

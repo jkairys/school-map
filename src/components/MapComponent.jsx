@@ -29,11 +29,13 @@ const ZoomHandler = () => {
 };
 
 
-const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
+
+const MapComponent = ({ onSchoolHover, selectedCompetency, showCatchments, showSchoolLocations, showRailwayStations }) => {
   const [geoData, setGeoData] = useState(null);
   const [schoolData, setSchoolData] = useState(null);
   const [stateAverages, setStateAverages] = useState(null);
   const [schoolSites, setSchoolSites] = useState(null);
+  const [railwayStations, setRailwayStations] = useState(null);
 
   useEffect(() => {
     // Load Catchments
@@ -57,6 +59,12 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
       .then(res => res.json())
       .then(data => setSchoolSites(data))
       .catch(err => console.error("Error loading School Sites:", err));
+
+    // Load Railway Stations
+    fetch('/data/railway-station-locations.geojson')
+      .then(res => res.json())
+      .then(data => setRailwayStations(data))
+      .catch(err => console.error("Error loading Railway Stations:", err));
   }, []);
 
   const getSchoolColor = (name) => {
@@ -112,9 +120,9 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
         const layer = e.target;
         layer.setStyle({
           weight: 3,
-          color: '#333',
+          color: 'white', // Keep white, just thicker
           dashArray: '',
-          fillOpacity: 0.9
+          fillOpacity: 0.8
         });
         layer.bringToFront();
 
@@ -132,8 +140,8 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
           weight: 1,
           opacity: 1,
           color: 'white',
-          dashArray: '3',
-          fillOpacity: 0.6
+          dashArray: '', // Solid line now
+          fillOpacity: 0.5
         });
 
         if (onSchoolHover) {
@@ -149,8 +157,8 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
       weight: 1,
       opacity: 1,
       color: 'white',
-      dashArray: '3',
-      fillOpacity: 0.6
+      dashArray: '', // Solid line
+      fillOpacity: 0.5
     };
   }, [schoolData, stateAverages, selectedCompetency]);
 
@@ -180,6 +188,44 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
     });
   }, []);
 
+  const pointToLayerRailwayStation = useCallback((feature, latlng) => {
+    // Square marker. Using rectangle relative to center point to scale with map.
+    // Radius ~150m effectively means a square with side ~300m
+    const radiusMeters = 150;
+
+    // Approximation for meters to degrees
+    // 1 deg lat = 111,320 meters
+    // 1 deg lng = 111,320 * cos(lat) meters
+
+    const latOffset = radiusMeters / 111320;
+    const lngOffset = radiusMeters / (111320 * Math.cos(latlng.lat * (Math.PI / 180)));
+
+    const bounds = [
+      [latlng.lat - latOffset, latlng.lng - lngOffset],
+      [latlng.lat + latOffset, latlng.lng + lngOffset]
+    ];
+
+    return L.rectangle(bounds, {
+      stroke: false,
+      color: '#ea580c', // orange-600
+      fillColor: '#ea580c',
+      fillOpacity: 1,
+      pane: 'school-sites-pane' // Use same pane as schools for now, or create new one
+    });
+  }, []);
+
+  const onEachRailwayStation = useCallback((feature, layer) => {
+    if (feature.properties && feature.properties.name) {
+      // Tooltip on hover/click, not permanent
+      layer.bindTooltip(feature.properties.name, {
+        permanent: false,
+        direction: 'top',
+        className: 'station-label',
+        offset: [0, -10]
+      });
+    }
+  }, []);
+
 
   return (
     <MapContainer
@@ -194,18 +240,25 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Pane name="school-sites-pane" style={{ zIndex: 650 }} />
-      {geoData && (
+      {showCatchments && geoData && (
         <GeoJSON
           data={geoData}
           style={style}
           onEachFeature={onEachFeature}
         />
       )}
-      {schoolSites && (
+      {showSchoolLocations && schoolSites && (
         <GeoJSON
           data={schoolSites}
           pointToLayer={pointToLayerSchoolSite}
           onEachFeature={onEachSchoolSite}
+        />
+      )}
+      {showRailwayStations && railwayStations && (
+        <GeoJSON
+          data={railwayStations}
+          pointToLayer={pointToLayerRailwayStation}
+          onEachFeature={onEachRailwayStation}
         />
       )}
     </MapContainer>
@@ -213,3 +266,4 @@ const MapComponent = ({ onSchoolHover, selectedCompetency }) => {
 };
 
 export default MapComponent;
+

@@ -5,6 +5,9 @@ import './index.css';
 function App() {
   const [hoveredSchool, setHoveredSchool] = React.useState(null);
   const [selectedCompetency, setSelectedCompetency] = React.useState('Reading');
+  const [showCatchments, setShowCatchments] = React.useState(true);
+  const [showSchoolLocations, setShowSchoolLocations] = React.useState(true);
+  const [showRailwayStations, setShowRailwayStations] = React.useState(true);
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-gray-50 text-gray-900 font-sans">
@@ -18,25 +21,102 @@ function App() {
             Catchment zones & property insights
           </p>
 
-          <div className="mt-4">
-            <label htmlFor="competency" className="block text-xs font-semibold text-gray-500 mb-1 uppercase">
-              NAPLAN Competency
-            </label>
-            <select
-              id="competency"
-              className="block w-full pl-3 pr-10 py-2 text-sm border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
-              value={selectedCompetency}
-              onChange={(e) => setSelectedCompetency(e.target.value)}
-            >
-              {['Reading', 'Writing', 'Spelling', 'Grammar', 'Numeracy'].map((comp) => (
-                <option key={comp} value={comp}>
-                  {comp}
-                </option>
-              ))}
-            </select>
-            <p className="text-xs text-gray-400 mt-1">
-              Map colors compare schools to state average.
-            </p>
+          <div className="mt-4 space-y-4">
+            <div>
+              <label htmlFor="competency" className="block text-xs font-semibold text-gray-500 mb-1 uppercase">
+                NAPLAN Competency
+              </label>
+              <select
+                id="competency"
+                className="block w-full pl-3 pr-10 py-2 text-sm border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md border"
+                value={selectedCompetency}
+                onChange={(e) => setSelectedCompetency(e.target.value)}
+              >
+                {['Reading', 'Writing', 'Spelling', 'Grammar', 'Numeracy'].map((comp) => (
+                  <option key={comp} value={comp}>
+                    {comp}
+                  </option>
+                ))}
+              </select>
+              <p className="text-xs text-gray-400 mt-1">
+                Map colors compare schools to state average.
+              </p>
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase">
+                Map Layers
+              </label>
+              <div className="space-y-4">
+                {/* Junior Secondary Group */}
+                <div>
+                  <div className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      checked={showCatchments && showSchoolLocations}
+                      ref={input => {
+                        if (input) {
+                          input.indeterminate = (showCatchments || showSchoolLocations) && !(showCatchments && showSchoolLocations);
+                        }
+                      }}
+                      onChange={(e) => {
+                        const checked = e.target.checked;
+                        setShowCatchments(checked);
+                        setShowSchoolLocations(checked);
+                      }}
+                    />
+                    <span className="text-sm font-medium text-gray-900">Junior Secondary</span>
+                  </div>
+
+                  <div className="ml-6 mt-2 space-y-2 border-l-2 border-gray-100 pl-3">
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={showCatchments}
+                        onChange={(e) => setShowCatchments(e.target.checked)}
+                        className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      <span className="text-sm text-gray-700">Catchments</span>
+                    </label>
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={showSchoolLocations}
+                        onChange={(e) => setShowSchoolLocations(e.target.checked)}
+                        className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      <span className="text-sm text-gray-700">Locations</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              {/* Transport Group */}
+              <div className="mt-6">
+                <div className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                    checked={showRailwayStations}
+                    onChange={(e) => setShowRailwayStations(e.target.checked)}
+                  />
+                  <span className="text-sm font-medium text-gray-900">Transport</span>
+                </div>
+
+                <div className="ml-6 mt-2 space-y-2 border-l-2 border-gray-100 pl-3">
+                  <label className="flex items-center space-x-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={showRailwayStations}
+                      onChange={(e) => setShowRailwayStations(e.target.checked)}
+                      className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                    />
+                    <span className="text-sm text-gray-700">Railway Stations</span>
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -141,6 +221,9 @@ function App() {
         <MapComponent
           onSchoolHover={setHoveredSchool}
           selectedCompetency={selectedCompetency}
+          showCatchments={showCatchments}
+          showSchoolLocations={showSchoolLocations}
+          showRailwayStations={showRailwayStations}
         />
       </main>
     </div>
