@@ -50,10 +50,14 @@ try {
       codeToGeoName.set(code, name);
     }
 
-    // Normalize Name
-    const norm = name.replace(/SHS/g, 'State High School').replace(/SS/g, 'State School').toLowerCase();
+    // Normalize Name - expand abbreviations for better matching
+    const norm = name
+      .replace(/\bSHS\b/g, 'State High School')
+      .replace(/\bSS\b/g, 'State School')
+      .replace(/\bSC\b/g, 'Secondary College')
+      .toLowerCase();
     normGeoNameMap.set(norm, name);
-    normGeoNameMap.set(name.toLowerCase(), name); // Also map exact name
+    normGeoNameMap.set(name.toLowerCase(), name); // Also map exact name (for abbreviated forms)
   });
 
   // 3. Process Scraped Data
@@ -90,8 +94,12 @@ try {
         linkedName = normGeoNameMap.get(normScraped);
         stats.linkedByName++;
       } else {
-        // Try cleaning "State High School" -> "SHS" manually just in case
-        const variant = normScraped.replace(/state high school/g, 'shs').replace(/state school/g, 'ss');
+        // Try cleaning "State High School" -> "SHS" and "State School" -> "SS"
+        let variant = normScraped
+          .replace(/\bstate high school\b/g, 'shs')
+          .replace(/\bstate school\b/g, 'ss')
+          .replace(/\bsecondary college\b/g, 'sc');
+
         if (normGeoNameMap.has(variant)) {
           linkedName = normGeoNameMap.get(variant);
           stats.linkedByName++;
@@ -100,12 +108,24 @@ try {
     }
 
     if (linkedName) {
-      finalData[linkedName] = {
-        acaraId,
-        schoolName, // Original full name
-        profile: profileData,
-        naplan: results?.tableData
-      };
+      // Only overwrite existing data if:
+      // 1. No existing data for this catchment, OR
+      // 2. Existing data has no NAPLAN results AND new data has NAPLAN results
+      const existing = finalData[linkedName];
+      const hasNewNaplan = results?.tableData && results.tableData.length > 0;
+      const hasExistingNaplan = existing?.naplan && existing.naplan.length > 0;
+
+      if (!existing || (!hasExistingNaplan && hasNewNaplan)) {
+        finalData[linkedName] = {
+          acaraId,
+          schoolName, // Original full name
+          profile: profileData,
+          naplan: results?.tableData
+        };
+      } else if (hasExistingNaplan && !hasNewNaplan) {
+        // Skip - keep existing data with NAPLAN
+        stats.linkedByCode--; // Adjust stats since we didn't actually use this link
+      }
     } else {
       stats.unlinked++;
       // console.warn(`Unlinked: ${schoolName} (${acaraId})`);

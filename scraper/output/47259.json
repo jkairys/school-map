@@ -1,0 +1,55 @@
+{
+  "acaraId": "47259",
+  "schoolName": "Varsity College, Varsity Lakes, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "3304",
+    "indigenousPercent": "2",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "394",
+        "423",
+        "406",
+        "410",
+        "403"
+      ],
+      [
+        "Year 5",
+        "508",
+        "493",
+        "509",
+        "522",
+        "513"
+      ],
+      [
+        "Year 7",
+        "539",
+        "540",
+        "548",
+        "549",
+        "559"
+      ],
+      [
+        "Year 9",
+        "568",
+        "594",
+        "573",
+        "575",
+        "578"
+      ]
+    ]
+  }
+}

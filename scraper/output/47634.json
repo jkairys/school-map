@@ -1,0 +1,55 @@
+{
+  "acaraId": "47634",
+  "schoolName": "Stretton State College, Stretton, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "3578",
+    "indigenousPercent": "2",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "425",
+        "424",
+        "437",
+        "434",
+        "414"
+      ],
+      [
+        "Year 5",
+        "500",
+        "501",
+        "512",
+        "522",
+        "508"
+      ],
+      [
+        "Year 7",
+        "544",
+        "561",
+        "556",
+        "561",
+        "562"
+      ],
+      [
+        "Year 9",
+        "563",
+        "577",
+        "580",
+        "572",
+        "575"
+      ]
+    ]
+  }
+}
