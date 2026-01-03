@@ -1,0 +1,3589 @@
+{
+  "generatedAt": "2026-01-03T04:09:06.023Z",
+  "departureTime": "2026-01-04T21:00:00.000Z",
+  "destination": {
+    "name": "Central",
+    "lat": -27.465665943606396,
+    "lng": 153.0259340348434
+  },
+  "stations": [
+    {
+      "name": "Bowen Hills",
+      "objectid": 91,
+      "coordinates": [
+        153.03757953617813,
+        -27.445136445109927
+      ],
+      "transitToCentral": {
+        "durationSeconds": 277,
+        "durationText": "5 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:05 AM",
+        "steps": [
+          {
+            "line": "RPSP",
+            "departureStop": "Bowen Hills",
+            "arrivalStop": "Central",
+            "numStops": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Milton",
+      "objectid": 4,
+      "coordinates": [
+        153.0052070362096,
+        -27.468811942339652
+      ],
+      "transitToCentral": {
+        "durationSeconds": 300,
+        "durationText": "5 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:05 AM",
+        "steps": [
+          {
+            "line": "IPNA",
+            "departureStop": "Milton station",
+            "arrivalStop": "Central",
+            "numStops": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fortitude Valley",
+      "objectid": 20,
+      "coordinates": [
+        153.03394553529913,
+        -27.45580944483572
+      ],
+      "transitToCentral": {
+        "durationSeconds": 352,
+        "durationText": "6 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:05 AM",
+        "steps": [
+          {
+            "line": "FGBN",
+            "departureStop": "Fortitude Valley",
+            "arrivalStop": "Central",
+            "numStops": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "South Brisbane",
+      "objectid": 25,
+      "coordinates": [
+        153.01857403429017,
+        -27.475096442933335
+      ],
+      "transitToCentral": {
+        "durationSeconds": 420,
+        "durationText": "7 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:09 AM",
+        "steps": [
+          {
+            "line": "BNFG",
+            "departureStop": "South Brisbane",
+            "arrivalStop": "Central",
+            "numStops": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Toowong",
+      "objectid": 157,
+      "coordinates": [
+        152.99311403620766,
+        -27.485257441552076
+      ],
+      "transitToCentral": {
+        "durationSeconds": 540,
+        "durationText": "9 mins",
+        "departureTime": "7:11 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "SPRP",
+            "departureStop": "Toowong station",
+            "arrivalStop": "Central",
+            "numStops": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Southbank",
+      "objectid": 152,
+      "coordinates": [
+        153.0230990332457,
+        -27.48183544455213
+      ],
+      "transitToCentral": {
+        "durationSeconds": 540,
+        "durationText": "9 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:09 AM",
+        "steps": [
+          {
+            "line": "BNFG",
+            "departureStop": "South Bank",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Auchenflower",
+      "objectid": 103,
+      "coordinates": [
+        152.9967080362696,
+        -27.476470441007198
+      ],
+      "transitToCentral": {
+        "durationSeconds": 572,
+        "durationText": "10 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "SPRP",
+            "departureStop": "Auchenflower station",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Eagle Junction",
+      "objectid": 130,
+      "coordinates": [
+        153.0496870377981,
+        -27.415377445898937
+      ],
+      "transitToCentral": {
+        "durationSeconds": 600,
+        "durationText": "10 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:14 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Eagle Junction Station",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Indooroopilly",
+      "objectid": 17,
+      "coordinates": [
+        152.97622353533367,
+        -27.50225343932499
+      ],
+      "transitToCentral": {
+        "durationSeconds": 633,
+        "durationText": "11 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "7:17 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "Indooroopilly",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Windsor",
+      "objectid": 114,
+      "coordinates": [
+        153.02902853767458,
+        -27.43528294406764
+      ],
+      "transitToCentral": {
+        "durationSeconds": 712,
+        "durationText": "12 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:13 AM",
+        "steps": [
+          {
+            "line": "FGCL",
+            "departureStop": "Windsor",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Park Road",
+      "objectid": 41,
+      "coordinates": [
+        153.03080003126533,
+        -27.49355844489443
+      ],
+      "transitToCentral": {
+        "durationSeconds": 720,
+        "durationText": "12 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:14 AM",
+        "steps": [
+          {
+            "line": "CLBD",
+            "departureStop": "Boggo Road/Park Road",
+            "arrivalStop": "Central",
+            "numStops": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Taringa",
+      "objectid": 111,
+      "coordinates": [
+        152.9816470355578,
+        -27.493149940441747
+      ],
+      "transitToCentral": {
+        "durationSeconds": 720,
+        "durationText": "12 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "SPRP",
+            "departureStop": "Taringa",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wilston",
+      "objectid": 113,
+      "coordinates": [
+        153.01925503870356,
+        -27.4361474429735
+      ],
+      "transitToCentral": {
+        "durationSeconds": 832,
+        "durationText": "14 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:13 AM",
+        "steps": [
+          {
+            "line": "FGCL",
+            "departureStop": "Wilston station",
+            "arrivalStop": "Central",
+            "numStops": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wooloowin",
+      "objectid": 68,
+      "coordinates": [
+        153.0433680390333,
+        -27.419992945040256
+      ],
+      "transitToCentral": {
+        "durationSeconds": 832,
+        "durationText": "14 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:18 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Wooloowin",
+            "arrivalStop": "Central",
+            "numStops": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Northgate",
+      "objectid": 88,
+      "coordinates": [
+        153.0692350388996,
+        -27.39283544847537
+      ],
+      "transitToCentral": {
+        "durationSeconds": 840,
+        "durationText": "14 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:14 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Northgate station",
+            "arrivalStop": "Central",
+            "numStops": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Albion",
+      "objectid": 115,
+      "coordinates": [
+        153.0403020384847,
+        -27.4291374453528
+      ],
+      "transitToCentral": {
+        "durationSeconds": 899,
+        "durationText": "15 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:18 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Albion",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Newmarket",
+      "objectid": 29,
+      "coordinates": [
+        153.0106075400328,
+        -27.432698442541618
+      ],
+      "transitToCentral": {
+        "durationSeconds": 952,
+        "durationText": "16 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "FGBN",
+            "departureStop": "Newmarket",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Chelmer",
+      "objectid": 73,
+      "coordinates": [
+        152.97278953453724,
+        -27.511994438878066
+      ],
+      "transitToCentral": {
+        "durationSeconds": 960,
+        "durationText": "16 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "SPRP",
+            "departureStop": "Chelmer",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fairfield",
+      "objectid": 142,
+      "coordinates": [
+        153.0279290297348,
+        -27.50975544492412
+      ],
+      "transitToCentral": {
+        "durationSeconds": 988,
+        "durationText": "16 mins",
+        "departureTime": "7:07 AM",
+        "arrivalTime": "7:24 AM",
+        "steps": [
+          {
+            "line": "BNFG",
+            "departureStop": "Fairfield",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Coorparoo",
+      "objectid": 75,
+      "coordinates": [
+        153.0552630282049,
+        -27.489778947447082
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1020,
+        "durationText": "17 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:19 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Coorparoo",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Virginia",
+      "objectid": 159,
+      "coordinates": [
+        153.0624115405661,
+        -27.382142447306556
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1020,
+        "durationText": "17 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:17 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Virginia station",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Toombul",
+      "objectid": 154,
+      "coordinates": [
+        153.0588450379156,
+        -27.407690446802558
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1072,
+        "durationText": "18 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:18 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Toombul",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Alderley",
+      "objectid": 123,
+      "coordinates": [
+        153.00084804289003,
+        -27.42320194121129
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1072,
+        "durationText": "18 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "FGBN",
+            "departureStop": "Alderley station",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Graceville",
+      "objectid": 36,
+      "coordinates": [
+        152.97587003328653,
+        -27.520532439412932
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1080,
+        "durationText": "18 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "SPRP",
+            "departureStop": "Graceville station",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Yeronga",
+      "objectid": 171,
+      "coordinates": [
+        153.01681902906486,
+        -27.518068943989707
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1080,
+        "durationText": "18 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "7:24 AM",
+        "steps": [
+          {
+            "line": "BNFG",
+            "departureStop": "Yeronga",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sunshine",
+      "objectid": 110,
+      "coordinates": [
+        153.056293542658,
+        -27.37569994660843
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1140,
+        "durationText": "19 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Sunshine",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Enoggera",
+      "objectid": 140,
+      "coordinates": [
+        152.99244404371257,
+        -27.420244440500294
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1200,
+        "durationText": "20 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "FGBN",
+            "departureStop": "Enoggera station",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sherwood",
+      "objectid": 24,
+      "coordinates": [
+        152.97948803107565,
+        -27.531000440453383
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1200,
+        "durationText": "20 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:20 AM",
+        "steps": [
+          {
+            "line": "SPRP",
+            "departureStop": "Sherwood station",
+            "arrivalStop": "Central",
+            "numStops": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "Darra",
+      "objectid": 177,
+      "coordinates": [
+        152.95239152964598,
+        -27.565846937469125
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1200,
+        "durationText": "20 mins",
+        "departureTime": "7:09 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "Darra Station",
+            "arrivalStop": "Central",
+            "numStops": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ascot",
+      "objectid": 102,
+      "coordinates": [
+        153.0634290348464,
+        -27.42953594765025
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1260,
+        "durationText": "21 mins",
+        "departureTime": "7:29 AM",
+        "arrivalTime": "7:50 AM",
+        "steps": [
+          {
+            "line": "DBCA",
+            "departureStop": "Ascot",
+            "arrivalStop": "Eagle Junction Station",
+            "numStops": 3
+          },
+          {
+            "line": "CAIP",
+            "departureStop": "Eagle Junction Station",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Geebung",
+      "objectid": 97,
+      "coordinates": [
+        153.04724204464478,
+        -27.368741445406794
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1260,
+        "durationText": "21 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Geebung station",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Corinda",
+      "objectid": 135,
+      "coordinates": [
+        152.98010852981366,
+        -27.53900794006671
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1320,
+        "durationText": "22 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "7:32 AM",
+        "steps": [
+          {
+            "line": "SPBR",
+            "departureStop": "Corinda",
+            "arrivalStop": "Central",
+            "numStops": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "Norman Park",
+      "objectid": 8,
+      "coordinates": [
+        153.06235602873397,
+        -27.481652447796534
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1348,
+        "durationText": "22 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "CLBD",
+            "departureStop": "Norman Park station",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gaythorne",
+      "objectid": 35,
+      "coordinates": [
+        152.98505054483206,
+        -27.419237940506246
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1377,
+        "durationText": "23 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:28 AM",
+        "steps": [
+          {
+            "line": "FGBR",
+            "departureStop": "Gaythorne",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Clayfield",
+      "objectid": 134,
+      "coordinates": [
+        153.05769603743278,
+        -27.418142447252542
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1429,
+        "durationText": "24 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:26 AM",
+        "steps": [
+          {
+            "line": "DBCA",
+            "departureStop": "Clayfield",
+            "arrivalStop": "Eagle Junction Station",
+            "numStops": 1
+          },
+          {
+            "line": "NAIP",
+            "departureStop": "Eagle Junction Station",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mitchelton",
+      "objectid": 5,
+      "coordinates": [
+        152.97608204688527,
+        -27.411630439606206
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1432,
+        "durationText": "24 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:28 AM",
+        "steps": [
+          {
+            "line": "FGBR",
+            "departureStop": "Mitchelton station",
+            "arrivalStop": "Central",
+            "numStops": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "International Terminal",
+      "objectid": 101,
+      "coordinates": [
+        153.10859953353196,
+        -27.402719951947173
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1482,
+        "durationText": "25 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "7:30 AM",
+        "steps": [
+          {
+            "line": "BDCL",
+            "departureStop": "International Airport Station",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bindha",
+      "objectid": 106,
+      "coordinates": [
+        153.07267103953026,
+        -27.382914447880346
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1492,
+        "durationText": "25 mins",
+        "departureTime": "7:09 AM",
+        "arrivalTime": "7:33 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Bindha station",
+            "arrivalStop": "Central",
+            "numStops": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "Carseldine",
+      "objectid": 128,
+      "coordinates": [
+        153.02883304983348,
+        -27.34722444297764
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1500,
+        "durationText": "25 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Carseldine",
+            "arrivalStop": "Central",
+            "numStops": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wacol",
+      "objectid": 169,
+      "coordinates": [
+        152.9243430303766,
+        -27.589141435020423
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1500,
+        "durationText": "25 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "Wacol",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hendra",
+      "objectid": 34,
+      "coordinates": [
+        153.0625950361272,
+        -27.42206894707478
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1500,
+        "durationText": "25 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:26 AM",
+        "steps": [
+          {
+            "line": "DBCA",
+            "departureStop": "Hendra",
+            "arrivalStop": "Eagle Junction Station",
+            "numStops": 2
+          },
+          {
+            "line": "NAIP",
+            "departureStop": "Eagle Junction Station",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxley",
+      "objectid": 145,
+      "coordinates": [
+        152.9737440286972,
+        -27.552193939115547
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1500,
+        "durationText": "25 mins",
+        "departureTime": "7:07 AM",
+        "arrivalTime": "7:32 AM",
+        "steps": [
+          {
+            "line": "SPBR",
+            "departureStop": "Oxley station",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Doomben",
+      "objectid": 137,
+      "coordinates": [
+        153.0745585341608,
+        -27.43135744879182
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1515,
+        "durationText": "25 mins",
+        "departureTime": "7:24 AM",
+        "arrivalTime": "7:50 AM",
+        "steps": [
+          {
+            "line": "DBCA",
+            "departureStop": "Doomben",
+            "arrivalStop": "Eagle Junction Station",
+            "numStops": 4
+          },
+          {
+            "line": "CAIP",
+            "departureStop": "Eagle Junction Station",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxford Park",
+      "objectid": 14,
+      "coordinates": [
+        152.96915954756903,
+        -27.40443743799416
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1552,
+        "durationText": "26 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:28 AM",
+        "steps": [
+          {
+            "line": "FGBR",
+            "departureStop": "Oxford Park station",
+            "arrivalStop": "Central",
+            "numStops": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nundah",
+      "objectid": 13,
+      "coordinates": [
+        153.06203503889247,
+        -27.400729447171198
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1560,
+        "durationText": "26 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:26 AM",
+        "steps": [
+          {
+            "line": "BRSH",
+            "departureStop": "Nundah",
+            "arrivalStop": "Northgate station",
+            "numStops": 1
+          },
+          {
+            "line": "NAIP",
+            "departureStop": "Northgate station",
+            "arrivalStop": "Central",
+            "numStops": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zillmere",
+      "objectid": 172,
+      "coordinates": [
+        153.03673504707396,
+        -27.358811443773217
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1568,
+        "durationText": "26 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Zillmere station",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gailes",
+      "objectid": 60,
+      "coordinates": [
+        152.91907002870695,
+        -27.60222793392094
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1620,
+        "durationText": "27 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "Gailes",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cannon Hill",
+      "objectid": 72,
+      "coordinates": [
+        153.0888850285032,
+        -27.46529944917607
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1680,
+        "durationText": "28 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:29 AM",
+        "steps": [
+          {
+            "line": "CLBD",
+            "departureStop": "Cannon Hill station",
+            "arrivalStop": "Central",
+            "numStops": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "Murarrie",
+      "objectid": 87,
+      "coordinates": [
+        153.10557902567484,
+        -27.464771452617033
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1680,
+        "durationText": "28 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "7:34 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Murarrie Station",
+            "arrivalStop": "Central",
+            "numStops": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "Grovely",
+      "objectid": 61,
+      "coordinates": [
+        152.96259504914855,
+        -27.404425937207616
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1693,
+        "durationText": "28 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:28 AM",
+        "steps": [
+          {
+            "line": "FGBR",
+            "departureStop": "Grovely station",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nudgee",
+      "objectid": 89,
+      "coordinates": [
+        153.08342504086042,
+        -27.366087449011882
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1732,
+        "durationText": "29 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:33 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Nudgee",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Keperra",
+      "objectid": 85,
+      "coordinates": [
+        152.95669604941625,
+        -27.409117437467316
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1792,
+        "durationText": "30 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "7:35 AM",
+        "steps": [
+          {
+            "line": "FGBN",
+            "departureStop": "Keperra",
+            "arrivalStop": "Central",
+            "numStops": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Goodna",
+      "objectid": 99,
+      "coordinates": [
+        152.90172503013923,
+        -27.608741433591614
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1800,
+        "durationText": "30 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:35 AM",
+        "steps": [
+          {
+            "line": "IPCA",
+            "departureStop": "Goodna",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bald Hills",
+      "objectid": 121,
+      "coordinates": [
+        153.0109715535344,
+        -27.32084144080517
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1811,
+        "durationText": "30 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "7:41 AM",
+        "steps": [
+          {
+            "line": "RPSP",
+            "departureStop": "Bald Hills station",
+            "arrivalStop": "Central",
+            "numStops": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "Petrie",
+      "objectid": 108,
+      "coordinates": [
+        152.9819420637014,
+        -27.268249437792694
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1842,
+        "durationText": "31 mins",
+        "departureTime": "7:07 AM",
+        "arrivalTime": "7:38 AM",
+        "steps": [
+          {
+            "line": "CAIP",
+            "departureStop": "Petrie station",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Richlands",
+      "objectid": 178,
+      "coordinates": [
+        152.94692252707563,
+        -27.596211437481525
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1920,
+        "durationText": "32 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:32 AM",
+        "steps": [
+          {
+            "line": "SPBR",
+            "departureStop": "Richlands station",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Boondall",
+      "objectid": 90,
+      "coordinates": [
+        153.06774404479614,
+        -27.34644544733661
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1968,
+        "durationText": "33 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:33 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Boondall station",
+            "arrivalStop": "Central",
+            "numStops": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Strathpine",
+      "objectid": 26,
+      "coordinates": [
+        152.98950705811788,
+        -27.311004939533664
+      ],
+      "transitToCentral": {
+        "durationSeconds": 1969,
+        "durationText": "33 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "7:41 AM",
+        "steps": [
+          {
+            "line": "RPSP",
+            "departureStop": "Strathpine",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ferny Grove",
+      "objectid": 32,
+      "coordinates": [
+        152.93542305152496,
+        -27.401501434334048
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2032,
+        "durationText": "34 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:35 AM",
+        "steps": [
+          {
+            "line": "FGBN",
+            "departureStop": "Ferny Grove station",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "North Boondall",
+      "objectid": 9,
+      "coordinates": [
+        153.0607090465361,
+        -27.338669447106252
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2032,
+        "durationText": "34 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:33 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "North Boondall station",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bray Park",
+      "objectid": 131,
+      "coordinates": [
+        152.98617655987147,
+        -27.29957843895268
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2040,
+        "durationText": "34 mins",
+        "departureTime": "7:07 AM",
+        "arrivalTime": "7:41 AM",
+        "steps": [
+          {
+            "line": "RPSP",
+            "departureStop": "Bray Park station",
+            "arrivalStop": "Central",
+            "numStops": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Redbank",
+      "objectid": 147,
+      "coordinates": [
+        152.87236703435633,
+        -27.599458430221873
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2040,
+        "durationText": "34 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:35 AM",
+        "steps": [
+          {
+            "line": "IPCA",
+            "departureStop": "Redbank Railway Station",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Moorooka",
+      "objectid": 21,
+      "coordinates": [
+        153.01392302680753,
+        -27.535659442862514
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2084,
+        "durationText": "35 mins",
+        "departureTime": "7:19 AM",
+        "arrivalTime": "7:54 AM",
+        "steps": [
+          {
+            "line": "R591",
+            "departureStop": "Ipswich Rd at Moorooka station",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 1
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dakabin",
+      "objectid": 94,
+      "coordinates": [
+        152.97578507029968,
+        -27.230406436985003
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2100,
+        "durationText": "35 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:38 AM",
+        "steps": [
+          {
+            "line": "CAIP",
+            "departureStop": "Dakabin station",
+            "arrivalStop": "Central",
+            "numStops": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hemmant",
+      "objectid": 83,
+      "coordinates": [
+        153.12744602558897,
+        -27.447370453751592
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2100,
+        "durationText": "35 mins",
+        "departureTime": "7:09 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "CLBD",
+            "departureStop": "Hemmant",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Domestic Terminal",
+      "objectid": 95,
+      "coordinates": [
+        153.1189120353824,
+        -27.385055953505933
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2127,
+        "durationText": "35 mins",
+        "departureTime": "7:25 AM",
+        "arrivalTime": "8:00 AM",
+        "steps": [
+          {
+            "line": "BDCL",
+            "departureStop": "Domestic Airport station",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lawnton",
+      "objectid": 86,
+      "coordinates": [
+        152.9809095632606,
+        -27.281517938497334
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2220,
+        "durationText": "37 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:41 AM",
+        "steps": [
+          {
+            "line": "RPSP",
+            "departureStop": "Lawnton railway station",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Riverview",
+      "objectid": 148,
+      "coordinates": [
+        152.85032403733496,
+        -27.594906427175008
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2222,
+        "durationText": "37 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:41 AM",
+        "steps": [
+          {
+            "line": "RWBR",
+            "departureStop": "Riverview station",
+            "arrivalStop": "Central",
+            "numStops": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sandgate",
+      "objectid": 151,
+      "coordinates": [
+        153.06916404825205,
+        -27.32219844714309
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2275,
+        "durationText": "38 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "7:48 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Sandgate station",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Deagon",
+      "objectid": 136,
+      "coordinates": [
+        153.06324104778614,
+        -27.32779644651619
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2306,
+        "durationText": "38 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "7:48 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Deagon",
+            "arrivalStop": "Central",
+            "numStops": 14
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dinmore",
+      "objectid": 80,
+      "coordinates": [
+        152.8335530394419,
+        -27.596206925954306
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2340,
+        "durationText": "39 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:41 AM",
+        "steps": [
+          {
+            "line": "RWBR",
+            "departureStop": "Dinmore",
+            "arrivalStop": "Central",
+            "numStops": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "Narangba",
+      "objectid": 7,
+      "coordinates": [
+        152.95998107502305,
+        -27.202272435224945
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2340,
+        "durationText": "39 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Narangba railway station",
+            "arrivalStop": "Central",
+            "numStops": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Springfield",
+      "objectid": 179,
+      "coordinates": [
+        152.9221070208538,
+        -27.65998243495251
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2374,
+        "durationText": "40 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "SPBR",
+            "departureStop": "Springfield",
+            "arrivalStop": "Central",
+            "numStops": 14
+          }
+        ]
+      }
+    },
+    {
+      "name": "Manly",
+      "objectid": 45,
+      "coordinates": [
+        153.18024701866764,
+        -27.456727458855735
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2400,
+        "durationText": "40 mins",
+        "departureTime": "7:09 AM",
+        "arrivalTime": "7:49 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Manly",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wynnum North",
+      "objectid": 162,
+      "coordinates": [
+        153.1586855238107,
+        -27.437262457584687
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2400,
+        "durationText": "40 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "CLBD",
+            "departureStop": "Wynnum North station",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Springfield Central",
+      "objectid": 79,
+      "coordinates": [
+        152.90282477462225,
+        -27.674333415947785
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2460,
+        "durationText": "41 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "SPBR",
+            "departureStop": "Springfield Central station",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ebbw Vale",
+      "objectid": 138,
+      "coordinates": [
+        152.82204053897303,
+        -27.603347425086874
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2460,
+        "durationText": "41 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:41 AM",
+        "steps": [
+          {
+            "line": "RWBR",
+            "departureStop": "Ebbw Vale",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Salisbury",
+      "objectid": 109,
+      "coordinates": [
+        153.02269802406957,
+        -27.553836444664434
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2471,
+        "durationText": "41 mins",
+        "departureTime": "7:12 AM",
+        "arrivalTime": "7:54 AM",
+        "steps": [
+          {
+            "line": "R591",
+            "departureStop": "Lillian Ave at Salisbury station",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 2
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wynnum",
+      "objectid": 69,
+      "coordinates": [
+        153.1660440232178,
+        -27.439750457796308
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2520,
+        "durationText": "42 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "CLBD",
+            "departureStop": "Wynnum",
+            "arrivalStop": "Central",
+            "numStops": 14
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kallangur",
+      "objectid": 184,
+      "coordinates": [
+        153.00029256415948,
+        -27.256562439963165
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2522,
+        "durationText": "42 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:47 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Kallangur",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lota",
+      "objectid": 44,
+      "coordinates": [
+        153.18858701652093,
+        -27.470098460018605
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2580,
+        "durationText": "43 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "7:49 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Lota",
+            "arrivalStop": "Central",
+            "numStops": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wynnum Central",
+      "objectid": 170,
+      "coordinates": [
+        153.17031602175885,
+        -27.445450458344837
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2640,
+        "durationText": "44 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "CLBD",
+            "departureStop": "Wynnum Central station",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Altandi",
+      "objectid": 116,
+      "coordinates": [
+        153.06375451560254,
+        -27.58280494962778
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2640,
+        "durationText": "44 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:44 AM",
+        "steps": [
+          {
+            "line": "140",
+            "departureStop": "Mains Rd at Altandi, stop 68",
+            "arrivalStop": "South Bank busway station",
+            "numStops": 7
+          },
+          {
+            "line": "CLBD",
+            "departureStop": "South Bank",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Murrumba Downs",
+      "objectid": 180,
+      "coordinates": [
+        153.0118365628749,
+        -27.25231444106416
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2694,
+        "durationText": "45 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:47 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Murrumba Downs station",
+            "arrivalStop": "Central",
+            "numStops": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "Booval",
+      "objectid": 19,
+      "coordinates": [
+        152.78944904230346,
+        -27.609342421873446
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2700,
+        "durationText": "45 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:47 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "Booval",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mango Hill",
+      "objectid": 181,
+      "coordinates": [
+        153.02763956204657,
+        -27.24639044208
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2760,
+        "durationText": "46 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:47 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Mango Hill",
+            "arrivalStop": "Central",
+            "numStops": 17
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thorneside",
+      "objectid": 167,
+      "coordinates": [
+        153.19276801366826,
+        -27.486030460942253
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2760,
+        "durationText": "46 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:49 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Thorneside",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Morayfield",
+      "objectid": 22,
+      "coordinates": [
+        152.9526260872647,
+        -27.110236934187782
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2880,
+        "durationText": "48 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:50 AM",
+        "steps": [
+          {
+            "line": "CAIP",
+            "departureStop": "Morayfield station",
+            "arrivalStop": "Central",
+            "numStops": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "East Ipswich",
+      "objectid": 81,
+      "coordinates": [
+        152.77500804401768,
+        -27.60996542033487
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2907,
+        "durationText": "48 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "7:53 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "East Ipswich station",
+            "arrivalStop": "Central",
+            "numStops": 14
+          }
+        ]
+      }
+    },
+    {
+      "name": "Birkdale",
+      "objectid": 107,
+      "coordinates": [
+        153.21874201013685,
+        -27.494027464334213
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2940,
+        "durationText": "49 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:49 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Birkdale",
+            "arrivalStop": "Central",
+            "numStops": 14
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mango Hill East",
+      "objectid": 182,
+      "coordinates": [
+        153.03609656327072,
+        -27.23332394309121
+      ],
+      "transitToCentral": {
+        "durationSeconds": 2998,
+        "durationText": "50 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:53 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Mango Hill East station",
+            "arrivalStop": "Central",
+            "numStops": 18
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ipswich",
+      "objectid": 84,
+      "coordinates": [
+        152.76068104599517,
+        -27.612912419226383
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3000,
+        "durationText": "50 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:53 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Banoon",
+      "objectid": 124,
+      "coordinates": [
+        153.04670101798297,
+        -27.576643447524344
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3004,
+        "durationText": "50 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:54 AM",
+        "steps": [
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Caboolture",
+      "objectid": 71,
+      "coordinates": [
+        152.95368909049708,
+        -27.08277943386599
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3060,
+        "durationText": "51 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "7:56 AM",
+        "steps": [
+          {
+            "line": "CAIP",
+            "departureStop": "Caboolture Station",
+            "arrivalStop": "Central",
+            "numStops": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "Coopers Plains",
+      "objectid": 74,
+      "coordinates": [
+        153.03597452147196,
+        -27.56745544601981
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3062,
+        "durationText": "51 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "7:54 AM",
+        "steps": [
+          {
+            "line": "R591",
+            "departureStop": "Orange Grove Rd at Rookwood Avenue, stop 56",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 3
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rothwell",
+      "objectid": 183,
+      "coordinates": [
+        153.0484050632121,
+        -27.223872944275577
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3101,
+        "durationText": "52 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:53 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Rothwell",
+            "arrivalStop": "Central",
+            "numStops": 19
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wellington Point",
+      "objectid": 160,
+      "coordinates": [
+        153.24201100855697,
+        -27.494362465990022
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3161,
+        "durationText": "53 mins",
+        "departureTime": "7:11 AM",
+        "arrivalTime": "8:04 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Wellington Point station",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fruitgrove",
+      "objectid": 143,
+      "coordinates": [
+        153.07973951219904,
+        -27.59821894995085
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3306,
+        "durationText": "55 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:59 AM",
+        "steps": [
+          {
+            "line": "156",
+            "departureStop": "Fruitgrove",
+            "arrivalStop": "Upper Mt Gravatt station",
+            "numStops": 8
+          },
+          {
+            "line": "276",
+            "departureStop": "Upper Mt Gravatt station",
+            "arrivalStop": "Buranda busway station",
+            "numStops": 2
+          },
+          {
+            "line": "CLBD",
+            "departureStop": "Buranda station",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thomas Street",
+      "objectid": 112,
+      "coordinates": [
+        152.74548254640277,
+        -27.614744917565755
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3310,
+        "durationText": "55 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:59 AM",
+        "steps": [
+          {
+            "line": "RWBR",
+            "departureStop": "Thomas Street station",
+            "arrivalStop": "Central",
+            "numStops": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ormiston",
+      "objectid": 76,
+      "coordinates": [
+        153.2558075038681,
+        -27.514552467970425
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3360,
+        "durationText": "56 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "8:04 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Ormiston",
+            "arrivalStop": "Central",
+            "numStops": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wulkuraka",
+      "objectid": 161,
+      "coordinates": [
+        152.73279554770266,
+        -27.61358741654131
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3360,
+        "durationText": "56 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "7:59 AM",
+        "steps": [
+          {
+            "line": "RWBR",
+            "departureStop": "Wulkuraka station",
+            "arrivalStop": "Central",
+            "numStops": 17
+          }
+        ]
+      }
+    },
+    {
+      "name": "Elimbah",
+      "objectid": 30,
+      "coordinates": [
+        152.94585910035224,
+        -27.010973432192877
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3420,
+        "durationText": "57 mins",
+        "departureTime": "7:11 AM",
+        "arrivalTime": "8:08 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Elimbah station",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kippa-Ring",
+      "objectid": 42,
+      "coordinates": [
+        153.08256505955123,
+        -27.225317948376578
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3449,
+        "durationText": "57 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "7:59 AM",
+        "steps": [
+          {
+            "line": "RPIP",
+            "departureStop": "Kippa-Ring Station",
+            "arrivalStop": "Central",
+            "numStops": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cleveland",
+      "objectid": 173,
+      "coordinates": [
+        153.2661190005189,
+        -27.524191469437906
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3480,
+        "durationText": "58 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "8:04 AM",
+        "steps": [
+          {
+            "line": "CLBR",
+            "departureStop": "Cleveland",
+            "arrivalStop": "Central",
+            "numStops": 17
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shorncliffe",
+      "objectid": 166,
+      "coordinates": [
+        153.08042804555907,
+        -27.32708044828673
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3509,
+        "durationText": "58 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "8:03 AM",
+        "steps": [
+          {
+            "line": "SHBR",
+            "departureStop": "Sandgate station",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Karrabin",
+      "objectid": 1,
+      "coordinates": [
+        152.70906755121476,
+        -27.604380912983647
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3540,
+        "durationText": "59 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "7:59 AM",
+        "steps": [
+          {
+            "line": "RWBR",
+            "departureStop": "Karrabin station",
+            "arrivalStop": "Central",
+            "numStops": 18
+          }
+        ]
+      }
+    },
+    {
+      "name": "Runcorn",
+      "objectid": 150,
+      "coordinates": [
+        153.06881501349616,
+        -27.592632449193626
+      ],
+      "transitToCentral": {
+        "durationSeconds": 3840,
+        "durationText": "1 hour 4 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "8:14 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Runcorn",
+            "arrivalStop": "Altandi",
+            "numStops": 1
+          },
+          {
+            "line": "139",
+            "departureStop": "Mains Rd at Altandi, stop 68",
+            "arrivalStop": "Buranda busway station",
+            "numStops": 8
+          },
+          {
+            "line": "CLBD",
+            "departureStop": "Buranda station",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sunnybank",
+      "objectid": 27,
+      "coordinates": [
+        153.05420001667696,
+        -27.580805447915157
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4020,
+        "durationText": "1 hour 7 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "8:09 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Sunnybank",
+            "arrivalStop": "Banoon",
+            "numStops": 1
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kuraby",
+      "objectid": 39,
+      "coordinates": [
+        153.09148700964005,
+        -27.604944952239492
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4144,
+        "durationText": "1 hour 9 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "8:14 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Kuraby",
+            "arrivalStop": "Altandi",
+            "numStops": 3
+          },
+          {
+            "line": "139",
+            "departureStop": "Mains Rd at Altandi, stop 68",
+            "arrivalStop": "Buranda busway station",
+            "numStops": 8
+          },
+          {
+            "line": "CLBD",
+            "departureStop": "Buranda station",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Glass House Mountains",
+      "objectid": 98,
+      "coordinates": [
+        152.95637511262518,
+        -26.899368933546263
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4200,
+        "durationText": "1 hour 10 mins",
+        "departureTime": "7:16 AM",
+        "arrivalTime": "8:26 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Glass House Mountains",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trinder Park",
+      "objectid": 158,
+      "coordinates": [
+        153.09790150603683,
+        -27.631752453449455
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4320,
+        "durationText": "1 hour 12 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "8:14 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Trinder Park station",
+            "arrivalStop": "Altandi",
+            "numStops": 4
+          },
+          {
+            "line": "139",
+            "departureStop": "Mains Rd at Altandi, stop 68",
+            "arrivalStop": "Buranda busway station",
+            "numStops": 8
+          },
+          {
+            "line": "CLBD",
+            "departureStop": "Buranda station",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Woodridge",
+      "objectid": 175,
+      "coordinates": [
+        153.10372700394,
+        -27.638037453670016
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4440,
+        "durationText": "1 hour 14 mins",
+        "departureTime": "7:00 AM",
+        "arrivalTime": "8:14 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Woodridge",
+            "arrivalStop": "Altandi",
+            "numStops": 5
+          },
+          {
+            "line": "139",
+            "departureStop": "Mains Rd at Altandi, stop 68",
+            "arrivalStop": "Buranda busway station",
+            "numStops": 8
+          },
+          {
+            "line": "CLBD",
+            "departureStop": "Buranda station",
+            "arrivalStop": "Central",
+            "numStops": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Beerwah",
+      "objectid": 18,
+      "coordinates": [
+        152.95840511752067,
+        -26.857104431941018
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4544,
+        "durationText": "1 hour 16 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "8:26 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Beerwah",
+            "arrivalStop": "Central",
+            "numStops": 14
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kingston",
+      "objectid": 118,
+      "coordinates": [
+        153.1183560002221,
+        -27.657275454595204
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4560,
+        "durationText": "1 hour 16 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "8:24 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Kingston station",
+            "arrivalStop": "Banoon",
+            "numStops": 8
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Walloon",
+      "objectid": 67,
+      "coordinates": [
+        152.66783805493702,
+        -27.607340408817887
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4560,
+        "durationText": "1 hour 16 mins",
+        "departureTime": "7:13 AM",
+        "arrivalTime": "8:29 AM",
+        "steps": [
+          {
+            "line": "RWIP",
+            "departureStop": "Walloon station",
+            "arrivalStop": "Ipswich",
+            "numStops": 4
+          },
+          {
+            "line": "IPBR",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Workshops Rail Museum",
+      "objectid": 139,
+      "coordinates": [
+        152.759739047429,
+        -27.5986584183761
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4714,
+        "durationText": "1 hour 19 mins",
+        "departureTime": "7:10 AM",
+        "arrivalTime": "8:29 AM",
+        "steps": [
+          {
+            "line": "IPBR",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Loganlea",
+      "objectid": 43,
+      "coordinates": [
+        153.1380429965563,
+        -27.670728956937754
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4740,
+        "durationText": "1 hour 19 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "8:24 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Loganlea",
+            "arrivalStop": "Banoon",
+            "numStops": 9
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Landsborough",
+      "objectid": 47,
+      "coordinates": [
+        152.9663736230897,
+        -26.80814693280357
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4800,
+        "durationText": "1 hour 20 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "8:26 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Landsborough station",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thagoona",
+      "objectid": 153,
+      "coordinates": [
+        152.62981905698965,
+        -27.62679790656387
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4800,
+        "durationText": "1 hour 20 mins",
+        "departureTime": "7:09 AM",
+        "arrivalTime": "8:29 AM",
+        "steps": [
+          {
+            "line": "RWIP",
+            "departureStop": "Thagoona station",
+            "arrivalStop": "Ipswich",
+            "numStops": 5
+          },
+          {
+            "line": "IPBR",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Beerburrum",
+      "objectid": 105,
+      "coordinates": [
+        152.95924210516836,
+        -26.959815433369307
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4921,
+        "durationText": "1 hour 22 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "8:26 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Beerburrum",
+            "arrivalStop": "Central",
+            "numStops": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bethania",
+      "objectid": 126,
+      "coordinates": [
+        153.1586784917507,
+        -27.68838095928782
+      ],
+      "transitToCentral": {
+        "durationSeconds": 4980,
+        "durationText": "1 hour 23 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "8:24 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Bethania station",
+            "arrivalStop": "Banoon",
+            "numStops": 10
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rosewood",
+      "objectid": 23,
+      "coordinates": [
+        152.59264405904685,
+        -27.643126901931446
+      ],
+      "transitToCentral": {
+        "durationSeconds": 5040,
+        "durationText": "1 hour 24 mins",
+        "departureTime": "7:05 AM",
+        "arrivalTime": "8:29 AM",
+        "steps": [
+          {
+            "line": "RWIP",
+            "departureStop": "Rosewood",
+            "arrivalStop": "Ipswich",
+            "numStops": 6
+          },
+          {
+            "line": "IPBR",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mooloolah",
+      "objectid": 6,
+      "coordinates": [
+        152.9632761289125,
+        -26.76600543207363
+      ],
+      "transitToCentral": {
+        "durationSeconds": 5107,
+        "durationText": "1 hour 25 mins",
+        "departureTime": "7:18 AM",
+        "arrivalTime": "8:44 AM",
+        "steps": [
+          {
+            "line": "GYBR",
+            "departureStop": "Mooloolah station",
+            "arrivalStop": "Central",
+            "numStops": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "Edens Landing",
+      "objectid": 82,
+      "coordinates": [
+        153.17091198958965,
+        -27.698109460615022
+      ],
+      "transitToCentral": {
+        "durationSeconds": 5280,
+        "durationText": "1 hour 28 mins",
+        "departureTime": "7:11 AM",
+        "arrivalTime": "8:39 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Edens Landing station",
+            "arrivalStop": "Banoon",
+            "numStops": 11
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Eudlo",
+      "objectid": 141,
+      "coordinates": [
+        152.95683863542067,
+        -26.72581893106829
+      ],
+      "transitToCentral": {
+        "durationSeconds": 5401,
+        "durationText": "1 hour 30 mins",
+        "departureTime": "7:13 AM",
+        "arrivalTime": "8:44 AM",
+        "steps": [
+          {
+            "line": "GYBR",
+            "departureStop": "Eudlo station",
+            "arrivalStop": "Central",
+            "numStops": 12
+          }
+        ]
+      }
+    },
+    {
+      "name": "Holmview",
+      "objectid": 38,
+      "coordinates": [
+        153.18759298572417,
+        -27.7095124620123
+      ],
+      "transitToCentral": {
+        "durationSeconds": 5460,
+        "durationText": "1 hour 31 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "8:39 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Holmview station",
+            "arrivalStop": "Banoon",
+            "numStops": 12
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Beenleigh",
+      "objectid": 125,
+      "coordinates": [
+        153.20473998250444,
+        -27.717551463863014
+      ],
+      "transitToCentral": {
+        "durationSeconds": 5717,
+        "durationText": "1 hour 35 mins",
+        "departureTime": "7:03 AM",
+        "arrivalTime": "8:39 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Beenleigh",
+            "arrivalStop": "Banoon",
+            "numStops": 13
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Palmwoods",
+      "objectid": 176,
+      "coordinates": [
+        152.96071613942792,
+        -26.68866193127744
+      ],
+      "transitToCentral": {
+        "durationSeconds": 5760,
+        "durationText": "1 hour 36 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "8:44 AM",
+        "steps": [
+          {
+            "line": "GYBR",
+            "departureStop": "Palmwoods station",
+            "arrivalStop": "Central",
+            "numStops": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "Woombye",
+      "objectid": 78,
+      "coordinates": [
+        152.96278314151962,
+        -26.660510431241345
+      ],
+      "transitToCentral": {
+        "durationSeconds": 6000,
+        "durationText": "1 hour 40 mins",
+        "departureTime": "7:04 AM",
+        "arrivalTime": "8:44 AM",
+        "steps": [
+          {
+            "line": "GYBR",
+            "departureStop": "Woombye",
+            "arrivalStop": "Central",
+            "numStops": 14
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ormeau",
+      "objectid": 77,
+      "coordinates": [
+        153.28237346480282,
+        -27.799098972838035
+      ],
+      "transitToCentral": {
+        "durationSeconds": 6360,
+        "durationText": "1 hour 46 mins",
+        "departureTime": "7:08 AM",
+        "arrivalTime": "8:54 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Ormeau",
+            "arrivalStop": "Banoon",
+            "numStops": 14
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nambour",
+      "objectid": 119,
+      "coordinates": [
+        152.95820264705824,
+        -26.62526543164508
+      ],
+      "transitToCentral": {
+        "durationSeconds": 6538,
+        "durationText": "1 hour 49 mins",
+        "departureTime": "7:25 AM",
+        "arrivalTime": "9:14 AM",
+        "steps": [
+          {
+            "line": "NAIP",
+            "departureStop": "Nambour station",
+            "arrivalStop": "Central",
+            "numStops": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "Coomera",
+      "objectid": 174,
+      "coordinates": [
+        153.31711445397698,
+        -27.852314476581256
+      ],
+      "transitToCentral": {
+        "durationSeconds": 6720,
+        "durationText": "1 hour 52 mins",
+        "departureTime": "7:02 AM",
+        "arrivalTime": "8:54 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Coomera Train Station",
+            "arrivalStop": "Banoon",
+            "numStops": 16
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Robina",
+      "objectid": 120,
+      "coordinates": [
+        153.37806491875347,
+        -28.071277484126572
+      ],
+      "transitToCentral": {
+        "durationSeconds": 6900,
+        "durationText": "1 hour 55 mins",
+        "departureTime": "7:09 AM",
+        "arrivalTime": "9:04 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Robina station",
+            "arrivalStop": "Altandi",
+            "numStops": 17
+          },
+          {
+            "line": "130",
+            "departureStop": "Mains Rd at Altandi, stop 68",
+            "arrivalStop": "South Bank busway station",
+            "numStops": 7
+          },
+          {
+            "line": "CLBR",
+            "departureStop": "South Bank",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Varsity Lakes",
+      "objectid": 46,
+      "coordinates": [
+        153.3992804130029,
+        -28.097069987059612
+      ],
+      "transitToCentral": {
+        "durationSeconds": 7080,
+        "durationText": "1 hour 58 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "9:04 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Varsity Lakes Station",
+            "arrivalStop": "Altandi",
+            "numStops": 18
+          },
+          {
+            "line": "130",
+            "departureStop": "Mains Rd at Altandi, stop 68",
+            "arrivalStop": "South Bank busway station",
+            "numStops": 7
+          },
+          {
+            "line": "CLBR",
+            "departureStop": "South Bank",
+            "arrivalStop": "Central",
+            "numStops": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Helensvale",
+      "objectid": 15,
+      "coordinates": [
+        153.33938444192958,
+        -27.925542978406042
+      ],
+      "transitToCentral": {
+        "durationSeconds": 7361,
+        "durationText": "2 hours 3 mins",
+        "departureTime": "7:06 AM",
+        "arrivalTime": "9:09 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Helensvale",
+            "arrivalStop": "Banoon",
+            "numStops": 17
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nerang",
+      "objectid": 28,
+      "coordinates": [
+        153.35011393190143,
+        -27.994106980781687
+      ],
+      "transitToCentral": {
+        "durationSeconds": 7650,
+        "durationText": "2 hours 8 mins",
+        "departureTime": "7:01 AM",
+        "arrivalTime": "9:09 AM",
+        "steps": [
+          {
+            "line": "VLBN",
+            "departureStop": "Nerang",
+            "arrivalStop": "Banoon",
+            "numStops": 18
+          },
+          {
+            "line": "R591",
+            "departureStop": "Banoon",
+            "arrivalStop": "Wilkie St at Yeerongpilly station",
+            "numStops": 4
+          },
+          {
+            "line": "BNFG",
+            "departureStop": "Yeerongpilly",
+            "arrivalStop": "Central",
+            "numStops": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Laidley",
+      "objectid": 2,
+      "coordinates": [
+        152.39318258302922,
+        -27.62823038308919
+      ],
+      "transitToCentral": {
+        "durationSeconds": 7840,
+        "durationText": "2 hours 11 mins",
+        "departureTime": "7:24 AM",
+        "arrivalTime": "9:35 AM",
+        "steps": [
+          {
+            "line": "539",
+            "departureStop": "William St at Laidley",
+            "arrivalStop": "Rosewood",
+            "numStops": 9
+          },
+          {
+            "line": "RWIP",
+            "departureStop": "Rosewood",
+            "arrivalStop": "Ipswich",
+            "numStops": 6
+          },
+          {
+            "line": "IPCA",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 23
+          }
+        ]
+      }
+    },
+    {
+      "name": "Eumundi",
+      "objectid": 31,
+      "coordinates": [
+        152.95508366535728,
+        -26.48047192802511
+      ],
+      "transitToCentral": {
+        "durationSeconds": 8633,
+        "durationText": "2 hours 24 mins",
+        "departureTime": "8:32 AM",
+        "arrivalTime": "10:56 AM",
+        "steps": [
+          {
+            "line": "630",
+            "departureStop": "Memorial Dr at Eumundi Aquatic Centre",
+            "arrivalStop": "Nambour station",
+            "numStops": 3
+          },
+          {
+            "line": "NAIP",
+            "departureStop": "Nambour station",
+            "arrivalStop": "Central",
+            "numStops": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gatton",
+      "objectid": 144,
+      "coordinates": [
+        152.2776461039851,
+        -27.554467371037443
+      ],
+      "transitToCentral": {
+        "durationSeconds": 9120,
+        "durationText": "2 hours 32 mins",
+        "departureTime": "8:03 AM",
+        "arrivalTime": "10:35 AM",
+        "steps": [
+          {
+            "line": "539",
+            "departureStop": "Gatton station",
+            "arrivalStop": "Rosewood",
+            "numStops": 13
+          },
+          {
+            "line": "RWIP",
+            "departureStop": "Rosewood",
+            "arrivalStop": "Ipswich",
+            "numStops": 6
+          },
+          {
+            "line": "IPCA",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 23
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cooran",
+      "objectid": 129,
+      "coordinates": [
+        152.8226781967551,
+        -26.334000415288607
+      ],
+      "transitToCentral": {
+        "durationSeconds": 9174,
+        "durationText": "2 hours 33 mins",
+        "departureTime": "1:44 PM",
+        "arrivalTime": "4:17 PM",
+        "steps": [
+          {
+            "line": "GYBR",
+            "departureStop": "Cooran station",
+            "arrivalStop": "Central",
+            "numStops": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "Traveston",
+      "objectid": 168,
+      "coordinates": [
+        152.78295370211654,
+        -26.319844411024224
+      ],
+      "transitToCentral": {
+        "durationSeconds": 9480,
+        "durationText": "2 hours 38 mins",
+        "departureTime": "1:39 PM",
+        "arrivalTime": "4:17 PM",
+        "steps": [
+          {
+            "line": "GYBR",
+            "departureStop": "Traveston station",
+            "arrivalStop": "Central",
+            "numStops": 21
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cooroy",
+      "objectid": 93,
+      "coordinates": [
+        152.91117467713775,
+        -26.417594924584293
+      ],
+      "transitToCentral": {
+        "durationSeconds": 10398,
+        "durationText": "2 hours 53 mins",
+        "departureTime": "9:32 AM",
+        "arrivalTime": "12:26 PM",
+        "steps": [
+          {
+            "line": "631",
+            "departureStop": "Elm St opp Cooroy station",
+            "arrivalStop": "Nambour station",
+            "numStops": 18
+          },
+          {
+            "line": "NAIP",
+            "departureStop": "Nambour station",
+            "arrivalStop": "Central",
+            "numStops": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gympie North",
+      "objectid": 100,
+      "coordinates": [
+        152.6824827317226,
+        -26.159101398988742
+      ],
+      "transitToCentral": {
+        "durationSeconds": 10560,
+        "durationText": "2 hours 56 mins",
+        "departureTime": "1:21 PM",
+        "arrivalTime": "4:17 PM",
+        "steps": [
+          {
+            "line": "GYBR",
+            "departureStop": "Gympie North station",
+            "arrivalStop": "Central",
+            "numStops": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "Helidon",
+      "objectid": 33,
+      "coordinates": [
+        152.12319912211177,
+        -27.547965355810778
+      ],
+      "transitToCentral": {
+        "durationSeconds": 10807,
+        "durationText": "3 hours 0 mins",
+        "departureTime": "10:34 AM",
+        "arrivalTime": "1:35 PM",
+        "steps": [
+          {
+            "line": "539",
+            "departureStop": "Turner St at Helidon",
+            "arrivalStop": "Rosewood",
+            "numStops": 17
+          },
+          {
+            "line": "RWIP",
+            "departureStop": "Rosewood",
+            "arrivalStop": "Ipswich",
+            "numStops": 6
+          },
+          {
+            "line": "IPCA",
+            "departureStop": "Ipswich",
+            "arrivalStop": "Central",
+            "numStops": 23
+          }
+        ]
+      }
+    },
+    {
+      "name": "Yandina",
+      "objectid": 70,
+      "coordinates": [
+        152.9582216550267,
+        -26.560961930435358
+      ],
+      "transitToCentral": {
+        "durationSeconds": 11916,
+        "durationText": "3 hours 19 mins",
+        "departureTime": "7:37 AM",
+        "arrivalTime": "10:56 AM",
+        "steps": [
+          {
+            "line": "631",
+            "departureStop": "Railway St at Yandina station",
+            "arrivalStop": "Memorial Dr at Eumundi Markets",
+            "numStops": 4
+          },
+          {
+            "line": "630",
+            "departureStop": "Memorial Dr at Eumundi Markets",
+            "arrivalStop": "Nambour station",
+            "numStops": 4
+          },
+          {
+            "line": "NAIP",
+            "departureStop": "Nambour station",
+            "arrivalStop": "Central",
+            "numStops": 20
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pomona",
+      "objectid": 146,
+      "coordinates": [
+        152.85670718924752,
+        -26.366079418603167
+      ],
+      "transitToCentral": {
+        "durationSeconds": 13446,
+        "durationText": "3 hours 44 mins",
+        "departureTime": "8:41 AM",
+        "arrivalTime": "12:26 PM",
+        "steps": [
+          {
+            "line": "632",
+            "departureStop": "Factory St near Reserve St",
+            "arrivalStop": "Elm St opp Cooroy station",
+            "numStops": 2
+          },
+          {
+            "line": "631",
+            "departureStop": "Elm St opp Cooroy station",
+            "arrivalStop": "Nambour station",
+            "numStops": 18
+          },
+          {
+            "line": "NAIP",
+            "departureStop": "Nambour station",
+            "arrivalStop": "Central",
+            "numStops": 20
+          }
+        ]
+      }
+    }
+  ]
+}

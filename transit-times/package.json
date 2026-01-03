@@ -1,0 +1,14 @@
+{
+  "name": "transit-times",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fetch transit times from Brisbane railway stations to CBD",
+  "main": "fetch-times.js",
+  "scripts": {
+    "fetch": "node fetch-times.js",
+    "fetch-dry": "node fetch-times.js --dry-run"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
