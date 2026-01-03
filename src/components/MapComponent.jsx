@@ -11,7 +11,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
-import { calculateStateAverages, getSchoolRelativeScore } from '../utils/naplanUtils';
+import { getSchoolRelativeScore } from '../utils/naplanUtils';
 
 // Component to handle zoom classes on map container
 const ZoomHandler = () => {
@@ -30,10 +30,18 @@ const ZoomHandler = () => {
 
 
 
-const MapComponent = ({ onSchoolHover, selectedCompetency, showCatchments, showSchoolLocations, showRailwayStations }) => {
+const MapComponent = ({
+  onSchoolSelect,
+  selectedSchool,
+  selectedCompetency,
+  showCatchments,
+  showSchoolLocations,
+  showRailwayStations,
+  schoolData,
+  stateAverages
+}) => {
   const [geoData, setGeoData] = useState(null);
-  const [schoolData, setSchoolData] = useState(null);
-  const [stateAverages, setStateAverages] = useState(null);
+  // schoolData and stateAverages are now props
   const [schoolSites, setSchoolSites] = useState(null);
   const [railwayStations, setRailwayStations] = useState(null);
 
@@ -44,15 +52,7 @@ const MapComponent = ({ onSchoolHover, selectedCompetency, showCatchments, showS
       .then(data => setGeoData(data))
       .catch(err => console.error("Error loading GeoJSON:", err));
 
-    // Load NAPLAN Data
-    fetch('/data/naplan_data.json')
-      .then(res => res.json())
-      .then(data => {
-        setSchoolData(data);
-        const averages = calculateStateAverages(data);
-        setStateAverages(averages);
-      })
-      .catch(err => console.error("Error loading NAPLAN data:", err));
+    // NAPLAN Data is now passed in props
 
     // Load School Sites
     fetch('/data/school_sites.geojson')
@@ -67,16 +67,17 @@ const MapComponent = ({ onSchoolHover, selectedCompetency, showCatchments, showS
       .catch(err => console.error("Error loading Railway Stations:", err));
   }, []);
 
-  const getSchoolColor = (name) => {
+  // Helper to ensure stable function reference if needed, though simple function is fine
+  const getSchoolColor = useCallback((name) => {
     if (!schoolData || !schoolData[name] || !stateAverages || !selectedCompetency) {
       // Fallback or No Data
-      return '#d1d5db'; // Gray 300
+      return '#9ca3af'; // Gray 400 (neutral for no data)
     }
 
     const school = schoolData[name];
     const score = getSchoolRelativeScore(school, selectedCompetency, stateAverages);
 
-    if (score === null) return '#d1d5db';
+    if (score === null) return '#9ca3af';
 
     // Thresholds
     // < 0.95: Red
@@ -88,105 +89,137 @@ const MapComponent = ({ onSchoolHover, selectedCompetency, showCatchments, showS
     if (score < 1.0) return '#f97316'; // Orange 500
     if (score < 1.05) return '#86efac'; // Green 300
     return '#15803d'; // Green 700
-  };
+  }, [schoolData, stateAverages, selectedCompetency]);
 
-  const onEachFeature = useCallback((feature, layer) => {
-    const { name, locality } = feature.properties;
+  // Ref to store school marker layers by name
+  const markerLayersRef = React.useRef({});
 
-    // Calculate score for tooltip
-    let scoreText = 'No Data';
-    let rawScore = null;
+  // Effect to update marker styles when selectedSchool changes
+  useEffect(() => {
+    // Reset all markers to default style (no border) first to be safe,
+    // or just reset the previously selected one if we tracked it.
+    // Iterating all is safer to ensure no artifacts.
+    Object.values(markerLayersRef.current).forEach(layer => {
+      const name = layer.feature.properties.name;
+      const color = getSchoolColor(name);
+      layer.setStyle({
+        color: color, // Border same as fill (invisible border effectively) or transparent if stroke false
+        fillColor: color,
+        stroke: false,
+        fillOpacity: 0.9
+      });
+    });
 
-    if (schoolData && schoolData[name] && stateAverages && selectedCompetency) {
-      const relScore = getSchoolRelativeScore(schoolData[name], selectedCompetency, stateAverages);
-      if (relScore !== null) {
-        rawScore = relScore.toFixed(2);
-        scoreText = `${rawScore}x State Avg`;
+    if (selectedSchool && selectedSchool.name) {
+      const layer = markerLayersRef.current[selectedSchool.name];
+      if (layer) {
+        layer.setStyle({
+          stroke: true,
+          color: 'black',
+          weight: 3,
+          fillOpacity: 1
+        });
+        layer.bringToFront();
       }
     }
+  }, [selectedSchool, getSchoolColor]);
 
-    layer.bindTooltip(`
-      <div class="text-sm font-sans">
-        <strong class="block text-base">${name}</strong>
-        <span class="text-gray-600">${locality || 'QLD'}</span>
-        <div class="mt-1 font-mono text-xs text-gray-800">
-           ${selectedCompetency}: <strong>${scoreText}</strong>
-        </div>
-      </div>
-    `, { sticky: true });
+  const onEachFeature = useCallback((feature, layer) => {
+    const { name } = feature.properties;
 
     layer.on({
       mouseover: (e) => {
         const layer = e.target;
+        const color = getSchoolColor(name);
         layer.setStyle({
           weight: 3,
-          color: 'white', // Keep white, just thicker
-          dashArray: '',
-          fillOpacity: 0.8
+          color: 'black',
+          fillColor: color,
+          fillOpacity: 0.1, // Very subtle fill on hover
+          opacity: 1
         });
         layer.bringToFront();
-
-        // Pass data to parent
-        if (onSchoolHover) {
-          const data = schoolData ? schoolData[name] : null;
-          onSchoolHover(data || { name });
-        }
       },
       mouseout: (e) => {
         const layer = e.target;
         // Re-apply style
         layer.setStyle({
-          fillColor: getSchoolColor(name),
-          weight: 1,
-          opacity: 1,
-          color: 'white',
-          dashArray: '', // Solid line now
-          fillOpacity: 0.5
+          fillColor: 'transparent',
+          weight: 1.5,
+          opacity: 0.6,
+          color: 'black',
+          fillOpacity: 0
         });
-
-        if (onSchoolHover) {
-          onSchoolHover(null);
-        }
       }
     });
-  }, [schoolData, stateAverages, selectedCompetency, onSchoolHover]);
+  }, [getSchoolColor]);
 
   const style = useCallback((feature) => {
+    // Default style for catchments: Visible black border, no fill
     return {
-      fillColor: getSchoolColor(feature.properties.name),
-      weight: 1,
-      opacity: 1,
-      color: 'white',
-      dashArray: '', // Solid line
-      fillOpacity: 0.5
+      fillColor: 'transparent',
+      weight: 1.5,
+      opacity: 0.6,
+      color: 'black',
+      dashArray: '',
+      fillOpacity: 0
     };
-  }, [schoolData, stateAverages, selectedCompetency]);
+  }, []);
 
   const onEachSchoolSite = useCallback((feature, layer) => {
-    // Label with school name
-    if (feature.properties && feature.properties.name) {
-      layer.bindTooltip(feature.properties.name, {
+    const { name } = feature.properties;
+
+    // Store reference to layer
+    if (name) {
+      markerLayersRef.current[name] = layer;
+    }
+
+    // Label with school name (Permanent)
+    if (name) {
+      const color = getSchoolColor(name);
+      const content = `<span style="color: ${color}; text-shadow: 0 0 2px white; font-weight: bold;">${name}</span>`;
+
+      layer.bindTooltip(content, {
         permanent: true,
         direction: 'right',
         className: 'school-site-label',
-        offset: [0, 0], // Center it better relative to the larger dot
-        pane: 'school-sites-pane' // Ensure labels are also on top
+        offset: [0, 0],
+        pane: 'school-sites-pane'
       });
     }
-  }, []);
+
+    // Click handler for selection
+    layer.on('click', () => {
+      if (onSchoolSelect) {
+        // Helper to check if currently selected
+        const isSelected = selectedSchool && selectedSchool.name === name;
+
+        if (isSelected) {
+          // Deselect
+          onSchoolSelect(null);
+        } else {
+          // Select
+          const data = schoolData ? schoolData[name] : null;
+          onSchoolSelect(data ? { ...data, name } : { name });
+        }
+      }
+    });
+
+  }, [getSchoolColor, schoolData, selectedSchool, onSchoolSelect]);
 
   const pointToLayerSchoolSite = useCallback((feature, latlng) => {
-    // Blue dot, no border. Using Circle (meters) so it scales with map.
-    // Radius: 150 meters (approx size of a school) to be visible at lower zooms
+    const color = getSchoolColor(feature.properties.name);
+
+    // Colored dot
     return L.circle(latlng, {
       radius: 150,
       stroke: false,
-      color: '#2563eb', // blue-600
-      fillColor: '#2563eb',
-      fillOpacity: 1,
-      pane: 'school-sites-pane' // Custom pane for Z-index
+      color: color,
+      fillColor: color,
+      fillOpacity: 0.9,
+      pane: 'school-sites-pane'
     });
-  }, []);
+  }, [getSchoolColor]);
 
   const pointToLayerRailwayStation = useCallback((feature, latlng) => {
     // Square marker. Using rectangle relative to center point to scale with map.
@@ -194,9 +227,6 @@ const MapComponent = ({ onSchoolHover, selectedCompetency, showCatchments, showS
     const radiusMeters = 150;
 
     // Approximation for meters to degrees
-    // 1 deg lat = 111,320 meters
-    // 1 deg lng = 111,320 * cos(lat) meters
-
     const latOffset = radiusMeters / 111320;
     const lngOffset = radiusMeters / (111320 * Math.cos(latlng.lat * (Math.PI / 180)));
 
@@ -210,13 +240,12 @@ const MapComponent = ({ onSchoolHover, selectedCompetency, showCatchments, showS
       color: '#ea580c', // orange-600
       fillColor: '#ea580c',
       fillOpacity: 1,
-      pane: 'school-sites-pane' // Use same pane as schools for now, or create new one
+      pane: 'school-sites-pane'
     });
   }, []);
 
   const onEachRailwayStation = useCallback((feature, layer) => {
     if (feature.properties && feature.properties.name) {
-      // Tooltip on hover/click, not permanent
       layer.bindTooltip(feature.properties.name, {
         permanent: false,
         direction: 'top',
