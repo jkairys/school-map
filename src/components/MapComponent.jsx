@@ -308,9 +308,11 @@ const MapComponent = ({
     >
       <ZoomHandler />
       <TileLayer
-        attribution='&copy; <a href="https://www.google.com/maps">Google Maps</a>'
-        url={`https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}`}
-        subdomains={['0', '1', '2', '3']}
+        attribution='&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        url={`https://api.mapbox.com/styles/v1/mapbox/light-v11/tiles/{z}/{x}/{y}?access_token=${import.meta.env.VITE_MAPBOX_ACCESS_TOKEN}`}
+        tileSize={512}
+        zoomOffset={-1}
+        maxZoom={19}
       />
       <Pane name="railway-pane" style={{ zIndex: 640 }} />
       <Pane name="school-sites-pane" style={{ zIndex: 650 }} />
