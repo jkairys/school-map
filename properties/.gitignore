@@ -3,5 +3,7 @@ __pycache__/
 .venv/
 .env
 .DS_Store
-data/
-output/
+data/output/
+!data/output/.gitkeep
+data/combined/
+!data/combined/.gitkeep
