@@ -2,6 +2,7 @@
 
 import asyncio
 import random
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
 from playwright.async_api import async_playwright, Page, Browser
@@ -13,6 +14,7 @@ from .config import (
 from .models import SoldProperty
 from .parsers import parse_price, parse_sold_date, is_within_date_range
 from .storage import SuburbStorage
+from .api_client import OnTheHouseAPI, APIResponse
 
 
 class BrisbanePropertyScraper:
@@ -246,6 +248,190 @@ class BrisbanePropertyScraper:
                     await self._random_delay(0.5)
 
             await browser.close()
+
+        # Save all properties
+        if all_properties:
+            storage.save(all_properties)
+            print(f"  Saved {len(all_properties)} properties to {storage.filename}")
+
+        return all_properties
+
+    def _api_item_to_property(self, item: dict, suburb_key: str, postcode: str) -> Optional[SoldProperty]:
+        """Convert an API response item to a SoldProperty.
+
+        Args:
+            item: Single property dict from API response
+            suburb_key: Suburb key (hyphenated)
+            postcode: Suburb postcode
+
+        Returns:
+            SoldProperty if it matches filters, None otherwise
+        """
+        # Extract basic info
+        beds = item.get("beds")
+        prop_type = item.get("type", "House")
+
+        # Apply filters: 3-4 bedrooms, House only
+        if beds is not None and (beds < 3 or beds > 4):
+            return None
+        if prop_type.lower() != "house":
+            return None
+
+        # Extract address
+        address_data = item.get("address", {})
+        address = address_data.get("formattedAddress", "")
+
+        # Extract sale info
+        last_sale = item.get("lastSale", {})
+        sale_date_str = last_sale.get("eventDate")  # Format: "2025-12-22"
+        sale_price = last_sale.get("salePrice")
+        if sale_price == 0:
+            sale_price = None
+
+        # Convert date format from "2025-12-22" to "22 Dec 2025"
+        formatted_date = None
+        if sale_date_str:
+            try:
+                dt = datetime.strptime(sale_date_str, "%Y-%m-%d")
+                formatted_date = dt.strftime("%-d %b %Y")
+            except ValueError:
+                formatted_date = sale_date_str
+
+        # Check date range
+        if not is_within_date_range(formatted_date, days=90):
+            return None
+
+        # Extract agent info
+        selling_agency = last_sale.get("sellingAgency", {})
+        agency_name = selling_agency.get("name")
+        agents = selling_agency.get("agents", [])
+        agent_name = agents[0].get("name") if agents else None
+
+        # Extract property URL
+        links = item.get("links", [])
+        listing_url = ""
+        for link in links:
+            if link.get("rel") == "othWebUrl":
+                listing_url = link.get("href", "")
+                break
+
+        return SoldProperty(
+            address=address,
+            suburb=suburb_key.replace("-", " ").title(),
+            postcode=postcode,
+            sale_price=sale_price,
+            sale_date=formatted_date,
+            bedrooms=beds,
+            bathrooms=item.get("baths"),
+            parking=item.get("carSpaces"),
+            land_size_sqm=item.get("landSize"),
+            property_type=prop_type,
+            description="",  # Not available in search API
+            listing_url=listing_url,
+            agent_name=agent_name,
+            agency_name=agency_name,
+        )
+
+    async def scrape_suburb_api(
+        self,
+        suburb: str,
+        storage: SuburbStorage,
+        max_pages: int = 5,
+    ) -> list[SoldProperty]:
+        """Scrape sold property listings using the API (single pass).
+
+        This method is faster than scrape_suburb as it uses the API directly
+        and gets land size in a single request without visiting individual pages.
+
+        Args:
+            suburb: Suburb name (use hyphens, e.g., "paddington" or "st-lucia")
+            storage: SuburbStorage instance for saving data
+            max_pages: Maximum number of result pages to scrape
+
+        Returns:
+            List of SoldProperty objects
+        """
+        suburb_key = suburb.lower().replace(" ", "-")
+        suburb_space = suburb_key.replace("-", " ")
+
+        postcode = self.suburbs.get(suburb_key)
+        if not postcode:
+            print(f"Unknown suburb: {suburb}. Please provide postcode.")
+            return []
+
+        all_properties = []
+        seen_urls = set()
+
+        # Create API client
+        api = OnTheHouseAPI(use_fallback=True)
+
+        # We may need Playwright for fallback
+        browser = None
+        page = None
+
+        try:
+            page_num = 0
+            while page_num < max_pages:
+                print(f"  Fetching page {page_num + 1} via API...")
+
+                try:
+                    response = await api.fetch(
+                        suburb=suburb_space,
+                        postcode=postcode,
+                        page=page_num,
+                        size=24,
+                    )
+                except Exception as e:
+                    # If direct HTTP failed and we need Playwright fallback
+                    if browser is None:
+                        print(f"  Starting Playwright for fallback...")
+                        from playwright.async_api import async_playwright
+                        pw = await async_playwright().start()
+                        browser = await pw.chromium.launch(headless=self.headless)
+                        context = await browser.new_context(
+                            viewport={"width": 1920, "height": 1080},
+                            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                        )
+                        page = await context.new_page()
+                        api.set_playwright_page(page)
+
+                        # Retry with Playwright
+                        response = await api.fetch(
+                            suburb=suburb_space,
+                            postcode=postcode,
+                            page=page_num,
+                            size=24,
+                        )
+                    else:
+                        print(f"  Error fetching page {page_num + 1}: {e}")
+                        break
+
+                # Process results
+                new_count = 0
+                for item in response.content:
+                    prop = self._api_item_to_property(item, suburb_key, postcode)
+                    if prop and prop.listing_url not in seen_urls:
+                        seen_urls.add(prop.listing_url)
+                        all_properties.append(prop)
+                        new_count += 1
+
+                print(f"  Found {new_count} new matching properties (total: {len(all_properties)})")
+
+                # Check if we've reached the end
+                if page_num >= response.total_pages - 1:
+                    print(f"  Reached last page ({response.total_pages} total)")
+                    break
+
+                if new_count == 0 and page_num > 0:
+                    print(f"  No new properties found, stopping")
+                    break
+
+                page_num += 1
+                await self._random_delay(0.3)  # Shorter delay for API requests
+
+        finally:
+            if browser:
+                await browser.close()
 
         # Save all properties
         if all_properties:

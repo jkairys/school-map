@@ -65,9 +65,19 @@ Examples:
         help="Maximum pages to scrape per suburb (default: 5)"
     )
     parser.add_argument(
+        "--use-api",
+        action="store_true",
+        help="Use API for faster single-pass scraping (includes land size, default)"
+    )
+    parser.add_argument(
+        "--use-browser",
+        action="store_true",
+        help="Use browser scraping (slower two-pass method)"
+    )
+    parser.add_argument(
         "--no-details",
         action="store_true",
-        help="Skip fetching individual property details (faster but less data)"
+        help="Skip fetching individual property details (only for browser mode)"
     )
     parser.add_argument(
         "--visible",
@@ -86,39 +96,53 @@ Examples:
 
 async def scrape_single_suburb(args):
     """Scrape a single suburb.
-    
+
     Args:
         args: Parsed command line arguments
     """
+    # Default to API mode unless --use-browser is specified
+    use_api = not args.use_browser
+
     scraper = BrisbanePropertyScraper(headless=not args.visible)
-    
+
     # Normalize suburb name
     suburb_key = args.suburb.lower().replace(" ", "-")
-    
+
     # Check if suburb exists
     if suburb_key not in scraper.suburbs:
         print(f"Error: Unknown suburb '{args.suburb}'")
         print(f"Use --list-suburbs to see all available suburbs")
         return
-    
+
     postcode = scraper.suburbs[suburb_key]
     storage = SuburbStorage(suburb_key, args.output_dir)
+
+    mode_str = "API (single-pass)" if use_api else "Browser (two-pass)"
 
     print(f"\n{'='*60}")
     print(f"Scraping {suburb_key.replace('-', ' ').title()}, QLD {postcode}")
     print(f"{'='*60}")
+    print(f"Mode: {mode_str}")
     print(f"Max pages: {args.max_pages}")
-    print(f"Fetch details: {not args.no_details}")
+    if not use_api:
+        print(f"Fetch details: {not args.no_details}")
     print(f"Output: {storage.filename}")
     print(f"{'='*60}\n")
 
-    properties = await scraper.scrape_suburb(
-        suburb=suburb_key,
-        storage=storage,
-        max_pages=args.max_pages,
-        fetch_details=not args.no_details,
-        save_incrementally=True
-    )
+    if use_api:
+        properties = await scraper.scrape_suburb_api(
+            suburb=suburb_key,
+            storage=storage,
+            max_pages=args.max_pages,
+        )
+    else:
+        properties = await scraper.scrape_suburb(
+            suburb=suburb_key,
+            storage=storage,
+            max_pages=args.max_pages,
+            fetch_details=not args.no_details,
+            save_incrementally=True
+        )
 
     print(f"\n{'='*60}")
     print(f"Completed: {len(properties)} properties saved to {storage.filename}")
@@ -127,19 +151,26 @@ async def scrape_single_suburb(args):
 
 async def scrape_all_suburbs(args):
     """Scrape all suburbs sequentially.
-    
+
     Args:
         args: Parsed command line arguments
     """
+    # Default to API mode unless --use-browser is specified
+    use_api = not args.use_browser
+
     suburbs = load_suburbs()
     scraper = BrisbanePropertyScraper(headless=not args.visible)
+
+    mode_str = "API (single-pass)" if use_api else "Browser (two-pass)"
 
     print(f"\n{'='*60}")
     print(f"Brisbane Property Scraper - All Suburbs Mode")
     print(f"{'='*60}")
+    print(f"Mode: {mode_str}")
     print(f"Total suburbs: {len(suburbs)}")
     print(f"Max pages per suburb: {args.max_pages}")
-    print(f"Fetch details: {not args.no_details}")
+    if not use_api:
+        print(f"Fetch details: {not args.no_details}")
     print(f"Output directory: {args.output_dir}")
     print(f"{'='*60}\n")
 
@@ -148,21 +179,28 @@ async def scrape_all_suburbs(args):
     for i, (suburb, postcode) in enumerate(suburbs.items(), 1):
         print(f"\n[{i}/{len(suburbs)}] {suburb.replace('-', ' ').title()}, QLD {postcode}")
         print("-" * 60)
-        
+
         storage = SuburbStorage(suburb, args.output_dir)
 
         try:
-            properties = await scraper.scrape_suburb(
-                suburb=suburb,
-                storage=storage,
-                max_pages=args.max_pages,
-                fetch_details=not args.no_details,
-                save_incrementally=True
-            )
-            
+            if use_api:
+                properties = await scraper.scrape_suburb_api(
+                    suburb=suburb,
+                    storage=storage,
+                    max_pages=args.max_pages,
+                )
+            else:
+                properties = await scraper.scrape_suburb(
+                    suburb=suburb,
+                    storage=storage,
+                    max_pages=args.max_pages,
+                    fetch_details=not args.no_details,
+                    save_incrementally=True
+                )
+
             print(f"  Completed: {len(properties)} properties")
             total_properties += len(properties)
-            
+
         except Exception as e:
             print(f"  Error: {e}")
             continue
