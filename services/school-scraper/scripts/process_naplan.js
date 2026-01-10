@@ -8,10 +8,10 @@ const __dirname = path.dirname(__filename);
 
 // Paths
 const projectRoot = path.resolve(__dirname, '..');
-const schoolsJsonPath = path.join(projectRoot, 'scraper/schools.json');
-const geoJsonPath = path.join(projectRoot, 'public/data/catchments.geojson');
-const scraperOutputDir = path.join(projectRoot, 'scraper/output');
-const finalOutputPath = path.join(projectRoot, 'public/data/naplan_data.json');
+const schoolsJsonPath = path.join(projectRoot, 'schools.json');
+const geoJsonPath = path.join(projectRoot, '../../apps/frontend/public/data/catchments.geojson');
+const scraperOutputDir = path.join(projectRoot, 'output');
+const finalOutputPath = path.join(projectRoot, '../../apps/frontend/public/data/naplan_data.json');
 
 console.log('Starting NAPLAN data processing...');
 

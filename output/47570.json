@@ -1,0 +1,55 @@
+{
+  "acaraId": "47570",
+  "schoolName": "Chancellor State College, Sippy Downs, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2609",
+    "indigenousPercent": "4",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "399",
+        "424",
+        "402",
+        "405",
+        "397"
+      ],
+      [
+        "Year 5",
+        "484",
+        "469",
+        "482",
+        "494",
+        "497"
+      ],
+      [
+        "Year 7",
+        "528",
+        "538",
+        "537",
+        "536",
+        "547"
+      ],
+      [
+        "Year 9",
+        "553",
+        "571",
+        "560",
+        "552",
+        "555"
+      ]
+    ]
+  }
+}

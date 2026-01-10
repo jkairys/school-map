@@ -1,0 +1,55 @@
+{
+  "acaraId": "47574",
+  "schoolName": "North Lakes State College, North Lakes, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "2407",
+    "indigenousPercent": "6",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "366",
+        "376",
+        "375",
+        "379",
+        "375"
+      ],
+      [
+        "Year 5",
+        "473",
+        "457",
+        "472",
+        "477",
+        "467"
+      ],
+      [
+        "Year 7",
+        "522",
+        "502",
+        "524",
+        "521",
+        "521"
+      ],
+      [
+        "Year 9",
+        "547",
+        "544",
+        "561",
+        "537",
+        "536"
+      ]
+    ]
+  }
+}

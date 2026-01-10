@@ -1,0 +1,39 @@
+{
+  "acaraId": "47716",
+  "schoolName": "St Joseph's School, Bardon, QLD",
+  "profileData": {
+    "icsea": null,
+    "icseaPercentile": null,
+    "totalEnrolments": "368",
+    "indigenousPercent": "1",
+    "lbotePercent": null
+  },
+  "results": {
+    "tableData": [
+      [
+        "",
+        "Reading",
+        "Writing",
+        "Spelling",
+        "Grammar",
+        "Numeracy"
+      ],
+      [
+        "Year 3",
+        "451",
+        "446",
+        "439",
+        "456",
+        "440"
+      ],
+      [
+        "Year 5",
+        "521",
+        "517",
+        "501",
+        "530",
+        "505"
+      ]
+    ]
+  }
+}

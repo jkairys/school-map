@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const scraperDir = path.join(__dirname, 'scraper/output');
-const geoJsonPath = path.join(__dirname, 'public/data/catchments.geojson');
+const scraperDir = path.join(__dirname, '../output');
+const geoJsonPath = path.join(__dirname, '../../../apps/frontend/public/data/catchments.geojson');
 
 console.log('Reading scraper output...');
 const scraperFiles = fs.readdirSync(scraperDir).filter(f => f.endsWith('.json'));

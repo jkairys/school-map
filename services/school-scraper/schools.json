@@ -5369,7 +5369,7 @@
     "LocalId": "47643",
     "StateProvinceId": "000006136",
     "CommonwealthId": "68232",
-    "ACARAId": "47643",
+    "ACARAId": "47644",
     "SchoolName": "Ormeau Woods State High School",
     "SchoolDistrict": "",
     "SchoolType": "Sec",
@@ -8198,7 +8198,7 @@
     "LocalId": "47619",
     "StateProvinceId": "000002410",
     "CommonwealthId": "47619",
-    "ACARAId": "47619",
+    "ACARAId": "47580",
     "SchoolName": "Whites Hill State College",
     "SchoolType": "Sec",
     "OperationalStatus": "O",
@@ -8266,7 +8266,7 @@
     "LocalId": "47596",
     "StateProvinceId": "000002324",
     "CommonwealthId": "47596",
-    "ACARAId": "47596",
+    "ACARAId": "47574",
     "SchoolName": "North Lakes State College",
     "SchoolType": "Sec",
     "OperationalStatus": "O",
@@ -8345,5 +8345,50 @@
     },
     "SchoolSector": "Gov",
     "SessionType": "0827"
+  },
+  {
+    "RefId": "manually-added-47716",
+    "LocalId": "47716",
+    "StateProvinceId": "000005534",
+    "CommonwealthId": "47716",
+    "ACARAId": "47716",
+    "SchoolName": "Capalaba State College",
+    "SchoolType": "Combined",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47716",
+      "SchoolCampusId": "47716",
+      "CampusType": "Main"
+    }
+  },
+  {
+    "RefId": "manually-added-47570",
+    "LocalId": "47570",
+    "StateProvinceId": "000002409",
+    "CommonwealthId": "47570",
+    "ACARAId": "47570",
+    "SchoolName": "Kelvin Grove State College",
+    "SchoolType": "Combined",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "47570",
+      "SchoolCampusId": "47570",
+      "CampusType": "Main"
+    }
+  },
+  {
+    "RefId": "manually-added-4930",
+    "LocalId": "4930",
+    "StateProvinceId": "000005180",
+    "CommonwealthId": "4930",
+    "ACARAId": "4930",
+    "SchoolName": "Earnshaw State College",
+    "SchoolType": "Combined",
+    "OperationalStatus": "O",
+    "Campus": {
+      "ParentSchoolId": "4930",
+      "SchoolCampusId": "4930",
+      "CampusType": "Main"
+    }
   }
 ]

@@ -1,7 +1,7 @@
 
 import fs from 'fs';
 
-const data = JSON.parse(fs.readFileSync('./public/data/naplan_data.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('../../apps/frontend/public/data/naplan_data.json', 'utf8'));
 const competencies = ['Reading', 'Writing', 'Spelling', 'Grammar', 'Numeracy'];
 
 const scoresByComp = {};

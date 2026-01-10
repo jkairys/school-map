@@ -1,0 +1,16 @@
+version: '3'
+
+includes:
+  frontend:
+    taskfile: ./apps/frontend/Taskfile.yml
+    dir: ./apps/frontend
+  school-scraper:
+    taskfile: ./services/school-scraper/Taskfile.yml
+    dir: ./services/school-scraper
+
+tasks:
+  install:
+    desc: Install dependencies for all projects
+    cmds:
+      - task: frontend:install
+      - task: school-scraper:install
