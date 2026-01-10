@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
 
 // Load data
-const schoolsPath = path.join(projectRoot, 'scraper/schools.json');
+const schoolsPath = path.join(projectRoot, 'schools.json');
 const schools = JSON.parse(fs.readFileSync(schoolsPath, 'utf8'));
 const schoolsToAdd = JSON.parse(fs.readFileSync(path.join(projectRoot, 'scripts/schools_to_add.json'), 'utf8'));
 

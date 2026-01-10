@@ -5,9 +5,9 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const schoolsJsonPath = path.join(__dirname, 'scraper/schools.json');
-const geoJsonPath = path.join(__dirname, 'public/data/catchments.geojson');
-const outputDir = path.join(__dirname, 'scraper/output');
+const schoolsJsonPath = path.join(__dirname, '../schools.json');
+const geoJsonPath = path.join(__dirname, '../../../apps/frontend/public/data/catchments.geojson');
+const outputDir = path.join(__dirname, '../output');
 
 console.log('Reading data...');
 const schools = JSON.parse(fs.readFileSync(schoolsJsonPath, 'utf8'));

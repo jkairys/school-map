@@ -6,9 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const projectRoot = path.resolve(__dirname, '..');
-const geoJsonPath = path.join(projectRoot, 'public/data/catchments.geojson');
-const schoolsJsonPath = path.join(projectRoot, 'scraper/schools.json');
-const naplanDataPath = path.join(projectRoot, 'public/data/naplan_data.json');
+const geoJsonPath = path.join(projectRoot, '../../apps/frontend/public/data/catchments.geojson');
+const schoolsJsonPath = path.join(projectRoot, 'schools.json');
+const naplanDataPath = path.join(projectRoot, '../../apps/frontend/public/data/naplan_data.json');
 
 // Load data
 const geoJson = JSON.parse(fs.readFileSync(geoJsonPath, 'utf8'));
