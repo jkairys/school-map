@@ -7,6 +7,9 @@ includes:
   school-scraper:
     taskfile: ./services/school-scraper/Taskfile.yml
     dir: ./services/school-scraper
+  property-scraper:
+    taskfile: ./services/property-scraper/Taskfile.yml
+    dir: ./services/property-scraper
 
 tasks:
   install:
@@ -14,3 +17,4 @@ tasks:
     cmds:
       - task: frontend:install
       - task: school-scraper:install
+      - task: property-scraper:install
