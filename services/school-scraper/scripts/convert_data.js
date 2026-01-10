@@ -3,9 +3,9 @@ import path from 'path';
 import { kml } from '@tmcw/togeojson';
 import { DOMParser } from '@xmldom/xmldom';
 
-const KML_PATH = 'public/data/junior-secondary-catchments-2025.kml';
-const GEOJSON_PATH = 'public/data/catchments.geojson';
-const RANKINGS_PATH = 'public/data/school_rankings.json';
+const KML_PATH = '../../apps/frontend/public/data/junior-secondary-catchments-2025.kml';
+const GEOJSON_PATH = '../../apps/frontend/public/data/catchments.geojson';
+const RANKINGS_PATH = '../../apps/frontend/public/data/school_rankings.json';
 
 // Ensure directories exist
 const ensureDirectoryExistence = (filePath) => {

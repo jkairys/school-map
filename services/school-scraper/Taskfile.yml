@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  install:
+    cmd: npm install
+
+  scrape:
+    cmd: node scraper.js --batch
