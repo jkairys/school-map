@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import MapComponent from './components/MapComponent';
+import PropertyPriceCards from './components/PropertyPriceCards';
 import './index.css';
 import { calculateStateAverages, getSchoolRelativeScore } from './utils/naplanUtils';
 
@@ -146,6 +147,8 @@ function App() {
               </div>
             </div>
           </div>
+
+          <PropertyPriceCards />
         </div>
 
         <div className="p-6 flex-1 overflow-y-auto">
