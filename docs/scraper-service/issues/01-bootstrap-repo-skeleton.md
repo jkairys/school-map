@@ -16,6 +16,8 @@ Existing prior art lives in `services/property-scraper/` (Python uv setup, Taskf
 - [ ] Root `Taskfile.yml` has an `oth-scraper:install` task and the install entry registers it.
 - [ ] `worker` container starts, logs that it has no work to do, and stays alive.
 - [ ] Same Docker image is used for `api` and `worker`; only the entrypoint differs.
+- [ ] `services/oth-scraper/README.md` exists and documents: how to start the stack (`docker compose up`), how to run migrations, how to run the test suite, env vars consumed by api and worker, and how to tear down. Should be readable as the first thing a new contributor sees.
+- [ ] `services/oth-scraper/CLAUDE.md` exists and documents conventions for future Claude/agent work in this service: Python style (line length, async patterns, error handling, log style), the layered architecture (deep modules vs coordination modules per the PRD), test-fixture conventions, where to find OTH JSON fixtures (`tests/fixtures/oth/`), and a pointer to `docs/scraper-service/PRD.md` as the source of truth.
 
 ## Blocked by
 
