@@ -1,0 +1,20 @@
+{
+  "size": 24,
+  "number": 0,
+  "sort": [
+    {
+      "listing.listedDate": "desc"
+    }
+  ],
+  "query": {
+    "queries": [
+      {
+        "category": "SaleListing",
+        "stateCode": "QLD",
+        "suburb": "paddington",
+        "postCode": "4064",
+        "status": "current"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "size": 24,
+  "number": 0,
+  "sort": [
+    {
+      "lastSale.eventDate": "desc"
+    }
+  ],
+  "query": {
+    "queries": [
+      {
+        "category": "RecentlySold",
+        "stateCode": "QLD",
+        "suburb": "paddington",
+        "postCode": "4064"
+      }
+    ],
+    "bedrooms": {
+      "min": 3,
+      "max": 4
+    },
+    "propertyTypes": [
+      "House"
+    ],
+    "lastSale.price": {
+      "max": 2500000
+    }
+  }
+}
