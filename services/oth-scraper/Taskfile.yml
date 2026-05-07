@@ -1,0 +1,30 @@
+version: '3'
+
+tasks:
+  install:
+    desc: Install dependencies using uv
+    cmd: uv sync
+
+  run:
+    desc: Start the API server locally (outside Docker)
+    cmd: uv run python -m oth_scraper.api.entrypoint
+
+  worker:
+    desc: Start the worker locally (outside Docker)
+    cmd: uv run python -m oth_scraper.worker
+
+  test:
+    desc: Run the test suite
+    cmd: uv run pytest
+
+  migrate:
+    desc: Run Alembic migrations to head
+    cmd: uv run alembic upgrade head
+
+  docker-up:
+    desc: Start all services via docker-compose
+    cmd: docker compose up --build
+
+  docker-down:
+    desc: Stop all services and remove volumes
+    cmd: docker compose down -v
