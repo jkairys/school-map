@@ -47,15 +47,28 @@ def postgres_url() -> Iterator[str]:
 
     from testcontainers.postgres import PostgresContainer
 
-    # Plain postgres image is enough for queue tests; postgis is not exercised
-    # here. Schema is built directly via metadata (no alembic), avoiding the
-    # postgis extension dependency for fast container startup.
-    with PostgresContainer("postgres:16-alpine") as pg:
+    # postgis image required: the `property.location` column is
+    # geography(Point, 4326) and Base.metadata.create_all builds it on
+    # every test engine. Plain postgres would error on the Geography type.
+    with PostgresContainer("postgis/postgis:16-3.4-alpine") as pg:
         raw_url = pg.get_connection_url()
         async_url = raw_url.replace(
             "postgresql+psycopg2://", "postgresql+asyncpg://"
         ).replace("postgresql://", "postgresql+asyncpg://")
         yield async_url
+
+
+# Tables we TRUNCATE between tests. Listed in dependency order
+# (children first) so the FK cascade isn't load-bearing. Geography columns on
+# `property` need the postgis extension; the engine fixture enables it on first
+# connect before create_all runs.
+_TRUNCATE_TABLES = (
+    "listing_snapshot",
+    "listing",
+    "property",
+    "suburb",
+    "scrape_job",
+)
 
 
 @pytest_asyncio.fixture
@@ -66,9 +79,15 @@ async def engine(postgres_url: str) -> AsyncIterator[AsyncEngine]:
 
     engine = create_async_engine(postgres_url, future=True)
     async with engine.begin() as conn:
+        await conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis"))
         await conn.run_sync(Base.metadata.create_all)
         # Keep tests independent; safe because the engine is function-scoped.
-        await conn.execute(text("TRUNCATE TABLE scrape_job RESTART IDENTITY"))
+        # CASCADE so we don't have to enumerate every FK; RESTART IDENTITY
+        # so id assertions are stable run to run.
+        for table in _TRUNCATE_TABLES:
+            await conn.execute(
+                text(f"TRUNCATE TABLE {table} RESTART IDENTITY CASCADE")
+            )
     try:
         yield engine
     finally:
