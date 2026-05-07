@@ -16,8 +16,11 @@ db_url = os.environ.get("OTH_DATABASE_URL")
 if db_url:
     config.set_main_option("sqlalchemy.url", db_url)
 
-# Import Base so Alembic can detect model changes in future migrations
+# Import Base so Alembic can detect model changes in future migrations.
+# Importing the models package registers all models on Base.metadata.
 from oth_scraper.db.engine import Base  # noqa: E402
+from oth_scraper.db import models  # noqa: E402, F401
+
 target_metadata = Base.metadata
 
 

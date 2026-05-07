@@ -65,6 +65,10 @@ All variables are prefixed `OTH_`. Copy `.env.example` to `.env` for local-only 
 | `OTH_RATE_LIMIT_MIN_INTERVAL` | `1.5` | Minimum seconds between OTH requests |
 | `OTH_RATE_LIMIT_MAX_INTERVAL` | `3.0` | Maximum seconds between OTH requests (jitter cap) |
 | `OTH_SOFT_EXPIRY_MISSED_RUNS` | `3` | Consecutive missed scrapes before a listing auto-closes |
+| `OTH_QUEUE_RETRY_MAX_TRANSIENT` | `3` | Max retries for transient errors (5xx/timeout) before dead-letter |
+| `OTH_QUEUE_RETRY_MAX_ANTIBOT` | `1` | Max retries for anti-bot errors (403/429/Cloudflare) before dead-letter |
+| `OTH_QUEUE_RETRY_MAX_PARSE` | `0` | Max retries for parse errors before dead-letter (0 = immediate) |
+| `OTH_QUEUE_RECLAIM_TTL_SECONDS` | `600` | A `running` job older than this is re-claimable by `claim_next()` |
 
 ## Tear down
 
