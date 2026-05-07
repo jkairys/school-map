@@ -12,6 +12,7 @@ from oth_scraper.db.models.scrape_job import (
     ScrapeJob,
     job_status_enum,
 )
+from oth_scraper.db.models.scrape_list import ScrapeList, ScrapeListSuburb
 from oth_scraper.db.models.suburb import Suburb
 
 __all__ = [
@@ -22,6 +23,8 @@ __all__ = [
     "ListingSnapshot",
     "Property",
     "ScrapeJob",
+    "ScrapeList",
+    "ScrapeListSuburb",
     "Suburb",
     "closure_reason_enum",
     "job_status_enum",

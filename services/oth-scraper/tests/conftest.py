@@ -58,16 +58,18 @@ def postgres_url() -> Iterator[str]:
         yield async_url
 
 
-# Tables we TRUNCATE between tests. Listed in dependency order
-# (children first) so the FK cascade isn't load-bearing. Geography columns on
-# `property` need the postgis extension; the engine fixture enables it on first
-# connect before create_all runs.
+# Tables we TRUNCATE between tests. Listed children-first so the FK CASCADE
+# isn't load-bearing. Geography columns on `property` need the postgis
+# extension; the engine fixture enables it on first connect before
+# Base.metadata.create_all runs.
 _TRUNCATE_TABLES = (
     "listing_snapshot",
     "listing",
     "property",
-    "suburb",
+    "scrape_list_suburb",
+    "scrape_list",
     "scrape_job",
+    "suburb",
 )
 
 
@@ -82,12 +84,14 @@ async def engine(postgres_url: str) -> AsyncIterator[AsyncEngine]:
         await conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis"))
         await conn.run_sync(Base.metadata.create_all)
         # Keep tests independent; safe because the engine is function-scoped.
-        # CASCADE so we don't have to enumerate every FK; RESTART IDENTITY
-        # so id assertions are stable run to run.
-        for table in _TRUNCATE_TABLES:
-            await conn.execute(
-                text(f"TRUNCATE TABLE {table} RESTART IDENTITY CASCADE")
+        # CASCADE handles every FK; RESTART IDENTITY so id assertions are
+        # stable run to run.
+        await conn.execute(
+            text(
+                f"TRUNCATE TABLE {', '.join(_TRUNCATE_TABLES)} "
+                "RESTART IDENTITY CASCADE"
             )
+        )
     try:
         yield engine
     finally:

@@ -1,14 +1,18 @@
 """property, listing, listing_snapshot tables
 
-Revision ID: 0004
-Revises: 0003
-Create Date: 2026-05-07 00:00:02.000000
+Revision ID: 0005
+Revises: 0004
+Create Date: 2026-05-07 00:00:03.000000
 
 Adds the heart of the data model: physical address (`property`) → marketing
 campaign (`listing`) → time-series observations (`listing_snapshot`).
 
 PostGIS: relies on the `postgis` extension created in migration 0001. The
 `property.location` column is `geography(Point, 4326)`.
+
+Note: this branch was originally authored against 0003 but the parallel
+issue 03 migration (`0004_create_scrape_list`) merged first — chaining
+0005 on top of 0004 keeps the linear history Alembic expects.
 """
 from typing import Sequence, Union
 
@@ -17,8 +21,8 @@ from alembic import op
 from geoalchemy2 import Geography
 from sqlalchemy.dialects import postgresql
 
-revision: str = "0004"
-down_revision: Union[str, None] = "0003"
+revision: str = "0005"
+down_revision: Union[str, None] = "0004"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

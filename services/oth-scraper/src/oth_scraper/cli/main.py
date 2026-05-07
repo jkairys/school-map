@@ -3,6 +3,15 @@ import sys
 
 import typer
 
+from oth_scraper.cli.list_commands import (
+    list_add_suburb_impl,
+    list_create_impl,
+    list_ls_impl,
+    list_rm_impl,
+    list_rm_suburb_impl,
+    list_show_impl,
+    list_update_impl,
+)
 from oth_scraper.cli.suburb_commands import suburb_resolve_impl
 
 app = typer.Typer(name="oth", help="OTH Scraper CLI")
@@ -39,21 +48,76 @@ def suburb_resolve(
 
 
 @list_app.command("create")
-def list_create(name: str) -> None:
+def list_create(
+    name: str,
+    description: str = typer.Option(None, "--description"),
+    filters: str = typer.Option(
+        None,
+        "--filters",
+        help='JSON string, e.g. \'{"beds_min":3,"price_max":1500000}\'',
+    ),
+) -> None:
     """Create a new scrape list."""
-    typer.echo(f"TODO: create scrape list '{name}'")
+    asyncio.run(
+        list_create_impl(name=name, description=description, filters_json=filters)
+    )
+
+
+@list_app.command("ls")
+def list_ls() -> None:
+    """List all scrape lists."""
+    asyncio.run(list_ls_impl())
 
 
 @list_app.command("show")
-def list_show(list_id: str) -> None:
-    """Show a scrape list."""
-    typer.echo(f"TODO: show scrape list '{list_id}'")
+def list_show(list_id: int) -> None:
+    """Show a scrape list with its suburbs."""
+    asyncio.run(list_show_impl(list_id=list_id))
 
 
-@list_app.command("run")
-def list_run(list_id: str) -> None:
-    """Fan out scrape jobs for all suburbs in the list."""
-    typer.echo(f"TODO: run scrape list '{list_id}'")
+@list_app.command("update")
+def list_update(
+    list_id: int,
+    name: str = typer.Option(None, "--name"),
+    description: str = typer.Option(None, "--description"),
+    filters: str = typer.Option(None, "--filters", help="JSON string"),
+) -> None:
+    """Update name, description, and/or filters on a scrape list."""
+    asyncio.run(
+        list_update_impl(
+            list_id=list_id,
+            name=name,
+            description=description,
+            filters_json=filters,
+        )
+    )
+
+
+@list_app.command("rm")
+def list_rm(list_id: int) -> None:
+    """Delete a scrape list (cascades the list↔suburb m2m only)."""
+    asyncio.run(list_rm_impl(list_id=list_id))
+
+
+@list_app.command("add-suburb")
+def list_add_suburb(
+    list_id: int,
+    name: str,
+    postcode: str = typer.Option(None, "--postcode"),
+    state: str = typer.Option(None, "--state"),
+) -> None:
+    """Add a suburb (resolved via OTH autocomplete) to a list."""
+    asyncio.run(
+        list_add_suburb_impl(
+            list_id=list_id, name=name, postcode=postcode, state=state
+        )
+    )
+
+
+@list_app.command("rm-suburb")
+def list_rm_suburb(list_id: int, suburb_id: int) -> None:
+    """Remove a suburb from a list (does not delete the suburb row)."""
+    asyncio.run(list_rm_suburb_impl(list_id=list_id, suburb_id=suburb_id))
 
 
 @jobs_app.command("ls")
