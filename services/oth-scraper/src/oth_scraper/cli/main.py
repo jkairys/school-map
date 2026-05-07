@@ -3,6 +3,7 @@ import sys
 
 import typer
 
+from oth_scraper.cli.dev_commands import session_smoke
 from oth_scraper.cli.list_commands import (
     list_add_suburb_impl,
     list_create_impl,
@@ -20,11 +21,24 @@ suburb_app = typer.Typer(help="Suburb commands")
 list_app = typer.Typer(help="Scrape list commands")
 jobs_app = typer.Typer(help="Job commands")
 listings_app = typer.Typer(help="Listing commands")
+dev_app = typer.Typer(help="Developer-only smoke / diagnostic commands")
 
 app.add_typer(suburb_app, name="suburb")
 app.add_typer(list_app, name="list")
 app.add_typer(jobs_app, name="jobs")
 app.add_typer(listings_app, name="listings")
+app.add_typer(dev_app, name="dev")
+
+
+@dev_app.command("session-smoke")
+def dev_session_smoke() -> None:
+    """Bootstrap a ScrapeSession and fire 5 live OTH search requests.
+
+    HITL verification command for issue 10. Hits the real OTH service —
+    do not run in CI. Exits non-zero if any request fails or trips an
+    anti-bot detector.
+    """
+    session_smoke()
 
 
 @suburb_app.command("resolve")
