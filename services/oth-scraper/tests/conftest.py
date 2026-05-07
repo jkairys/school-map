@@ -68,7 +68,14 @@ async def engine(postgres_url: str) -> AsyncIterator[AsyncEngine]:
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
         # Keep tests independent; safe because the engine is function-scoped.
-        await conn.execute(text("TRUNCATE TABLE scrape_job RESTART IDENTITY"))
+        # CASCADE handles cross-table FKs (scrape_list ← scrape_list_suburb,
+        # scrape_job → scrape_list/suburb).
+        await conn.execute(
+            text(
+                "TRUNCATE TABLE scrape_list_suburb, scrape_list, "
+                "scrape_job, suburb RESTART IDENTITY CASCADE"
+            )
+        )
     try:
         yield engine
     finally:
