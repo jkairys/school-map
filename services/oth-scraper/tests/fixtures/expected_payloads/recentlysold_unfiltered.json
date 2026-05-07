@@ -1,0 +1,19 @@
+{
+  "size": 24,
+  "number": 0,
+  "sort": [
+    {
+      "lastSale.eventDate": "desc"
+    }
+  ],
+  "query": {
+    "queries": [
+      {
+        "category": "RecentlySold",
+        "stateCode": "QLD",
+        "suburb": "paddington",
+        "postCode": "4064"
+      }
+    ]
+  }
+}

@@ -25,3 +25,6 @@ dist-ssr
 
 # Secrets
 .env
+
+# Playwright MCP working directory (used during interactive probes)
+.playwright-mcp/

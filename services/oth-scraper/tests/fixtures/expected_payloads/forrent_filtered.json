@@ -1,0 +1,30 @@
+{
+  "size": 24,
+  "number": 0,
+  "sort": [
+    {
+      "listing.listedDate": "desc"
+    }
+  ],
+  "query": {
+    "queries": [
+      {
+        "category": "RentalListing",
+        "stateCode": "QLD",
+        "suburb": "paddington",
+        "postCode": "4064",
+        "status": "current"
+      }
+    ],
+    "bedrooms": {
+      "min": 2
+    },
+    "propertyTypes": [
+      "Apartment"
+    ],
+    "listing.weeklyRent": {
+      "min": 400,
+      "max": 800
+    }
+  }
+}

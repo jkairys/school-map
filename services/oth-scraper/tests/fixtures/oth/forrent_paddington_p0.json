@@ -1,0 +1,1429 @@
+{
+  "content": [
+    {
+      "category": "RentalListing",
+      "clPropertyId": "6697269",
+      "othPropertyId": "3175209",
+      "address": {
+        "formattedAddress": "43 BOWLER ST, PADDINGTON, QLD 4064",
+        "streetNumber": "43",
+        "streetName": "BOWLER",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46124297,
+          "lon": 153.00649195
+        }
+      },
+      "beds": 3,
+      "baths": 1,
+      "carSpaces": 2,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-05-05",
+        "listedDateTime": "2026-05-05T03:30:58",
+        "lastModifiedDateTime": "2026-05-07T04:33:15",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "84024",
+              "username": "pm2.paddington@raywhite.com",
+              "email": "pm2.paddington@raywhite.com",
+              "firstName": "Kerry",
+              "lastName": "VanWyk",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3087 1332",
+              "mobileNumber": "",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Kerry VanWyk",
+              "contact": {
+                "email": "pm2.paddington@raywhite.com",
+                "phone": {
+                  "mobile": "",
+                  "business": "+61 (7) 3087 1332"
+                }
+              },
+              "links": [],
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Click 'BOOK INSPECTION TIME' to register your interest & receive updates...\n\nWelcome to 43 Bowler Street, a charming residence nestled in the heart of the popular Paddington. This spacious three bedroom plus a study, home offers the perfect blend of character & modern comfort, ideal for families or professionals seeking space, style & convenience.\n\nInside, you'll find a warm & inviting living room featuring a beautiful character fireplace solidifying the idea of comfort. The home is equipped with air conditioning & ceiling fans throughout, ensuring year round comfort. All three bedrooms, as well as the living area, are carpeted, adding a soft, homely feel & the separate study provides an ideal space for working from home or managing the household.\n\nThe kitchen is both functional & stylish, featuring ample storage & generous bench space to make meal preparation a breeze. Complete with a dishwasher for added convenience & efficient gas cooking, this well equipped kitchen caters perfectly to both everyday living and entertaining.\n\nThe bathroom is thoughtfully designed with a separate shower & bathtub, offering both functionality & comfort for busy mornings or relaxing evenings. This layout provides added convenience for families or shared living arrangements. The home also includes an internal laundry & a separate powder room for added practicality.\n\nStep outside to a paved, undercover patio-ideal for entertaining or relaxing while overlooking the generous backyard, perfect for kids, pets, or weekend gardening. Additional storage is available in the undercroft, offering a secure place for tools, bikes, or seasonal items.\n\nWith two car spaces included, this home delivers comfortable living in one of Brisbane's most desirable inner city suburbs...\n\nProperty Features:\n\n- Carpeted bedrooms \n- Separate study\n- Dishwasher \n- Additional powder room \n- Character fireplace \n- Freshly painted \n- Internal laundry \n- Paved undercover patio \n- Large backyard \n- Storage in undercroft \n\nRENT WILL INCREASE TO $990 EFFECTIVE FROM 03.10.26",
+        "price": 950,
+        "displayPrice": "$950 per week",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-05-25"
+      },
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18534929"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3175209"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18534929/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/84024"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/yk2sxgmz5qi7bjnqxmrqaomy4y?signature=888c03aab72a585e98998ebe6b7e05ef627aaec3e120818543fad7407ff2fe69"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/43-bowler-st-paddington-qld-4064-18534929"
+        }
+      ],
+      "id": "18534929"
+    },
+    {
+      "category": "RentalListing",
+      "clPropertyId": "6700055",
+      "othPropertyId": "5052481",
+      "address": {
+        "formattedAddress": "18 GILDAY ST, PADDINGTON, QLD 4064",
+        "streetNumber": "18",
+        "streetName": "GILDAY",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45797712,
+          "lon": 152.99254051
+        }
+      },
+      "beds": 3,
+      "baths": 2,
+      "carSpaces": 1,
+      "floorSize": 0,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-05-01",
+        "listedDateTime": "2026-05-01T06:33:14",
+        "lastModifiedDateTime": "2026-05-07T06:43:57",
+        "agency": {
+          "agencyId": "16438",
+          "name": "SPACE Property Paddington",
+          "email": "marketing@spaceproperty.com.au",
+          "address": {
+            "formattedAddress": "90 Latrobe TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.459432,
+              "lon": 152.998047
+            },
+            "addressLine1": "90 Latrobe TCE"
+          },
+          "phoneNumber": "07 3510 7600",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16438/logo.png",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "101048",
+              "username": "leasing@spaceproperty.com.au",
+              "email": "leasing@spaceproperty.com.au",
+              "firstName": "SPACE",
+              "lastName": "Leasing",
+              "status": "Active",
+              "phoneNumber": "07 3510 7606",
+              "mobileNumber": "0431 322 759",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "SPACE Leasing",
+              "contact": {
+                "email": "leasing@spaceproperty.com.au",
+                "phone": {
+                  "mobile": "0431 322 759",
+                  "business": "07 3510 7606"
+                }
+              },
+              "links": [],
+              "agencyId": "16438"
+            }
+          ],
+          "links": []
+        },
+        "description": "Enjoy modern open plan living spaced over 2 levels with a huge living area downstairs and spacious kitchen with a stainless steel dishwasher included. Other features include:\n\n* Ducted air-conditioning \n* Main bedroom incorporates newly renovated ensuite & balcony\n* Newly renovated modern bathroom with shower & separate bathtub\n* Outdoor alfresco dining in private courtyard\n* Remote lock up garage plus driveway parking\n* Front fenced courtyard\n\nThis home is located in the heart of Paddington Central only a short walk to Shops, Cafes & Parks with bus transport at your door - only 8 minute express bus to Brisbane CBD!\n\n***HOW TO ARRANGE AN INSPECTION***\nTo book a time to inspect this property with one of our friendly staff, simply click on the 'Book An Inspection Time' button on this advertisement.\nBy registering your details, you will be automatically informed of any upcoming inspections, changes or cancellations.\nIt is important that you register your details as unfortunately should you not register these we will be unable to advise if any changes that are made to these times.",
+        "price": 1100,
+        "displayPrice": "$1,100 per week",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-07T16:00:00",
+            "end": "2026-05-07T16:15:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-05-11"
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18524404"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/5052481"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18524404/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16438"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/101048"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/zzrauxkfhei7do6oy5r6xs3gfm?signature=fe390639c8ed95c728b0d15933e03b363047ddae96757d36755d0c26f7137bc3"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/18-gilday-st-paddington-qld-4064-18524404"
+        }
+      ],
+      "id": "18524404"
+    },
+    {
+      "category": "RentalListing",
+      "clPropertyId": "6702661",
+      "othPropertyId": "3175553",
+      "address": {
+        "formattedAddress": "108 LATROBE TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "108",
+        "streetName": "LATROBE",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45910796,
+          "lon": 152.9972359
+        }
+      },
+      "landSizeUnit": "squareMeter",
+      "type": "Commercial",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-24",
+        "listedDateTime": "2026-04-24T05:58:05",
+        "lastModifiedDateTime": "2026-05-07T00:23:04",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "100034",
+              "username": "bdo1.paddington@raywhite.com",
+              "email": "bdo1.paddington@raywhite.com",
+              "firstName": "Brooke",
+              "lastName": "Rowley",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3087 1329",
+              "mobileNumber": "",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Brooke Rowley",
+              "contact": {
+                "email": "bdo1.paddington@raywhite.com",
+                "phone": {
+                  "mobile": "",
+                  "business": "+61 (7) 3087 1329"
+                }
+              },
+              "links": [],
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Ray White Paddington is delighted to present a rare opportunity to secure sought after consulting rooms within this charming, character-filled building!\n\nPositioned in the heart of Paddington, these iconic spaces have been part of the suburb's vibrant community for decades. We are now offering the chance for you to establish or grow your practice in this highly desirable location. We present a combination of thoughtfully designed indoor consulting rooms & an inviting outdoor space, ideal for a boutique barista or bakery. \n\nKey Features:\n\n- Several premium consulting rooms available, plus outdoor space suitable for a small café/barista concept\n- Outgoings included (electricity, water, internet)\n- Optional reception services, including booking & payment management\n- Welcoming client waiting area\n- All rooms feature air conditioning & abundant natural light\n- Fully furnished, turnkey spaces (furniture can be removed/added)\n- Well-maintained kitchenette & bathroom facilities\n- Prominent corner position with excellent street frontage & exposure\n- Directly opposite Paddington Central (Woolworths) & surrounded by cafés, restaurants, & boutique retail\n- Leafy district views from covered wraparound balconies\n- Excellent access to public transport\n- Flexible leasing options available to suit a range of operators including a separate building wing to operate an independent business\n- Whether you're an established practitioner or looking to launch in a thriving community, this is a rare opportunity to position yourself in one of Brisbane's most desirable precincts.\n\nCall Nick 0403 389 102 to book your inspection!",
+        "displayPrice": "FOR LEASE",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18505204"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3175553"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18505204/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/100034"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/oqdk4un45mi6npdst7k4eer7v4?signature=ba2157231a8b47a30552a5c79421544b6f543dc6771e53c8724f191f80a32451"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/108-latrobe-tce-paddington-qld-4064-18505204"
+        }
+      ],
+      "id": "18505204"
+    },
+    {
+      "category": "RentalListing",
+      "clPropertyId": "6698951",
+      "othPropertyId": "3178102",
+      "address": {
+        "formattedAddress": "104 ELIZABETH ST, PADDINGTON, QLD 4064",
+        "streetNumber": "104",
+        "streetName": "ELIZABETH",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46505031,
+          "lon": 152.99398297
+        }
+      },
+      "beds": 3,
+      "baths": 1,
+      "carSpaces": 1,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-22",
+        "listedDateTime": "2026-04-22T15:13:30",
+        "lastModifiedDateTime": "2026-05-05T14:06:42",
+        "agency": {
+          "agencyId": "16407",
+          "name": "Calibre Real Estate - Red Hill",
+          "email": "sales@calibrerealestate.com.au",
+          "address": {
+            "formattedAddress": "191 Musgrave RD , Red Hill, QLD 4059",
+            "suburb": "Red Hill",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.452965,
+              "lon": 153.005577
+            },
+            "addressLine1": "191 Musgrave RD"
+          },
+          "phoneNumber": "07 3367 3411",
+          "faxNumber": "07 3367 3408",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16407/logo/8179ed5e-3139-4e44-a332-89809fac5e7f.png",
+          "banner": "https://img.othsolutions.com.au/agent-centre/agency/16407/banner/09d827bd-54c2-4e6a-9751-3c4fa38ea011.png",
+          "brandColour": "4e6772",
+          "accountStatus": "ACTIVE",
+          "profileDescription": "Calibre is a boutique real estate agency in Brisbane offering real estate management and residential sales consultancy. At Calibre we pride ourselves on being market innovators and our unique points of difference allow us to achieve a premium result by exposing your property to a wider audience, presented in the best possible light.\n\nSelling a home is one of the biggest decisions most people will have to make in their lifetime and we understand the emotions involved. With this philosophy in mind, the Calibre team is dedicated to minimising the anguish of this process by delivering a level of service that is unmatched in the industry.\n\nNo two properties are alike, a one size fits all approach no longer works. Your investment faces a diverse range of challenges that require unique, and increasingly bespoke, solutions.\n\nWe have adopted modern and innovative concepts and solutions, providing maximum returns on your investment. Whether you are a hands-on owner or enjoy having peace of mind that everything is being taken care of, we tailor our management style to suit any level involvement.\n\nIf you're a property investor and would like to learn more about our award winning property management services visit the Property Management page on our website https://www.calibrerealestate.com.au/property-management/brisbane/",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "246724",
+              "username": "dylan.m@calibrerealestate.com.au",
+              "email": "dylan.m@calibrerealestate.com.au",
+              "firstName": "Dylan",
+              "lastName": "Manitta",
+              "status": "Active",
+              "phoneNumber": "07 3367 3411",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Dylan Manitta",
+              "contact": {
+                "email": "dylan.m@calibrerealestate.com.au",
+                "phone": {
+                  "business": "07 3367 3411"
+                }
+              },
+              "links": [],
+              "agencyId": "16407"
+            }
+          ],
+          "links": []
+        },
+        "description": "Perfectly positioned just a short stroll to Rosalie Village, Bardon Shed and Rainworth State School, and within close reach of Paddington Central, Brisbane CBD and Suncorp Stadium, this quaint three bedroom house has been freshly painted and offers low maintenance living in a highly desirable location. \n\n- Large functional timber kitchen with gas cooking and dishwasher \n- Air conditioned living area \n- Freshly painted internally \n- Polished timber floors throughout \n- Two spacious air conditioned bedrooms plus smaller third bedroom \n- Refurbished bathroom \n- Large covered entertaining area at rear \n- Low maintenance fenced yard \n- Full length front balcony \n- Secure garaging under the house for one car \n\nBook an inspection online!\n1. Send an enquiry using the Email Agent button below and we will instantly respond with available inspection times OR Click on the \"BOOK\" button (available on our website click here, from the search rentals page)\n2. Register to join an existing inspection\n3. If no time offered, please register so we can contact you once time is arranged\n4. If you do not register, we cannot notify you of any time changes, cancellations or further\ninspection times. Please note that if you do not register, we do not know you are interested!\n\n",
+        "price": 900,
+        "displayPrice": "$900 per week ",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-05-12"
+      },
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18497285"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3178102"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18497285/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16407"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/246724"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/kw5zytb6eai7dmdogg7lmeh64e?signature=f04c0f08166a4fcc2fa7fd641d5fa23b9a6b19388ecfa1af0d4fd49502462ce9"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/104-elizabeth-st-paddington-qld-4064-18497285"
+        }
+      ],
+      "id": "18497285"
+    },
+    {
+      "category": "RentalListing",
+      "othPropertyId": "43110286",
+      "address": {
+        "formattedAddress": "1/32 ALMA ST, PADDINGTON, QLD 4064",
+        "streetNumber": "",
+        "streetName": "ALMA",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064"
+      },
+      "beds": 4,
+      "baths": 1,
+      "carSpaces": 1,
+      "landSizeUnit": "squareMeter",
+      "type": "DuplexSemi-detached",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-22",
+        "listedDateTime": "2026-04-22T13:41:33",
+        "lastModifiedDateTime": "2026-05-06T15:29:57",
+        "agency": {
+          "agencyId": "3696",
+          "name": "Burlington Property Agents",
+          "email": "admin@belleproperty.com",
+          "address": {
+            "formattedAddress": "5 Howard ST , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.467104,
+              "lon": 152.998329
+            },
+            "addressLine1": "5 Howard ST"
+          },
+          "phoneNumber": "07 3510 8222",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/3696/logo/329bd812-642a-4bf4-b07e-bf3f27ceda76.png",
+          "brandColour": "002846",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "238600",
+              "username": "pm3@burlingtonproperty.com.au",
+              "email": "pm3@burlingtonproperty.com.au",
+              "firstName": "Ellie",
+              "lastName": "Loneragan",
+              "status": "Active",
+              "phoneNumber": "07 3510 8222",
+              "mobileNumber": "0402 699 843",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Ellie Loneragan",
+              "contact": {
+                "email": "pm3@burlingtonproperty.com.au",
+                "phone": {
+                  "mobile": "0402 699 843",
+                  "business": "07 3510 8222"
+                }
+              },
+              "links": [],
+              "agencyId": "3696"
+            }
+          ],
+          "links": []
+        },
+        "description": "Enjoy the charm and space of this expansive upper-level Queenslander, perfectly positioned in leafy, sought-after Paddington. Offering a private outlook, this home combines classic character with everyday convenience-just a short stroll to local cafés, boutiques, Rosalie Village + Suncorp Stadium + Caxton Street and public transport.\n\nProperty Features:\n* Four generously sized bedrooms\n* Good size living area with air conditioning\n* Kitchen and bathroom\n* Separate dining room for added space and flexibility\n* Dedicated laundry area at the rear of the building\n\nWith a rare sense of space and comfort, this home is ideal for those seeking room to move in a prime inner-city location.\n\nWater usage and garden maintenance are included, making for easy, low-maintenance living.\n\n\nINSPECTIONS:  \n\nOur Open For Inspections are generally conducted on a Wednesday afternoon and Saturday morning and the times are listed on the website. \n\nTo be informed of all upcoming inspections please register your interest in the property. You will receive a message from Snug and this is where you can register for the inspections, once your details are added you will be INSTANTLY informed of any updates, changes, future inspections or cancellations for the property.\n\nInspections are a must, if you are unable to attend an advertised open, please contact the office and we will endeavour to make a suitable time to show you through the property. If you live interstate or outside of Brisbane, please contact us to discuss a virtual inspection.\n\nIf you wish to apply prior to your inspection, we accept applications via SNUG which are online and convenient for you. \n\nPlease copy and paste the following address into your browser:\n\nhttps://app.snug.com/apply/burlingtonpropertyagents\n\n",
+        "price": 800,
+        "displayPrice": "$800 per week pw",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-07T01:00:00",
+            "end": "2026-05-07T01:15:00"
+          },
+          {
+            "start": "2026-05-13T13:00:00",
+            "end": "2026-05-13T13:10:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-05-08"
+      },
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18496642"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/43110286"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18496642/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/3696"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/238600"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://img.othsolutions.com.au/images/14/37/1437b155a4cc4b1944a65ede0154d60e60b2c936f76fb02532db6bb8a50eda7d_451015e9a33828422913c11259477d23.jpg"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/1-32-alma-st-paddington-qld-4064-18496642"
+        }
+      ],
+      "id": "18496642"
+    },
+    {
+      "category": "RentalListing",
+      "clPropertyId": "6701774",
+      "othPropertyId": "5051851",
+      "address": {
+        "formattedAddress": "42 HERBERT ST, PADDINGTON, QLD 4064",
+        "streetNumber": "42",
+        "streetName": "HERBERT",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46265052,
+          "lon": 152.9973079
+        }
+      },
+      "beds": 2,
+      "baths": 1,
+      "carSpaces": 0,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-22",
+        "listedDateTime": "2026-04-22T06:47:19",
+        "lastModifiedDateTime": "2026-05-07T06:30:46",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "100034",
+              "username": "bdo1.paddington@raywhite.com",
+              "email": "bdo1.paddington@raywhite.com",
+              "firstName": "Brooke",
+              "lastName": "Rowley",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3087 1329",
+              "mobileNumber": "",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Brooke Rowley",
+              "contact": {
+                "email": "bdo1.paddington@raywhite.com",
+                "phone": {
+                  "mobile": "",
+                  "business": "+61 (7) 3087 1329"
+                }
+              },
+              "links": [],
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Click 'BOOK INSPECTION TIME' to register your interest & receive updates...\n\nWelcome to 42 Herbert Street, Paddington - a charming workers' cottage that combines character, space & a highly sought-after inner-city lifestyle. Positioned in a convenient location, the home is just moments from local cafés, shops & public transport, with easy access to the CBD & surrounding lifestyle precincts.\n\nStep inside to find three well-sized, carpeted bedrooms, offering comfort & privacy. The central bathroom is practical for everyday living, complete with both a separate bath & shower.\n\nThe home features a combined kitchen & dining area, creating a functional hub for meals & entertaining. In addition, there is a separate family room, as well as a comfortable living area fitted with split system air-conditioning, providing multiple spaces to relax & unwind.\n\nDownstairs, the undercroft offers an abundance of storage space along with a dedicated laundry area, adding to the home's overall convenience & usability.\n\nOutside, you'll find a huge backyard - a rare feature in Paddington - perfect for those who value outdoor space, whether it's for entertaining, relaxing or simply enjoying the open area.\n\n\nProperty Features:\n \n- Charming workers' cottage in a prime Paddington location\n- Three carpeted bedrooms\n- Bathroom with separate bath &shower\n- Combined kitchen & dining area\n- Separate living room with split system air-conditioning\n- Additional family room for extra living space\n- Large backyard \n- Undercroft with ample storage space\n- Laundry located downstairs\n- No off-street parking",
+        "price": 695,
+        "displayPrice": "$695 per week",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-04-30"
+      },
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18344245"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/5051851"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18344245/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/100034"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/y7iel5aswii7dexu2vu5q35ade?signature=0dd69935d30c90c4d434128a68b7204e9aa143bb991de878bb95c36b116f1597"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/42-herbert-st-paddington-qld-4064-18344245"
+        }
+      ],
+      "id": "18344245"
+    },
+    {
+      "category": "RentalListing",
+      "clPropertyId": "6703180",
+      "othPropertyId": "3193670",
+      "address": {
+        "formattedAddress": "12 MORETON ST, PADDINGTON, QLD 4064",
+        "streetNumber": "12",
+        "streetName": "MORETON",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46165302,
+          "lon": 153.00982012
+        }
+      },
+      "beds": 3,
+      "baths": 1,
+      "carSpaces": 1,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-10",
+        "listedDateTime": "2026-04-10T10:21:37",
+        "lastModifiedDateTime": "2026-05-06T15:29:35",
+        "agency": {
+          "agencyId": "3696",
+          "name": "Burlington Property Agents",
+          "email": "admin@belleproperty.com",
+          "address": {
+            "formattedAddress": "5 Howard ST , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.467104,
+              "lon": 152.998329
+            },
+            "addressLine1": "5 Howard ST"
+          },
+          "phoneNumber": "07 3510 8222",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/3696/logo/329bd812-642a-4bf4-b07e-bf3f27ceda76.png",
+          "brandColour": "002846",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "238600",
+              "username": "pm3@burlingtonproperty.com.au",
+              "email": "pm3@burlingtonproperty.com.au",
+              "firstName": "Ellie",
+              "lastName": "Loneragan",
+              "status": "Active",
+              "phoneNumber": "07 3510 8222",
+              "mobileNumber": "0402 699 843",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Ellie Loneragan",
+              "contact": {
+                "email": "pm3@burlingtonproperty.com.au",
+                "phone": {
+                  "mobile": "0402 699 843",
+                  "business": "07 3510 8222"
+                }
+              },
+              "links": [],
+              "agencyId": "3696"
+            }
+          ],
+          "links": []
+        },
+        "description": "Welcome to your next home-perfectly positioned in one of Paddington's most sought-after pockets. This charming three-bedroom residence offers an enviable lifestyle for families and professionals alike, combining comfort, convenience, and vibrant inner-city living.\n\nSituated directly across from the popular Neil Macrossan Playground, complete with a skate park, this home is ideal for active families and outdoor enthusiasts. Just moments away, you'll find Suncorp Stadium, where you can enjoy world-class sporting events and concerts right on your doorstep.\n\nEnjoy the convenience of being a short stroll to the lively Caxton Street precinct and The Barracks, offering a fantastic selection of shops, cafes, restaurants, and a cinema. With boutique shopping and dining options all within easy reach, you'll love the lifestyle this location provides.\n\nProperty Features:\n\n* Three well-sized bedrooms, two with built-in robes\n* Light-filled sunroom plus an inviting balcony\n* Modern kitchen with quality finishes\n* Polished timber floors throughout\n* Secure lock-up garage\n\n\nInspections & Applications\n\nOpen for Inspections\nOur Open for Inspections are generally held on Wednesday afternoons and Saturday mornings. Scheduled times are advertised online.\n\nTo ensure you don't miss out, we strongly recommend registering your interest in the property. By registering, you will be instantly notified of any updates, time changes, additional inspection dates or cancellations.\n\nHow to Register\nWhen you submit an enquiry for the property, you will receive an email from SNUG outlining upcoming inspection times and providing the option to register your attendance.\n\nInspections are required prior to application approval. If you are unable to attend a scheduled open home, please contact our office and we will endeavour to arrange a suitable alternative time. For interstate applicants or those located outside of Brisbane, virtual inspections can be arranged upon request.\n\nApplications\nIf you wish to apply prior to inspecting the property, we accept online applications via SNUG for your convenience.\n\nTo apply, please copy and paste the following link into your browser:\n\nhttps://app.snug.com/apply/burlingtonpropertyagents",
+        "price": 800,
+        "displayPrice": "$800 per week",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-13T13:30:00",
+            "end": "2026-05-13T13:40:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-04-10"
+      },
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18462274"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3193670"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18462274/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/3696"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/238600"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/4jf43vjuoyi7djctahs6xxr7t4?signature=4ac91c5283eff527b180670e497fc758226b29556e42ad7db18ece4f1f902448"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/12-moreton-st-paddington-qld-4064-18462274"
+        }
+      ],
+      "id": "18462274"
+    },
+    {
+      "category": "RentalListing",
+      "othPropertyId": "11351548",
+      "address": {
+        "formattedAddress": "3/58 ELIZABETH ST, PADDINGTON, QLD 4064",
+        "unitNumber": "3",
+        "streetNumber": "58",
+        "streetName": "ELIZABETH",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.465423,
+          "lon": 152.99636899
+        }
+      },
+      "beds": 2,
+      "baths": 2,
+      "carSpaces": 2,
+      "landSize": 127,
+      "landSizeUnit": "squareMeter",
+      "type": "Townhouse",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-02",
+        "listedDateTime": "2026-04-02T09:30:00",
+        "lastModifiedDateTime": "2026-05-05T13:11:00",
+        "agency": {
+          "agencyId": "10349",
+          "name": "Priority Properties Pty Ltd ",
+          "email": "sarahbanachak.priority@gmail.com",
+          "address": {
+            "formattedAddress": "P O Box 419  , Spring Hill, QLD 4000",
+            "suburb": "Spring Hill",
+            "stateCode": "QLD",
+            "addressLine1": "P O Box 419"
+          },
+          "phoneNumber": "0431 418 575",
+          "faxNumber": "07 3319 6068",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/10349/logo.png",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "81823",
+              "username": "sarah@priorityproperties.com.au",
+              "email": "sarah@priorityproperties.com.au",
+              "firstName": "Sarah",
+              "lastName": "Banachak",
+              "status": "Active",
+              "phoneNumber": "0431 418 575",
+              "mobileNumber": "0431 418 575",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Sarah Banachak",
+              "contact": {
+                "email": "sarah@priorityproperties.com.au",
+                "phone": {
+                  "mobile": "0431 418 575",
+                  "business": "0431 418 575"
+                }
+              },
+              "links": [],
+              "agencyId": "10349"
+            },
+            {
+              "uuid": "249804",
+              "username": "paige@priorityproperties.com.au",
+              "email": "paige@priorityproperties.com.au",
+              "firstName": "Paige",
+              "lastName": "Banachak",
+              "status": "Active",
+              "phoneNumber": "0432687055",
+              "mobileNumber": "0432687055",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Paige Banachak",
+              "contact": {
+                "email": "paige@priorityproperties.com.au",
+                "phone": {
+                  "mobile": "0432687055",
+                  "business": "0432687055"
+                }
+              },
+              "links": [],
+              "agencyId": "10349"
+            }
+          ],
+          "links": []
+        },
+        "description": "This 2 bedroom fully furnished townhome, set over 3 levels, is a short walk from the vibrant Rosalie Village with its cafes, bars, restaurants and movie theatre.\nSuper convenient, yet quiet location.\nWalking into the main air conditioned living area on the middle floor, you have a dining area for entertaining with a central kitchen and lounge area that opens to a deck and courtyard.\nUpstairs are the 2 bedrooms, the main with ensuite and air conditioning and both have built in wardrobes. The 2nd bedroom has its own small balcony. A separate bathroom is also on this level.\nThe lower level consists of the laundry with clothesline and a tandem lock up garage with remote. There is additional storage under the stairs.\n\nThe townhome is walking distance to Public Transport and Suncorp Stadium as well as the Paddington shops, Cafes and Restaurants.\n",
+        "price": 810,
+        "displayPrice": "$810 pw",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-07T16:30:00",
+            "end": "2026-05-07T16:40:00"
+          },
+          {
+            "start": "2026-05-09T12:30:00",
+            "end": "2026-05-09T12:40:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-04-28"
+      },
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18442006"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/11351548"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18442006/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/10349"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/81823"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://img.othsolutions.com.au/images/9c/92/9c925604011cae085bda501ee5afc8ddc354a17ac2e735e8274483cd12550638_c2bf177cacd1bb409787c1a5e11d8fd8.jpg"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/3-58-elizabeth-st-paddington-qld-4064-18442006"
+        }
+      ],
+      "id": "18442006"
+    },
+    {
+      "category": "RentalListing",
+      "othPropertyId": "42019357",
+      "address": {
+        "formattedAddress": "82 COCHRANE ST, PADDINGTON, QLD 4064",
+        "streetNumber": "82",
+        "streetName": "COCHRANE",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064"
+      },
+      "beds": 3,
+      "baths": 3,
+      "carSpaces": 1,
+      "floorSize": 0,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-02-16",
+        "listedDateTime": "2026-02-16T05:53:06",
+        "lastModifiedDateTime": "2026-04-30T01:07:23",
+        "agency": {
+          "agencyId": "16438",
+          "name": "SPACE Property Paddington",
+          "email": "marketing@spaceproperty.com.au",
+          "address": {
+            "formattedAddress": "90 Latrobe TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.459432,
+              "lon": 152.998047
+            },
+            "addressLine1": "90 Latrobe TCE"
+          },
+          "phoneNumber": "07 3510 7600",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16438/logo.png",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "101048",
+              "username": "leasing@spaceproperty.com.au",
+              "email": "leasing@spaceproperty.com.au",
+              "firstName": "SPACE",
+              "lastName": "Leasing",
+              "status": "Active",
+              "phoneNumber": "07 3510 7606",
+              "mobileNumber": "0431 322 759",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "SPACE Leasing",
+              "contact": {
+                "email": "leasing@spaceproperty.com.au",
+                "phone": {
+                  "mobile": "0431 322 759",
+                  "business": "07 3510 7606"
+                }
+              },
+              "links": [],
+              "agencyId": "16438"
+            }
+          ],
+          "links": []
+        },
+        "description": "Heritage charm blends seamlessly with contemporary style in this beautifully presented home, offering an exceptional balance of timeless character and modern sophistication. Showcasing elegant period features alongside stylish upgrades, the property has been thoughtfully renovated to create a warm and inviting atmosphere while maintaining its classic appeal.\n\nIdeally positioned just a short stroll from Paddington's renowned Latrobe and Given Terraces, you'll enjoy the convenience of having vibrant cafés, boutique shops, popular restaurants, quality schools, and leafy parks all within easy reach. This sought-after location provides the perfect lifestyle combination of inner-city living and a relaxed, community feel.\n\nDesigned with both comfort and practicality in mind, the home features a bright and airy open-plan layout that maximises natural light and space. The seamless flow between living, dining, and outdoor areas makes it ideal for both everyday living and entertaining, while the high-quality renovations throughout ensure a low-maintenance and move-in-ready experience.\n\n- Fully Air conditioned for year-round comfort\n- Generous lounge and dining area\n- Kitchen featuring ample storage and bench space, gas cooking, and stainless steel appliances including a dishwasher \n- two master bedrooms with walk-in robes & private ensuites.\n- Covered outdoor entertaining area overlooking a sparkling swimming pool\n- Monthly pool servicing included\n- Additional entertainment deck with views over the landscaped yard\n- Secure lock-up storage area beneath the home\n- Fully fenced, low-maintenance yard\n\n***HOW TO ARRANGE AN INSPECTION***\nTo book a time to inspect this property with one of our friendly staff, simply click on the 'Book An Inspection Time' button on this advertisement.\nBy registering your details, you will be automatically informed of any upcoming inspections, changes or cancellations.",
+        "price": 1150,
+        "displayPrice": "$1,150 per week",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-04-30T16:00:00",
+            "end": "2026-04-30T16:10:00"
+          },
+          {
+            "start": "2026-05-01T15:45:00",
+            "end": "2026-05-01T16:00:00"
+          },
+          {
+            "start": "2026-05-02T12:00:00",
+            "end": "2026-05-02T12:15:00"
+          }
+        ],
+        "hasVirtualTour": true,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "dateAvailable": "2026-04-17"
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18315054"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/42019357"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18315054/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16438"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/101048"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://img.othsolutions.com.au/images/39/48/3948890b9ba69bb0b1fceaef52c05933a43195e4c35cdb03c253a26266950bff_8195bdddf7e93d77b9a21c9eee9fd216.jpg"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/82-cochrane-st-paddington-qld-4064-18315054"
+        },
+        {
+          "rel": "videoLink-1",
+          "href": "https://openhouse.littlehinges.com.au/tour/82_Cochrane_Street-_RED_HILL_QLD_4059"
+        },
+        {
+          "rel": "videoLink-2",
+          "href": "https://openhouse.littlehinges.com.au/tour/82_Cochrane_Street-_RED_HILL_QLD_4059"
+        }
+      ],
+      "id": "18315054"
+    },
+    {
+      "category": "RentalListing",
+      "clPropertyId": "6700146",
+      "othPropertyId": "5051458",
+      "address": {
+        "formattedAddress": "175 GIVEN TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "175",
+        "streetName": "GIVEN",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46185767,
+          "lon": 153.0074628
+        }
+      },
+      "carSpaces": 4,
+      "landSizeUnit": "squareMeter",
+      "type": "Commercial",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2025-11-20",
+        "listedDateTime": "2025-11-20T07:02:48",
+        "lastModifiedDateTime": "2026-02-24T23:48:00",
+        "agency": {
+          "agencyId": "12728",
+          "name": "Raine & Horne Commercial Brisbane North",
+          "email": "info@rhcommercial.com",
+          "address": {
+            "formattedAddress": "6/87 Webster Road  , Stafford, QLD 4053",
+            "suburb": "Stafford",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.414915,
+              "lon": 153.017256
+            },
+            "addressLine1": "6/87 Webster Road"
+          },
+          "phoneNumber": "07 3352 8900",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/12728/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Raine & Horne",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "130300",
+              "username": "kmylius@rhcommercial.com",
+              "email": "kmylius@rhcommercial.com",
+              "firstName": "Keelan",
+              "lastName": "Mylius",
+              "status": "Active",
+              "phoneNumber": "0733528926",
+              "mobileNumber": "0423591533",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Keelan Mylius",
+              "contact": {
+                "email": "kmylius@rhcommercial.com",
+                "phone": {
+                  "mobile": "0423591533",
+                  "business": "0733528926"
+                }
+              },
+              "links": [],
+              "agencyId": "12728",
+              "facebookUrl": "",
+              "twitterUrl": "",
+              "linkedInUrl": ""
+            }
+          ],
+          "links": []
+        },
+        "description": "Raine & Horne Commercial are pleased to present these high-quality, prominent commercial tenancies to the market for lease.\n\nKey Features:\n\nShop 3 (Under Offer);\n• 27sqm* ground floor office\n• Predominantly open plan with walk-in reception/meeting area\n• Traditional Paddington aesthetic \n• Carpeted, air-conditioned and excellent natural light\n• Balcony access offering city views \n\nSuites 1 & 4;\n• 14sqm* individual offices\n• Access to kitchen, balcony overlooking Given Terrace and multiple bathrooms\n• Upstairs location with ample natural light and air-conditioning\n• Perfect and affordable satellite office\n\nThe subject property is positioned minutes from Suncorp Stadium and offers excellent exposure to Given Terrace and provides convenient access to a variety of surrounding cafes, retail shops and lifestyle offerings Paddington is famous for.  The character commercial property offers the traditional 'Paddington' aesthetic, and with a motivated landlord it is guaranteed these spaces will not be available for long!\n\nFor further information and to arrange an inspection, contact your Raine & Horne Commercial agents today. \n\n* Approximately \n\nListing ID: 32568850\n",
+        "price": 10000,
+        "displayPrice": "CONTACT AGENT",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/17917283"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/5051458"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/17917283/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/12728"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/130300"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/ovj7ppognqi7bi7t5n7z5wxptm?signature=c5691a055fd9907f0f422993caf77bbca4e1cc40604e37b5af6434292155dfc6"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/175-given-tce-paddington-qld-4064-17917283"
+        }
+      ],
+      "id": "17917283"
+    },
+    {
+      "category": "RentalListing",
+      "othPropertyId": "43003960",
+      "address": {
+        "formattedAddress": "9A LATROBE TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "",
+        "streetName": "LATROBE",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064"
+      },
+      "carSpaces": 4,
+      "floorSize": 184,
+      "landSizeUnit": "squareMeter",
+      "type": "Commercial",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2024-12-06",
+        "listedDateTime": "2024-12-06T04:45:55",
+        "lastModifiedDateTime": "2025-07-24T05:11:45",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "100034",
+              "username": "bdo1.paddington@raywhite.com",
+              "email": "bdo1.paddington@raywhite.com",
+              "firstName": "Brooke",
+              "lastName": "Rowley",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3087 1329",
+              "mobileNumber": "",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Brooke Rowley",
+              "contact": {
+                "email": "bdo1.paddington@raywhite.com",
+                "phone": {
+                  "mobile": "",
+                  "business": "+61 (7) 3087 1329"
+                }
+              },
+              "links": [],
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Ray White Paddington has the pleasure of bringing this character building to the rental market. This iconic space has been part of the Paddington vibe for decades & now it's your chance to join this highly regarded suburb & take advantage of the retail hub that is inner city Paddington. \n\nOffering a street level option with a top floor space (184 sqm approx.) this is ideal for a number of retail options. The street level floor could host your showroom and the top level with a private office, a meeting/break room & a full kitchen.\n\n•\tMultiple car spaces\n•\tStreet front appeal\n•\tAir Conditioning\n•\tDistrict views from the front & back balconies\n•\tKitchenettes\n•\tAfter travel amenities \n\nCall Nick 0403 389 102 to book your inspection!",
+        "displayPrice": "For Lease",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/17182190"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/43003960"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/17182190/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/100034"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://img.othsolutions.com.au/images/06/9d/069d0fd8ca9c499cb37ceae0a69d2ab5018c01007bc1c35c352a96ba98ba8c34_98ee404ad7538204e30bd612e0b65341.png"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-rent/qld/paddington-4064/9a-latrobe-tce-paddington-qld-4064-17182190"
+        }
+      ],
+      "id": "17182190"
+    }
+  ],
+  "pageable": {
+    "sort": {
+      "unsorted": true,
+      "sorted": false,
+      "empty": true
+    },
+    "offset": 0,
+    "pageSize": 24,
+    "pageNumber": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 11,
+  "last": true,
+  "totalPages": 1,
+  "size": 24,
+  "number": 0,
+  "sort": {
+    "unsorted": true,
+    "sorted": false,
+    "empty": true
+  },
+  "first": true,
+  "numberOfElements": 11,
+  "empty": false
+}

@@ -1,0 +1,3472 @@
+{
+  "content": [
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6704698",
+      "othPropertyId": "3183143",
+      "address": {
+        "formattedAddress": "115 ROCKBOURNE TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "115",
+        "streetName": "ROCKBOURNE",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45661952,
+          "lon": 152.98864895
+        }
+      },
+      "beds": 5,
+      "baths": 3,
+      "carSpaces": 1,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-05-07",
+        "listedDateTime": "2026-05-07T08:29:47",
+        "lastModifiedDateTime": "2026-05-07T08:29:47",
+        "agency": {
+          "agencyId": "16138",
+          "name": "Dixon Family Estate Agents",
+          "email": "patrick@dixonfamily.net.au",
+          "address": {
+            "formattedAddress": "Coronation Drive   , Toowong , QLD 4066",
+            "suburb": "Toowong ",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.4834815,
+              "lon": 152.9959157
+            },
+            "addressLine1": "Coronation Drive"
+          },
+          "phoneNumber": "0408 756 694",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16138/logo.png",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "145793",
+              "username": "jack@dixonea.com.au",
+              "email": "jack@dixonea.com.au",
+              "firstName": "Jack",
+              "lastName": "Dixon",
+              "status": "Active",
+              "phoneNumber": "0738702251",
+              "mobileNumber": "0408756694",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Jack Dixon",
+              "contact": {
+                "email": "jack@dixonea.com.au",
+                "phone": {
+                  "mobile": "0408756694",
+                  "business": "0738702251"
+                }
+              },
+              "links": [],
+              "agencyId": "16138"
+            }
+          ],
+          "links": []
+        },
+        "description": "This beautifully renovated character home effortlessly combines timeless charm with modern functionality, delivering a premium lifestyle in one of Brisbane's most sought-after locations. Positioned on an elevated 562sqm allotment with wide 19m frontage, the home captures sweeping mountain views and cooling breezes.\n \nFrom the moment you arrive, the elegant facade sets the tone for this home brimming with character and style. Inside, a traditional hallway introduces classic features including whitewashed hardwood floors, VJ walls, french doors, sash windows and soaring 3.6m ceilings. Thoughtfully renovated throughout, the home offers generous proportions, quality finishes and an abundance of natural light.\n \nA wraparound front veranda extends the main living zone, creating a relaxed and private space for everyday living. The layout flows seamlessly through an open plan living and dining spaces onto the rear entertaining deck, making it ideal for hosting. At the heart of the home, the stunning kitchen is appointed with ILVE appliances, stone benchtops, sleek white cabinetry and a practical servery connecting directly to the deck.\n \nAccommodation is well considered across two levels. Upstairs features two spacious bedrooms, including a private master retreat with stunning ensuite and walk in robe. A second light filled bathroom with clawfoot tub services this level. Downstairs, three additional bedrooms, a third bathroom and a large multi-purpose living area provide flexibility for families of all stages. This space opens out to a resort-style pool, gazebo and beautifully landscaped yard, perfect for entertaining or unwinding in complete privacy.\n \nAdditional features include:\n \n•\tClassic colonial details including timber fretwork, arches, traditional trims and floor-to-ceiling sash windows \n•\tFrench doors opening to an elevated rear veranda with leafy outlooks towards Mt Coot-tha \n•\tThe upper level incorporates two spacious bedrooms, including the master suite and a dedicated home study \n•\tDownstairs, the additional bedrooms and third bathroom offer you flexibility and a large multi-purpose room\n•\tAir-conditioning & ceiling fans throughout, custom planation shutters, abundance of storage \n•\tUndercover parking for one vehicle, covered external breakout space ideal for hobbies or home gym\n \nEnjoy the convenience of being just a short stroll to Paddington's vibrant cafes and boutiques, parks and public transport, while remaining only minutes from the CBD. Located within the sought-after Ithaca Creek State School and Kelvin Grove State College catchments.\n",
+        "displayPrice": "For Sale",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T11:15:00",
+            "end": "2026-05-09T12:00:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18548014"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3183143"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18548014/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16138"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/145793"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/z4ajtthalqi65epvmedjz5anbu?signature=c958eed39201ef601882d3bb67de7aefbee23fe1f93d5807dc9b63d994fce360"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/115-rockbourne-tce-paddington-qld-4064-18548014"
+        }
+      ],
+      "id": "18548014"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "47105551",
+      "othPropertyId": "15900697",
+      "address": {
+        "formattedAddress": "45 UPPER CAIRNS TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "45",
+        "streetName": "UPPER CAIRNS",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45811691,
+          "lon": 153.00844271
+        }
+      },
+      "beds": 6,
+      "baths": 3,
+      "carSpaces": 3,
+      "landSize": 1155,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-05-06",
+        "listedDateTime": "2026-05-06T02:46:01",
+        "lastModifiedDateTime": "2026-05-06T02:46:01",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "2469",
+              "username": "mathew.abboud@raywhite.com",
+              "email": "mathew.abboud@raywhite.com",
+              "firstName": "Mathew",
+              "lastName": "Abboud",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 423 629 346",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Mathew Abboud",
+              "contact": {
+                "email": "mathew.abboud@raywhite.com",
+                "phone": {
+                  "mobile": "+61 423 629 346",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/2469/headshot.jpg?20260506043058",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "In a suburb where large landholdings are tightly held and seldom released, this exceptional 1155m² parcel sets a new benchmark for scale, value and opportunity in Paddington. Positioned in one of the area's most coveted streets, 45 Upper Cairns Terrace offers a truly rare combination of a classic Queenslander residence and an expansive landholding that is almost unheard of this close to the CBD.\n\nThis is more than just a home - it's a generational asset. The sheer size of the block not only enhances privacy and lifestyle but underpins long-term value in one of Brisbane's most sought-after blue-chip locations.\n\nA residence of timeless charm and flexibility, the home itself caters effortlessly to growing families, featuring:\n\n• Oversized bedrooms and multiple living zones\n• Dedicated study and work-from-home spaces\n• Seamless indoor and outdoor entertaining areas\n• Signature character features including 3m+ ceilings, VJ walls, pressed metal ceilings and original timber floors\n• Modern upgrades such as air-conditioning, a zoned alarm system and updated amenities\n\nSet across an extraordinary 1155m², the grounds provide space, freedom and future potential rarely found in Paddington - a true standout in a suburb defined by its limited land supply.\n\nAdditional highlights include:\n\n• Expansive, level landholding in a premium position\n• Blue-chip location with quick access to the CBD\n• Walking distance to Brisbane's leading schools\n• Moments from Paddington's vibrant café and lifestyle precincts, plus Suncorp Stadium\n\nSurrounded by established gardens, the property also features an oversized in-ground pool and multiple outdoor entertaining zones, perfect for relaxed living and hosting on a grand scale.\n\nWhether you choose to enjoy it as a move-in ready family residence or further enhance and capitalise on the exceptional landholding, this is a rare opportunity to secure one of Paddington's most valuable and tightly held offerings.",
+        "displayPrice": "For Sale",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T11:00:00",
+            "end": "2026-05-09T11:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18416276"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/15900697"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18416276/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/2469"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/ipc6cujxaii7dloe7og6xrunou?signature=64885a98a21e8d9eec7df09b37e9a8b3ba9bb695b3a47a88e1cd15bbdf08ede1"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/45-upper-cairns-tce-paddington-qld-4064-18416276"
+        }
+      ],
+      "id": "18416276"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6701481",
+      "othPropertyId": "3183249",
+      "address": {
+        "formattedAddress": "17 HALL ST, PADDINGTON, QLD 4064",
+        "streetNumber": "17",
+        "streetName": "HALL",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46292556,
+          "lon": 153.00700802
+        }
+      },
+      "beds": 5,
+      "baths": 3,
+      "carSpaces": 2,
+      "floorSize": 0,
+      "landSize": 405,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-05-05",
+        "listedDateTime": "2026-05-05T02:10:14",
+        "lastModifiedDateTime": "2026-05-07T05:51:11",
+        "agency": {
+          "agencyId": "17873",
+          "name": "SPACE Property Ashgrove",
+          "email": "ashgrove@spaceproperty.com.au",
+          "address": {
+            "formattedAddress": "477 Waterworks RD , Ashgrove, QLD 4060",
+            "suburb": "Ashgrove",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.4490401,
+              "lon": 152.9778282
+            },
+            "addressLine1": "50 Frasers Rd"
+          },
+          "phoneNumber": "07 3366 3366",
+          "faxNumber": "07 3368 3937",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/17873/logo.png",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "100901",
+              "username": "michael@spaceproperty.com.au",
+              "email": "michael@spaceproperty.com.au",
+              "firstName": "Michael",
+              "lastName": "Shean",
+              "status": "Active",
+              "phoneNumber": "0410 303 880",
+              "mobileNumber": "0410 303 880",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Michael Shean",
+              "contact": {
+                "email": "michael@spaceproperty.com.au",
+                "phone": {
+                  "mobile": "0410 303 880",
+                  "business": "0410 303 880"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/100901/headshot.jpg?20220718005615",
+              "agencyId": "17873"
+            },
+            {
+              "uuid": "264962",
+              "username": "gabrielle@spaceproperty.com.au",
+              "email": "gabrielle@spaceproperty.com.au",
+              "firstName": "Gabrielle",
+              "lastName": "Trickey",
+              "status": "Active",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Gabrielle Trickey",
+              "contact": {
+                "email": "gabrielle@spaceproperty.com.au",
+                "phone": {}
+              },
+              "links": [],
+              "agencyId": "17873"
+            }
+          ],
+          "links": []
+        },
+        "description": "Expressions of Interest \nClosing Wednesday 27th May @ 12noon \nIF NOT SOLD PRIOR \n\n* Prime Paddington position \n* Ideal to move in, renovate, or rent out\n* Dual occupancy potential \n* Within Petrie Terrace SS & Kelvin Grove SC catchments \n* Moments to Suncorp Stadium, restaurants and a variety of shops\n\nPositioned in one of Paddington's most sought-after pockets, this character-filled residence presents an outstanding opportunity to secure a home rich in charm, space and future potential. Set on a 405m² allotment and surrounded by quality homes, 17 Hall Street offers a flexible layout across two levels, providing immediate comfort while allowing exciting scope to renovate, extend or reimagine over time.\n\nFramed by established gardens and a charming façade, the home welcomes you into warm, light-filled interiors that showcase timeless character features including polished timber floors, leadlight windows, high ceilings and ornate detailing.\n\nUpstairs, the open plan layout creates a harmonious space that is geared towards easy living and seamless entertaining. The well-positioned windows and doors capture natural light and breezes, enhancing the sense of space throughout. The living, kitchen and dining areas flow together to create a comfortable and functional hub for everyday living. This space flows seamlessly onto a rear deck, perfect for relaxed outdoor living. \n\nDownstairs offers further versatility, featuring additional living and dining spaces and a second kitchen making this level ideal for extended family, dual living potential, or flexible use as your needs evolve. \n\nAccommodation comprises five generously sized bedrooms, serviced by three bathrooms, making the home well-suited to larger families or those seeking extra space. Additional features include air conditioning, ceiling fans, dedicated storage, a lock up garage plus a single carport. \n\nSet just moments from Suncorp Stadium and the vibrant cafés & boutiques along Given Terrace & Latrobe Terrace,  this property presents an exceptional opportunity for families, professionals, or savvy investors looking to secure a foothold in a blue-chip location.\n\nWith its inviting street presence and thoughtfully designed layout, 17 Hall Street promises comfortable living with ample scope to personalise and add value. Enjoy easy access to the CBD, quality schools, public transport, and all the charm that makes Paddington one of Brisbane's most desirable suburbs.\n\nFor more information, contact our team today!",
+        "displayPrice": "Expressions of Interest",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T12:00:00",
+            "end": "2026-05-09T12:30:00"
+          },
+          {
+            "start": "2026-05-14T16:00:00",
+            "end": "2026-05-14T16:30:00"
+          },
+          {
+            "start": "2026-05-16T12:00:00",
+            "end": "2026-05-16T12:30:00"
+          },
+          {
+            "start": "2026-05-21T16:00:00",
+            "end": "2026-05-21T16:30:00"
+          },
+          {
+            "start": "2026-05-23T12:00:00",
+            "end": "2026-05-23T12:30:00"
+          },
+          {
+            "start": "2026-05-26T17:00:00",
+            "end": "2026-05-26T17:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18534264"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3183249"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18534264/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/17873"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/100901"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/p4cha6kiiai7dhlc5pmgo56ez4?signature=d8c2acd0fb46cb419c9cbf223d6d1ab7b171eca11df51d3ec6ae90a9a5de9ce1"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/17-hall-st-paddington-qld-4064-18534264"
+        }
+      ],
+      "id": "18534264"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6705830",
+      "othPropertyId": "3183489",
+      "address": {
+        "formattedAddress": "41 WILDEN ST, PADDINGTON, QLD 4064",
+        "streetNumber": "41",
+        "streetName": "WILDEN",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.4601302,
+          "lon": 152.9925937
+        }
+      },
+      "beds": 4,
+      "baths": 3,
+      "carSpaces": 4,
+      "floorSize": 0,
+      "landSize": 405,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-29",
+        "listedDateTime": "2026-04-29T07:22:48",
+        "lastModifiedDateTime": "2026-05-06T23:28:24",
+        "agency": {
+          "agencyId": "28710",
+          "name": "Spinks & Co Residential Pty Ltd",
+          "email": "residential@spinksco.com.au",
+          "address": {
+            "formattedAddress": "PADDINGTON, QLD",
+            "suburb": "PADDINGTON",
+            "stateCode": "QLD",
+            "addressLine1": "3/166 Baroona Rd"
+          },
+          "phoneNumber": "0733675444",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "258627",
+              "username": "rachael@spinksco.com.au",
+              "email": "rachael@spinksco.com.au",
+              "firstName": "Rachael",
+              "lastName": "Spinks",
+              "status": "Active",
+              "phoneNumber": "0411101015",
+              "mobileNumber": "0411 10 10 15",
+              "blurb": "Rachael grew up surrounded by real estate with her father a town planner and successful property developer. She began her own career with one of Queensland’s award-winning real estate teams. With a decade of experience behind her, and time away from work devoted to family, she returned to the industry as Director of her own company.\n\nCombining her love of tennis and real estate, SpinksCo Residential was launched; catering to the prestige and tennis court home markets. By creating an exclusive data base of tennis court homes in the inner/mid city range, Rachael is able to offer a boutique service of sourcing and matching the right home with the right family.\n\nHer personal commitment to focusing on a limited number of properties at any one time, has allowed Rachael to establish new service benchmarks in the industry.\n\nRachael is highly regarded for her diplomacy skills and her consideration for both vendors and buyers during the sales process. She is renowned for providing her clients with a high-level of research data relating specifically to the Brisbane tennis court and prestige home markets.",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Rachael Spinks",
+              "contact": {
+                "email": "rachael@spinksco.com.au",
+                "phone": {
+                  "mobile": "0411 10 10 15",
+                  "business": "0411101015"
+                }
+              },
+              "links": [],
+              "agencyId": "28710"
+            },
+            {
+              "uuid": "267293",
+              "username": "stephen@wakelyproperties.com.au",
+              "email": "stephen@wakelyproperties.com.au",
+              "firstName": "Stephen",
+              "lastName": "Matthews",
+              "status": "Active",
+              "mobileNumber": "0436111000",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Stephen Matthews",
+              "contact": {
+                "email": "stephen@wakelyproperties.com.au",
+                "phone": {
+                  "mobile": "0436111000"
+                }
+              },
+              "links": [],
+              "agencyId": "28710"
+            }
+          ],
+          "links": []
+        },
+        "description": "Elevated within one of Paddington's most prestigious enclaves, 41 Wilden Street is not just a residence; it is a sublime expression of contemporary, mid-century inspired architecture. A collaboration between the owners and the renowned CG Design Studios, this award-winning sanctuary has reimagined an original worker's cottage into a sophisticated family retreat where the city skyline serves as a breathtaking, ever-changing backdrop.\n\nCommanding an enviable position, the home's elevation is the hero of the design.  Floor to ceiling glass retracts to frame sweeping, unobstructed city views, transforming the twinkling skyline into a living piece of art.  \n\nAt the heart of the home are the open-plan kitchen, dining, and \"sunken\" lounge.   The sunken lounge is a chic conversation pit anchored by a suspended fireplace, which offers an immediate sense of warmth and drama.  Honed concrete floors provide a cool, tactile foundation underfoot, while the kitchen presents as a culinary temple featuring exquisite Artedomus marble and premium Neff appliances.  This social hub flows effortlessly toward the view, while a shimmering, fully tiled pool is tucked into a central courtyard, remaining visible from the kitchen to ensure a constant connection to the water.\n\nOccupying the entire top level, the master suite is a true architectural sanctuary that feels like a high-end boutique hotel.  This private retreat offers a secluded balcony overlooking the city and a spa-like ensuite complete with a freestanding bath for the ultimate indulgence.  For children or guests, the lower level reveals a bright, casual living zone with a seamless connection to the flat lawn and gardens, complemented by a sauna and a bathroom cleverly concealed behind stunning timber panelling.  Even the practicalities are handled with innovative engineering; solving the inner-city parking puzzle, a double carport with a hydraulic lift lowers vehicles into a massive secure garage with ample space for additional cars, a boat, or lifestyle toys.\n\nBeyond the front door, you are immersed in the pulse of Paddington, just a short stroll from the vibrant boutiques, bars, and cafes of Latrobe & Given Terrace.  For sports and entertainment enthusiasts, Suncorp Stadium is a casual walk away, making world-class events a seamless part of your lifestyle.  Positioned just 4km from the CBD and a short walk to express bus services, this is the ultimate in inner-city connectivity.\n\nThis location is equally unparalleled for its educational prestige, sitting within the coveted Milton State School catchment and offering easy access to St Joseph's Primary, All Hallows', Gregory Terrace, Stuartholme, Marist College Ashgrove, both Brisbane Grammar Schools and The Gap & Kelvin Grove high schools.\n\nThis is a home that doesn't just look beautiful - it performs.  Honoured by the HIA for both Residential Design and Sustainable Living, the property features integrated sound, solar power, security, and ducted air-conditioning throughout.  Rarely does a home of such architectural pedigree and location become available.  This is your opportunity to secure an envied Paddington lifestyle where the city is your backyard, and every elite amenity is at your door.\n\n- Outstanding Elevation and Stunning City Views\n- HIA Awarded & Designed by CG Design Studios\n- Fully Tiled, Sparkling Swimming Pool\n- Sauna\n- High-End Fixtures & Finishes including Custom Cabinetry, Marble, Honed Concrete, Wool Carpet\n- Chic, Sunken Lounge with Suspended Fireplace\n- Pet & Family Friendly Flat Lawn\n- Double Carport fitted with Hydraulic Lift to Secure Garage\n- Ducted Air & Integrated Sound throughout\n- Solar & Security Systems\n- Approximately 4km to Brisbane CBD\n- Walking Distance to Restaurants, Café's Bars & Express Transport\n- Easy Access to Outstanding Public & Private Schools\n\nBest Offers Closing 26th May at 3.00pm if not sold prior\n\nDisclaimer: This property is being sold by Best Offers and therefore a price guide cannot be provided. The website may have filtered the property into a price bracket for website functionality purposes. Best Offers closes on Tuesday 26th May if not sold prior.",
+        "displayPrice": "BEST OFFERS closing 26th May at 3.00pm",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T10:00:00",
+            "end": "2026-05-09T10:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18516988"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3183489"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18516988/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/28710"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/258627"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/y7cpjp2d2mi7devm7go4avbfrq?signature=cf43af5008e8a41f5421f736f0807323d06d386feb5ec1fa6d7857ab945ef45b"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/41-wilden-st-paddington-qld-4064-18516988"
+        }
+      ],
+      "id": "18516988"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6702202",
+      "othPropertyId": "3174809",
+      "address": {
+        "formattedAddress": "58 KENNEDY TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "58",
+        "streetName": "KENNEDY",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45602279,
+          "lon": 152.99811701
+        }
+      },
+      "beds": 2,
+      "baths": 2,
+      "carSpaces": 1,
+      "floorSize": 161,
+      "landSize": 362,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-29",
+        "listedDateTime": "2026-04-29T03:10:21",
+        "lastModifiedDateTime": "2026-05-06T01:27:07",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "9926",
+              "username": "max.hadgelias@raywhite.com",
+              "email": "max.hadgelias@raywhite.com",
+              "firstName": "Max",
+              "lastName": "Hadgelias",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 411 276 372",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Max Hadgelias",
+              "contact": {
+                "email": "max.hadgelias@raywhite.com",
+                "phone": {
+                  "mobile": "+61 411 276 372",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/9926/headshot.jpg?20260507053048",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Etched into a streetscape of revered period homes on Kennedy Terrace, this character cottage presents huge potential; preserve the original facade and key features and transform into a timeless classic family residence. \n\nConsider a lifestyle where the comforts of home and neighbourhood connection are interwoven; the interior is enriched by views of suburban greenspace and architecture. Polished timber flooring creates a warm welcome, while lofty ceilings and tongue-in-groove panelling enhance the abundance of natural light.\n \nShowcasing elevation, the 362m2 allotment has a lot to offer; demonstrating proven yields and presented in perfectly livable condition, the property could be occupied while plans are explored for a large-scale renovation.\n\nProperty Highlights:\n? Twin gable cottage with traditional features and huge potential for further renovations\n? Neat and tidy condition with opportunities for immediate occupation\n? Living and dining areas open to elevated balcony\n? Two ideally positioned queen-sized bedrooms and adjacent sun room\n? Functional kitchen with integrated appliances \n? Large muti-purpose room, currently used as a bedroom, is located on the ground floor with an updated attached bathroom \n? Split system air conditioning \n? Off street car parking and generous storage undercroft\n\nPositioned just down the road from Reverie Coffee House, locals enjoy crossing paths with their neighbours in the early hours. One of the suburb's most walkable locations, Paddington Central is easily accessible. Buyers will love the position within catchment for the highly regarded Ithaca Creek State School. Popular private school choices include Marist College, Mt St Michael's College and Brisbane Grammar, all accessible with ease. \n\nSituated only nine minutes from the CBD, with great access to major arterials and public transport options, this property will appeal to buyers seeking an opportunity to create their ideal family residence.\n \nFor sale by Auction, unless sold prior the property is exclusively presented by Max Hadgelias 0411 276 372, get in contact today to register your interest or to arrange an inspection.\n\nDisclaimer:\nThis property is being sold by auction or without a price and therefore a price guide can not be provided. The website may have filtered the property into a price bracket for website functionality purposes only.",
+        "displayPrice": "Auction - If not sold prior",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-06T17:00:00",
+            "end": "2026-05-06T17:30:00"
+          },
+          {
+            "start": "2026-05-09T10:00:00",
+            "end": "2026-05-09T10:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Auction"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18515123"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3174809"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18515123/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/9926"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/b3lifyceiqi7dhhtcetmdynupy?signature=387111b41fe4868a4177a8bec7771643378969f1ff38293375e8570a75709c69"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/58-kennedy-tce-paddington-qld-4064-18515123"
+        }
+      ],
+      "id": "18515123"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6699402",
+      "othPropertyId": "3183530",
+      "address": {
+        "formattedAddress": "1 FERNBERG RD, PADDINGTON, QLD 4064",
+        "streetNumber": "1",
+        "streetName": "FERNBERG",
+        "streetType": "RD",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46633958,
+          "lon": 153.00146133
+        }
+      },
+      "beds": 3,
+      "baths": 1,
+      "carSpaces": 2,
+      "floorSize": 0,
+      "landSize": 473,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-29",
+        "listedDateTime": "2026-04-29T00:12:01",
+        "lastModifiedDateTime": "2026-05-05T01:27:03",
+        "agency": {
+          "agencyId": "16438",
+          "name": "SPACE Property Paddington",
+          "email": "marketing@spaceproperty.com.au",
+          "address": {
+            "formattedAddress": "90 Latrobe TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.459432,
+              "lon": 152.998047
+            },
+            "addressLine1": "90 Latrobe TCE"
+          },
+          "phoneNumber": "07 3510 7600",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16438/logo.png",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "85664",
+              "username": "zac@spaceproperty.com.au",
+              "email": "zac@spaceproperty.com.au",
+              "firstName": "Zac",
+              "lastName": "Tully",
+              "status": "Active",
+              "phoneNumber": "07 3510 7600",
+              "mobileNumber": "0413 820 274",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Zac Tully",
+              "contact": {
+                "email": "zac@spaceproperty.com.au",
+                "phone": {
+                  "mobile": "0413 820 274",
+                  "business": "07 3510 7600"
+                }
+              },
+              "links": [],
+              "agencyId": "16438"
+            },
+            {
+              "uuid": "263908",
+              "username": "ruby@spaceproperty.com.au",
+              "email": "ruby@spaceproperty.com.au",
+              "firstName": "Ruby",
+              "lastName": "Salton",
+              "status": "Active",
+              "phoneNumber": "07 3510 7600",
+              "mobileNumber": "0418745055",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Ruby Salton",
+              "contact": {
+                "email": "ruby@spaceproperty.com.au",
+                "phone": {
+                  "mobile": "0418745055",
+                  "business": "07 3510 7600"
+                }
+              },
+              "links": [],
+              "agencyId": "16438"
+            }
+          ],
+          "links": []
+        },
+        "description": "Perfectly positioned on a 473m² corner block, this charming 3-bedroom cottage offers an exceptional opportunity to secure a home in one of Paddington's most convenient and tightly held pockets. Just moments from Rosalie Village, Milton State School, local cafés, restaurants and public transport, the lifestyle on offer here is one of convenience, charm and endless potential.\n\nFull of warmth and character, the home is immediately inviting with its beautiful green front facade and timeless cottage appeal. Inside, the property offers comfortable living with plenty of natural light flowing throughout, creating a bright and welcoming atmosphere from the moment you step inside. The functional layout provides an excellent foundation to enjoy as is, while also offering scope to update, renovate or further personalise over time.\n\nStepping outside, the home opens onto a large, flat grassed backyard and the perfect space for children and pets to enjoy, entertaining family and friends, or exploring future extensions or improvements (STCA). Positioned on a generous corner allotment, the property also benefits from excellent street presence and added privacy.\n\nWhether you are looking to move straight in, renovate over time or secure a blue-chip landholding in a premium inner-city location, this is an opportunity not to be missed. Combining character, usable land and an unbeatable lifestyle position, this charming Paddington cottage offers the very best of inner-city living.",
+        "displayPrice": "By Negotiation",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T11:00:00",
+            "end": "2026-05-09T11:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18513774"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3183530"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18513774/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16438"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/85664"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/xedlrqcdmei7ddmjj6jiptvdue?signature=08878806bc468680d40320baeba32c351c24d0a1e4e41e41e1d50baa7dad1552"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/1-fernberg-rd-paddington-qld-4064-18513774"
+        }
+      ],
+      "id": "18513774"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6702841",
+      "othPropertyId": "3210211",
+      "address": {
+        "formattedAddress": "205 LATROBE TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "205",
+        "streetName": "LATROBE",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45902736,
+          "lon": 152.99267188
+        }
+      },
+      "beds": 2,
+      "baths": 1,
+      "carSpaces": 1,
+      "floorSize": 0,
+      "landSize": 445,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-28",
+        "listedDateTime": "2026-04-28T05:07:48",
+        "lastModifiedDateTime": "2026-05-05T01:23:28",
+        "agency": {
+          "agencyId": "16438",
+          "name": "SPACE Property Paddington",
+          "email": "marketing@spaceproperty.com.au",
+          "address": {
+            "formattedAddress": "90 Latrobe TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.459432,
+              "lon": 152.998047
+            },
+            "addressLine1": "90 Latrobe TCE"
+          },
+          "phoneNumber": "07 3510 7600",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16438/logo.png",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "85664",
+              "username": "zac@spaceproperty.com.au",
+              "email": "zac@spaceproperty.com.au",
+              "firstName": "Zac",
+              "lastName": "Tully",
+              "status": "Active",
+              "phoneNumber": "07 3510 7600",
+              "mobileNumber": "0413 820 274",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Zac Tully",
+              "contact": {
+                "email": "zac@spaceproperty.com.au",
+                "phone": {
+                  "mobile": "0413 820 274",
+                  "business": "07 3510 7600"
+                }
+              },
+              "links": [],
+              "agencyId": "16438"
+            },
+            {
+              "uuid": "263908",
+              "username": "ruby@spaceproperty.com.au",
+              "email": "ruby@spaceproperty.com.au",
+              "firstName": "Ruby",
+              "lastName": "Salton",
+              "status": "Active",
+              "phoneNumber": "07 3510 7600",
+              "mobileNumber": "0418745055",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Ruby Salton",
+              "contact": {
+                "email": "ruby@spaceproperty.com.au",
+                "phone": {
+                  "mobile": "0418745055",
+                  "business": "07 3510 7600"
+                }
+              },
+              "links": [],
+              "agencyId": "16438"
+            }
+          ],
+          "links": []
+        },
+        "description": "Positioned in a highly convenient inner-city location, 205 Latrobe Terrace presents an exceptional opportunity to secure a charming Paddington home with lifestyle at its core.\n\nThis cute cottage enjoys a surprising sense of peace and separation, enhanced by a welcoming front courtyard that creates an inviting entry and added privacy from the road. Brimming with character and potential, the home offers the perfect canvas to update and add your own personal touch over time.\n\nInside, the two-bedroom, one-bathroom layout is well-proportioned and filled with natural light, creating a warm and airy atmosphere throughout. The generous living and dining area flows effortlessly, capturing a lush, green outlook that provides a tranquil backdrop rarely found this close to the city.\n\nThe home also features a yard area, ideal for those seeking outdoor space for entertaining, gardening, or simply relaxing. Downstairs, ample under-house storage offers exciting potential to further enhance or extend (STCA), adding long-term value.\n\nComplete with off-street parking for one vehicle, this property combines immediate comfort with future upside. All of this is just moments from Paddington Central, an array of popular cafés, and the vibrant Rosalie Village, making it an outstanding opportunity for buyers seeking privacy, convenience, and lifestyle in a central location.",
+        "displayPrice": "By Negotiation",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-07T12:00:00",
+            "end": "2026-05-07T12:30:00"
+          },
+          {
+            "start": "2026-05-09T10:15:00",
+            "end": "2026-05-09T10:45:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18511505"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3210211"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18511505/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16438"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/85664"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/k4zj6a2czui7dgi7xm6cg6anva?signature=8134cd73983812b36adc2a28a704e2443aea8976adf1c32180796880335b3844"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/205-latrobe-tce-paddington-qld-4064-18511505"
+        }
+      ],
+      "id": "18511505"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6698144",
+      "othPropertyId": "3182331",
+      "address": {
+        "formattedAddress": "12 COCHRANE ST, PADDINGTON, QLD 4064",
+        "streetNumber": "12",
+        "streetName": "COCHRANE",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45896458,
+          "lon": 153.00230778
+        }
+      },
+      "beds": 4,
+      "baths": 2,
+      "carSpaces": 2,
+      "landSize": 440,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-23",
+        "listedDateTime": "2026-04-23T10:36:40",
+        "lastModifiedDateTime": "2026-05-07T15:21:40",
+        "agency": {
+          "agencyId": "16407",
+          "name": "Calibre Real Estate - Red Hill",
+          "email": "sales@calibrerealestate.com.au",
+          "address": {
+            "formattedAddress": "191 Musgrave RD , Red Hill, QLD 4059",
+            "suburb": "Red Hill",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.452965,
+              "lon": 153.005577
+            },
+            "addressLine1": "191 Musgrave RD"
+          },
+          "phoneNumber": "07 3367 3411",
+          "faxNumber": "07 3367 3408",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16407/logo/8179ed5e-3139-4e44-a332-89809fac5e7f.png",
+          "banner": "https://img.othsolutions.com.au/agent-centre/agency/16407/banner/09d827bd-54c2-4e6a-9751-3c4fa38ea011.png",
+          "brandColour": "4e6772",
+          "accountStatus": "ACTIVE",
+          "profileDescription": "Calibre is a boutique real estate agency in Brisbane offering real estate management and residential sales consultancy. At Calibre we pride ourselves on being market innovators and our unique points of difference allow us to achieve a premium result by exposing your property to a wider audience, presented in the best possible light.\n\nSelling a home is one of the biggest decisions most people will have to make in their lifetime and we understand the emotions involved. With this philosophy in mind, the Calibre team is dedicated to minimising the anguish of this process by delivering a level of service that is unmatched in the industry.\n\nNo two properties are alike, a one size fits all approach no longer works. Your investment faces a diverse range of challenges that require unique, and increasingly bespoke, solutions.\n\nWe have adopted modern and innovative concepts and solutions, providing maximum returns on your investment. Whether you are a hands-on owner or enjoy having peace of mind that everything is being taken care of, we tailor our management style to suit any level involvement.\n\nIf you're a property investor and would like to learn more about our award winning property management services visit the Property Management page on our website https://www.calibrerealestate.com.au/property-management/brisbane/",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "23113",
+              "username": "jhteam@calibrerealestate.com.au",
+              "email": "jhteam@calibrerealestate.com.au",
+              "firstName": "Justin",
+              "lastName": "Hagen",
+              "status": "Active",
+              "phoneNumber": "07 3367 3411",
+              "mobileNumber": "0401 856 161",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Justin Hagen",
+              "contact": {
+                "email": "jhteam@calibrerealestate.com.au",
+                "phone": {
+                  "mobile": "0401 856 161",
+                  "business": "07 3367 3411"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/117710/headshot.png?20230630020454",
+              "agencyId": "16407"
+            },
+            {
+              "uuid": "154270",
+              "username": "keaton@calibrerealestate.com.au",
+              "email": "keaton@calibrerealestate.com.au",
+              "firstName": "Keaton",
+              "lastName": "Luck",
+              "status": "Active",
+              "phoneNumber": "07 3367 3411",
+              "mobileNumber": "0426 966 124",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Keaton Luck",
+              "contact": {
+                "email": "keaton@calibrerealestate.com.au",
+                "phone": {
+                  "mobile": "0426 966 124",
+                  "business": "07 3367 3411"
+                }
+              },
+              "links": [],
+              "agencyId": "16407"
+            }
+          ],
+          "links": []
+        },
+        "description": "Step into timeless charm and effortless inner-city living with this beautifully preserved double-storey character cottage, perfectly positioned in one of Paddington's most sought-after streets. Framed by its elevated setting and rich in street appeal, this inviting residence offers a rare opportunity to secure a home that effortlessly blends history, warmth, and lifestyle.\n\nFull of personality and charm, the home captures the essence of classic character design, where traditional details meet everyday comfort. With a versatile layout ideal for growing families, creative pursuits, or those looking to personalise a dream inner-city retreat, this gorgeous home delivers both functionality and inspiration in equal measure, all within a location that places you just moments from the very best of Paddington living.\n\nKey Features:\n- Classic cottage charm with original high ceilings, polished timber floors, VJ walls, and a warm, inviting aesthetic\n- 4 good sized bedrooms offering flexibility for families, a home office, or guest accommodation\n- 2.5 bathrooms, including a main bathroom plus an additional second bathroom for everyday convenience\n- Secure two-car lock-up garage with ample storage \n- Private pool, perfect for relaxed entertaining and summer living\n- Generous 440 m² allotment with scope for gardens, outdoor entertaining, or future expansion\n- School catchment areas for Petrie Terrace State School & Kelvin Grove State College\n\nLifestyle & Location:\n\nPositioned just moments from the vibrant energy of Latrobe Terrace, renowned for its cafés, boutiques, and dining experiences, this address offers the very best of Paddington living.\n\nWith easy access to public transport, parks, and quality schools-and located less than 4km from the Brisbane CBD-this exceptional home delivers the perfect balance of lifestyle, location, and character.\n\nThis property is being sold without a price and therefore a price guide cannot be provided. The website may have filtered the property into a price bracket for website functionality purposes only.",
+        "displayPrice": "For Sale",
+        "showPrice": true,
+        "hasVirtualTour": true,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18499228"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3182331"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18499228/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16407"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/23113"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/ubc6nej6zei7dnjhqmb7lclxom?signature=5fe7b9790a0a831f56ae3405764e1077f6e1db4b7c79ba97e1b1cb2ec13440ac"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/12-cochrane-st-paddington-qld-4064-18499228"
+        },
+        {
+          "rel": "videoLink-1",
+          "href": "https://my.matterport.com/show/?m=DdedATttNNv"
+        }
+      ],
+      "id": "18499228"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6697907",
+      "othPropertyId": "3711827",
+      "address": {
+        "formattedAddress": "3/63 CHARLOTTE ST, PADDINGTON, QLD 4064",
+        "unitNumber": "3",
+        "streetNumber": "63",
+        "streetName": "CHARLOTTE",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45987366,
+          "lon": 153.00725627
+        }
+      },
+      "beds": 3,
+      "baths": 3,
+      "carSpaces": 2,
+      "landSize": 143,
+      "landSizeUnit": "squareMeter",
+      "type": "Townhouse",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-22",
+        "listedDateTime": "2026-04-22T02:52:08",
+        "lastModifiedDateTime": "2026-05-01T03:09:14",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "2469",
+              "username": "mathew.abboud@raywhite.com",
+              "email": "mathew.abboud@raywhite.com",
+              "firstName": "Mathew",
+              "lastName": "Abboud",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 423 629 346",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Mathew Abboud",
+              "contact": {
+                "email": "mathew.abboud@raywhite.com",
+                "phone": {
+                  "mobile": "+61 423 629 346",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/2469/headshot.jpg?20260506043058",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Seldom does the opportunity present itself where a 3bed, 3 bath, 2 car town home in the heart of the effervescent Paddington becomes available.\n\nNestled within an intimate boutique complex of just five, this exceptional property offers a coveted lifestyle for discerning buyers or investors alike.\n\nWith its rare combination of space, style, and location, it represents a genuine entry into one of Brisbane's most sought-after inner-city addresses.\n\nDesigned across two light-filled levels, the townhouse offers generously proportioned bedrooms, multiple living zones, and seamless indoor-outdoor flow. \nEvery detail has been considered to provide a quality of life that allows you to simply move in and enjoy all the best of Paddington - from chic café culture to elite schools, and effortless access to the CBD.\n\nSummary:\n• Prime location with the CBD on your doorstep\n• Stroll to the cafés and boutiques of Given Terrace and Latrobe Terrace\n• Thoughtfully designed, practical layout for modern living\n• Recently renovated ensuite delivering contemporary comfort\n• Competitive Body Corporate rates for a hassle-free lifestyle\n\nOpportunities to secure a property of this calibre in Paddington are extremely rare. Act swiftly to make one of inner-city Brisbane's most desirable townhouses yours.\n\n\nAuction:\n30th April @ 6pm\nRay White Paddington In rooms - Darling and Co\n\n* Where properties are being sold without a price, in accordance with government\nregulations a price guide cannot be provided. Please also note that the website being\nviewed may have filtered the property into a price bracket for functionality purposes.\n\n* Land dimensions are sourced from Pricefinder & B.C.C and should be used as a guide only",
+        "displayPrice": "Auction",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-04-23T18:00:00",
+            "end": "2026-04-23T18:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": true,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18431312"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3711827"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18431312/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/2469"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/3fjvimrl6mi7dbrr5eozb3oaau?signature=a68ca7fc01e169bf78a3833ada6259ed3fdce3234b8009809b5d219e428aa289"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/3-63-charlotte-st-paddington-qld-4064-18431312"
+        }
+      ],
+      "id": "18431312"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6705423",
+      "othPropertyId": "4079864",
+      "address": {
+        "formattedAddress": "10 TOOTH AVE, PADDINGTON, QLD 4064",
+        "streetNumber": "10",
+        "streetName": "TOOTH",
+        "streetType": "AVE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45603998,
+          "lon": 152.99378247
+        }
+      },
+      "beds": 4,
+      "baths": 2,
+      "carSpaces": 1,
+      "landSize": 405,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-21",
+        "listedDateTime": "2026-04-21T14:56:01",
+        "lastModifiedDateTime": "2026-05-07T11:46:02",
+        "agency": {
+          "agencyId": "10755",
+          "name": "Place West",
+          "email": "toni@placewest.com.au",
+          "address": {
+            "formattedAddress": "8 Guthrie St  , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.462216,
+              "lon": 153.006134
+            },
+            "addressLine1": "8 Guthrie St"
+          },
+          "phoneNumber": "07 3858 0388",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/10755/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Place",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "129609",
+              "username": "simon@placewest.com.au",
+              "email": "simon@placewest.com.au",
+              "firstName": "Simon",
+              "lastName": "Wheelans",
+              "status": "Active",
+              "phoneNumber": "(07) 3858 0388",
+              "mobileNumber": "0417 799 963",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Simon Wheelans",
+              "contact": {
+                "email": "simon@placewest.com.au",
+                "phone": {
+                  "mobile": "0417 799 963",
+                  "business": "(07) 3858 0388"
+                }
+              },
+              "links": [],
+              "agencyId": "10755",
+              "facebookUrl": "",
+              "twitterUrl": "",
+              "linkedInUrl": ""
+            },
+            {
+              "uuid": "231021",
+              "username": "toni@placewest.com.au",
+              "email": "toni@placewest.com.au",
+              "firstName": "Toni",
+              "lastName": "Pallent",
+              "status": "Active",
+              "mobileNumber": "0418 404 111",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Toni Pallent",
+              "contact": {
+                "email": "toni@placewest.com.au",
+                "phone": {
+                  "mobile": "0418 404 111"
+                }
+              },
+              "links": [],
+              "agencyId": "10755"
+            }
+          ],
+          "links": []
+        },
+        "description": "Positioned in one of Paddington’s most convenient and sought-after pockets, this elevated Queenslander at 10 Tooth Avenue presents an exceptional opportunity to secure timeless character, family functionality and effortless inner-city living.\nImmaculately presented and fully fenced, the home beautifully blends traditional charm with modern comfort. Showcasing VJ walls, high ceilings and polished timber floors, it offers expansive open-plan living, seamless indoor-outdoor entertaining and a lifestyle of absolute convenience just minutes from the CBD.\n\nFEATURES\n- Generous open-plan living, dining and kitchen area designed for modern family living.\n- Expansive entertaining deck plus multiple outdoor living spaces including a huge front porch to relax and unwind.\n- Charming street appeal with wide frontage, welcoming entrance and classic Queenslander presence.\n- Well-appointed kitchen with stone island bench, gas cooktop, stainless steel appliances, pantry and ample storage.\n- Bifold doors opening seamlessly to a large 30sqm entertaining deck for effortless indoor-outdoor living.\n- Spacious master retreat with brand new air-conditioning, ceiling fan, built-in robes and private ensuite.\n- Three additional bedrooms with ceiling fans, two enjoying direct verandah access.\n- Modern main bathroom with shower over bath and excellent storage.\n- Timeless character features including VJ walls, high ceilings and polished timber floors.\n- Dedicated tiled laundry conveniently located underneath the home.\n- Two covered car spaces plus extensive under-house storage.\n- Electronic remote-controlled front gate for added security.\n- Energy-efficient solar panels.\n- External staircase to rear level lawn, fully fenced for kids to play, with space for a pool (STCA).\n\nLOCATION FEATURES\n- Approx. 1km to Rosalie Village \n- Approx. 1.7km to Suncorp Stadium \n- Less than 850m to Broncos Leagues Club \n- Approx. 3.2km to Brisbane CBD \n- Less than 500m to Paddington Central Shopping Centre \n- Walking distance to an array of cafés, restaurants and shops including NAÏM, Mili &amp; Maisie and Sunnyside Sandwiches \n- Zoned for Ithaca Creek State School and Kelvin Grove State College",
+        "displayPrice": "FOR SALE NOW",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18493490"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/4079864"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18493490/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/10755"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/129609"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/rorqsdb5lai7daoxc4srksjvqy?signature=18b3eb9c693a3788af77e0c3b832a9ce3cd64d4d0d4f6ba91e9da4871b6f6350"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/10-tooth-ave-paddington-qld-4064-18493490"
+        }
+      ],
+      "id": "18493490"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6702076",
+      "othPropertyId": "3183447",
+      "address": {
+        "formattedAddress": "32 IMPERIAL TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "32",
+        "streetName": "IMPERIAL",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45921491,
+          "lon": 152.99620948
+        }
+      },
+      "beds": 5,
+      "baths": 2,
+      "carSpaces": 2,
+      "landSize": 594,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-20",
+        "listedDateTime": "2026-04-20T02:49:57",
+        "lastModifiedDateTime": "2026-05-05T06:10:18",
+        "agency": {
+          "agencyId": "9972",
+          "name": "Ray White New Farm",
+          "email": "newfarm.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "612 Brunswick ST , New Farm, QLD 4005",
+            "suburb": "New Farm",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.462564,
+              "lon": 153.04071
+            },
+            "addressLine1": "612 Brunswick ST"
+          },
+          "phoneNumber": "07 3254 1022",
+          "faxNumber": "07 3358 4891",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "94256",
+              "username": "josh.brown@raywhite.com",
+              "email": "josh.brown@raywhite.com",
+              "firstName": "Josh",
+              "lastName": "Brown",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3358 0662",
+              "mobileNumber": "+61 403 139 397",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Josh Brown",
+              "contact": {
+                "email": "josh.brown@raywhite.com",
+                "phone": {
+                  "mobile": "+61 403 139 397",
+                  "business": "+61 (7) 3358 0662"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/94256/headshot.jpg?20251107020046",
+              "agencyId": "9972"
+            },
+            {
+              "uuid": "71219",
+              "username": "ruby.brown@raywhite.com",
+              "email": "ruby.brown@raywhite.com",
+              "firstName": "Ruby",
+              "lastName": "Kiriyama-Brown",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3358 0605",
+              "mobileNumber": "+61 450 220 037",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Ruby Kiriyama-Brown",
+              "contact": {
+                "email": "ruby.brown@raywhite.com",
+                "phone": {
+                  "mobile": "+61 450 220 037",
+                  "business": "+61 (7) 3358 0605"
+                }
+              },
+              "links": [],
+              "agencyId": "9972"
+            }
+          ],
+          "links": []
+        },
+        "description": "Perched on a breezy north-south parcel at the end of a leafy cul-de-sac, this phenomenal family home delivers a peaceful lifestyle just one street from Paddington's renowned precinct, placing shopping, dining, transport and entertainment on your doorstep.\n\nCapturing green vistas and city glimpses, the house encourages time and connection outdoors while effortlessly accommodating large-scale families with a five-bedroom design. \n\nUpstairs, living, sitting, and dining zones create comfort across the seasons with air-conditioning, a fireplace and integrated seating, all centred around a stonetop kitchen. Doors open to front and rear decks, where you can take in the outlooks, retreat to private corners, and host everything from intimate gatherings to vibrant entertaining.\n\nThe backyard unfolds as a sanctuary for all ages, inviting you to relax in the shade or bask in the sunshine beside the swim spa, while children enjoy the playground and cubbyhouse set amongst lush lawns and gardens forming a tranquil green backdrop. \n\nThoughtfully designed for growing families, the home features three bedrooms upstairs, including a primary suite with a walk-in robe, and two additional bedrooms downstairs off a separate family room, perfect for teenagers seeking their own space. Complete with two bathrooms and a huge laundry, this is a residence where lifestyle, flexibility and family connection come together with ease.\n\nPresenting an unmatched lifestyle and exceptional opportunity in one of Brisbane's most sought-after precincts, this private Paddington address offers quiet cul-de-sac living and everything you could ask for at your fingertips. Just 300m from Latrobe Terrace, cafes, restaurants, shops, antique stores and galleries are footsteps away for relaxed dining, weekend shopping, and leisure with friends. Premier schools rest on your doorstep, transport is close at hand, and the CBD is within 3.5km for fast morning commutes.\n\nFeatures of this phenomenal family home include:\n- Elevated family retreat in a private Paddington cul-de-sac\n- 594sqm north-south parcel with leafy outlooks and city glimpses\n- 5 bedrooms, 2 bathrooms, huge laundry, 2-car garage with storage\n- Upstairs living, dining, sitting and kitchen, downstairs family room\n- Front and rear decks, swim spa, elevated yard, cubbyhouse, playground\n- Gas cooktop, wood-burning fireplace, split system air-conditioning, solar\n- 300m to Paddington precinct cafes, restaurants, shops and antiques\n- 300m to bus stops, 2km to Suncorp Stadium, 3.5km to the CBD\n- In the Ithaca Creek School catchment, minutes to premier colleges\n\nTo obtain further information, please contact Josh Brown on 0403 139 397.",
+        "displayPrice": "Inviting Offers in the Early $2m",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-04-30T16:00:00",
+            "end": "2026-04-30T16:30:00"
+          },
+          {
+            "start": "2026-05-02T09:45:00",
+            "end": "2026-05-02T10:15:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18489577"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3183447"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18489577/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/9972"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/94256"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/7n5ayxuvxii67dzpug44ltqgda?signature=c41d2ba8417e4dbdb015feafeb99037fed74cc155345914940cccf036d6703a2"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/32-imperial-tce-paddington-qld-4064-18489577"
+        }
+      ],
+      "id": "18489577"
+    },
+    {
+      "category": "SaleListing",
+      "othPropertyId": "17543705",
+      "address": {
+        "formattedAddress": "43 UPPER CAIRNS TCE, PADDINGTON, QLD 4064",
+        "streetNumber": "43",
+        "streetName": "UPPER CAIRNS",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45802702,
+          "lon": 153.00853748
+        }
+      },
+      "landSize": 609,
+      "landSizeUnit": "squareMeter",
+      "type": "Land",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-16",
+        "listedDateTime": "2026-04-16T05:06:16",
+        "lastModifiedDateTime": "2026-05-06T02:38:47",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "2469",
+              "username": "mathew.abboud@raywhite.com",
+              "email": "mathew.abboud@raywhite.com",
+              "firstName": "Mathew",
+              "lastName": "Abboud",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 423 629 346",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Mathew Abboud",
+              "contact": {
+                "email": "mathew.abboud@raywhite.com",
+                "phone": {
+                  "mobile": "+61 423 629 346",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/2469/headshot.jpg?20260506043058",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Opportunities like this don't come along often. Set on a generous 609m² in one of Paddington's most tightly held pockets, this is your chance to secure outstanding value and create something truly special from the ground up.\n\nWhether you've been dreaming of designing a bespoke family home, a striking architectural statement, or a smart long-term investment, this is the perfect blank canvas. With an ideal building platform and a peaceful, private outlook, the block offers the space and setting to bring your vision to life without compromise.\n\nWhat makes this offering even more compelling is the value on offer for such a premium inner-city location. Land of this size and quality, so close to the Brisbane CBD, is increasingly rare, making this an opportunity to secure your future in a blue-chip suburb before it's out of reach.\n\nEnjoy the best of both worlds: a quiet, elevated position paired with unbeatable convenience. Just minutes to the CBD, surrounded by some of Brisbane's top schools, and within walking distance to Paddington's vibrant café, dining, and boutique shopping scene.\n\n43 Upper Cairns Terrace is more than just land, it's the foundation for your dream home and a lifestyle to match. Secure it now and build exactly what you've always wanted, in a location that will never go out of style.\n\n\n\n* Where properties are being sold without a price, in accordance with government regulations a price guide cannot be provided. Please also note that the website being\nviewed may have filtered the property into a price bracket for functionality purposes.\n\n* Land dimensions are sourced from Pricefinder & B.C.C and should be used as a guide only",
+        "displayPrice": "FOR SALE",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18431300"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/17543705"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18431300/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/2469"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://img.othsolutions.com.au/images/3a/6b/3a6b7fc6034f5ddd44df38bb03be85cb6cdb6c69f778a12ee2a9fb0b007fc19d_51c27853be41088633f3e7389d6b8fea.jpg"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/43-upper-cairns-tce-paddington-qld-4064-18431300"
+        }
+      ],
+      "id": "18431300"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6701766",
+      "othPropertyId": "3208492",
+      "address": {
+        "formattedAddress": "39 HERBERT ST, PADDINGTON, QLD 4064",
+        "streetNumber": "39",
+        "streetName": "HERBERT",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46221441,
+          "lon": 152.99760025
+        }
+      },
+      "beds": 2,
+      "baths": 1,
+      "carSpaces": 2,
+      "landSize": 405,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-15",
+        "listedDateTime": "2026-04-15T16:27:19",
+        "lastModifiedDateTime": "2026-04-29T19:38:24",
+        "agency": {
+          "agencyId": "3696",
+          "name": "Burlington Property Agents",
+          "email": "admin@belleproperty.com",
+          "address": {
+            "formattedAddress": "5 Howard ST , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.467104,
+              "lon": 152.998329
+            },
+            "addressLine1": "5 Howard ST"
+          },
+          "phoneNumber": "07 3510 8222",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/3696/logo/329bd812-642a-4bf4-b07e-bf3f27ceda76.png",
+          "brandColour": "002846",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "10902",
+              "username": "ted.walton@burlingtonproperty.com.au",
+              "email": "ted.walton@burlingtonproperty.com.au",
+              "firstName": "Ted",
+              "lastName": "Walton",
+              "status": "Active",
+              "phoneNumber": "07 3510 8222",
+              "mobileNumber": "0412 190 680",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Ted Walton",
+              "contact": {
+                "email": "ted.walton@burlingtonproperty.com.au",
+                "phone": {
+                  "mobile": "0412 190 680",
+                  "business": "07 3510 8222"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/10902/headshot.png?20220718005751",
+              "agencyId": "3696"
+            }
+          ],
+          "links": []
+        },
+        "description": "Life offers up many opportunities, some we grab, some we miss. Here's one not to miss. \n\nSitting in the heart of one of Brisbane's most popular residential locations, just a delightful little stroll from Rosalie Village, is a home looking for love.\n\nCome and have a look, bring your imagination, life might never be the same.\n\nThe original circa 1930 Colonial home has had some interesting modifications over the decades, but nothing that can't be re-modified, so to speak.\n\nSitting on the high side of the street, the rear of the house facing north, you can almost feel the winter sunshine bursting in. The block is 405m2, offering lots of garden area to extend the house into, or build the pool you've always wanted.\n\nInternally, there are VJ walls and high ceilings, and the basics of a very special home\n\nSo, come along to our next open house, bring your creative side with you, and we can have a chat about how the next few years could look for you.\n\nImportant Information: \t\n-\tWe have a Building Inspection Report available\n-\tThe property is tenanted until September 2026\n-\tThe rental income is $730pw\n\nAn opportunity that could be a lot of fun as well as a great investment. So, come along, throw your hat in the ring, it may just be your turn!",
+        "displayPrice": "Offers by 5pm, Monday 4 May",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-02T11:00:00",
+            "end": "2026-05-02T11:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18476996"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3208492"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18476996/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/3696"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/10902"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/owjotinx2yi63eo6qux3vabeou?signature=0f4f270b8cbfbfc3c45f8e2bb495150da27374e4a9212c3e96fdb4c156d9664a"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/39-herbert-st-paddington-qld-4064-18476996"
+        }
+      ],
+      "id": "18476996"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6696664",
+      "othPropertyId": "3183580",
+      "address": {
+        "formattedAddress": "128 BECK ST, PADDINGTON, QLD 4064",
+        "streetNumber": "128",
+        "streetName": "BECK",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46413782,
+          "lon": 152.99402805
+        }
+      },
+      "beds": 3,
+      "baths": 1,
+      "carSpaces": 2,
+      "landSize": 405,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-15",
+        "listedDateTime": "2026-04-15T12:00:09",
+        "lastModifiedDateTime": "2026-05-07T13:00:31",
+        "agency": {
+          "agencyId": "3696",
+          "name": "Burlington Property Agents",
+          "email": "admin@belleproperty.com",
+          "address": {
+            "formattedAddress": "5 Howard ST , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.467104,
+              "lon": 152.998329
+            },
+            "addressLine1": "5 Howard ST"
+          },
+          "phoneNumber": "07 3510 8222",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/3696/logo/329bd812-642a-4bf4-b07e-bf3f27ceda76.png",
+          "brandColour": "002846",
+          "accountStatus": "ACTIVE",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "10902",
+              "username": "ted.walton@burlingtonproperty.com.au",
+              "email": "ted.walton@burlingtonproperty.com.au",
+              "firstName": "Ted",
+              "lastName": "Walton",
+              "status": "Active",
+              "phoneNumber": "07 3510 8222",
+              "mobileNumber": "0412 190 680",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Ted Walton",
+              "contact": {
+                "email": "ted.walton@burlingtonproperty.com.au",
+                "phone": {
+                  "mobile": "0412 190 680",
+                  "business": "07 3510 8222"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/10902/headshot.png?20220718005751",
+              "agencyId": "3696"
+            }
+          ],
+          "links": []
+        },
+        "description": "A gorgeous cottage that underlines the reason Rosalie has become one of Brisbane's most popular lifestyle precincts.\n\nThis is a wonderful first step as you ease into the property market. The house is in good condition, returns a good consistent rent, and offers an opportunity to extend and develop further.\n\nYou'll be just a casual stroll from all the highlights of Rosalie Village, somewhere that lights up and comes alive at dusk. A little further and you'll find city trains and buses, then the Citycat, a delightful way to travel to work.\n\nBeck Street has seen enormous investment in homes being restored over recent years and has become one of the inner city's most desirable residential streets.\n\nThe house itself is circa 1930, offers 3 bedrooms, a smart kitchen that connects to a generous living area. There's also a sunroom at the front of the house, ideal for a home office, or just somewhere to sit and enjoy the winter sunshine.\n\nA summary of what you will be seeing:\n-\t3 bedrooms all of a good size, and one bathroom\n-\tWell presented kitchen with good space for dining table\n-\tLight filled living room with polished pine floor and high ceilings\n-\tGood storage space under house\n-\tParking for 2 cars\n-\tLaundry under house\n\nThis is a wonderful opportunity to join one of our most prestigious residential precincts, or you may be looking for a rock solid investment that will look after you, through any global turmoil. \n\nImportant Information:\t\n- A Building Report is available\n- The house is rented for $730pw\n- The current lease expires in January 2027\n\nInspections by appointment.",
+        "displayPrice": "$1,485,000",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18474990"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3183580"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18474990/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/3696"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/10902"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/utz5vip4hui6tfera64dzosruq?signature=dd399d7a04167cf7aef11f4f8bf067fc176489cb08d6711c2e9649c722e1e637"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/128-beck-st-paddington-qld-4064-18474990"
+        }
+      ],
+      "id": "18474990"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "14713849",
+      "othPropertyId": "5810589",
+      "address": {
+        "formattedAddress": "39/1 ALEXANDRA ST, PADDINGTON, QLD 4064",
+        "unitNumber": "39",
+        "streetNumber": "1",
+        "streetName": "ALEXANDRA",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46187562,
+          "lon": 153.00868061
+        }
+      },
+      "beds": 3,
+      "baths": 2,
+      "carSpaces": 2,
+      "floorSize": 127,
+      "landSizeUnit": "squareMeter",
+      "type": "Apartment",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-15",
+        "listedDateTime": "2026-04-15T07:31:20",
+        "lastModifiedDateTime": "2026-04-29T03:41:22",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "9926",
+              "username": "max.hadgelias@raywhite.com",
+              "email": "max.hadgelias@raywhite.com",
+              "firstName": "Max",
+              "lastName": "Hadgelias",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 411 276 372",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Max Hadgelias",
+              "contact": {
+                "email": "max.hadgelias@raywhite.com",
+                "phone": {
+                  "mobile": "+61 411 276 372",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/9926/headshot.jpg?20260507053048",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Exclusive top floor residence, with no adjoining apartments, in the central 'Iceworks' development. This fantastic lifestyle property presents immediate access to the retail and dining precinct on Given Terrace as well as being short stroll to Suncorp Stadium. \n\nOverlooking the beautiful tree-lined street, a covered alfresco dining area showcases uninterrupted views of Paddington's lush hillscape and iconic architecture. Wall-to-wall glazing enables a seamless alfresco connection to the open-format living space and master bedroom.\n\nA classic monochromatic colour palette presents a timeless offering; shadow-line cornice enhances the soaring ceiling height, welcoming an abundance of natural light throughout.\nBeing the only apartment on the level, this property delivers on the utmost privacy; buyers will love the serene embrace of their surroundings.\n\nProperty Highlights:\n• 155m2 floorplan with great separation between the master and guest bedrooms\n• Open-format living area connecting an elevated street-facing balcony\n• Sleek, entertainer's kitchen with two-tone cabinetry, integrated appliances and stone benchtops\n• Master bedroom includes direct balcony access, a walk-through robe and ensuite\n• Two additional queen-sized bedrooms with built-in robes\n• Internal European style laundry\n• Ducted air conditioning \n• Exclusive complex amenities including a resort style lap pool with sundeck, cabana and BBQ facilities\n• Tandem secure car accommodation\n\nIdeally positioned in immediate proximity to Darling & Co, across from Suncorp Stadium; locals enjoy Paddington Social, the dog park and playground around the corner at Neal Macrossan Park. Buyers will love the convenient position within the catchment Petrie Terrace State School and Kelvin Grove State College. Popular choices for private schools include Brisbane Grammar, All Hallows School and St Joseph's College Gregory Terrace, all conveniently accessible. \n\nLocated just a short, six minute commute from the CBD, with great access to major arterials  and public transport options, this property will appeal to buyers seeking a centrally positioned, turn-key lifestyle property.\n\nExclusively presented by Max Hadgelias 0411 276 372. Call to register your interest or to arrange an inspection.\n\nDisclaimer:\nThis property is being sold by auction or without a price and therefore a price guide can not be provided. The website may have filtered the property into a price bracket for website functionality purposes only.",
+        "displayPrice": "Auction",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-04-22T17:15:00",
+            "end": "2026-04-22T17:45:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Auction"
+        }
+      },
+      "underOffer": true,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18477464"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/5810589"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18477464/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/9926"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/icj5eobyumi7dmo5dhud2dnwce?signature=90e897be7e636b90c934d353ac0145017a41db42d377239b984a67899612d21b"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/39-1-alexandra-st-paddington-qld-4064-18477464"
+        }
+      ],
+      "id": "18477464"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6703463",
+      "othPropertyId": "3584355",
+      "address": {
+        "formattedAddress": "9/24 MULLIN ST, PADDINGTON, QLD 4064",
+        "unitNumber": "9",
+        "streetNumber": "24",
+        "streetName": "MULLIN",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46056644,
+          "lon": 153.01049983
+        }
+      },
+      "beds": 1,
+      "baths": 1,
+      "carSpaces": 1,
+      "landSize": 54,
+      "landSizeUnit": "squareMeter",
+      "type": "Apartment",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-15",
+        "listedDateTime": "2026-04-15T02:52:18",
+        "lastModifiedDateTime": "2026-05-07T11:23:24",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "49161",
+              "username": "luke.dawson@raywhite.com",
+              "email": "luke.dawson@raywhite.com",
+              "firstName": "Luke",
+              "lastName": "Dawson",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "0435716880",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Luke Dawson",
+              "contact": {
+                "email": "luke.dawson@raywhite.com",
+                "phone": {
+                  "mobile": "0435716880",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/49161/headshot.jpg?20260507112512",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Positioned for a premier Paddington lifestyle, this bright and light inviting apartment delivers the perfect balance of location, low-maintenance ease and everyday comfort. Peacefully perched within a solid complex of just ten residences with a leafy green outlook, the home offers privacy and practicality in one of Brisbane's most desirable inner-city pockets. Perfect for the busy first home buyer or savvy investor.\n\nProperty Rates include:\n- Council rates per year are approx. $2,250 per year\n- Water rates per year are approx. $1,300 per year\n- Body corporate fees are approx. $3,300 per year\n- Sinking fund balance is approx. $111,000\n- Complex of 10\n\nThe apartment has been completely renovated from head to toe and features include:\n- Stone Ambassador - Allure Blue prestige stone benchtops with stunning splashback\n- Kitchen cabinetry has white shaker doors with a 2pac finish (Matte)\n- Oven: 60cm freestanding electric oven and gas cooktop with Air Fry, dark stainless steel \n- Miele dishwasher - Active Fully integrated dishwasher 45cm\n- Laminate White Oak Timber Flooring\n- All new plumbing, gas, electrical, windows, doors, ceilings, fans, lighting\n- Beautifully presented ensuite with internal laundry\n- Big windows right throughout so plenty of natural light\n- Secure undercover car port\n- Communal clothesline \n\nPresenting a walk-to-everything lifestyle this property is close to Latrobe Terrace offering an outstanding selection of cafes, restaurants, shops and transport. Positioned in a friendly complex with proximity to the CBD, this apartment offers an extraordinary lifestyle with every amenity within walking distance. Less than 700m from the shops, cafes, restaurants and bars at Rosalie and Paddington, you can wine and dine with friends, grab morning coffees, and hit up Caxton Street after games at Suncorp Stadium. Bus stops are near your front door, and you can enjoy scenic running tracks along the nearby parks and riverfront. Perfect for students and hospital staff, this apartment is only 1.8km from Wesley Hospital, 2.3km from QUT Kelvin Grove and 4.9km from UQ St Lucia.",
+        "displayPrice": "Offers Over $699,000",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T08:30:00",
+            "end": "2026-05-09T09:30:00"
+          },
+          {
+            "start": "2026-05-09T13:00:00",
+            "end": "2026-05-09T13:45:00"
+          },
+          {
+            "start": "2026-05-11T16:30:00",
+            "end": "2026-05-11T17:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18475215"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3584355"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18475215/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/49161"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/o3rnwzjyxei7dmo5dhud2dnwce?signature=b0bc0f623ca4e2749b694cf1e9ef8b1fb53c16f47f29d443974162a03d9f2b8e"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/9-24-mullin-st-paddington-qld-4064-18475215"
+        }
+      ],
+      "id": "18475215"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6705007",
+      "othPropertyId": "3710965",
+      "address": {
+        "formattedAddress": "2/23 STAFFORD ST, PADDINGTON, QLD 4064",
+        "unitNumber": "2",
+        "streetNumber": "23",
+        "streetName": "STAFFORD",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45755286,
+          "lon": 152.9968618
+        }
+      },
+      "beds": 2,
+      "baths": 1,
+      "carSpaces": 1,
+      "landSizeUnit": "squareMeter",
+      "type": "Apartment",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-10",
+        "listedDateTime": "2026-04-10T05:52:03",
+        "lastModifiedDateTime": "2026-05-05T07:00:16",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "85996",
+              "username": "nik.vidakovic@raywhite.com",
+              "email": "nik.vidakovic@raywhite.com",
+              "firstName": "Nik",
+              "lastName": "Vidakovic",
+              "status": "Active",
+              "phoneNumber": "",
+              "mobileNumber": "0475000401",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Nik Vidakovic",
+              "contact": {
+                "email": "nik.vidakovic@raywhite.com",
+                "phone": {
+                  "mobile": "0475000401",
+                  "business": ""
+                }
+              },
+              "links": [],
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Positioned in the highly sought-after suburb of Paddington, this exceptional two-bedroom apartment offers the perfect blend of lifestyle, convenience, and low-maintenance living. Whether you're an owner-occupier seeking vibrant inner-city living or a savvy investor, this is an opportunity not to be missed.\n\nLocated just moments from The Barracks Shopping Centre, Suncorp Stadium, Fortitude Valley, South Bank, Roma Street Parkland and the Brisbane CBD, this address places you at the centre of everything-cafés, restaurants, entertainment, transport, and more.\n\nProperty Features:\n• Spacious, light-filled floorplan with neutral tones and excellent cross ventilation\n• Modern kitchen featuring quality stainless steel appliances, induction cooktop, dishwasher, tiled splashback, dual sink, and ample storage\n• Two well-appointed bedrooms, including a master with mirrored built-in robe\n• Stylish bathroom with separate shower and generous storage\n• Convenient internal laundry nook\n• Air-conditioning for year-round comfort\n• Two secure car parks - a rare inner-city bonus\n• Prime location just 2km from the CBD\n\nOffering unbeatable convenience and a vibrant lifestyle, this apartment represents outstanding value in a blue-chip inner-city location.\n\nAct fast-properties in this location are in high demand. Contact us today to arrange your inspection!",
+        "displayPrice": "For Sale",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T12:00:00",
+            "end": "2026-05-09T12:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18464497"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3710965"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18464497/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/85996"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/fnpxjjjyeqi7ddk7b6vdrambxa?signature=6937c150edeea9996c0819357f2e5c0ac502fc2c50f1f5cb2439c77433b54d38"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/2-23-stafford-st-paddington-qld-4064-18464497"
+        }
+      ],
+      "id": "18464497"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6695460",
+      "othPropertyId": "3201019",
+      "address": {
+        "formattedAddress": "41 ALMA ST, PADDINGTON, QLD 4064",
+        "streetNumber": "41",
+        "streetName": "ALMA",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46119683,
+          "lon": 152.99908196
+        }
+      },
+      "beds": 4,
+      "baths": 2,
+      "carSpaces": 1,
+      "landSize": 579,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-10",
+        "listedDateTime": "2026-04-10T03:22:20",
+        "lastModifiedDateTime": "2026-04-10T03:22:20",
+        "agency": {
+          "agencyId": "27154",
+          "name": "Ray White Collective",
+          "address": {
+            "formattedAddress": "QLD",
+            "stateCode": "QLD"
+          },
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "266286",
+              "username": "kim.olsen@raywhite.com",
+              "email": "kim.olsen@raywhite.com",
+              "firstName": "Kim",
+              "lastName": "Olsen",
+              "status": "Active",
+              "mobileNumber": "0411867212",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Kim Olsen",
+              "contact": {
+                "email": "kim.olsen@raywhite.com",
+                "phone": {
+                  "mobile": "0411867212"
+                }
+              },
+              "links": [],
+              "agencyId": "27154"
+            },
+            {
+              "uuid": "266288",
+              "username": "karen.farrell@raywhite.com",
+              "email": "karen.farrell@raywhite.com",
+              "firstName": "Karen",
+              "lastName": "Farrell",
+              "status": "Active",
+              "mobileNumber": "0405685562",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Karen Farrell",
+              "contact": {
+                "email": "karen.farrell@raywhite.com",
+                "phone": {
+                  "mobile": "0405685562"
+                }
+              },
+              "links": [],
+              "agencyId": "27154"
+            }
+          ],
+          "links": []
+        },
+        "description": "Positioned within one of Paddington's most desirable enclaves, 41 Alma Street presents a refined balance of lifestyle appeal and investment confidence. Just moments from the boutique cafés, dining and shopping along Latrobe Terrace and Given Terrace, the home also enjoys convenient access to Rosalie Village, Suncorp Stadium, leading schools and the Brisbane CBD.\n\nDesigned for relaxed family living and effortless entertaining, the residence unfolds across two generous levels with multiple living areas and seamless indoor and outdoor integration. An expansive open plan living and dining zone flows to a substantial covered deck overlooking the sparkling in-ground pool, a private retreat for year-round enjoyment. The well-appointed kitchen is perfectly positioned to supervise both pool and yard, while a separate downstairs zone with rumpus, bedrooms, bathroom and laundry offers flexibility for extended family or guests.\n\nCurrently leased at $1,600 per week until February 2027, this is a secure, income-producing asset in a blue-chip location. With an established tenancy in place and a motivated seller, 41 Alma Street represents a compelling opportunity to secure a prestigious Paddington address with strong long-term capital growth prospects.\n\nKey Features\n• Four oversized bedrooms including a master suite with walk-through wardrobe and ensuite\n• Expansive open plan living flowing to a large covered entertainer's deck\n• Well-appointed kitchen overlooking the pool and yard\n• Separate downstairs living with rumpus, bedrooms, bathroom and laundry\n• In-ground pool with monthly servicing included\n• 12kW solar system\n• Double garage with internal entry\n• Walking distance to Latrobe and Given Terraces and a short drive to Rosalie Village and the Brisbane CBD\n\nOffering immediate rental return and exceptional long-term potential in one of Brisbane's most tightly held suburbs, this is an outstanding opportunity to secure a premium property in Paddington. To arrange your private inspection or for further information, contact Kim Olsen on 0413 539 865.\n\nThis property is being sold without a price and therefore a price guide cannot be provided. The website may have filtered the property into a price bracket for website functionality purposes.",
+        "displayPrice": "For Sale",
+        "showPrice": true,
+        "hasVirtualTour": true,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18463531"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3201019"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18463531/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/27154"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/266286"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/mmvdxgzmxei7da7zr6mdpefsvu?signature=242f616d6077cf9f87824eaafbe28b6408fa1ed4f587f941fa4adb5a1c53469f"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/41-alma-st-paddington-qld-4064-18463531"
+        },
+        {
+          "rel": "videoLink-1",
+          "href": "https://raywhitekimolsenproperty.com.au/L36476370"
+        }
+      ],
+      "id": "18463531"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6705713",
+      "othPropertyId": "3177077",
+      "address": {
+        "formattedAddress": "40 WARMINGTON ST, PADDINGTON, QLD 4064",
+        "streetNumber": "40",
+        "streetName": "WARMINGTON",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45700544,
+          "lon": 152.99840514
+        }
+      },
+      "beds": 3,
+      "baths": 2,
+      "carSpaces": 1,
+      "landSize": 405,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-09",
+        "listedDateTime": "2026-04-09T07:08:30",
+        "lastModifiedDateTime": "2026-04-29T22:56:45",
+        "agency": {
+          "agencyId": "10458",
+          "name": "Ray White Ashgrove",
+          "email": "ashgrove.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "7 Ashgrove Avenue  , Ashgrove, QLD 4064",
+            "suburb": "Ashgrove",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.444912,
+              "lon": 152.9939428
+            },
+            "addressLine1": "6/223 Waterworks Rd"
+          },
+          "phoneNumber": "07 3366 4033",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "149877",
+              "username": "adam.downes@raywhite.com",
+              "email": "adam.downes@raywhite.com",
+              "firstName": "Adam",
+              "lastName": "Downes",
+              "status": "Active",
+              "phoneNumber": "(07)33664033",
+              "mobileNumber": "0418872022",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Adam Downes",
+              "contact": {
+                "email": "adam.downes@raywhite.com",
+                "phone": {
+                  "mobile": "0418872022",
+                  "business": "(07)33664033"
+                }
+              },
+              "links": [],
+              "agencyId": "10458"
+            },
+            {
+              "uuid": "164952",
+              "username": "james.gilbert@raywhite.com",
+              "email": "james.gilbert@raywhite.com",
+              "firstName": "James",
+              "lastName": "Gilbert",
+              "status": "Active",
+              "mobileNumber": "0413100109",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "James Gilbert",
+              "contact": {
+                "email": "james.gilbert@raywhite.com",
+                "phone": {
+                  "mobile": "0413100109"
+                }
+              },
+              "links": [],
+              "agencyId": "10458"
+            }
+          ],
+          "links": []
+        },
+        "description": "Welcome to 40 Warmington Street - a beautifully renovated, single-level home that effortlessly combines modern elegance with relaxed, easy-care living. Nestled in one of Brisbane's most sought-after inner-city suburbs, this private haven ticks every box for families, professionals, and downsizers alike.\n\nCleverly designed for the Queensland climate, the heart of the home is positioned at the rear. A modern, open-plan kitchen flows seamlessly into the light and airy living and dining spaces, before opening directly onto a large covered alfresco living area - complete with ceiling fan, roller blinds, and a tranquil leafy outlook. Sheltered from the elements and comfortable in virtually all weather, this is a genuine second living space as much as it is an entertainer's deck. Stairs lead directly down to a fully secure, flat, and spacious grassy backyard that is perfect for kids and pets.\n\nFor even more entertaining options, a large front courtyard provides a fantastic, versatile space to enjoy all year round.\n\nInside, the home has been thoughtfully laid out for family convenience and modern comfort:\n\n• Three generous bedrooms, all featuring built-in wardrobes.\n• A separate study, perfect for those working from home.\n• Two beautifully appointed bathrooms.\n• Timeless character details, including polished timber floors, high ceilings, and elegant plantation shutters.\n• Year-round comfort with split-system air-conditioning.\n• Secure garage for one vehicle.\n• The property offers build-under potential, with legal height and solid foundations already in place.\n\nIt is incredibly rare to find a residence this quiet and private just 5km from the Brisbane CBD. 40 Warmington Street offers the ultimate lifestyle location, blending immediate access to major sporting and entertainment events with unbeatable everyday convenience. Leave the car behind with Paddington Central and Woolworths a mere 210m stroll away, while boutique cafes, restaurants, and premium retail at Milton Village are just around the corner.\n\nPerfectly positioned for growing families, the property falls within the highly sought-after Ithaca Creek State School and Kelvin Grove State College catchments, complemented by prestigious private schools including Mt St Michael's, Marist College Ashgrove, and Stuartholme all within a rapid 4km radius. With an incredible ten bus stops in the immediate vicinity - the closest being just a 280m walk - effortless city commuting is guaranteed from this incredibly central, vibrant location.\n\nDon't miss your opportunity to secure this private inner-city sanctuary. Enquire today to experience the exceptional lifestyle on offer at 40 Warmington Street.",
+        "displayPrice": "Offers over $2,450,000",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-02T09:00:00",
+            "end": "2026-05-02T09:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18461035"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3177077"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18461035/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/10458"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/149877"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/p7z2xuzt5qi7djyuo7cdf34pt4?signature=884dbc25ea34dfb76e4ee0dcd62fc0b7cec03955885ba929368bcb0785573696"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/40-warmington-st-paddington-qld-4064-18461035"
+        }
+      ],
+      "id": "18461035"
+    },
+    {
+      "category": "SaleListing",
+      "othPropertyId": "43589611",
+      "address": {
+        "formattedAddress": "RESIDENCE 2/294-298 GIVEN TCE, PADDINGTON, QLD 4064",
+        "unitNumber": "RESIDENCE 2",
+        "streetNumber": "294-298",
+        "streetName": "GIVEN",
+        "streetType": "TCE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064"
+      },
+      "beds": 4,
+      "baths": 3,
+      "carSpaces": 4,
+      "floorSize": 351,
+      "landSizeUnit": "squareMeter",
+      "type": "Apartment",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-09",
+        "listedDateTime": "2026-04-09T04:19:07",
+        "lastModifiedDateTime": "2026-04-26T23:45:43",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "9926",
+              "username": "max.hadgelias@raywhite.com",
+              "email": "max.hadgelias@raywhite.com",
+              "firstName": "Max",
+              "lastName": "Hadgelias",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 411 276 372",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Max Hadgelias",
+              "contact": {
+                "email": "max.hadgelias@raywhite.com",
+                "phone": {
+                  "mobile": "+61 411 276 372",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/9926/headshot.jpg?20260507053048",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "298 Given Terrace presents a collection of five boutique luxury residences that continue the narrative of nurturing landscape in a residential enclave within the area. Elevated on the hillside, the proposal utilises high-quality design, landscaping, and generous amenities to create a contextual response that positively contributes to the streetscape and wider neighbourhood framework.\n\nWorld leading architecture by Bureau Proberts with the new world city on your door step!\n\nThe architecture of Ti-Tree Paddington builds on the suburban character intrinsic to Paddington's unique identity. Traditional design elements such as hipped roof forms, screened verandas, feature external entry stairs, and landscaped courtyards are re-conceptualised to harmonise heritage with modern-day living requirements.\n\nA singular built form is raised and folded around a landscaped base, transcending down the hillside to mimic the steep topography and create a cohesive relationship between the building and its natural environment.\n\nThis elevation connects the building's residents and visitors to a landscaped courtyard and feature entry stair, which occupies an \"under the house\" quality. The entry takes place beneath a concrete arbour of hanging greenery and natural stone-clad walls that emanate the timber-and-tin undercroft space, yet characterise the enduring qualities of an apartment building.\n\nResidence 2 is the final residence for sale.     Contact Max Hadgelias 0411 276 372 for further information.\n\n**Disclaimer **\nFinal product may differ to renders shown depending on options selected as purchase.",
+        "displayPrice": "For Sale",
+        "showPrice": true,
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18459878"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/43589611"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18459878/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/9926"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://img.othsolutions.com.au/images/56/5c/565c47a0d64036ae40914d1501e9494595646faaa81784d3b093ca83099314b2_173b9ec13b12cf43fc4fd3fcd6351ed5.jpg"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/residence-2-294--298-given-tce-paddington-qld-4064-18459878"
+        }
+      ],
+      "id": "18459878"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6701373",
+      "othPropertyId": "3711324",
+      "address": {
+        "formattedAddress": "2/87 GUTHRIE ST, PADDINGTON, QLD 4064",
+        "unitNumber": "2",
+        "streetNumber": "87",
+        "streetName": "GUTHRIE",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46331697,
+          "lon": 153.00098822
+        }
+      },
+      "beds": 2,
+      "baths": 1,
+      "carSpaces": 1,
+      "landSize": 109,
+      "landSizeUnit": "squareMeter",
+      "type": "Apartment",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-04-07",
+        "listedDateTime": "2026-04-07T00:38:19",
+        "lastModifiedDateTime": "2026-04-22T03:51:15",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "49161",
+              "username": "luke.dawson@raywhite.com",
+              "email": "luke.dawson@raywhite.com",
+              "firstName": "Luke",
+              "lastName": "Dawson",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 435 716 880",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Luke Dawson",
+              "contact": {
+                "email": "luke.dawson@raywhite.com",
+                "phone": {
+                  "mobile": "+61 435 716 880",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/49161/headshot.jpg?20260507112512",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "Positioned for a premier Paddington lifestyle, this inviting apartment delivers the perfect balance of location, low-maintenance ease and everyday comfort. Peacefully perched within a solid brick complex of just eight residences, the home offers privacy and practicality in one of Brisbane's most desirable inner-city pockets.\n\nThoughtfully designed with minimal stairs, a large lock-up garage and a functional two- bedroom layout, the apartment is ideally suited to professionals, couples and investors seeking effortless living with enduring appeal. Wonderfully neat and tidy, the interiors open to a light-filled living and dining area, creating a welcoming space for relaxing or entertaining. Step outside to the balcony, where you can soak up the sunshine and enjoy quiet moments, or cook in the adjoining kitchen, well- appointed with stainless steel appliances and ample storage.\n\nBoth bedrooms are generously sized and feature built-in robes, serviced by a central bathroom, a separate toilet, and a convenient internal laundry. Perfectly positioned to experience everything Paddington has to offer; this apartment promises a walk-to-everything lifestyle just 3km from the CBD. 600m from your door, the suburb's famed cafes, restaurants, bars, boutiques and antique stores cater to morning coffee, after-work drinks, weekend shopping, and dining with friends.\n\nProperty features include:\n- Low-maintenance unit in a small complex of 8\n- Air-conditioned living and dining area with a balcony\n- Kitchen featuring a stainless steel oven and dishwasher\n- 2 well-sized bedrooms with built-in robes\n- 1 bathroom, separate toilet, internal laundry\n- Large lock-up garage, on-site visitor parking\n- Brick building with minimal stairs to climb\n- 600m to Paddington shops, dining and transport\n- 1km to Suncorp Stadium, 3km to the CBD\n\nYou can enjoy comedy shows at the Sit Down Comedy Club, 550m away, Suncorp Stadium matches, 1km from your door, and movies at nearby Rosalie Village. Bus stops are 600m away, and you will appreciate the quick commutes to the city, Wesley Hospital, UQ campus, and QUT.",
+        "displayPrice": "UNDER CONTRACT",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-04-11T09:00:00",
+            "end": "2026-04-11T10:00:00"
+          },
+          {
+            "start": "2026-04-11T12:00:00",
+            "end": "2026-04-11T13:00:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": true,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18448020"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3711324"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18448020/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/49161"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/cmivqvrsdui7dmwed754zxhr4i?signature=acc8c2cc67a2171bfffe124f49acd826c70bbe97f7483cfc2e94aec31d20427d"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/2-87-guthrie-st-paddington-qld-4064-18448020"
+        }
+      ],
+      "id": "18448020"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6696859",
+      "othPropertyId": "3174751",
+      "address": {
+        "formattedAddress": "16 BELLEVIEW PDE, PADDINGTON, QLD 4064",
+        "streetNumber": "16",
+        "streetName": "BELLEVIEW",
+        "streetType": "PDE",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.45729988,
+          "lon": 152.98703778
+        }
+      },
+      "beds": 3,
+      "baths": 1,
+      "carSpaces": 3,
+      "landSize": 506,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-03-13",
+        "listedDateTime": "2026-03-13T15:57:48",
+        "lastModifiedDateTime": "2026-05-05T14:22:18",
+        "agency": {
+          "agencyId": "16407",
+          "name": "Calibre Real Estate - Red Hill",
+          "email": "sales@calibrerealestate.com.au",
+          "address": {
+            "formattedAddress": "191 Musgrave RD , Red Hill, QLD 4059",
+            "suburb": "Red Hill",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.452965,
+              "lon": 153.005577
+            },
+            "addressLine1": "191 Musgrave RD"
+          },
+          "phoneNumber": "07 3367 3411",
+          "faxNumber": "07 3367 3408",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/16407/logo/8179ed5e-3139-4e44-a332-89809fac5e7f.png",
+          "banner": "https://img.othsolutions.com.au/agent-centre/agency/16407/banner/09d827bd-54c2-4e6a-9751-3c4fa38ea011.png",
+          "brandColour": "4e6772",
+          "accountStatus": "ACTIVE",
+          "profileDescription": "Calibre is a boutique real estate agency in Brisbane offering real estate management and residential sales consultancy. At Calibre we pride ourselves on being market innovators and our unique points of difference allow us to achieve a premium result by exposing your property to a wider audience, presented in the best possible light.\n\nSelling a home is one of the biggest decisions most people will have to make in their lifetime and we understand the emotions involved. With this philosophy in mind, the Calibre team is dedicated to minimising the anguish of this process by delivering a level of service that is unmatched in the industry.\n\nNo two properties are alike, a one size fits all approach no longer works. Your investment faces a diverse range of challenges that require unique, and increasingly bespoke, solutions.\n\nWe have adopted modern and innovative concepts and solutions, providing maximum returns on your investment. Whether you are a hands-on owner or enjoy having peace of mind that everything is being taken care of, we tailor our management style to suit any level involvement.\n\nIf you're a property investor and would like to learn more about our award winning property management services visit the Property Management page on our website https://www.calibrerealestate.com.au/property-management/brisbane/",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "23113",
+              "username": "jhteam@calibrerealestate.com.au",
+              "email": "jhteam@calibrerealestate.com.au",
+              "firstName": "Justin",
+              "lastName": "Hagen",
+              "status": "Active",
+              "phoneNumber": "07 3367 3411",
+              "mobileNumber": "0401 856 161",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Justin Hagen",
+              "contact": {
+                "email": "jhteam@calibrerealestate.com.au",
+                "phone": {
+                  "mobile": "0401 856 161",
+                  "business": "07 3367 3411"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/117710/headshot.png?20230630020454",
+              "agencyId": "16407"
+            },
+            {
+              "uuid": "154270",
+              "username": "keaton@calibrerealestate.com.au",
+              "email": "keaton@calibrerealestate.com.au",
+              "firstName": "Keaton",
+              "lastName": "Luck",
+              "status": "Active",
+              "phoneNumber": "07 3367 3411",
+              "mobileNumber": "0426 966 124",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Keaton Luck",
+              "contact": {
+                "email": "keaton@calibrerealestate.com.au",
+                "phone": {
+                  "mobile": "0426 966 124",
+                  "business": "07 3367 3411"
+                }
+              },
+              "links": [],
+              "agencyId": "16407"
+            }
+          ],
+          "links": []
+        },
+        "description": "Positioned at the end of a cul-de-sac in a well-regarded pocket of Paddington, this home offers comfortable living with an elevated leafy outlook, all within easy reach of local shops, cafés, parks and transport.\n\nBehind its traditional façade, the home features high ceilings and polished timber floors throughout. The open-plan living and dining area connects to a private courtyard, providing an inviting space for outdoor dining or entertaining.\n\nKey Features:\n- Post war home, LMR2 Zoning\n- Elevated position at the end of a cul-de-sac with a leafy outlook\n- Light-filled open-plan living and dining area\n- Private courtyard for outdoor dining or entertaining\n- Practical kitchen with functional layout\n- Well-sized bedrooms with built-in wardrobes\n- Polished timber floors and high ceilings throughout\n- Located in a sought-after Paddington area\n- Close to cafés, shops, parks and public transport\n\nHomes in this part of Paddington are tightly held, and opportunities to purchase are limited. 16 Belleview Parade presents a well-located home ready to enjoy now, with the potential to add further value over time.\n\nThis property is being sold without a price and therefore a price guide cannot be provided. The website may have filtered the property into a price bracket for website functionality purposes only.",
+        "displayPrice": "$1.675mil - $1.75mil",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-06T12:00:00",
+            "end": "2026-05-06T12:30:00"
+          },
+          {
+            "start": "2026-05-07T17:00:00",
+            "end": "2026-05-07T17:30:00"
+          }
+        ],
+        "hasVirtualTour": true,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18389557"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3174751"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18389557/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/16407"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/23113"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/hfij7li6vai7dhgtbhxjh2vsvm?signature=3c27d993a38addcdbe212b5e3b4816f5364552f94f60e003975daaa301061f80"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/16-belleview-pde-paddington-qld-4064-18389557"
+        },
+        {
+          "rel": "videoLink-1",
+          "href": "https://my.matterport.com/show/?m=ERE5iYELZLd"
+        }
+      ],
+      "id": "18389557"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6697565",
+      "othPropertyId": "3187973",
+      "address": {
+        "formattedAddress": "17 CARRINGTON ST, PADDINGTON, QLD 4064",
+        "streetNumber": "17",
+        "streetName": "CARRINGTON",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.46677917,
+          "lon": 152.99234839
+        }
+      },
+      "beds": 2,
+      "baths": 1,
+      "carSpaces": 2,
+      "landSize": 405,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-03-12",
+        "listedDateTime": "2026-03-12T13:46:02",
+        "lastModifiedDateTime": "2026-05-05T17:26:04",
+        "agency": {
+          "agencyId": "10755",
+          "name": "Place West",
+          "email": "toni@placewest.com.au",
+          "address": {
+            "formattedAddress": "8 Guthrie St  , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.462216,
+              "lon": 153.006134
+            },
+            "addressLine1": "8 Guthrie St"
+          },
+          "phoneNumber": "07 3858 0388",
+          "faxNumber": "",
+          "logo": "https://img.othsolutions.com.au/agent-centre/agency/10755/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Place",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "129609",
+              "username": "simon@placewest.com.au",
+              "email": "simon@placewest.com.au",
+              "firstName": "Simon",
+              "lastName": "Wheelans",
+              "status": "Active",
+              "phoneNumber": "(07) 3858 0388",
+              "mobileNumber": "0417 799 963",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Simon Wheelans",
+              "contact": {
+                "email": "simon@placewest.com.au",
+                "phone": {
+                  "mobile": "0417 799 963",
+                  "business": "(07) 3858 0388"
+                }
+              },
+              "links": [],
+              "agencyId": "10755",
+              "facebookUrl": "",
+              "twitterUrl": "",
+              "linkedInUrl": ""
+            },
+            {
+              "uuid": "231021",
+              "username": "toni@placewest.com.au",
+              "email": "toni@placewest.com.au",
+              "firstName": "Toni",
+              "lastName": "Pallent",
+              "status": "Active",
+              "mobileNumber": "0418 404 111",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Toni Pallent",
+              "contact": {
+                "email": "toni@placewest.com.au",
+                "phone": {
+                  "mobile": "0418 404 111"
+                }
+              },
+              "links": [],
+              "agencyId": "10755"
+            }
+          ],
+          "links": []
+        },
+        "description": "EXPRESSIONS OF INTEREST CLOSING THURSDAY 14th MAY - IF NOT SOLD PRIOR\nPositioned in one of Paddington’s most tightly held pockets, this immaculately presented cottage offers timeless character and exciting future potential on a generous 405m² block. Beautifully maintained and full of timeless charm, the home features polished timber floors, VJ walls and high ceilings, creating a warm and welcoming atmosphere throughout. The cosy front porch offers the perfect place to enjoy your morning coffee, while the rear entertaining deck captures leafy parkland and mountain views — an ideal space for relaxing or hosting friends. \nComfortable to enjoy as it is today, the property also offers exciting scope to update or extend in the future (STCA), making it an ideal opportunity for first home buyers, renovators or those looking to secure a foothold in one of Brisbane’s most desirable inner-city suburbs.\nWith Rosalie Village, cafés, parks and the CBD all close by, this charming cottage delivers the perfect combination of lifestyle and location.\n\nFEATURES \n- 405m² block with mostly level backyard offering scope to extend or add a pool (STCA).\n- Covered rear entertaining deck enjoying elevated views across Norman Buchan Park, Government House and distant mountain ranges and stairs leading to the yard.\n- Polished timber floors, VJ walls and high ceilings showcasing classic character.\n- Welcoming front porch perfect for enjoying your morning coffee.\n- Spacious living and dining area with air-conditioning and ceiling fans.\n- Functional kitchen with gas cooktop, ample bench space and storage.\n- Two generously sized bedrooms with ceiling fans.\n- Bright bathroom with shower and bath.\n- Under house slab for car parking, laundry and storage use.\n- Handy side driveway access leading to the backyard.\n- Expansive blank canvas level backyard offering potential for extensions or a pool (STCA).\n- Landscaped and fenced garden providing a safe, shaded space for children to play.\n\nLOCATION FEATURES\n- 500m to Rosalie Village, where you can enjoy a meal, a glass of wine at a choice of restaurants and bars or catch a movie at the Blue Room Cinema.\n- Close to the dining, boutiques, supermarket, cafés, and bars at Paddington and The Barracks precincts.\n- 200m to Norman Buchan Park, and close to Gregory and Frew Parks\n-\nLess than 300m to Bardon Markets, Good Folk Café and 500m to Bardon Shed\n- Just 1km to two grocery stores - Paddington Central Shopping Centre (Woolworths) and Milton Village (Coles)\n- Within Milton State School and Kelvin Grove State High School catchments\n- Approx. 1.6km to Suncorp Stadium\n- Only 3km to Brisbane CBD\n- Excellent public transport options nearby",
+        "displayPrice": "EXPRESSIONS OF INTEREST CLOSING THURSDAY 14th MAY",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T09:00:00",
+            "end": "2026-05-09T09:30:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18384367"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3187973"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18384367/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/10755"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/129609"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/npytiyy54ii7dd65qfmozaay4m?signature=d0956f42c8d2489a3bce6c8501cdc5bb58f579d294e22d7a758d50cf61e58221"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/17-carrington-st-paddington-qld-4064-18384367"
+        }
+      ],
+      "id": "18384367"
+    },
+    {
+      "category": "SaleListing",
+      "clPropertyId": "6700066",
+      "othPropertyId": "3211550",
+      "address": {
+        "formattedAddress": "26 GILDAY ST, PADDINGTON, QLD 4064",
+        "streetNumber": "26",
+        "streetName": "GILDAY",
+        "streetType": "ST",
+        "suburb": "PADDINGTON",
+        "stateCode": "QLD",
+        "postCode": "4064",
+        "location": {
+          "lat": -27.4577796,
+          "lon": 152.99241163
+        }
+      },
+      "beds": 4,
+      "baths": 2,
+      "carSpaces": 2,
+      "floorSize": 414,
+      "landSize": 450,
+      "landSizeUnit": "squareMeter",
+      "type": "House",
+      "legalAttributes": {},
+      "listing": {
+        "listedDate": "2026-03-11",
+        "listedDateTime": "2026-03-11T05:37:19",
+        "lastModifiedDateTime": "2026-05-07T01:53:43",
+        "agency": {
+          "agencyId": "13862",
+          "name": "Ray White Paddington (Qld)",
+          "email": "paddington.qld@raywhite.com",
+          "address": {
+            "formattedAddress": "181 Given  TCE , Paddington, QLD 4064",
+            "suburb": "Paddington",
+            "stateCode": "QLD",
+            "location": {
+              "lat": -27.461731,
+              "lon": 153.006973
+            },
+            "addressLine1": "181 Given  TCE"
+          },
+          "phoneNumber": "07 3369 6488",
+          "faxNumber": "07 3367 1821",
+          "logo": "https://img.othsolutions.com.au/agent-centre/franchise/ray_white/logo.png",
+          "accountStatus": "ACTIVE",
+          "franchiseName": "Ray White",
+          "allowManualListings": false,
+          "isBranded": false,
+          "agents": [
+            {
+              "uuid": "9926",
+              "username": "max.hadgelias@raywhite.com",
+              "email": "max.hadgelias@raywhite.com",
+              "firstName": "Max",
+              "lastName": "Hadgelias",
+              "status": "Active",
+              "phoneNumber": "+61 (7) 3369 6488",
+              "mobileNumber": "+61 411 276 372",
+              "preferences": {
+                "INCLUDE_IN_SEARCH": "true"
+              },
+              "hasInvitationDate": false,
+              "hasActivatedInvitation": false,
+              "hasCurrentValidInvitation": false,
+              "name": "Max Hadgelias",
+              "contact": {
+                "email": "max.hadgelias@raywhite.com",
+                "phone": {
+                  "mobile": "+61 411 276 372",
+                  "business": "+61 (7) 3369 6488"
+                }
+              },
+              "links": [],
+              "headShot": "https://img.othsolutions.com.au/agent-centre/agent/9926/headshot.jpg?20260507053048",
+              "agencyId": "13862"
+            }
+          ],
+          "links": []
+        },
+        "description": "This magnificent family home commands attention with its striking, contemporary facade and host of premium features. Positioned in the heart of Paddington, just moments from the high street, buyers will appreciate the convenience of a plethora of retail and dining amenities at their fingertips. Carefully designed to capture and showcase the benefits of the elevated 450m2 allotment, the eastern aspect highlights views of the CBD and captures the warmth of the morning sun.\n\nDesigned to accommodate multi-generational families and entertaining on every level, two well appointed chef's kitchens are located on the entry and upper floors featuring a selection of quality European fixtures.\nThe flawless design emulates family connection and seamless flow from the internal living spaces to the covered alfresco areas maximising the north-facing aspect, overlooking the glistening in-ground pool and manicured landscaping. \n\nProperty Highlights:\n•\tCohesive floor plan in excess of 400m2 under roof\n•\tLiving spaces located on the upper and entry levels, both with adjoining alfresco access\n•\tWell appointed chef's kitchen on the upper level with oak cabinetry, stone benchtops, Miele appliances and a fully equipped walk-in pantry\n•\tPrimary top floor suite includes direct balcony access, an ensuite and generous walk-in robe\n•\t3 additional queen-sized bedrooms with built-in robes located on the entry level\n•\tFully equipped cinema room on the lower level\n•\tIn-ground pool with water feature\n•\tSOLAR DETAILS : 52 Panels @ 16.2 kilowatts\n•\tSecure, gated entry with intercom system\n•\tDouble remote car accommodation with internal access and two additional storage rooms\n\nJust 8 minutes from the CBD and within walking distance to Latrobe Terrace, this central family home is ideally positioned within the Ithaca Creek State School catchment. Popular choices for private schools include Marist College, Mt St Michaels, Stuartholme School and Brisbane Boys College.\nPresenting convenient access to public transport and major arterials, this contemporary home will appeal to buyers seeking a family home with high-end inclusions in one of Paddington's coveted neighbourhoods.\n\nExclusively presented by Max Hadgelias 0411 276 372, get in contact today to register your interest or to arrange an inspection.",
+        "displayPrice": "For Sale",
+        "showPrice": true,
+        "inspectionTimes": [
+          {
+            "start": "2026-05-09T10:45:00",
+            "end": "2026-05-09T11:15:00"
+          }
+        ],
+        "hasVirtualTour": false,
+        "isNewConstruction": false,
+        "isHomeLandPackage": false,
+        "auction": {
+          "saleType": "Private Treaty"
+        }
+      },
+      "underOffer": false,
+      "recentlySold": false,
+      "isSoldListing": false,
+      "hasVirtualTour": false,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18381578"
+        },
+        {
+          "rel": "property",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/properties/3211550"
+        },
+        {
+          "rel": "images",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/listings/18381578/images"
+        },
+        {
+          "rel": "agency",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agencies/13862"
+        },
+        {
+          "rel": "agent",
+          "href": "https://api-gateway-alb.cnsr-onthehouse-prod.aws.corelogic.io:443/agent/agents/9926"
+        },
+        {
+          "rel": "mainImage",
+          "href": "https://images.corelogic.asia/470x313/filters:stretch()/filters:watermark(cla-digital-assets-prod,watermarks/logo.png,-2p,-2p,30,16,16)/assets/perm/oel7qby5dei7dbrhy7wlgd2spe?signature=16b3ce414871b13183b6a8273729f1e211d4ea6536941926e0674b22bb8a1e5a"
+        },
+        {
+          "rel": "othWebUrl",
+          "href": "https://www.onthehouse.com.au/property-for-sale/qld/paddington-4064/26-gilday-st-paddington-qld-4064-18381578"
+        }
+      ],
+      "id": "18381578"
+    }
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": false,
+      "unsorted": true,
+      "empty": true
+    },
+    "offset": 0,
+    "pageSize": 24,
+    "pageNumber": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 34,
+  "totalPages": 2,
+  "last": false,
+  "size": 24,
+  "number": 0,
+  "sort": {
+    "sorted": false,
+    "unsorted": true,
+    "empty": true
+  },
+  "first": true,
+  "numberOfElements": 24,
+  "empty": false
+}

@@ -1,0 +1,32 @@
+{
+  "size": 24,
+  "number": 1,
+  "sort": [
+    {
+      "listing.listedDate": "desc"
+    }
+  ],
+  "query": {
+    "queries": [
+      {
+        "category": "SaleListing",
+        "stateCode": "QLD",
+        "suburb": "paddington",
+        "postCode": "4064",
+        "status": "current"
+      }
+    ],
+    "bedrooms": {
+      "min": 3,
+      "max": 4
+    },
+    "propertyTypes": [
+      "House",
+      "Townhouse"
+    ],
+    "listing.price": {
+      "min": 1000000,
+      "max": 2000000
+    }
+  }
+}
