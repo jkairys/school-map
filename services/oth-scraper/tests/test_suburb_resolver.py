@@ -8,8 +8,7 @@ import pytest
 import pytest_asyncio
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
-from oth_scraper.db.engine import Base
-from oth_scraper.db.models.suburb import Suburb  # noqa: F401  (register on metadata)
+from oth_scraper.db.models.suburb import Suburb
 from oth_scraper.suburb_resolver import (
     AutocompleteUnavailableError,
     Match,
@@ -31,7 +30,9 @@ async def session() -> AsyncSession:
     # in these tests; coordination/integration tests use real Postgres.
     engine = create_async_engine("sqlite+aiosqlite:///:memory:")
     async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+        # Only create the suburb table — other models (e.g. scrape_job) use
+        # Postgres-only types like JSONB and would fail under sqlite.
+        await conn.run_sync(lambda c: Suburb.__table__.create(c))
     sm = async_sessionmaker(engine, expire_on_commit=False)
     async with sm() as s:
         yield s

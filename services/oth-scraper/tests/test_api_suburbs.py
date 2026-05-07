@@ -9,8 +9,8 @@ from httpx import ASGITransport, AsyncClient
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 
 from oth_scraper.api.app import app
-from oth_scraper.db.engine import Base, get_db
-from oth_scraper.db.models.suburb import Suburb  # noqa: F401  (register on metadata)
+from oth_scraper.db.engine import get_db
+from oth_scraper.db.models.suburb import Suburb
 
 FIXTURES = Path(__file__).parent / "fixtures" / "oth" / "locations"
 
@@ -23,7 +23,8 @@ def _fixture(name: str) -> dict:
 async def api_client():
     engine = create_async_engine("sqlite+aiosqlite:///:memory:")
     async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+        # See test_suburb_resolver: only the suburb table is sqlite-safe.
+        await conn.run_sync(lambda c: Suburb.__table__.create(c))
     sm = async_sessionmaker(engine, expire_on_commit=False)
 
     async def _override_get_db():

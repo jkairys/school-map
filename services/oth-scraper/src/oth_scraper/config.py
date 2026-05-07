@@ -14,5 +14,15 @@ class Settings(BaseSettings):
     rate_limit_max_interval: float = 3.0
     soft_expiry_missed_runs: int = 3
 
+    # Job queue retry policy. The queue module increments attempts on each
+    # fail() call; once attempts > the per-class limit the job dead-letters.
+    # See oth_scraper.queue for the lookup logic.
+    queue_retry_max_transient: int = 3
+    queue_retry_max_antibot: int = 1
+    queue_retry_max_parse: int = 0
+    # Reclaim TTL: a `running` job whose claimed_at is older than this is
+    # considered abandoned and is re-claimable by claim_next().
+    queue_reclaim_ttl_seconds: int = 600
+
 
 settings = Settings()
