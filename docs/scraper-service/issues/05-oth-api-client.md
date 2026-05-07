@@ -28,6 +28,18 @@ The module:
 
 Recorded fixtures live under `tests/fixtures/oth/` — at least one per category and a few edge cases (rental with weekly+monthly rent fields, sold without land size, multiple agents).
 
+### Fixture capture (HITL one-off)
+
+The repo has no real OTH fixtures committed yet. Before writing the parser, capture the canonical dataset that the parser tests will run against:
+
+1. Add a small ad-hoc script `services/oth-scraper/scripts/capture_fixtures.py` that uses bare Playwright (NOT camoufox — that comes in issue 10) to load `https://www.onthehouse.com.au/` once, then makes 3 search calls via `page.evaluate(fetch(...))` for one suburb, one per category: `ForSale`, `ForRent`, `RecentlySold`. Pick a suburb known to have listings in all three (e.g. Paddington QLD 4064).
+2. Save raw responses to `services/oth-scraper/tests/fixtures/oth/{category}_paddington_p0.json`.
+3. Manually run the script once; commit the JSON outputs to the repo.
+4. Eyeball each fixture: confirm it contains at least one listing with land size, one without, and (for `ForRent`) the weekly-rent field shape so the parser tests can cover those edge cases. If gaps, capture additional fixtures from another suburb (e.g. Bondi NSW for variety) or another page.
+5. The script is committed but not run in CI.
+
+The actual parser implementation work is AFK once fixtures exist.
+
 ## Acceptance criteria
 
 - [ ] Request builder produces the correct payload for each of the 3 categories — verified by snapshot test against committed expected payloads.
@@ -39,3 +51,7 @@ Recorded fixtures live under `tests/fixtures/oth/` — at least one per category
 ## Blocked by
 
 - 01 — Bootstrap repo skeleton, docker-compose, Postgres, Alembic
+
+## Type
+
+HITL — fixture capture is a one-off developer step. The parser implementation that follows is AFK.
