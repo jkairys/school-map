@@ -1,0 +1,119 @@
+{
+    "content": [
+        {
+            "propertyId": "RICHMOND+NSW+2755",
+            "formattedAddress": "RICHMOND, NSW 2755",
+            "streetNumber": "",
+            "suburb": "RICHMOND",
+            "stateCode": "NSW",
+            "postCode": "2755",
+            "surroundSuburbs": "CLARENDON+NSW+2756,RICHMOND+NSW+2753"
+        },
+        {
+            "propertyId": "RICHMOND+NSW+2753",
+            "formattedAddress": "RICHMOND, NSW 2753",
+            "streetNumber": "",
+            "suburb": "RICHMOND",
+            "stateCode": "NSW",
+            "postCode": "2753",
+            "surroundSuburbs": "AGNES_BANKS+NSW+2753,CORNWALLIS+NSW+2756,CLARENDON+NSW+2756,RICHMOND_LOWLANDS+NSW+2753,SOUTH_WINDSOR+NSW+2756,HOBARTVILLE+NSW+2753,LONDONDERRY+NSW+2753,NORTH_RICHMOND+NSW+2754"
+        },
+        {
+            "propertyId": "RICHMOND+QLD+4740",
+            "formattedAddress": "RICHMOND, QLD 4740",
+            "streetNumber": "",
+            "suburb": "RICHMOND",
+            "stateCode": "QLD",
+            "postCode": "4740",
+            "surroundSuburbs": "GLENELLA+QLD+4740,FARLEIGH+QLD+4741,BEACONSFIELD+QLD+4740,MOUNT_PLEASANT+QLD+4740,NINDAROO+QLD+4740,RURAL_VIEW+QLD+4740"
+        },
+        {
+            "propertyId": "RICHMOND+QLD+4822",
+            "formattedAddress": "RICHMOND, QLD 4822",
+            "streetNumber": "",
+            "suburb": "RICHMOND",
+            "stateCode": "QLD",
+            "postCode": "4822",
+            "surroundSuburbs": "WOOLGAR+QLD+4822,BURLEIGH+QLD+4822,MARATHON+QLD+4821,DUTTON_RIVER+QLD+4821,MAXWELTON+QLD+4822,STAMFORD+QLD+4821,ALBION+QLD+4822"
+        },
+        {
+            "propertyId": "RICHMOND+SA+5033",
+            "formattedAddress": "RICHMOND, SA 5033",
+            "streetNumber": "",
+            "suburb": "RICHMOND",
+            "stateCode": "SA",
+            "postCode": "5033",
+            "surroundSuburbs": "KESWICK+SA+5035,NETLEY+SA+5037,COWANDILLA+SA+5033,HILTON+SA+5033,MARLESTON+SA+5033,WEST_RICHMOND+SA+5033,MILE_END_SOUTH+SA+5031"
+        },
+        {
+            "propertyId": "RICHMOND+TAS+7025",
+            "formattedAddress": "RICHMOND, TAS 7025",
+            "streetNumber": "",
+            "suburb": "RICHMOND",
+            "stateCode": "TAS",
+            "postCode": "7025",
+            "surroundSuburbs": "OLD_BEACH+TAS+7017,CAMPANIA+TAS+7026,RISDON+TAS+7017,ORIELTON+TAS+7172,PENNA+TAS+7171,CAMBRIDGE+TAS+7170,TEA_TREE+TAS+7017,GRASSTREE_HILL+TAS+7017,DULCOT+TAS+7025"
+        },
+        {
+            "propertyId": "RICHMOND+VIC+3121",
+            "formattedAddress": "RICHMOND, VIC 3121",
+            "streetNumber": "",
+            "suburb": "RICHMOND",
+            "stateCode": "VIC",
+            "postCode": "3121",
+            "surroundSuburbs": "ABBOTSFORD+VIC+3067,HAWTHORN+VIC+3122,MELBOURNE+VIC+3004,KEW+VIC+3101,SOUTH_YARRA+VIC+3141,COLLINGWOOD+VIC+3066,EAST_MELBOURNE+VIC+3002,CREMORNE+VIC+3121,BURNLEY+VIC+3121"
+        },
+        {
+            "propertyId": "RICHMOND_HILL+NSW+2480",
+            "formattedAddress": "RICHMOND HILL, NSW 2480",
+            "streetNumber": "",
+            "suburb": "RICHMOND HILL",
+            "stateCode": "NSW",
+            "postCode": "2480",
+            "surroundSuburbs": "BEXHILL+NSW+2480,GOONELLABAH+NSW+2480,LINDENDALE+NSW+2480,MCLEANS_RIDGES+NSW+2480,WOODLAWN+NSW+2480,BOAT_HARBOUR+NSW+2480,LAGOON_GRASS+NSW+2480"
+        },
+        {
+            "propertyId": "RICHMOND_HILL+QLD+4820",
+            "formattedAddress": "RICHMOND HILL, QLD 4820",
+            "streetNumber": "",
+            "suburb": "RICHMOND HILL",
+            "stateCode": "QLD",
+            "postCode": "4820",
+            "surroundSuburbs": "TOLL+QLD+4820,GRAND_SECRET+QLD+4820,CHARTERS_TOWERS_CITY+QLD+4820,QUEENTON+QLD+4820,COLUMBIA+QLD+4820"
+        },
+        {
+            "propertyId": "RICHMOND_LOWLANDS+NSW+2753",
+            "formattedAddress": "RICHMOND LOWLANDS, NSW 2753",
+            "streetNumber": "",
+            "suburb": "RICHMOND LOWLANDS",
+            "stateCode": "NSW",
+            "postCode": "2753",
+            "surroundSuburbs": "CORNWALLIS+NSW+2756,FREEMANS_REACH+NSW+2756,RICHMOND+NSW+2753,NORTH_RICHMOND+NSW+2754"
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "sorted": false,
+            "unsorted": true,
+            "empty": true
+        },
+        "offset": 0,
+        "pageSize": 10,
+        "pageNumber": 0,
+        "paged": true,
+        "unpaged": false
+    },
+    "totalElements": 41532,
+    "totalPages": 4154,
+    "last": false,
+    "size": 10,
+    "number": 0,
+    "sort": {
+        "sorted": false,
+        "unsorted": true,
+        "empty": true
+    },
+    "first": true,
+    "numberOfElements": 10,
+    "empty": false
+}

@@ -18,6 +18,7 @@ if db_url:
 
 # Import Base so Alembic can detect model changes in future migrations
 from oth_scraper.db.engine import Base  # noqa: E402
+from oth_scraper.db import models  # noqa: E402, F401  (register models on Base.metadata)
 target_metadata = Base.metadata
 
 

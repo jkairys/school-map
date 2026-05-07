@@ -1,4 +1,9 @@
+import asyncio
+import sys
+
 import typer
+
+from oth_scraper.cli.suburb_commands import suburb_resolve_impl
 
 app = typer.Typer(name="oth", help="OTH Scraper CLI")
 
@@ -14,9 +19,23 @@ app.add_typer(listings_app, name="listings")
 
 
 @suburb_app.command("resolve")
-def suburb_resolve(name: str) -> None:
-    """Resolve a suburb name to postcode/state via OTH autocomplete."""
-    typer.echo(f"TODO: resolve suburb '{name}'")
+def suburb_resolve(
+    name: str,
+    postcode: str = typer.Option(None, "--postcode", help="Disambiguate by postcode"),
+    state: str = typer.Option(None, "--state", help="Disambiguate by state code, e.g. QLD"),
+) -> None:
+    """Resolve a suburb name to postcode/state via OTH autocomplete.
+
+    On ambiguity in a TTY, prompts to pick a candidate. In non-TTY contexts,
+    use --postcode and/or --state to disambiguate; otherwise exits non-zero
+    with the candidate list on stderr.
+    """
+    interactive = sys.stdin.isatty() and sys.stdout.isatty()
+    asyncio.run(
+        suburb_resolve_impl(
+            name=name, postcode=postcode, state=state, interactive=interactive
+        )
+    )
 
 
 @list_app.command("create")
