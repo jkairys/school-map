@@ -1,0 +1,128 @@
+{
+    "content": [
+        {
+            "propertyId": "LITTLE_MOUNTAIN+QLD+4551",
+            "formattedAddress": "LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551",
+            "surroundSuburbs": "CURRIMUNDI+QLD+4551,MERIDAN_PLAINS+QLD+4551,BARINGA+QLD+4551,CALOUNDRA_WEST+QLD+4551,CORBOULD_PARK+QLD+4551,AROONA+QLD+4551"
+        },
+        {
+            "propertyId": "LITTLE_MOUNTAIN+QLD+4551+LITTLE_MOUNTAIN+DR",
+            "formattedAddress": "LITTLE MOUNTAIN DR, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "DR",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        },
+        {
+            "propertyId": "LITTLE_MOUNTAIN+QLD+4551+LITTLE_MOUNTAIN+WAY",
+            "formattedAddress": "LITTLE MOUNTAIN WAY, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "WAY",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        },
+        {
+            "propertyId": "SOUTH_MELBOURNE+VIC+3205+LITTLE_MOUNTAIN+ST",
+            "formattedAddress": "LITTLE MOUNTAIN ST, SOUTH MELBOURNE, VIC 3205",
+            "streetNumber": "",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "ST",
+            "suburb": "SOUTH MELBOURNE",
+            "stateCode": "VIC",
+            "postCode": "3205"
+        },
+        {
+            "propertyId": "5559143",
+            "formattedAddress": "4 LITTLE MOUNTAIN DR, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "4",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "DR",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        },
+        {
+            "propertyId": "5559142",
+            "formattedAddress": "6 LITTLE MOUNTAIN DR, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "6",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "DR",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        },
+        {
+            "propertyId": "5559141",
+            "formattedAddress": "8 LITTLE MOUNTAIN DR, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "8",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "DR",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        },
+        {
+            "propertyId": "5559140",
+            "formattedAddress": "10 LITTLE MOUNTAIN DR, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "10",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "DR",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        },
+        {
+            "propertyId": "5559135",
+            "formattedAddress": "12 LITTLE MOUNTAIN DR, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "12",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "DR",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        },
+        {
+            "propertyId": "5559134",
+            "formattedAddress": "13 LITTLE MOUNTAIN DR, LITTLE MOUNTAIN, QLD 4551",
+            "streetNumber": "13",
+            "streetName": "LITTLE MOUNTAIN",
+            "streetType": "DR",
+            "suburb": "LITTLE MOUNTAIN",
+            "stateCode": "QLD",
+            "postCode": "4551"
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "unsorted": true,
+            "sorted": false,
+            "empty": true
+        },
+        "offset": 0,
+        "pageSize": 10,
+        "pageNumber": 0,
+        "unpaged": false,
+        "paged": true
+    },
+    "last": false,
+    "totalElements": 4426,
+    "totalPages": 443,
+    "size": 10,
+    "number": 0,
+    "sort": {
+        "unsorted": true,
+        "sorted": false,
+        "empty": true
+    },
+    "first": true,
+    "numberOfElements": 10,
+    "empty": false
+}
