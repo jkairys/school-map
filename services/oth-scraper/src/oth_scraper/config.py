@@ -12,7 +12,12 @@ class Settings(BaseSettings):
     session_max_age_seconds: int = 1800
     rate_limit_min_interval: float = 1.5
     rate_limit_max_interval: float = 3.0
-    soft_expiry_missed_runs: int = 3
+    # Listings whose `last_seen_at` is older than this window are closed by
+    # the soft-expiry sweep that runs at the end of a successful job. The
+    # default (14 days) covers ~3 missed scrapes at a daily cadence; tune
+    # down for more aggressive closure or up to be more forgiving of
+    # anti-bot hiccups.
+    soft_expiry_days: int = 14
 
     # Job queue retry policy. The queue module increments attempts on each
     # fail() call; once attempts > the per-class limit the job dead-letters.

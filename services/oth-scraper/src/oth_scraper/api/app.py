@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
-from oth_scraper.api.routers import scrape_lists, suburbs
+from oth_scraper.api.routers import maintenance, scrape_lists, suburbs
 
 app = FastAPI(title="OTH Scraper", version="0.1.0")
 
@@ -14,6 +14,9 @@ async def health() -> JSONResponse:
 app.include_router(suburbs.router, prefix="/suburbs", tags=["suburbs"])
 app.include_router(
     scrape_lists.router, prefix="/scrape-lists", tags=["scrape-lists"]
+)
+app.include_router(
+    maintenance.router, prefix="/maintenance", tags=["maintenance"]
 )
 
 # Placeholder routers — populated by later issues

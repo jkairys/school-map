@@ -7,12 +7,14 @@ For one batch of OTH search-API results from a `(suburb, category)` job:
 4. Insert a new ListingSnapshot when the diff is non-empty.
 5. Always bump `Listing.last_seen_at`. Always update `agent_name`/`agency_name`.
 
-Soft-expiry sweep (closing stale listings) is NOT in this module — issue 09
-ships it. The reconciler never touches `closed_at` / `closure_reason`.
+Soft-expiry sweep (closing stale listings) lives in `soft_expiry` and is
+invoked by the worker loop AFTER a successful job — never from inside
+`reconcile_batch`, which only sees one page at a time.
 """
 from oth_scraper.listing_reconciler.reconciler import (
     ReconcileResult,
     reconcile_batch,
 )
+from oth_scraper.listing_reconciler.soft_expiry import run_soft_expiry_sweep
 
-__all__ = ["ReconcileResult", "reconcile_batch"]
+__all__ = ["ReconcileResult", "reconcile_batch", "run_soft_expiry_sweep"]
