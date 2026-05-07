@@ -64,7 +64,7 @@ All variables are prefixed `OTH_`. Copy `.env.example` to `.env` for local-only 
 | `OTH_SESSION_MAX_AGE_SECONDS` | `1800` | Age (seconds) before camoufox session rotates |
 | `OTH_RATE_LIMIT_MIN_INTERVAL` | `1.5` | Minimum seconds between OTH requests |
 | `OTH_RATE_LIMIT_MAX_INTERVAL` | `3.0` | Maximum seconds between OTH requests (jitter cap) |
-| `OTH_SOFT_EXPIRY_MISSED_RUNS` | `3` | Consecutive missed scrapes before a listing auto-closes |
+| `OTH_SOFT_EXPIRY_DAYS` | `14` | Days a listing must be unseen in its `(suburb, category)` feed before the soft-expiry sweep closes it (`closure_reason='unknown'`). 14d covers ~3 missed daily scrapes. |
 | `OTH_QUEUE_RETRY_MAX_TRANSIENT` | `3` | Max retries for transient errors (5xx/timeout) before dead-letter |
 | `OTH_QUEUE_RETRY_MAX_ANTIBOT` | `1` | Max retries for anti-bot errors (403/429/Cloudflare) before dead-letter |
 | `OTH_QUEUE_RETRY_MAX_PARSE` | `0` | Max retries for parse errors before dead-letter (0 = immediate) |
