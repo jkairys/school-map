@@ -10,6 +10,9 @@ includes:
   property-scraper:
     taskfile: ./services/property-scraper/Taskfile.yml
     dir: ./services/property-scraper
+  oth-scraper:
+    taskfile: ./services/oth-scraper/Taskfile.yml
+    dir: ./services/oth-scraper
 
 tasks:
   install:
@@ -18,3 +21,4 @@ tasks:
       - task: frontend:install
       - task: school-scraper:install
       - task: property-scraper:install
+      - task: oth-scraper:install

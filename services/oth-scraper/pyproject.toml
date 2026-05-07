@@ -1,0 +1,38 @@
+[project]
+name = "oth-scraper"
+version = "0.1.0"
+description = "OTH property listing scraper service"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.30.0",
+    "typer>=0.12.0",
+    "httpx>=0.27.0",
+    "camoufox>=0.4.0",
+    "sqlalchemy[asyncio]>=2.0",
+    "alembic>=1.13.0",
+    "asyncpg>=0.29.0",
+    "pydantic-settings>=2.0.0",
+]
+
+[project.scripts]
+oth = "oth_scraper.cli.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oth_scraper"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-httpx>=0.30.0",
+]

@@ -1,0 +1,41 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: oth
+      POSTGRES_PASSWORD: oth
+      POSTGRES_DB: oth
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U oth -d oth"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    command: ["uv", "run", "python", "-m", "oth_scraper.api.entrypoint"]
+    environment:
+      OTH_DATABASE_URL: postgresql+asyncpg://oth:oth@postgres:5432/oth
+      OTH_API_HOST: "0.0.0.0"
+      OTH_API_PORT: "8000"
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  worker:
+    build: .
+    command: ["uv", "run", "python", "-m", "oth_scraper.worker"]
+    environment:
+      OTH_DATABASE_URL: postgresql+asyncpg://oth:oth@postgres:5432/oth
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
