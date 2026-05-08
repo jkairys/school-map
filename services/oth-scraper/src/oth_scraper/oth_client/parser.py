@@ -61,10 +61,12 @@ def parse_search_response(
         raise ParseError("response 'content' is not a list")
 
     listings: list[OTHListing] = []
+    raw_payloads: list[dict] = []
     for i, item in enumerate(raw_content):
         if not isinstance(item, dict):
             raise ParseError(f"content[{i}] is not an object: {type(item).__name__}")
         listings.append(_parse_listing(item, category, index=i))
+        raw_payloads.append(item)
 
     total = _as_int(body.get("totalElements"), default=len(listings))
     page_number = _as_int(body.get("number"), default=page)
@@ -75,6 +77,7 @@ def parse_search_response(
 
     return SearchPage(
         listings=listings,
+        raw_payloads=raw_payloads,
         total=total,
         page=page_number,
         has_next=has_next,

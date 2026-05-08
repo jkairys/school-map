@@ -1,18 +1,20 @@
+"""Worker process entrypoint.
+
+Thin wrapper around `oth_scraper.worker_loop.run_worker` that configures
+logging and runs the asyncio loop. The real loop, error classification,
+and signal handling live in `worker_loop.loop`.
+"""
 import asyncio
 import logging
 
-logger = logging.getLogger(__name__)
-
-
-async def run_worker() -> None:
-    logger.info("Worker started — no work in queue, idling")
-    while True:
-        await asyncio.sleep(5)
-        logger.debug("Worker: no jobs available")
+from oth_scraper.worker_loop import run_worker
 
 
 def main() -> None:
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s %(message)s",
+    )
     asyncio.run(run_worker())
 
 

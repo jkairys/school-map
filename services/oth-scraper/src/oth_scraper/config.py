@@ -7,7 +7,15 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+asyncpg://oth:oth@localhost:5432/oth"
     api_host: str = "127.0.0.1"
     api_port: int = 8000
-    worker_concurrency: int = 2
+    worker_concurrency: int = 3
+    # How long the worker sleeps between empty `claim_next()` polls when the
+    # queue has no work. Kept tight (seconds) because Postgres `SKIP LOCKED`
+    # claims are cheap and a worker that just finished a job should pick up
+    # the next one with minimal latency.
+    worker_poll_interval_seconds: float = 1.0
+    # Hard deadline applied after SIGTERM: in-flight jobs get this many
+    # seconds to drain before the worker exits anyway.
+    worker_shutdown_grace_seconds: float = 30.0
     session_max_requests: int = 50
     session_max_age_seconds: int = 1800
     rate_limit_min_interval: float = 1.5

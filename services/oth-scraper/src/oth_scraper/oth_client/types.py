@@ -100,9 +100,16 @@ class OTHListing(BaseModel):
 
 
 class SearchPage(BaseModel):
-    """One page of search results plus pagination metadata."""
+    """One page of search results plus pagination metadata.
+
+    `raw_payloads[i]` is the verbatim OTH JSON object that was parsed into
+    `listings[i]`; the worker loop hands this list to the reconciler so the
+    `listing_snapshot.raw_payload` JSONB column preserves every byte OTH
+    returned for re-parsing later.
+    """
 
     listings: list[OTHListing] = Field(default_factory=list)
+    raw_payloads: list[dict] = Field(default_factory=list)
     total: int = 0
     page: int = 0
     has_next: bool = False
