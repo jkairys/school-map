@@ -2,6 +2,29 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
+# Firefox runtime libs for camoufox (workers bootstrap a stealth browser).
+# The api container doesn't strictly need these but a single image keeps the
+# build matrix simple — both services share /app/.venv and the same entrypoint
+# selection per docker-compose.yml.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgtk-3-0 \
+    libdbus-glib-1-2 \
+    libxt6 \
+    libxtst6 \
+    libpci3 \
+    libdrm2 \
+    libxkbcommon0 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxrandr2 \
+    libgbm1 \
+    libasound2 \
+    libpango-1.0-0 \
+    libcairo2 \
+    libegl1 \
+    fonts-liberation \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN pip install uv
 
 COPY pyproject.toml README.md ./
