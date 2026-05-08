@@ -1,14 +1,16 @@
 """REST endpoints for scrape-list CRUD."""
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
-from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-from oth_scraper.db.engine import get_db
+from oth_scraper.db.engine import get_db, get_session_factory
+from oth_scraper.queue import JobQueue
 from oth_scraper.services.scrape_list import (
     AmbiguousSuburbError,
     ScrapeListCreate,
     ScrapeListNotFoundError,
     ScrapeListRead,
+    ScrapeListRunResult,
     ScrapeListSummary,
     ScrapeListUpdate,
     SuburbAddRequest,
@@ -20,6 +22,7 @@ from oth_scraper.services.scrape_list import (
     get_list,
     list_lists,
     remove_suburb_from_list,
+    run_list,
     update_list,
 )
 from oth_scraper.suburb_resolver import (
@@ -108,6 +111,19 @@ async def add_suburb_endpoint(
         raise HTTPException(status_code=404, detail=str(e)) from e
     except AutocompleteUnavailableError as e:
         raise HTTPException(status_code=503, detail=str(e)) from e
+
+
+@router.post("/{list_id}/run", response_model=ScrapeListRunResult)
+async def run_endpoint(
+    list_id: int,
+    session: AsyncSession = Depends(get_db),
+    session_factory: async_sessionmaker[AsyncSession] = Depends(get_session_factory),
+) -> ScrapeListRunResult:
+    queue = JobQueue(session_factory)
+    try:
+        return await run_list(session, list_id, queue)
+    except ScrapeListNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e
 
 
 @router.delete(

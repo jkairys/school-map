@@ -19,8 +19,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from oth_scraper.db.models.scrape_list import ScrapeList, ScrapeListSuburb
 from oth_scraper.db.models.suburb import Suburb
+from oth_scraper.queue import JobQueue, NewJob
 from oth_scraper.services.suburb import resolve_suburb
 from oth_scraper.suburb_resolver import Match, ResolvedSuburb
+
+PRODUCER_CATEGORIES: tuple[str, ...] = ("forsale", "forrent", "recentlysold")
+"""Categories the producer fans out for every suburb on a list run."""
 
 
 class ScrapeListFilters(BaseModel):
@@ -104,6 +108,14 @@ class ScrapeListRead(BaseModel):
     cron_schedule: str | None
     created_at: datetime
     suburbs: list[SuburbInList]
+
+
+class ScrapeListRunResult(BaseModel):
+    """Return shape for `POST /scrape-lists/{id}/run`."""
+
+    list_id: int
+    job_ids: list[int]
+    count: int
 
 
 class ScrapeListSummary(BaseModel):
@@ -263,6 +275,53 @@ async def add_suburb_to_list(
             f"suburb {result.id} already in list {list_id}"
         ) from e
     return result
+
+
+async def run_list(
+    session: AsyncSession,
+    list_id: int,
+    queue: JobQueue,
+) -> ScrapeListRunResult:
+    """Fan out one ScrapeJob per (suburb × category) for the list.
+
+    The list's filters are snapshotted into ``scrape_job.filters`` at
+    enqueue time so editing the list afterwards doesn't mutate in-flight
+    jobs' provenance. Returns the created job IDs in enqueue order.
+
+    Raises:
+        ScrapeListNotFoundError: list doesn't exist.
+    """
+    row = await session.get(ScrapeList, list_id)
+    if row is None:
+        raise ScrapeListNotFoundError(f"scrape_list {list_id} not found")
+
+    filters_snapshot: dict[str, Any] = dict(row.filters or {})
+
+    suburb_ids_stmt = (
+        select(ScrapeListSuburb.suburb_id)
+        .where(ScrapeListSuburb.scrape_list_id == list_id)
+        .order_by(ScrapeListSuburb.suburb_id)
+    )
+    suburb_ids = list(
+        (await session.execute(suburb_ids_stmt)).scalars().all()
+    )
+
+    job_ids: list[int] = []
+    for suburb_id in suburb_ids:
+        for category in PRODUCER_CATEGORIES:
+            job = await queue.enqueue(
+                NewJob(
+                    suburb_id=suburb_id,
+                    category=category,
+                    filters=dict(filters_snapshot),
+                    scrape_list_id=list_id,
+                )
+            )
+            job_ids.append(job.id)
+
+    return ScrapeListRunResult(
+        list_id=list_id, job_ids=job_ids, count=len(job_ids)
+    )
 
 
 async def remove_suburb_from_list(
