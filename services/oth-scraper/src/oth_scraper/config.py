@@ -7,6 +7,9 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+asyncpg://oth:oth@localhost:5432/oth"
     api_host: str = "127.0.0.1"
     api_port: int = 8000
+    # CLI talks to the running api over HTTP — never opens its own DB session.
+    # Override via OTH_SCRAPER_BASE_URL when running outside the default loopback.
+    scraper_base_url: str = "http://127.0.0.1:8000"
     worker_concurrency: int = 3
     # How long the worker sleeps between empty `claim_next()` polls when the
     # queue has no work. Kept tight (seconds) because Postgres `SKIP LOCKED`
