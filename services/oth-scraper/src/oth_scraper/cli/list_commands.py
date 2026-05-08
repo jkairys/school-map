@@ -9,7 +9,11 @@ import sys
 import typer
 from pydantic import ValidationError
 
+from sqlalchemy import select
+
 from oth_scraper.db.engine import AsyncSessionLocal
+from oth_scraper.db.models.scrape_list import ScrapeList
+from oth_scraper.queue import JobQueue
 from oth_scraper.services.scrape_list import (
     AmbiguousSuburbError,
     ScrapeListCreate,
@@ -27,6 +31,7 @@ from oth_scraper.services.scrape_list import (
     get_list,
     list_lists,
     remove_suburb_from_list,
+    run_list,
     update_list,
 )
 from oth_scraper.suburb_resolver import (
@@ -151,6 +156,48 @@ async def list_add_suburb_impl(
             typer.echo(f"OTH autocomplete unavailable: {e}", err=True)
             raise typer.Exit(code=2)
     typer.echo(f"Added: {result.name}, {result.state} {result.postcode} → list {list_id}")
+
+
+async def list_run_impl(*, target: str) -> None:
+    """Resolve `target` (numeric id or name) and fan out one job per
+    (suburb × category) for `[forsale, forrent, recentlysold]`."""
+    async with AsyncSessionLocal() as session:
+        list_id = await _resolve_list_id(session, target)
+        if list_id is None:
+            typer.echo(f"Not found: scrape list {target!r}", err=True)
+            raise typer.Exit(code=1)
+        queue = JobQueue(AsyncSessionLocal)
+        try:
+            result = await run_list(session, list_id, queue)
+        except ScrapeListNotFoundError as e:
+            typer.echo(f"Not found: {e}", err=True)
+            raise typer.Exit(code=1)
+    typer.echo(
+        f"Enqueued {result.count} jobs for list {result.list_id}: "
+        f"{result.job_ids}"
+    )
+
+
+async def _resolve_list_id(session, target: str) -> int | None:
+    """Accept numeric id or unique name; return list_id or None."""
+    if target.isdigit():
+        list_id = int(target)
+        row = await session.get(ScrapeList, list_id)
+        return list_id if row is not None else None
+    rows = (
+        await session.execute(
+            select(ScrapeList).where(ScrapeList.name == target)
+        )
+    ).scalars().all()
+    if not rows:
+        return None
+    if len(rows) > 1:
+        typer.echo(
+            f"Ambiguous name {target!r} — {len(rows)} matches; use the id.",
+            err=True,
+        )
+        raise typer.Exit(code=2)
+    return rows[0].id
 
 
 async def list_rm_suburb_impl(*, list_id: int, suburb_id: int) -> None:

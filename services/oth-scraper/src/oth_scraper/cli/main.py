@@ -4,14 +4,21 @@ import sys
 import typer
 
 from oth_scraper.cli.dev_commands import session_smoke
+from oth_scraper.cli.jobs_commands import jobs_ls_impl, jobs_show_impl
 from oth_scraper.cli.list_commands import (
     list_add_suburb_impl,
     list_create_impl,
     list_ls_impl,
     list_rm_impl,
     list_rm_suburb_impl,
+    list_run_impl,
     list_show_impl,
     list_update_impl,
+)
+from oth_scraper.cli.listings_commands import (
+    listings_history_impl,
+    listings_ls_impl,
+    listings_show_impl,
 )
 from oth_scraper.cli.suburb_commands import suburb_resolve_impl
 
@@ -134,22 +141,56 @@ def list_rm_suburb(list_id: int, suburb_id: int) -> None:
     asyncio.run(list_rm_suburb_impl(list_id=list_id, suburb_id=suburb_id))
 
 
+@list_app.command("run")
+def list_run(target: str) -> None:
+    """Fan out scrape jobs for a list. `target` is an id or unique list name."""
+    asyncio.run(list_run_impl(target=target))
+
+
 @jobs_app.command("ls")
-def jobs_ls() -> None:
-    """List scrape jobs."""
-    typer.echo("TODO: list jobs")
+def jobs_ls(
+    status: str = typer.Option(None, "--status"),
+    list_id: int = typer.Option(None, "--list-id"),
+    limit: int = typer.Option(50, "--limit"),
+) -> None:
+    """List scrape jobs (newest first)."""
+    asyncio.run(jobs_ls_impl(status=status, list_id=list_id, limit=limit))
+
+
+@jobs_app.command("show")
+def jobs_show(job_id: int) -> None:
+    """Show a single job, including last error info."""
+    asyncio.run(jobs_show_impl(job_id=job_id))
 
 
 @listings_app.command("ls")
-def listings_ls() -> None:
-    """List listings."""
-    typer.echo("TODO: list listings")
+def listings_ls(
+    suburb_id: int = typer.Option(None, "--suburb-id"),
+    category: str = typer.Option(None, "--category"),
+    active: bool = typer.Option(False, "--active/--all"),
+    limit: int = typer.Option(50, "--limit"),
+) -> None:
+    """List listings (newest first)."""
+    asyncio.run(
+        listings_ls_impl(
+            suburb_id=suburb_id,
+            category=category,
+            active=active,
+            limit=limit,
+        )
+    )
+
+
+@listings_app.command("show")
+def listings_show(listing_id: int) -> None:
+    """Show a listing with its latest snapshot."""
+    asyncio.run(listings_show_impl(listing_id=listing_id))
 
 
 @listings_app.command("history")
-def listings_history(listing_id: str) -> None:
+def listings_history(listing_id: int) -> None:
     """Show snapshot history for a listing."""
-    typer.echo(f"TODO: listing history '{listing_id}'")
+    asyncio.run(listings_history_impl(listing_id=listing_id))
 
 
 if __name__ == "__main__":
