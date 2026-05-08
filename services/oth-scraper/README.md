@@ -70,6 +70,52 @@ All variables are prefixed `OTH_`. Copy `.env.example` to `.env` for local-only 
 | `OTH_QUEUE_RETRY_MAX_PARSE` | `0` | Max retries for parse errors before dead-letter (0 = immediate) |
 | `OTH_QUEUE_RECLAIM_TTL_SECONDS` | `600` | A `running` job older than this is re-claimable by `claim_next()` |
 
+## Live E2E smoke test
+
+A single end-to-end test at `tests/e2e/test_live_smoke.py` exercises the
+producer → worker → read-API path against **real OTH** for one small
+suburb (Mount Coolum QLD). It is skipped by default and only runs when
+`RUN_LIVE_OTH_TESTS=1`. **It does not run in CI** — there is no CI
+configuration in this repository today, and the env-var gate keeps it
+skipped even if `uv run pytest` is executed there in the future. Treat
+it as the developer's responsibility to run before merging changes that
+touch the scrape session, OTH API client, or worker loop.
+
+Run it with stdout visible (the test prints job statuses + last errors
+on failure, which is what you want at release time):
+
+```bash
+RUN_LIVE_OTH_TESTS=1 uv run pytest \
+    services/oth-scraper/tests/e2e/test_live_smoke.py -s
+```
+
+Requires Docker (Postgres testcontainer) and a working camoufox
+install (`uv sync` + `uv run playwright install firefox`).
+
+### What anti-bot failure looks like
+
+If OTH is blocking you, the per-job diagnostic block printed at the
+end of the run will show jobs in `deadletter` with
+`last_error_class=antibot` and a `last_error_message` like:
+
+- HTTP **403** or **429** from `https://www.onthehouse.com.au/...`
+- A sentinel string match in the body, e.g. `'Just a moment'`,
+  `'Checking your browser'`, `'Attention Required! | Cloudflare'`,
+  `'_Incapsula_Resource'`.
+
+Knobs to consider tuning when this happens (all `OTH_`-prefixed):
+
+| Variable | Effect |
+|---|---|
+| `OTH_SESSION_MAX_REQUESTS` | Rotate camoufox after this many requests (default `50`). Lower it to rotate more aggressively. |
+| `OTH_SESSION_MAX_AGE_SECONDS` | Rotate camoufox after this many seconds (default `1800`). Lower it for shorter session lifetimes. |
+| `OTH_RATE_LIMIT_MIN_INTERVAL` / `OTH_RATE_LIMIT_MAX_INTERVAL` | Slow the request cadence (defaults `1.5` / `3.0` seconds). |
+| `OTH_QUEUE_RETRY_MAX_ANTIBOT` | Number of anti-bot retries before dead-letter (default `1`). |
+
+If anti-bot keeps tripping after rotation, capture an example
+response (status + body snippet) and revisit the camoufox bootstrap in
+`src/oth_scraper/scrape_session/`.
+
 ## Tear down
 
 ```bash
