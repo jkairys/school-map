@@ -1,3 +1,9 @@
+"""Typer entrypoint for the ``oth`` CLI.
+
+Every command shells out to a running api over HTTP — the CLI never opens
+its own DB session. The base URL comes from ``OTH_SCRAPER_BASE_URL``
+(default ``http://127.0.0.1:8000``).
+"""
 import asyncio
 import sys
 
@@ -75,12 +81,15 @@ def list_create(
     filters: str = typer.Option(
         None,
         "--filters",
-        help='JSON string, e.g. \'{"beds_min":3,"price_max":1500000}\'',
+        help=(
+            "Filters as inline JSON (e.g. '{\"beds_min\":3}') "
+            "or @path/to/file.json."
+        ),
     ),
 ) -> None:
     """Create a new scrape list."""
     asyncio.run(
-        list_create_impl(name=name, description=description, filters_json=filters)
+        list_create_impl(name=name, description=description, filters_raw=filters)
     )
 
 
@@ -91,54 +100,68 @@ def list_ls() -> None:
 
 
 @list_app.command("show")
-def list_show(list_id: int) -> None:
-    """Show a scrape list with its suburbs."""
-    asyncio.run(list_show_impl(list_id=list_id))
+def list_show(target: str) -> None:
+    """Show a scrape list with its suburbs. Accepts an id or unique name."""
+    asyncio.run(list_show_impl(target=target))
 
 
 @list_app.command("update")
 def list_update(
-    list_id: int,
+    target: str,
     name: str = typer.Option(None, "--name"),
     description: str = typer.Option(None, "--description"),
-    filters: str = typer.Option(None, "--filters", help="JSON string"),
+    filters: str = typer.Option(
+        None,
+        "--filters",
+        help="Filters as inline JSON or @path/to/file.json.",
+    ),
 ) -> None:
-    """Update name, description, and/or filters on a scrape list."""
+    """Update name, description, and/or filters on a scrape list.
+
+    `target` accepts an id or unique name.
+    """
     asyncio.run(
         list_update_impl(
-            list_id=list_id,
+            target=target,
             name=name,
             description=description,
-            filters_json=filters,
+            filters_raw=filters,
         )
     )
 
 
 @list_app.command("rm")
-def list_rm(list_id: int) -> None:
-    """Delete a scrape list (cascades the list↔suburb m2m only)."""
-    asyncio.run(list_rm_impl(list_id=list_id))
+def list_rm(target: str) -> None:
+    """Delete a scrape list. Accepts an id or unique name."""
+    asyncio.run(list_rm_impl(target=target))
 
 
 @list_app.command("add-suburb")
 def list_add_suburb(
-    list_id: int,
+    target: str,
     name: str,
     postcode: str = typer.Option(None, "--postcode"),
     state: str = typer.Option(None, "--state"),
 ) -> None:
-    """Add a suburb (resolved via OTH autocomplete) to a list."""
+    """Add a suburb (resolved via OTH autocomplete) to a list.
+
+    `target` accepts an id or unique name. Use --postcode / --state for
+    non-interactive disambiguation when the resolver returns multiple matches.
+    """
     asyncio.run(
         list_add_suburb_impl(
-            list_id=list_id, name=name, postcode=postcode, state=state
+            target=target, name=name, postcode=postcode, state=state
         )
     )
 
 
 @list_app.command("rm-suburb")
-def list_rm_suburb(list_id: int, suburb_id: int) -> None:
-    """Remove a suburb from a list (does not delete the suburb row)."""
-    asyncio.run(list_rm_suburb_impl(list_id=list_id, suburb_id=suburb_id))
+def list_rm_suburb(target: str, suburb: str) -> None:
+    """Remove a suburb from a list (does not delete the suburb row).
+
+    Both `target` (list) and `suburb` accept either an id or a unique name.
+    """
+    asyncio.run(list_rm_suburb_impl(target=target, suburb=suburb))
 
 
 @list_app.command("run")
@@ -150,11 +173,15 @@ def list_run(target: str) -> None:
 @jobs_app.command("ls")
 def jobs_ls(
     status: str = typer.Option(None, "--status"),
-    list_id: int = typer.Option(None, "--list-id"),
+    list_target: str = typer.Option(
+        None, "--list", help="Filter by list id or unique name."
+    ),
     limit: int = typer.Option(50, "--limit"),
 ) -> None:
     """List scrape jobs (newest first)."""
-    asyncio.run(jobs_ls_impl(status=status, list_id=list_id, limit=limit))
+    asyncio.run(
+        jobs_ls_impl(status=status, list_target=list_target, limit=limit)
+    )
 
 
 @jobs_app.command("show")
@@ -165,15 +192,19 @@ def jobs_show(job_id: int) -> None:
 
 @listings_app.command("ls")
 def listings_ls(
-    suburb_id: int = typer.Option(None, "--suburb-id"),
-    category: str = typer.Option(None, "--category"),
-    active: bool = typer.Option(False, "--active/--all"),
+    suburb: int = typer.Option(None, "--suburb", help="Filter by suburb id."),
+    category: str = typer.Option(
+        None, "--category", help="forsale | forrent | recentlysold"
+    ),
+    active: bool = typer.Option(
+        False, "--active", help="Only listings with closed_at IS NULL."
+    ),
     limit: int = typer.Option(50, "--limit"),
 ) -> None:
     """List listings (newest first)."""
     asyncio.run(
         listings_ls_impl(
-            suburb_id=suburb_id,
+            suburb=suburb,
             category=category,
             active=active,
             limit=limit,
