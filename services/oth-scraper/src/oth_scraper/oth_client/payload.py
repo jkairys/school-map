@@ -2,6 +2,17 @@
 
 Pure functions, no I/O. The output is the JSON body posted to
 `POST https://www.onthehouse.com.au/odin/api/composite/search`.
+
+Filter shape was captured from the live OTH frontend (see
+`tests/oth_client/test_payload.py` for the snapshot fixtures). Every filter
+dimension is a flat string-valued key inside the per-suburb target object
+under ``query.queries[i]`` — NOT nested under ``query`` and NOT structured
+as a ``{min, max}`` sub-object. The categories also disagree on the price
+key: SaleListing/RecentlySold use ``priceMin``/``priceMax`` while
+RentalListing uses ``forRentPriceMin``/``forRentPriceMax``.
+
+Sending the wrong shape (e.g. ``bedrooms: {min: 1}`` under ``query``) causes
+OTH to respond ``HTTP 400 {"error": "An unexpected error has occurred"}``.
 """
 
 from typing import Any
@@ -24,13 +35,14 @@ _CATEGORY_SORT: dict[Category, list[dict[str, str]]] = {
     Category.RECENTLYSOLD: [{"lastSale.eventDate": "desc"}],
 }
 
-# Per-category JSON path for the price filter range. SaleListing uses the
-# asking price, RentalListing uses weekly rent, RecentlySold uses the
-# realised sale price.
-_PRICE_FIELD: dict[Category, str] = {
-    Category.FORSALE: "listing.price",
-    Category.FORRENT: "listing.weeklyRent",
-    Category.RECENTLYSOLD: "lastSale.price",
+# Per-category JSON keys for the price filter min/max. SaleListing and
+# RecentlySold both key off ``priceMin``/``priceMax``; RentalListing
+# uses a distinct ``forRentPriceMin``/``forRentPriceMax`` pair (verified
+# live against the OTH frontend).
+_PRICE_KEYS: dict[Category, tuple[str, str]] = {
+    Category.FORSALE: ("priceMin", "priceMax"),
+    Category.FORRENT: ("forRentPriceMin", "forRentPriceMax"),
+    Category.RECENTLYSOLD: ("priceMin", "priceMax"),
 }
 
 # OTH's "live listing" categories carry an explicit `status` discriminator.
@@ -48,10 +60,12 @@ def build_search_payload(
 ) -> dict[str, Any]:
     """Build the JSON body for an OTH search request.
 
-    The payload always contains exactly one entry in `query.queries` describing
-    the suburb-and-category target. Filter fields are added under `query` only
-    when the corresponding filter dimension is set, so an "unfiltered" search
-    produces the minimal payload.
+    The payload always contains exactly one entry in ``query.queries``
+    describing the suburb-and-category target. Every filter dimension is
+    inlined into that target object — OTH rejects nested ``{min, max}``
+    structures and rejects filters at the ``query`` level. Categories that
+    are unfiltered on a given dimension simply omit the corresponding
+    key(s).
     """
     sort = _CATEGORY_SORT[category]
     target: dict[str, Any] = {
@@ -63,47 +77,26 @@ def build_search_payload(
     if category in _REQUIRES_STATUS_CURRENT:
         target["status"] = "current"
 
-    query: dict[str, Any] = {"queries": [target]}
+    if filters.beds_min is not None:
+        target["bedsMin"] = str(filters.beds_min)
+    if filters.beds_max is not None:
+        target["bedsMax"] = str(filters.beds_max)
 
-    bed_range = _bed_range(filters)
-    if bed_range is not None:
-        query["bedrooms"] = bed_range
+    price_min_key, price_max_key = _PRICE_KEYS[category]
+    if filters.price_min is not None:
+        target[price_min_key] = str(filters.price_min)
+    if filters.price_max is not None:
+        target[price_max_key] = str(filters.price_max)
 
     if filters.property_types:
-        query["propertyTypes"] = [_property_type_value(t) for t in filters.property_types]
-
-    price_range = _price_range(filters)
-    if price_range is not None:
-        query[_PRICE_FIELD[category]] = price_range
+        target["types"] = [_property_type_value(t) for t in filters.property_types]
 
     return {
         "size": size,
         "number": page,
         "sort": sort,
-        "query": query,
+        "query": {"queries": [target]},
     }
-
-
-def _bed_range(filters: ListingFilters) -> dict[str, int] | None:
-    if filters.beds_min is None and filters.beds_max is None:
-        return None
-    out: dict[str, int] = {}
-    if filters.beds_min is not None:
-        out["min"] = filters.beds_min
-    if filters.beds_max is not None:
-        out["max"] = filters.beds_max
-    return out
-
-
-def _price_range(filters: ListingFilters) -> dict[str, int] | None:
-    if filters.price_min is None and filters.price_max is None:
-        return None
-    out: dict[str, int] = {}
-    if filters.price_min is not None:
-        out["min"] = filters.price_min
-    if filters.price_max is not None:
-        out["max"] = filters.price_max
-    return out
 
 
 def _property_type_value(t: PropertyType) -> str:

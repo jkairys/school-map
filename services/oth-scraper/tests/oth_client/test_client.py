@@ -51,10 +51,13 @@ async def test_search_posts_built_payload_to_oth(
     sent = httpx_mock.get_request()
     assert sent is not None
     body = json.loads(sent.content)
-    assert body["query"]["queries"][0]["category"] == "RentalListing"
-    assert body["query"]["queries"][0]["status"] == "current"
-    assert body["query"]["bedrooms"] == {"min": 2}
-    assert body["query"]["propertyTypes"] == ["Apartment"]
+    target = body["query"]["queries"][0]
+    assert target["category"] == "RentalListing"
+    assert target["status"] == "current"
+    # Filter keys are inlined into the per-suburb target object as
+    # string-encoded scalars; OTH 400s on nested ranges or top-level keys.
+    assert target["bedsMin"] == "2"
+    assert target["types"] == ["Apartment"]
 
     assert page.total == 11
     assert len(page.listings) == 11

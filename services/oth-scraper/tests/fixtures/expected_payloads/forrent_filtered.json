@@ -13,18 +13,14 @@
         "stateCode": "QLD",
         "suburb": "paddington",
         "postCode": "4064",
-        "status": "current"
+        "status": "current",
+        "bedsMin": "2",
+        "forRentPriceMin": "400",
+        "forRentPriceMax": "800",
+        "types": [
+          "Apartment"
+        ]
       }
-    ],
-    "bedrooms": {
-      "min": 2
-    },
-    "propertyTypes": [
-      "Apartment"
-    ],
-    "listing.weeklyRent": {
-      "min": 400,
-      "max": 800
-    }
+    ]
   }
 }
