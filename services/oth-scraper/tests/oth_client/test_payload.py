@@ -96,15 +96,27 @@ def test_build_search_payload_matches_snapshot(
 
 
 def test_filter_price_field_routes_per_category() -> None:
-    """Each category routes the price filter into a different JSON path."""
+    """Each category routes the price filter into a different JSON key.
+
+    SaleListing and RecentlySold share ``priceMin``/``priceMax``;
+    RentalListing diverges to ``forRentPriceMin``/``forRentPriceMax``.
+    All filter keys live inside ``query.queries[0]`` (the per-suburb
+    target), not under ``query`` — captured live from the OTH frontend.
+    """
     f = ListingFilters(price_min=500_000, price_max=1_000_000)
     sale = build_search_payload(PADDINGTON, Category.FORSALE, f, 0)
     rent = build_search_payload(PADDINGTON, Category.FORRENT, f, 0)
     sold = build_search_payload(PADDINGTON, Category.RECENTLYSOLD, f, 0)
 
-    assert "listing.price" in sale["query"]
-    assert "listing.weeklyRent" in rent["query"]
-    assert "lastSale.price" in sold["query"]
+    assert "priceMin" in sale["query"]["queries"][0]
+    assert "priceMax" in sale["query"]["queries"][0]
+    assert "forRentPriceMin" in rent["query"]["queries"][0]
+    assert "forRentPriceMax" in rent["query"]["queries"][0]
+    assert "priceMin" in sold["query"]["queries"][0]
+    assert "priceMax" in sold["query"]["queries"][0]
+    # Price keys must NOT appear at the query level — that shape 400s.
+    assert "priceMin" not in sale["query"]
+    assert "forRentPriceMin" not in rent["query"]
 
 
 def test_recentlysold_omits_status_current() -> None:
@@ -125,8 +137,12 @@ def test_forsale_and_forrent_carry_status_current() -> None:
 
 def test_unfiltered_payload_has_no_filter_keys() -> None:
     payload = build_search_payload(PADDINGTON, Category.FORSALE, ListingFilters(), 0)
-    extra_keys = set(payload["query"]) - {"queries"}
-    assert extra_keys == set()
+    # No extra keys under `query` (only `queries`).
+    assert set(payload["query"]) == {"queries"}
+    # And the target object only carries the suburb/category descriptor.
+    target = payload["query"]["queries"][0]
+    expected = {"category", "stateCode", "suburb", "postCode", "status"}
+    assert set(target) == expected
 
 
 def test_state_is_uppercased() -> None:
