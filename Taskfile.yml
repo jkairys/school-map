@@ -4,6 +4,9 @@ includes:
   frontend:
     taskfile: ./apps/frontend/Taskfile.yml
     dir: ./apps/frontend
+  parcel-analytics:
+    taskfile: ./services/parcel-analytics/Taskfile.yml
+    dir: ./services/parcel-analytics
   school-scraper:
     taskfile: ./services/school-scraper/Taskfile.yml
     dir: ./services/school-scraper
@@ -16,5 +19,6 @@ tasks:
     desc: Install dependencies for all projects
     cmds:
       - task: frontend:install
+      - task: parcel-analytics:install
       - task: school-scraper:install
       - task: property-scraper:install
