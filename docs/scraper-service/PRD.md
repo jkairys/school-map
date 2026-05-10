@@ -1,5 +1,7 @@
 # PRD — OTH Scraper Service
 
+> **Live domain model reference**: `docs/scraper-service/DOMAIN_MODEL.md` — what's actually in the database now (grounded in the SQLAlchemy models, not just this PRD's design intent). Reference that for current schema; reference this PRD for original design rationale.
+
 ## Problem Statement
 
 I want to track Australian residential real estate listings — for sale, for rent, and recently sold — across a curated set of suburbs that I care about, and watch how those listings change over time (price drops, blurb edits, status transitions). Today I have a one-shot Python scraper that targets `onthehouse.com.au` for Brisbane sold properties only: it dumps per-suburb JSON files, has no notion of the same listing across runs, can't track price history, and is hardcoded to "3–4BR Houses, last 90 days, sold". I can't manage suburbs as named lists, I can't kick off a coordinated multi-suburb scrape, and there's no durable schema I can run analytics against. Anti-bot defences on OTH already require a Playwright fallback in the existing tool, which is fragile.
