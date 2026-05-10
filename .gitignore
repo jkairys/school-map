@@ -17,6 +17,10 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
 *.suo
 *.ntvs*
 *.njsproj
@@ -28,3 +32,14 @@ dist-ssr
 
 # Playwright MCP working directory (used during interactive probes)
 .playwright-mcp/
+
+# Parcel analytics local artifacts
+services/parcel-analytics/data/raw/*
+!services/parcel-analytics/data/raw/.gitkeep
+services/parcel-analytics/data/processed/*
+!services/parcel-analytics/data/processed/.gitkeep
+services/parcel-analytics/output/*
+!services/parcel-analytics/output/.gitkeep
+
+# Jupyter notebook checkpoints
+**/.ipynb_checkpoints/

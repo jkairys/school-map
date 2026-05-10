@@ -1,0 +1,19 @@
+data_dir: data
+output_dir: output
+default_hex_resolution: 8
+reports:
+  sunshine_coast_demo:
+    localities:
+      - Caloundra West
+      - Little Mountain
+      - Baringa
+    hex_resolution: 8
+  sunshine_coast_region:
+    lga: Sunshine Coast Regional
+    hex_resolution: 8
+  north_brisbane_demo:
+    localities:
+      - Albany Creek
+      - Bridgeman Downs
+      - Eatons Hill
+    hex_resolution: 8
