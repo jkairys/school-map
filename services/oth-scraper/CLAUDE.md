@@ -1,6 +1,7 @@
 # CLAUDE.md — oth-scraper service
 
 - **Design source of truth**: `docs/scraper-service/PRD.md` — the PRD plus 14 issue specs that built v1. Read this before making structural decisions.
+- **Domain model reference**: `docs/scraper-service/DOMAIN_MODEL.md` — entities, fields, relationships, invariants, and common queries. Reference this in conversations about data shape.
 - **Operational docs**: `services/oth-scraper/README.md` — how to bring up the docker-compose stack, run migrations, env vars (including anti-bot tuning knobs), and run the live E2E smoke test.
 
 ## Python style
