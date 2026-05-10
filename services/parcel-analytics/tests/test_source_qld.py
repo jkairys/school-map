@@ -126,6 +126,7 @@ def test_fetch_parcels_geojson_batches_large_locality_lists(tmp_path, monkeypatc
         *,
         client=None,
         batch_size: int,
+        progress_label: str | None = None,
     ):
         seen_object_id_batches.append(object_ids)
         yield {"type": "Feature", "properties": {"where": params["where"]}, "geometry": None}
@@ -146,8 +147,43 @@ def test_fetch_parcels_geojson_batches_large_locality_lists(tmp_path, monkeypatc
     payload = json.loads(output_path.read_text())
 
     assert seen_wheres == [
-        "parcel_typ = 'Lot Type Parcel' AND locality IN ('Alpha', 'Beta')",
+        "parcel_typ = 'Lot Type Parcel' AND locality IN ('Alpha')",
+        "parcel_typ = 'Lot Type Parcel' AND locality IN ('Beta')",
         "parcel_typ = 'Lot Type Parcel' AND locality IN ('Gamma')",
     ]
-    assert seen_object_id_batches == [[1, 2], [1, 2]]
-    assert len(payload["features"]) == 2
+    assert seen_object_id_batches == [[1, 2], [1, 2], [1, 2]]
+    assert len(payload["features"]) == 3
+
+
+def test_fetch_parcels_geojson_reuses_cached_locality_parts(tmp_path, monkeypatch) -> None:
+    seen_wheres: list[str] = []
+
+    def fake_fetch_object_ids(url: str, params: dict[str, str], *, client=None) -> list[int]:
+        seen_wheres.append(params["where"])
+        return [1]
+
+    def fake_fetch_features_by_object_ids(
+        url: str,
+        params: dict[str, str],
+        object_ids: list[int],
+        *,
+        client=None,
+        batch_size: int,
+        progress_label: str | None = None,
+    ):
+        yield {"type": "Feature", "properties": {"where": params["where"]}, "geometry": None}
+
+    monkeypatch.setattr("parcel_analytics.source_qld.fetch_object_ids", fake_fetch_object_ids)
+    monkeypatch.setattr(
+        "parcel_analytics.source_qld.fetch_features_by_object_ids",
+        fake_fetch_features_by_object_ids,
+    )
+
+    output_path = tmp_path / "parcels.geojson"
+    fetch_parcels_geojson(output_path, localities=["Alpha", "Beta"])
+    fetch_parcels_geojson(output_path, localities=["Alpha", "Beta"])
+
+    assert seen_wheres == [
+        "parcel_typ = 'Lot Type Parcel' AND locality IN ('Alpha')",
+        "parcel_typ = 'Lot Type Parcel' AND locality IN ('Beta')",
+    ]

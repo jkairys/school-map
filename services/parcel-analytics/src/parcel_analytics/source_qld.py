@@ -92,6 +92,46 @@ def fetch_parcels_geojson(
     locality_batch_size: int = PARCEL_LOCALITY_BATCH_SIZE,
     object_id_batch_size: int = PARCEL_OBJECT_ID_BATCH_SIZE,
 ) -> Path:
+    destination = Path(output_path)
+    if localities:
+        cache_dir = _parcel_locality_cache_dir(destination)
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        all_features: list[dict] = []
+        total_localities = len(localities)
+        for index, locality in enumerate(localities, start=1):
+            part_path = _parcel_locality_part_path(cache_dir, index, locality)
+            if part_path.exists():
+                print(f"[{index}/{total_localities}] Skipping cached locality: {locality}")
+            else:
+                print(f"[{index}/{total_localities}] Downloading locality: {locality}")
+                params = {
+                    "where": build_parcel_where(localities=[locality]),
+                    "outFields": PARCEL_OUT_FIELDS,
+                    "returnGeometry": "true",
+                    "f": "geojson",
+                    "outSR": "4326",
+                }
+                if bounds is not None:
+                    params.update(bounds_to_query_params(bounds))
+                object_ids = fetch_object_ids(PARCEL_QUERY_URL, params, client=client)
+                print(f"  found {len(object_ids)} parcel ids")
+                locality_features = list(
+                    fetch_features_by_object_ids(
+                        PARCEL_QUERY_URL,
+                        params,
+                        object_ids,
+                        client=client,
+                        batch_size=object_id_batch_size,
+                        progress_label=locality,
+                    )
+                )
+                _write_feature_collection(part_path, locality_features)
+                print(f"  wrote {len(locality_features)} features to {part_path.name}")
+            all_features.extend(_read_feature_collection(part_path))
+        _write_feature_collection(destination, all_features)
+        print(f"Wrote merged parcel extract: {destination}")
+        return destination
+
     features: list[dict] = []
     locality_batches = [None]
     if localities:
@@ -175,6 +215,11 @@ def _write_feature_collection(output_path: str | Path, features: Sequence[dict])
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(json.dumps(collection))
     return destination
+
+
+def _read_feature_collection(path: str | Path) -> list[dict]:
+    payload = json.loads(Path(path).read_text())
+    return list(payload.get("features") or [])
 
 
 def fetch_all_features(
@@ -279,11 +324,18 @@ def fetch_features_by_object_ids(
     *,
     client: httpx.Client | None = None,
     batch_size: int,
+    progress_label: str | None = None,
 ) -> Iterable[dict]:
     owns_client = client is None
     active_client = client or httpx.Client(timeout=60.0)
     try:
-        for object_id_batch in _chunked(list(object_ids), batch_size):
+        object_id_batches = list(_chunked(list(object_ids), batch_size))
+        for batch_index, object_id_batch in enumerate(object_id_batches, start=1):
+            if progress_label is not None:
+                print(
+                    f"  {progress_label}: object id batch "
+                    f"{batch_index}/{len(object_id_batches)} ({len(object_id_batch)} ids)"
+                )
             yield from _fetch_feature_object_id_batch(
                 url,
                 params,
@@ -341,3 +393,17 @@ def _fetch_feature_object_id_batch(
     payload = response.json()
     for feature in payload.get("features", []):
         yield feature
+
+
+def _parcel_locality_cache_dir(output_path: Path) -> Path:
+    return output_path.parent / f"{output_path.stem}_parts"
+
+
+def _parcel_locality_part_path(cache_dir: Path, index: int, locality: str) -> Path:
+    return cache_dir / f"{index:03d}_{_slugify_filename(locality)}.geojson"
+
+
+def _slugify_filename(value: str) -> str:
+    sanitized = "".join(char.lower() if char.isalnum() else "_" for char in value)
+    compact = "_".join(part for part in sanitized.split("_") if part)
+    return compact or "locality"
