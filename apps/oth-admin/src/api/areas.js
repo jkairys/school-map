@@ -96,3 +96,50 @@ export async function runArea(id, body = {}) {
   }
   return res.json()
 }
+
+/**
+ * Add a suburb to an area.
+ * @param {number|string} areaId
+ * @param {{ name: string, postcode: string, state: string }} suburb
+ * @returns {Promise<Object>} ResolvedSuburb DTO on success
+ * @throws {Object} With .status and .body when the server returns a non-2xx response.
+ *   409 with { candidates } body means an ambiguous match.
+ *   409 with a plain string body means the suburb is already in the list.
+ */
+export async function addSuburb(areaId, suburb) {
+  const res = await fetch(`/scrape-lists/${areaId}/suburbs`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(suburb),
+  })
+  if (!res.ok) {
+    let body
+    const text = await res.text()
+    try {
+      body = JSON.parse(text)
+    } catch {
+      body = text
+    }
+    const err = new Error(`addSuburb failed: ${res.status}`)
+    err.status = res.status
+    err.body = body
+    throw err
+  }
+  return res.json()
+}
+
+/**
+ * Remove a suburb from an area.
+ * @param {number|string} areaId
+ * @param {number|string} suburbId
+ * @returns {Promise<void>}
+ */
+export async function removeSuburb(areaId, suburbId) {
+  const res = await fetch(`/scrape-lists/${areaId}/suburbs/${suburbId}`, {
+    method: 'DELETE',
+  })
+  if (!res.ok) {
+    const detail = await res.text()
+    throw new Error(`removeSuburb(${areaId}, ${suburbId}) failed: ${res.status} ${detail}`)
+  }
+}
