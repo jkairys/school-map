@@ -27,6 +27,7 @@ from oth_scraper.services.scrape_list import (
     run_list,
     update_list,
 )
+from oth_scraper.services.scrape_list_summary import AreaSummary, ScrapeListSummaryService
 from oth_scraper.suburb_resolver import (
     AutocompleteUnavailableError,
     Match,
@@ -135,6 +136,19 @@ async def run_endpoint(
     queue = JobQueue(session_factory)
     try:
         return await run_list(session, list_id, queue, trigger_source=body.trigger_source)
+    except ScrapeListNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e
+
+
+@router.get("/{list_id}/summary", response_model=AreaSummary)
+async def get_summary_endpoint(
+    list_id: int,
+    session: AsyncSession = Depends(get_db),
+) -> AreaSummary:
+    """Return the full area summary for the dashboard and area detail page."""
+    try:
+        svc = ScrapeListSummaryService(session)
+        return await svc.summary(list_id)
     except ScrapeListNotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
 
