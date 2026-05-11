@@ -7,6 +7,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from oth_scraper.db.models import Listing, ListingSnapshot, Property
 from oth_scraper.oth_client.types import Category, OTHListing
+from oth_scraper.sale_date_extractor import extract_sale_date
 from oth_scraper.snapshot_diff import ChangedFields, diff
 
 logger = logging.getLogger(__name__)
@@ -69,7 +70,7 @@ async def reconcile_batch(
                     properties_upserted += 1
 
                 listing_row, listing_opened = await _find_or_open_listing(
-                    session, prop.id, suburb_id, category, listing
+                    session, prop.id, suburb_id, category, listing, raw
                 )
                 if listing_opened:
                     listings_opened += 1
@@ -235,11 +236,16 @@ async def _find_or_open_listing(
     suburb_id: int,
     category: Category,
     listing: OTHListing,
+    raw_payload: dict,
 ) -> tuple[Listing, bool]:
     """Find the open Listing for (property, suburb, category), or open a new one.
 
     "Open" means `closed_at IS NULL`. A re-listing of the same property
     after a previous Listing has closed correctly produces a second row.
+
+    For new `recentlysold` listings, `sale_date` is extracted from the raw
+    payload on INSERT and never overwritten — subsequent observations of the
+    same listing leave `sale_date` untouched.
     """
     existing = await session.scalar(
         select(Listing).where(
@@ -252,6 +258,10 @@ async def _find_or_open_listing(
     if existing is not None:
         return existing, False
 
+    sale_date = None
+    if category == Category.RECENTLYSOLD:
+        sale_date = extract_sale_date(raw_payload)
+
     row = Listing(
         property_id=property_id,
         suburb_id=suburb_id,
@@ -259,6 +269,7 @@ async def _find_or_open_listing(
         oth_listing_id=_extract_listing_id(listing),
         agent_name=listing.agent_name,
         agency_name=listing.agency_name,
+        sale_date=sale_date,
     )
     session.add(row)
     await session.flush()
