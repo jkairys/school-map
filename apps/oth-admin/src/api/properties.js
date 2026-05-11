@@ -29,3 +29,17 @@ export async function listProperties({ suburb, search, sort, limit = 50, offset 
   }
   return res.json()
 }
+
+/**
+ * Fetch a single property by id, including all listing campaigns with
+ * latest-snapshot summaries.
+ * @param {number|string} id
+ * @returns {Promise<Object>} PropertyDetail DTO { property, listings }
+ */
+export async function getProperty(id) {
+  const res = await fetch(`/properties/${id}`)
+  if (!res.ok) {
+    throw new Error(`getProperty(${id}) failed: ${res.status} ${res.statusText}`)
+  }
+  return res.json()
+}
