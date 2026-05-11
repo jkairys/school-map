@@ -46,9 +46,17 @@ class RunBody(BaseModel):
 
     ``trigger_source`` defaults to ``'api'`` so callers that send no body
     still get the right provenance label.
+
+    ``suburb_ids`` and ``categories`` are optional narrowing filters:
+    - If ``suburb_ids`` is None/empty, all suburbs in the list are used.
+    - If ``categories`` is None/empty, all three categories are used.
+    - 422 if suburb_ids contains ids not in the list, or categories contains
+      unknown values.
     """
 
     trigger_source: Literal["api", "cli", "scheduler", "retry"] = "api"
+    suburb_ids: list[int] | None = None
+    categories: list[Literal["forsale", "forrent", "recentlysold"]] | None = None
 
 
 @router.post("", response_model=ScrapeListRead, status_code=status.HTTP_201_CREATED)
@@ -134,9 +142,18 @@ async def run_endpoint(
 ) -> ScrapeListRunResult:
     queue = JobQueue(session_factory)
     try:
-        return await run_list(session, list_id, queue, trigger_source=body.trigger_source)
+        return await run_list(
+            session,
+            list_id,
+            queue,
+            trigger_source=body.trigger_source,
+            suburb_ids=body.suburb_ids or None,
+            categories=[c for c in body.categories] if body.categories else None,
+        )
     except ScrapeListNotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
 
 
 @router.delete(
