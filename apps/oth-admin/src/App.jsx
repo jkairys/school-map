@@ -3,6 +3,7 @@ import { Construction } from 'lucide-react'
 import Layout from './components/Layout.jsx'
 import AreasPage from './pages/AreasPage.jsx'
 import AreaDetailPage from './pages/AreaDetailPage.jsx'
+import SuburbDetailPage from './pages/SuburbDetailPage.jsx'
 
 /**
  * Minimal placeholder for pages that haven't been implemented yet.
@@ -28,8 +29,8 @@ export default function App() {
           <Route index element={<Navigate to="/areas" replace />} />
           <Route path="areas" element={<AreasPage />} />
           <Route path="areas/:id" element={<AreaDetailPage />} />
+          <Route path="suburbs/:id" element={<SuburbDetailPage />} />
           {/* Placeholder routes — implemented in future slices */}
-          <Route path="suburbs/:id" element={<PlaceholderPage label="Suburb detail — slice 10" />} />
           <Route path="properties/:id" element={<PlaceholderPage label="Property detail — slice 11" />} />
           <Route path="listings/:id" element={<PlaceholderPage label="Listing detail — slice 11" />} />
           <Route path="runs/:id" element={<PlaceholderPage label="Run detail — slice 12" />} />
