@@ -1,5 +1,8 @@
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from oth_scraper.api.routers import (
     jobs,
@@ -34,3 +37,13 @@ app.include_router(listings.router, prefix="/listings", tags=["listings"])
 app.include_router(
     maintenance.router, prefix="/maintenance", tags=["maintenance"]
 )
+
+# Mount the admin SPA bundle at /admin/ if the static directory has been built.
+# The directory is produced by `task build` in apps/oth-admin/ and intentionally
+# not committed to git (see .gitignore). The conditional mount means the backend
+# still starts cleanly during development before the SPA has been compiled.
+# __file__ = .../services/oth-scraper/src/oth_scraper/api/app.py
+# 4 × .parent  → services/oth-scraper/
+_ADMIN_STATIC = Path(__file__).parent.parent.parent.parent / "static" / "admin"
+if _ADMIN_STATIC.is_dir():
+    app.mount("/admin", StaticFiles(directory=str(_ADMIN_STATIC), html=True), name="admin")
