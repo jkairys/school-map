@@ -1,0 +1,25 @@
+version: '3'
+
+vars:
+  # Path to drop the compiled bundle into the FastAPI static directory.
+  STATIC_DIR: ../../services/oth-scraper/static/admin
+
+tasks:
+  install:
+    desc: Install npm dependencies
+    cmd: npm install
+
+  dev:
+    desc: Start Vite dev server with API proxy to localhost:8000
+    cmd: npm run dev
+
+  lint:
+    desc: Run ESLint
+    cmd: npm run lint
+
+  build:
+    desc: Build production bundle and copy into services/oth-scraper/static/admin/
+    cmds:
+      - npm run build
+      - mkdir -p {{.STATIC_DIR}}
+      - rsync -a --delete dist/ {{.STATIC_DIR}}/
