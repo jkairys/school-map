@@ -1,4 +1,6 @@
 """REST endpoints for scrape-list CRUD."""
+from typing import Literal
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
@@ -37,6 +39,16 @@ router = APIRouter()
 
 class CandidatesResponse(BaseModel):
     candidates: list[Match]
+
+
+class RunBody(BaseModel):
+    """Optional body for POST /scrape-lists/{id}/run.
+
+    ``trigger_source`` defaults to ``'api'`` so callers that send no body
+    still get the right provenance label.
+    """
+
+    trigger_source: Literal["api", "cli", "scheduler", "retry"] = "api"
 
 
 @router.post("", response_model=ScrapeListRead, status_code=status.HTTP_201_CREATED)
@@ -116,12 +128,13 @@ async def add_suburb_endpoint(
 @router.post("/{list_id}/run", response_model=ScrapeListRunResult)
 async def run_endpoint(
     list_id: int,
+    body: RunBody = RunBody(),
     session: AsyncSession = Depends(get_db),
     session_factory: async_sessionmaker[AsyncSession] = Depends(get_session_factory),
 ) -> ScrapeListRunResult:
     queue = JobQueue(session_factory)
     try:
-        return await run_list(session, list_id, queue)
+        return await run_list(session, list_id, queue, trigger_source=body.trigger_source)
     except ScrapeListNotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
 
