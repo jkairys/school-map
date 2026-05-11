@@ -4,6 +4,7 @@ import Layout from './components/Layout.jsx'
 import AreasPage from './pages/AreasPage.jsx'
 import AreaDetailPage from './pages/AreaDetailPage.jsx'
 import SuburbDetailPage from './pages/SuburbDetailPage.jsx'
+import RunDetailPage from './pages/RunDetailPage.jsx'
 
 /**
  * Minimal placeholder for pages that haven't been implemented yet.
@@ -33,7 +34,7 @@ export default function App() {
           {/* Placeholder routes — implemented in future slices */}
           <Route path="properties/:id" element={<PlaceholderPage label="Property detail — slice 11" />} />
           <Route path="listings/:id" element={<PlaceholderPage label="Listing detail — slice 11" />} />
-          <Route path="runs/:id" element={<PlaceholderPage label="Run detail — slice 12" />} />
+          <Route path="runs/:id" element={<RunDetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
