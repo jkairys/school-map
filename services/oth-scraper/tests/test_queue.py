@@ -9,6 +9,7 @@ import pytest
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
+from oth_scraper.db.models import ScrapeRun
 from oth_scraper.queue import (
     ErrorClass,
     Job,
@@ -31,8 +32,23 @@ def _make_queue(
     return JobQueue(factory, **defaults)
 
 
-def _new_job(suburb_id: int = 1, category: str = "forsale") -> NewJob:
+async def _seed_run(factory: async_sessionmaker[AsyncSession]) -> int:
+    """Insert a scrape_run row and return its id."""
+    async with factory() as session:
+        async with session.begin():
+            row = ScrapeRun(
+                trigger_source="api",
+                filters_snapshot={},
+                status="running",
+            )
+            session.add(row)
+            await session.flush()
+            return row.id
+
+
+def _new_job(run_id: int, suburb_id: int = 1, category: str = "forsale") -> NewJob:
     return NewJob(
+        run_id=run_id,
         suburb_id=suburb_id,
         category=category,
         filters={"beds_min": 3},
@@ -42,10 +58,12 @@ def _new_job(suburb_id: int = 1, category: str = "forsale") -> NewJob:
 
 async def test_enqueue_returns_persisted_job(session_factory):
     queue = _make_queue(session_factory)
-    job = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
 
     assert isinstance(job, Job)
     assert job.id > 0
+    assert job.run_id == run_id
     assert job.status is JobStatus.QUEUED
     assert job.attempts == 0
     assert job.category == "forsale"
@@ -60,7 +78,8 @@ async def test_claim_next_returns_none_when_empty(session_factory):
 
 async def test_claim_next_transitions_to_running(session_factory):
     queue = _make_queue(session_factory)
-    enq = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    enq = await queue.enqueue(_new_job(run_id))
 
     claimed = await queue.claim_next()
 
@@ -78,9 +97,10 @@ async def test_concurrent_claim_next_each_job_claimed_exactly_once(
     Each job must be claimed exactly once; 5 callers receive None.
     """
     queue = _make_queue(session_factory)
+    run_id = await _seed_run(session_factory)
     enqueued_ids: set[int] = set()
     for i in range(5):
-        job = await queue.enqueue(_new_job(suburb_id=i + 1))
+        job = await queue.enqueue(_new_job(run_id, suburb_id=i + 1))
         enqueued_ids.add(job.id)
 
     # Fire 10 concurrent claim_next() calls.
@@ -98,7 +118,8 @@ async def test_concurrent_claim_next_each_job_claimed_exactly_once(
 
 async def test_complete_marks_succeeded(session_factory):
     queue = _make_queue(session_factory)
-    job = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
     claimed = await queue.claim_next()
     assert claimed is not None
 
@@ -119,7 +140,8 @@ async def test_complete_marks_succeeded(session_factory):
 
 async def test_complete_is_idempotent(session_factory):
     queue = _make_queue(session_factory)
-    job = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
     await queue.claim_next()
 
     await queue.complete(job.id)
@@ -139,7 +161,8 @@ async def test_complete_is_idempotent(session_factory):
 async def test_fail_parse_dead_letters_immediately(session_factory):
     """parse: max_retries=0 → first failure dead-letters."""
     queue = _make_queue(session_factory)
-    job = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
     await queue.claim_next()
 
     failed = await queue.fail(job.id, ErrorClass.PARSE, "bad json")
@@ -154,7 +177,8 @@ async def test_fail_parse_dead_letters_immediately(session_factory):
 async def test_fail_antibot_requeues_then_dead_letters(session_factory):
     """antibot: max_retries=1 → first failure requeues, second dead-letters."""
     queue = _make_queue(session_factory)
-    job = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
     await queue.claim_next()
 
     first = await queue.fail(job.id, ErrorClass.ANTIBOT, "403")
@@ -176,7 +200,8 @@ async def test_fail_transient_requeues_up_to_three_then_dead_letters(
 ):
     """transient: max_retries=3 → 3 requeues, 4th call dead-letters."""
     queue = _make_queue(session_factory)
-    job = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
     await queue.claim_next()
 
     for attempt in range(1, 4):
@@ -197,7 +222,8 @@ async def test_fail_transient_requeues_up_to_three_then_dead_letters(
 async def test_stale_running_job_is_reclaimable(session_factory):
     """A `running` job whose claimed_at is older than the TTL is re-claimable."""
     queue = _make_queue(session_factory, reclaim_ttl_seconds=60)
-    job = await queue.enqueue(_new_job())
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
 
     first_claim = await queue.claim_next()
     assert first_claim is not None
@@ -232,3 +258,17 @@ async def test_unknown_job_id_raises(session_factory):
         await queue.complete(99999)
     with pytest.raises(LookupError):
         await queue.fail(99999, ErrorClass.TRANSIENT, "x")
+
+
+async def test_job_has_run_id(session_factory):
+    """Verify run_id is persisted and returned by every queue method."""
+    queue = _make_queue(session_factory)
+    run_id = await _seed_run(session_factory)
+    job = await queue.enqueue(_new_job(run_id))
+    assert job.run_id == run_id
+
+    claimed = await queue.claim_next()
+    assert claimed is not None
+    assert claimed.run_id == run_id
+
+    await queue.complete(claimed.id)

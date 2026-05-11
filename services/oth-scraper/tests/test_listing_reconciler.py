@@ -4,6 +4,7 @@ Run against a real Postgres test container (see conftest). Each test asserts
 externally observable DB state — never private structure of the reconciler.
 """
 import pytest
+from datetime import date
 from sqlalchemy import select, text
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
@@ -326,3 +327,143 @@ async def test_postgis_location_column_persists_a_point(session_factory):
 
     assert row.lat == pytest.approx(-27.4699, abs=1e-6)
     assert row.lon == pytest.approx(153.0251, abs=1e-6)
+
+
+# ---- sale_date integration tests -------------------------------------------
+
+
+def _raw_with_sale_date(listing: OTHListing, sale_date_str: str) -> dict:
+    """Build a raw payload that includes lastSale.eventDate."""
+    return {
+        "oth_property_id": listing.oth_property_id,
+        "lastSale": {"eventDate": sale_date_str, "type": "SoldEvent"},
+    }
+
+
+async def test_recentlysold_listing_populates_sale_date_on_first_observation(
+    session_factory,
+):
+    """Reconciling a recentlysold listing with a valid eventDate persists sale_date."""
+    suburb_id = await _seed_suburb(session_factory)
+    listing = _make_listing(oth_property_id="PROP-1")
+    raw = _raw_with_sale_date(listing, "2026-04-28")
+
+    result = await reconcile_batch(
+        suburb_id,
+        Category.RECENTLYSOLD,
+        [listing],
+        [raw],
+        session_factory=session_factory,
+    )
+
+    assert result.listings_opened == 1
+
+    async with session_factory() as session:
+        listing_row = (await session.scalars(select(Listing))).one()
+
+    assert listing_row.sale_date == date(2026, 4, 28)
+
+
+async def test_recentlysold_sale_date_not_overwritten_on_re_observation(
+    session_factory,
+):
+    """A second reconcile of the same listing must NOT change sale_date."""
+    suburb_id = await _seed_suburb(session_factory)
+    listing = _make_listing(oth_property_id="PROP-1", price=1_200_000)
+    raw = _raw_with_sale_date(listing, "2026-04-28")
+
+    # First observation — listing opens with sale_date populated.
+    await reconcile_batch(
+        suburb_id,
+        Category.RECENTLYSOLD,
+        [listing],
+        [raw],
+        session_factory=session_factory,
+    )
+
+    # Mutate the raw payload to carry a different date and change the price
+    # so a new snapshot is written (ensuring the reconciler actually runs
+    # through the UPDATE path).
+    changed = listing.model_copy(update={"price": 1_150_000})
+    raw_changed = _raw_with_sale_date(changed, "2099-01-01")
+
+    result = await reconcile_batch(
+        suburb_id,
+        Category.RECENTLYSOLD,
+        [changed],
+        [raw_changed],
+        session_factory=session_factory,
+    )
+
+    assert result.listings_opened == 0, "listing must NOT be reopened"
+    assert result.snapshots_written == 1, "price change must write a snapshot"
+
+    async with session_factory() as session:
+        listing_row = (await session.scalars(select(Listing))).one()
+
+    # sale_date must still be the ORIGINAL value, not the new raw payload's date.
+    assert listing_row.sale_date == date(2026, 4, 28)
+
+
+async def test_forsale_listing_has_null_sale_date(session_factory):
+    """forsale listings must always have sale_date = NULL."""
+    suburb_id = await _seed_suburb(session_factory)
+    listing = _make_listing(oth_property_id="PROP-1")
+    # Provide a raw with a lastSale key (edge case) — extractor must not be
+    # called for non-recentlysold categories.
+    raw = _raw_with_sale_date(listing, "2026-04-28")
+
+    await reconcile_batch(
+        suburb_id,
+        Category.FORSALE,
+        [listing],
+        [raw],
+        session_factory=session_factory,
+    )
+
+    async with session_factory() as session:
+        listing_row = (await session.scalars(select(Listing))).one()
+
+    assert listing_row.sale_date is None
+
+
+async def test_forrent_listing_has_null_sale_date(session_factory):
+    """forrent listings must always have sale_date = NULL."""
+    suburb_id = await _seed_suburb(session_factory)
+    listing = _make_listing(oth_property_id="PROP-1")
+    raw = _raw_with_sale_date(listing, "2026-04-28")
+
+    await reconcile_batch(
+        suburb_id,
+        Category.FORRENT,
+        [listing],
+        [raw],
+        session_factory=session_factory,
+    )
+
+    async with session_factory() as session:
+        listing_row = (await session.scalars(select(Listing))).one()
+
+    assert listing_row.sale_date is None
+
+
+async def test_recentlysold_missing_event_date_yields_null_sale_date(
+    session_factory,
+):
+    """If the raw payload has no lastSale.eventDate, sale_date must be NULL."""
+    suburb_id = await _seed_suburb(session_factory)
+    listing = _make_listing(oth_property_id="PROP-1")
+    raw = {"oth_property_id": listing.oth_property_id}  # no lastSale key at all
+
+    await reconcile_batch(
+        suburb_id,
+        Category.RECENTLYSOLD,
+        [listing],
+        [raw],
+        session_factory=session_factory,
+    )
+
+    async with session_factory() as session:
+        listing_row = (await session.scalars(select(Listing))).one()
+
+    assert listing_row.sale_date is None

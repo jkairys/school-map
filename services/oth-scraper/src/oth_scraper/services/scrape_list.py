@@ -10,7 +10,7 @@ Adding a suburb to a list goes through ``oth_scraper.suburb_resolver.resolve``
 which the API layer turns into a 409 with a candidate list.
 """
 from datetime import datetime
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 from sqlalchemy import delete, select
@@ -18,6 +18,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from oth_scraper.db.models.scrape_list import ScrapeList, ScrapeListSuburb
+from oth_scraper.db.models.scrape_run import ScrapeRun
 from oth_scraper.db.models.suburb import Suburb
 from oth_scraper.queue import JobQueue, NewJob
 from oth_scraper.services.suburb import resolve_suburb
@@ -114,6 +115,7 @@ class ScrapeListRunResult(BaseModel):
     """Return shape for `POST /scrape-lists/{id}/run`."""
 
     list_id: int
+    run_id: int
     job_ids: list[int]
     count: int
 
@@ -281,12 +283,14 @@ async def run_list(
     session: AsyncSession,
     list_id: int,
     queue: JobQueue,
+    trigger_source: Literal["api", "cli", "scheduler", "retry"] = "api",
 ) -> ScrapeListRunResult:
     """Fan out one ScrapeJob per (suburb × category) for the list.
 
-    The list's filters are snapshotted into ``scrape_job.filters`` at
-    enqueue time so editing the list afterwards doesn't mutate in-flight
-    jobs' provenance. Returns the created job IDs in enqueue order.
+    Creates a ``scrape_run`` row in the same transaction as the job rows so
+    the fanout is atomic.  The list's filters are snapshotted into both the
+    run and each job so editing the list afterwards doesn't mutate in-flight
+    provenance. Returns the created run and job IDs in enqueue order.
 
     Raises:
         ScrapeListNotFoundError: list doesn't exist.
@@ -306,11 +310,24 @@ async def run_list(
         (await session.execute(suburb_ids_stmt)).scalars().all()
     )
 
+    # Insert the scrape_run row and commit it so child jobs can reference it
+    # via FK.  (queue.enqueue() opens its own session/transaction.)
+    run = ScrapeRun(
+        scrape_list_id=list_id,
+        trigger_source=trigger_source,
+        filters_snapshot=filters_snapshot,
+        status="running",
+    )
+    session.add(run)
+    await session.commit()
+    await session.refresh(run)
+
     job_ids: list[int] = []
     for suburb_id in suburb_ids:
         for category in PRODUCER_CATEGORIES:
             job = await queue.enqueue(
                 NewJob(
+                    run_id=run.id,
                     suburb_id=suburb_id,
                     category=category,
                     filters=dict(filters_snapshot),
@@ -320,7 +337,7 @@ async def run_list(
             job_ids.append(job.id)
 
     return ScrapeListRunResult(
-        list_id=list_id, job_ids=job_ids, count=len(job_ids)
+        list_id=list_id, run_id=run.id, job_ids=job_ids, count=len(job_ids)
     )
 
 

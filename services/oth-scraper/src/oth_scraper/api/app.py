@@ -7,6 +7,7 @@ from oth_scraper.api.routers import (
     maintenance,
     properties,
     scrape_lists,
+    scrape_runs,
     suburbs,
 )
 
@@ -23,6 +24,9 @@ app.include_router(
     scrape_lists.router, prefix="/scrape-lists", tags=["scrape-lists"]
 )
 app.include_router(jobs.router, prefix="/jobs", tags=["jobs"])
+app.include_router(
+    scrape_runs.router, prefix="/scrape-runs", tags=["scrape-runs"]
+)
 app.include_router(
     properties.router, prefix="/properties", tags=["properties"]
 )

@@ -1,0 +1,47 @@
+# OTH admin UI
+
+## What
+A local-only admin SPA for the OTH scraper, served from the FastAPI service at `/admin/`. From the dashboard I see my **Areas** (the user-facing label for `scrape_list`), each with its latest run status, suburb count, properties observed, and active-listing splits. Clicking into an area shows its suburbs; clicking a suburb shows aggregate stats (last scraped, new/changed in last scrape, totals per category, median sold/asking/rent prices over the last 30 days) plus a property table. Properties drill into per-listing detail with a price-history chart. Full CRUD over areas and suburbs (live-autocomplete add), and trigger runs at either area scope or per-`(suburb, category)`, including one-click retry of failed jobs from a run's job table. Backend work expands meaningfully: a new first-class `scrape_run` entity, summary endpoints per area and per suburb, an autocomplete endpoint, a `sale_date` extraction on listings, and a retry/narrowed-run flow.
+
+## Why
+The scraper service today is fully CLI/REST driven — to know the state of a scrape (what areas exist, when they last ran, what came back, what's stale) you have to read SQL or call low-level endpoints. The user needs an operator dashboard that surfaces "is this thing alive and working?" at a glance, and lets them drive routine admin chores (add suburb, kick off a run, retry one failed job) without dropping to the CLI. It also gives the latent time-series data in `listing_snapshot` its first visible use — a price chart per listing, medians per suburb — converting captured data into something a human reads.
+
+## Key decisions
+- **New SPA at `apps/oth-admin/`** (React 19 + Vite + Tailwind 4, matching `apps/frontend` toolchain). Rationale: clean separation from the public school-map app; admin and consumer audiences shouldn't share a build target.
+- **UI label "Area", backend stays `scrape_list`**. Rationale: backend is locked and shared with CLI/PRD; "scrape list" leaks implementation, "Area" matches the user's mental model. One-constant translation in the frontend; URL is `/areas`.
+- **Full CRUD + triggering**, not read-only. Rationale: the dashboard is also where the user wants to act (trigger, retry, add suburb, edit filters); bouncing to the CLI defeats the dashboard's purpose.
+- **First-class `scrape_run` entity** (new table: `id, scrape_list_id NULLABLE, triggered_at, completed_at NULLABLE, status (running|succeeded|partial|failed), trigger_source (api|cli|scheduler|retry), filters_snapshot, retried_from_run_id NULLABLE, created_at`). `scrape_job` gets `run_id NOT NULL FK`. Status and `completed_at` are stored, not derived — updated by the worker via one idempotent SQL statement at every terminal job transition (also on reclaim). Rationale: synthesising a "run" from `MAX(created_at)` is fragile; the user's mental model is a run, and storing status keeps reads trivial while the update is cheap and self-healing.
+- **Aggregate endpoints, one per entity**: `GET /scrape-lists/{id}/summary`, `GET /suburbs/{id}/summary`. Each returns the full bundle the relevant screen needs (latest_run rollup, counts, splits, medians). Rationale: one round-trip per screen; aggregates from one transaction stay self-consistent; volumes are small so no caching/materialised views needed.
+- **Area summary numbers**: `properties_observed` (distinct `property.id` by suburb-membership), `active_listings` split by category (listings where `closed_at IS NULL`). No "universe / housing stock" figure in v1 — data unavailable. Rationale: honest about coverage vs unknown universe; schema can add `suburb.housing_stock_estimate` later without disruption.
+- **Suburb "last scrape" + "new/changed"** anchored to the run window `[run.triggered_at, MAX(scrape_job.completed_at) for this suburb]`. Per-category 3×2 grid: rows = New / Changed, columns = forsale / forrent / sold. "New" = snapshots with `__initial__` in `changed_fields`; "Changed" = without. In-flight runs surfaced separately as a banner. Rationale: catches both new-campaign signal and price-movement signal in one compact widget.
+- **Median sale price uses an extracted `listing.sale_date DATE NULLABLE`** populated by the reconciler from `raw_payload` when category=`recentlysold`. Median taken from the **first snapshot per listing** where `sale_date >= CURRENT_DATE - 30 days`. User OK'd schema reset (dev still). Bundle also includes median asking price (active forsale, latest snapshot) and median weekly rent (active forrent, latest snapshot). Rationale: proper time anchor over an approximation; first snapshot is the canonical sale price.
+- **Drill-down depth**: areas → suburbs → properties → listings. Property page lists all listings ever attached (re-listing detection). Listing page has snapshot history + price chart (Recharts). Rationale: makes the time-series data visible; map-based property exploration is v2.
+- **Trigger scope: area + narrowed**. `POST /scrape-lists/{id}/run` accepts optional `{suburb_ids, categories}` body to narrow the fan-out. New convenience: `POST /scrape-runs/{id}/retry-failed` re-enqueues failed jobs from a specific run as a NEW run with `trigger_source='retry'` and `retried_from_run_id` set. Rationale: anti-bot leaves a few failed jobs per run; admins need to retry without re-scraping the whole area. New run row keeps each run immutable and the audit trail clean.
+- **Add-suburb flow: live autocomplete dropdown** via a new `GET /suburbs/autocomplete?q=` endpoint (read-only, does not cache). User picks a fully-qualified `{name, postcode, state}` before submitting; the existing 409-ambiguity path stays as a fallback. Debounce 250ms, 5 results max. Rationale: modern picker UX in one round trip vs. submit-then-error-modal.
+- **Refresh: adaptive polling**. Page makes one summary request on load; if `latest_run.status === 'running'`, polls `/runs/{id}` every 5s until terminal; otherwise no polling. Manual "Refresh" button always present. "Live" pill shown while polling. Rationale: near-real-time during runs, zero traffic at rest, no pubsub infra needed for a single-user localhost tool.
+- **Binding/auth: 127.0.0.1, no auth**. Rationale: matches scraper PRD's local-only stance; iPhone access via SSH tunnel if needed.
+- **Bundle serving: FastAPI mounts the built React bundle** at `/admin/` via `StaticFiles(html=True)`. Dev uses `vite dev` on `:5173` with a `/api → http://localhost:8000` proxy so `fetch('/api/...')` works identically in dev and prod. Rationale: one process, same-origin, no CORS or second container.
+- **UX polish**: confirm modal on Run-now ("N suburbs × 3 categories = 3N jobs") and on retry-failed (failed-count). Filter form mirrors `ScrapeListFilters` Pydantic model exactly; `cron_schedule` field hidden in v1. Property table: server-paginated (50/page), sortable by price + observed-at, free-text `formatted_address ILIKE` search (small backend addition). Area page has an expandable "Past runs" section linking to per-run job tables. Tailwind 4 + Lucide + Recharts; admin density, no hero imagery.
+
+## Open questions
+- → engineer: exact key in OTH `raw_payload` for the sale date — confirm during reconciler change (likely `sale_date` or `sold_date`); fixture corpus in `services/oth-scraper/tests/fixtures/` should answer this without a live call.
+- → engineer: should the run-status recompute SQL live inside `JobQueue` (next to `complete/fail/deadletter`) or in a dedicated `RunFinalizer` service? Pick what reads cleaner; behaviour-equivalent.
+- → engineer: pagination/sort affordances for the area dashboard if the user grows past ~20 areas — almost certainly not v1.
+- → user: do you want a "delete a run" admin action (cascade to its jobs) or is "leave the audit trail intact" the right default? Default left as intact for now.
+
+## Out of scope
+- Universe / housing-stock figures per suburb (no data source; placeholder for v2).
+- Map-based property exploration (deferred — table view only in v1).
+- Scheduling (`cron_schedule` column stays reserved; no scheduler runs).
+- Days-on-market, price-drop history widgets, per-property-type splits beyond the medians bundle.
+- Auth, multi-user, LAN-binding (localhost only).
+- Migrating legacy data from `services/property-scraper`; that service will be removed in a separate cleanup PR.
+- Real-time push (SSE/WS) — polling is sufficient for one user.
+- Backfill of existing `scrape_job` rows into synthesised runs: user confirmed dev DB can be reset, so the new schema lands cleanly with no backfill.
+
+## Related
+- Backend code paths: `services/oth-scraper/src/oth_scraper/db/models/` (new `scrape_run.py`, edits to `scrape_job.py`, `listing.py`); `services/oth-scraper/src/oth_scraper/api/routers/` (new `runs.py`, edits to `scrape_lists.py`, `suburbs.py`); `services/oth-scraper/src/oth_scraper/services/` (new `scrape_list_summary.py`, `suburb_summary.py`); `services/oth-scraper/src/oth_scraper/queue.py` (run status recompute); `services/oth-scraper/src/oth_scraper/reconciler.py` (sale_date extraction); `services/oth-scraper/alembic/versions/` (new migration; drop existing dev data).
+- New frontend: `apps/oth-admin/` (React 19 + Vite + Tailwind 4 + Recharts + Lucide).
+- FastAPI static mount: `services/oth-scraper/src/oth_scraper/api/app.py`.
+- Prior specs: `docs/scraper-service/PRD.md`, `docs/scraper-service/DOMAIN_MODEL.md`, issues `01–14` in `docs/scraper-service/issues/`.
+- Legacy cleanup (separate PR): remove `services/property-scraper/`.

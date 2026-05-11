@@ -158,10 +158,10 @@ async def list_run_impl(*, target: str) -> None:
     """Resolve `target` (numeric id or name) and POST .../run."""
     async with cli_api_client() as client:
         list_id = await resolve_list_id(client, target)
-        result = await client.list_run(list_id)
+        result = await client.list_run(list_id, trigger_source="cli")
     typer.echo(
-        f"Enqueued {result['count']} jobs for list {result['list_id']}: "
-        f"{result['job_ids']}"
+        f"Enqueued {result['count']} jobs (run {result['run_id']}) "
+        f"for list {result['list_id']}: {result['job_ids']}"
     )
 
 

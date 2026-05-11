@@ -13,20 +13,32 @@ from oth_scraper.db.models.scrape_job import (
     job_status_enum,
 )
 from oth_scraper.db.models.scrape_list import ScrapeList, ScrapeListSuburb
+from oth_scraper.db.models.scrape_run import (
+    RUN_STATUS_VALUES,
+    RUN_TRIGGER_SOURCE_VALUES,
+    ScrapeRun,
+    run_status_enum,
+    run_trigger_source_enum,
+)
 from oth_scraper.db.models.suburb import Suburb
 
 __all__ = [
     "CLOSURE_REASON_VALUES",
     "JOB_STATUS_VALUES",
     "LISTING_CATEGORY_VALUES",
+    "RUN_STATUS_VALUES",
+    "RUN_TRIGGER_SOURCE_VALUES",
     "Listing",
     "ListingSnapshot",
     "Property",
     "ScrapeJob",
     "ScrapeList",
     "ScrapeListSuburb",
+    "ScrapeRun",
     "Suburb",
     "closure_reason_enum",
     "job_status_enum",
     "listing_category_enum",
+    "run_status_enum",
+    "run_trigger_source_enum",
 ]
