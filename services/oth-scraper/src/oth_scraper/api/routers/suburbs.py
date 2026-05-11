@@ -1,4 +1,4 @@
-"""REST endpoints for suburb resolution and autocomplete."""
+"""REST endpoints for suburb resolution, autocomplete, and summary."""
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from oth_scraper.db.engine import get_db
 from oth_scraper.services.suburb import resolve_suburb
+from oth_scraper.services.suburb_summary import SuburbSummary, SuburbSummaryService
 from oth_scraper.suburb_autocomplete import autocomplete as _autocomplete
 from oth_scraper.suburb_resolver import (
     AutocompleteUnavailableError,
@@ -68,4 +69,24 @@ async def resolve_endpoint(
             status_code=409,
             detail={"candidates": [m.model_dump() for m in result]},
         )
+    return result
+
+
+@router.get("/{suburb_id}/summary", response_model=SuburbSummary)
+async def suburb_summary_endpoint(
+    suburb_id: int,
+    session: AsyncSession = Depends(get_db),
+) -> SuburbSummary:
+    """Return the full summary DTO for one suburb.
+
+    Packs everything the suburb detail page needs into a single round trip:
+    last completed run, in-flight run (if any), new/changed deltas per
+    category, all-time totals, and three price medians.
+
+    Returns **404** when the suburb does not exist.
+    """
+    svc = SuburbSummaryService(session)
+    result = await svc.summary(suburb_id)
+    if result is None:
+        raise HTTPException(status_code=404, detail=f"Suburb {suburb_id} not found")
     return result

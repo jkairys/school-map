@@ -1,9 +1,10 @@
-"""REST endpoints for scrape-run inspection.
+"""REST endpoints for scrape-run inspection and mutation.
 
-Three read endpoints:
-  GET /scrape-runs                    — list runs (filter by list_id, status)
-  GET /scrape-runs/{id}               — run detail with per-status job counts
-  GET /scrape-runs/{id}/jobs          — child jobs for a run
+Endpoints:
+  GET  /scrape-runs                    — list runs (filter by list_id, status)
+  GET  /scrape-runs/{id}               — run detail with per-status job counts
+  GET  /scrape-runs/{id}/jobs          — child jobs for a run
+  POST /scrape-runs/{id}/retry-failed  — re-enqueue failed/deadletter jobs
 """
 from datetime import datetime
 from typing import Any
@@ -11,11 +12,18 @@ from typing import Any
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy import func, select
-from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-from oth_scraper.db.engine import get_db
+from oth_scraper.db.engine import get_db, get_session_factory
 from oth_scraper.db.models.scrape_job import ScrapeJob
 from oth_scraper.db.models.scrape_run import RUN_STATUS_VALUES, ScrapeRun
+from oth_scraper.queue import JobQueue
+from oth_scraper.services.run_producer import (
+    NoFailedJobsError,
+    RunResult,
+    ScrapeRunNotFoundError,
+    retry_failed,
+)
 
 router = APIRouter()
 
@@ -128,3 +136,42 @@ async def list_run_jobs(
     stmt = stmt.limit(limit).offset(offset)
     rows = (await session.execute(stmt)).scalars().all()
     return [JobRead.model_validate(r) for r in rows]
+
+
+class RetryFailedResult(BaseModel):
+    """Response shape for POST /scrape-runs/{id}/retry-failed."""
+
+    run_id: int
+    list_id: int | None
+    job_ids: list[int]
+    count: int
+
+
+@router.post("/{run_id}/retry-failed", response_model=RetryFailedResult)
+async def retry_failed_endpoint(
+    run_id: int,
+    session: AsyncSession = Depends(get_db),
+    session_factory: async_sessionmaker[AsyncSession] = Depends(get_session_factory),
+) -> RetryFailedResult:
+    """Re-enqueue failed/deadletter jobs from a previous run as a NEW run.
+
+    The original run is never mutated.  Returns the new run_id and its
+    child job_ids.
+
+    - 404 if the run doesn't exist.
+    - 422 if the run has no failed or deadletter jobs.
+    """
+    queue = JobQueue(session_factory)
+    try:
+        result: RunResult = await retry_failed(session, run_id, queue)
+    except ScrapeRunNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e
+    except NoFailedJobsError as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
+
+    return RetryFailedResult(
+        run_id=result.run_id,
+        list_id=result.list_id,
+        job_ids=result.job_ids,
+        count=result.count,
+    )
