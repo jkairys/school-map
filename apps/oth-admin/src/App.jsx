@@ -3,6 +3,7 @@ import { Construction } from 'lucide-react'
 import Layout from './components/Layout.jsx'
 import AreasPage from './pages/AreasPage.jsx'
 import AreaDetailPage from './pages/AreaDetailPage.jsx'
+import RunDetailPage from './pages/RunDetailPage.jsx'
 
 /**
  * Minimal placeholder for pages that haven't been implemented yet.
@@ -32,7 +33,7 @@ export default function App() {
           <Route path="suburbs/:id" element={<PlaceholderPage label="Suburb detail — slice 10" />} />
           <Route path="properties/:id" element={<PlaceholderPage label="Property detail — slice 11" />} />
           <Route path="listings/:id" element={<PlaceholderPage label="Listing detail — slice 11" />} />
-          <Route path="runs/:id" element={<PlaceholderPage label="Run detail — slice 12" />} />
+          <Route path="runs/:id" element={<RunDetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
