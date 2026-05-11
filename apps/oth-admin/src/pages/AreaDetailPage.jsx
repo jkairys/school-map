@@ -6,13 +6,14 @@ import {
   Play,
   Pencil,
   Trash2,
+  Plus,
   ChevronDown,
   ChevronRight,
   MapPin,
   AlertCircle,
 } from 'lucide-react'
 
-import { getAreaSummary, getArea, updateArea, deleteArea, runArea } from '../api/areas.js'
+import { getAreaSummary, getArea, updateArea, deleteArea, runArea, addSuburb, removeSuburb } from '../api/areas.js'
 import { listRuns } from '../api/runs.js'
 import useAdaptivePoll from '../hooks/useAdaptivePoll.js'
 import RunStatusPill from '../components/RunStatusPill.jsx'
@@ -20,6 +21,7 @@ import CategorySplit from '../components/CategorySplit.jsx'
 import LivePill from '../components/LivePill.jsx'
 import Modal from '../components/Modal.jsx'
 import RunConfirmModal from '../components/RunConfirmModal.jsx'
+import SuburbAutocomplete from '../components/SuburbAutocomplete.jsx'
 import Toast from '../components/Toast.jsx'
 import { timeAgo } from '../utils/time.js'
 
@@ -108,7 +110,7 @@ function FiltersBlock({ filters }) {
 // ---------------------------------------------------------------------------
 // SuburbCard
 // ---------------------------------------------------------------------------
-function SuburbCard({ suburb }) {
+function SuburbCard({ suburb, onRemove }) {
   return (
     <div className="bg-white rounded-lg border border-neutral-200 p-4 flex flex-col gap-1.5">
       <div className="flex items-start justify-between gap-2">
@@ -118,7 +120,14 @@ function SuburbCard({ suburb }) {
             {suburb.postcode} {suburb.state}
           </p>
         </div>
-        <MapPin size={14} className="text-neutral-300 shrink-0 mt-0.5" />
+        <button
+          onClick={() => onRemove(suburb)}
+          className="shrink-0 text-neutral-300 hover:text-red-400 transition-colors mt-0.5"
+          title={`Remove ${suburb.name}`}
+          aria-label={`Remove ${suburb.name}`}
+        >
+          <Trash2 size={13} />
+        </button>
       </div>
       <Link
         to={`/suburbs/${suburb.id}`}
@@ -127,6 +136,152 @@ function SuburbCard({ suburb }) {
         View details →
       </Link>
     </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// AddSuburbModal
+// State is batched into a single reducer so useEffect can reset in one
+// dispatch (avoids the react-hooks/set-state-in-effect lint rule).
+// ---------------------------------------------------------------------------
+const ADD_SUBURB_INITIAL = {
+  selected: null,
+  submitting: false,
+  inlineError: null,
+  inlineCandidates: null,
+}
+
+function addSuburbReducer(state, action) {
+  switch (action.type) {
+    case 'RESET':
+      return ADD_SUBURB_INITIAL
+    case 'SELECT':
+      return { ...state, selected: action.candidate, inlineError: null, inlineCandidates: null }
+    case 'SUBMIT_START':
+      return { ...state, submitting: true, inlineError: null, inlineCandidates: null }
+    case 'SUBMIT_ERROR':
+      return { ...state, submitting: false, inlineError: action.error, inlineCandidates: action.candidates ?? null }
+    case 'SUBMIT_DONE':
+      return { ...state, submitting: false }
+    default:
+      return state
+  }
+}
+
+function AddSuburbModal({ open, onClose, areaId, areaName, onAdded }) {
+  const [state, dispatch] = useReducer(addSuburbReducer, ADD_SUBURB_INITIAL)
+  const { selected, submitting, inlineError, inlineCandidates } = state
+
+  // Reset in a single dispatch when modal opens.
+  useEffect(() => {
+    if (open) dispatch({ type: 'RESET' })
+  }, [open])
+
+  const handleSelect = (candidate) => {
+    dispatch({ type: 'SELECT', candidate })
+  }
+
+  const handleSubmit = async () => {
+    if (!selected) return
+    dispatch({ type: 'SUBMIT_START' })
+    try {
+      await addSuburb(areaId, selected)
+      dispatch({ type: 'SUBMIT_DONE' })
+      onAdded(selected.name)
+      onClose()
+    } catch (e) {
+      if (e.status === 409) {
+        const body = e.body
+        // Ambiguous match — candidates returned.
+        if (body && typeof body === 'object' && body.detail && body.detail.candidates) {
+          dispatch({ type: 'SUBMIT_ERROR', error: null, candidates: body.detail.candidates })
+        } else if (body && typeof body === 'object' && body.detail) {
+          // "already in list" message.
+          const msg = typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail)
+          dispatch({ type: 'SUBMIT_ERROR', error: msg })
+        } else {
+          const msg = typeof body === 'string' ? body : 'Suburb already in this area.'
+          dispatch({ type: 'SUBMIT_ERROR', error: msg })
+        }
+      } else if (e.status === 503) {
+        dispatch({ type: 'SUBMIT_ERROR', error: 'Autocomplete unavailable — try again shortly.' })
+      } else {
+        dispatch({ type: 'SUBMIT_ERROR', error: e.message || 'Failed to add suburb.' })
+      }
+    }
+  }
+
+  return (
+    <Modal open={open} onClose={onClose} title={`Add suburb to "${areaName}"`} maxWidth="max-w-md">
+      <div className="space-y-4">
+        <div>
+          <label className="block text-xs font-medium text-neutral-600 mb-1">Search suburb</label>
+          <SuburbAutocomplete
+            onSelect={handleSelect}
+            disabled={submitting}
+            placeholder="e.g. Mount Coolum"
+          />
+        </div>
+
+        {selected && !inlineError && !inlineCandidates && (
+          <div className="flex items-center gap-2 px-3 py-2 bg-blue-50 border border-blue-100 rounded text-sm text-blue-800">
+            <MapPin size={13} className="shrink-0 text-blue-400" />
+            <span className="font-medium">{selected.name}</span>
+            <span className="px-1.5 py-0.5 text-xs rounded bg-white border border-blue-200 font-mono tabular-nums">
+              {selected.postcode}
+            </span>
+            <span className="px-1.5 py-0.5 text-xs rounded bg-blue-100 text-blue-600 font-medium">
+              {selected.state}
+            </span>
+          </div>
+        )}
+
+        {inlineError && (
+          <div className="flex items-center gap-2 px-3 py-2 bg-red-50 border border-red-200 rounded text-xs text-red-700">
+            <AlertCircle size={12} className="shrink-0" />
+            {inlineError}
+          </div>
+        )}
+
+        {inlineCandidates && inlineCandidates.length > 0 && (
+          <div className="space-y-1">
+            <p className="text-xs text-neutral-500">Multiple matches found — please select one:</p>
+            {inlineCandidates.map((c) => (
+              <button
+                key={`${c.name}-${c.postcode}-${c.state}`}
+                type="button"
+                onClick={() => handleSelect(c)}
+                className="w-full flex items-center gap-2 px-3 py-2 text-sm text-left border border-neutral-200 rounded hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              >
+                <span className="flex-1 font-medium">{c.name}</span>
+                <span className="px-1.5 py-0.5 text-xs rounded bg-neutral-100 text-neutral-500 font-mono tabular-nums">
+                  {c.postcode}
+                </span>
+                <span className="px-1.5 py-0.5 text-xs rounded bg-blue-50 text-blue-600 font-medium">
+                  {c.state}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="flex items-center justify-end gap-2 pt-1">
+          <button
+            onClick={onClose}
+            className="px-3 py-1.5 text-sm text-neutral-600 border border-neutral-200 rounded hover:bg-neutral-50 transition-colors"
+          >
+            Cancel
+          </button>
+          <button
+            onClick={handleSubmit}
+            disabled={submitting || !selected}
+            className="px-3 py-1.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {submitting ? 'Adding…' : 'Add suburb'}
+          </button>
+        </div>
+      </div>
+    </Modal>
   )
 }
 
@@ -517,6 +672,10 @@ export default function AreaDetailPage() {
   const [showRunModal, setShowRunModal] = useState(false)
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [showEditModal, setShowEditModal] = useState(false)
+  const [showAddSuburbModal, setShowAddSuburbModal] = useState(false)
+  // suburb to confirm removal: { id, name } | null
+  const [suburbToRemove, setSuburbToRemove] = useState(null)
+  const [removePending, setRemovePending] = useState(false)
   const [runPending, setRunPending] = useState(false)
   const [deletePending, setDeletePending] = useState(false)
   const [toast, setToast] = useState(null)
@@ -583,6 +742,23 @@ export default function AreaDetailPage() {
     } catch (e) {
       showToast(`Failed to delete: ${e.message}`, 'error')
       setDeletePending(false)
+    }
+  }
+
+  const handleRemoveSuburb = async () => {
+    if (!suburbToRemove) return
+    setRemovePending(true)
+    try {
+      await removeSuburb(id, suburbToRemove.id)
+      const name = suburbToRemove.name
+      setSuburbToRemove(null)
+      showToast(`Removed ${name}`)
+      setDetailTick((t) => t + 1)
+      refetch()
+    } catch (e) {
+      showToast(`Failed to remove suburb: ${e.message}`, 'error')
+    } finally {
+      setRemovePending(false)
     }
   }
 
@@ -683,6 +859,13 @@ export default function AreaDetailPage() {
             Edit
           </button>
           <button
+            onClick={() => setShowAddSuburbModal(true)}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-neutral-600 border border-neutral-200 rounded hover:bg-neutral-50 hover:border-neutral-300 transition-colors"
+          >
+            <Plus size={14} />
+            Add suburb
+          </button>
+          <button
             onClick={() => setShowDeleteModal(true)}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-red-600 border border-red-200 rounded hover:bg-red-50 transition-colors"
           >
@@ -717,7 +900,7 @@ export default function AreaDetailPage() {
         {areaDetail?.suburbs && areaDetail.suburbs.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
             {areaDetail.suburbs.map((s) => (
-              <SuburbCard key={s.id} suburb={s} />
+              <SuburbCard key={s.id} suburb={s} onRemove={setSuburbToRemove} />
             ))}
           </div>
         ) : areaDetail?.suburbs && areaDetail.suburbs.length === 0 ? (
@@ -778,6 +961,35 @@ export default function AreaDetailPage() {
           refetch()
           setDetailTick((t) => t + 1)
         }}
+      />
+
+      <AddSuburbModal
+        open={showAddSuburbModal}
+        onClose={() => setShowAddSuburbModal(false)}
+        areaId={id}
+        areaName={summary?.name ?? `Area ${id}`}
+        onAdded={(name) => {
+          showToast(`Added ${name}`)
+          setDetailTick((t) => t + 1)
+          refetch()
+        }}
+      />
+
+      <RunConfirmModal
+        open={!!suburbToRemove}
+        onClose={() => setSuburbToRemove(null)}
+        onConfirm={handleRemoveSuburb}
+        title={`Remove "${suburbToRemove?.name}"?`}
+        body={
+          <span>
+            Remove <strong>{suburbToRemove?.name}</strong> from{' '}
+            <strong>{summary?.name ?? 'this area'}</strong>? The suburb itself remains in the
+            system.
+          </span>
+        }
+        confirmLabel="Remove"
+        danger
+        disabled={removePending}
       />
 
       <Toast toast={toast} onDismiss={() => setToast(null)} />
