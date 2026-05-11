@@ -230,6 +230,7 @@ export default function RunDetailPage() {
   // ---- fetch jobs whenever run id changes or run data refreshes ----
   useEffect(() => {
     let cancelled = false
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- loading flag pattern
     setJobsLoading(true)
     setJobsError(null)
     getRunJobs(id)
