@@ -9,6 +9,7 @@ from sqlalchemy import (
     BigInteger,
     DateTime,
     Enum,
+    ForeignKey,
     Index,
     Integer,
     String,
@@ -36,6 +37,14 @@ class ScrapeJob(Base):
     __tablename__ = "scrape_job"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+
+    # run_id links back to the parent scrape_run row (NOT NULL — every job
+    # belongs to exactly one run since migration 0006).
+    run_id: Mapped[int] = mapped_column(
+        BigInteger,
+        ForeignKey("scrape_run.id", ondelete="CASCADE"),
+        nullable=False,
+    )
 
     # Nullable FKs without a physical FK constraint (issue 04 lands ahead of the
     # tables they would point to — issue 02 adds suburb, issue 03 adds scrape_list).

@@ -272,7 +272,7 @@ async def test_list_lifecycle_create_add_run_rm(
     # run by name
     run = run_cli("list", "run", "myl", base_url=api_subprocess)
     assert run.returncode == 0, run.stderr
-    assert "Enqueued 3 jobs for list 1" in run.stdout
+    assert "Enqueued 3 jobs" in run.stdout and "for list 1" in run.stdout
 
     # rm-suburb by suburb name
     rms = run_cli(

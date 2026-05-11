@@ -14,7 +14,7 @@ import pytest
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-from oth_scraper.db.models import Suburb
+from oth_scraper.db.models import ScrapeRun, Suburb
 from oth_scraper.oth_client import (
     Category,
     ListingFilters,
@@ -59,11 +59,31 @@ async def _seed_suburb(
             return row.id
 
 
-async def _enqueue(queue: JobQueue, suburb_id: int, n: int = 1) -> list[int]:
+async def _seed_run(factory: async_sessionmaker[AsyncSession]) -> int:
+    """Insert a scrape_run row and return its id."""
+    async with factory() as session:
+        async with session.begin():
+            row = ScrapeRun(
+                trigger_source="api",
+                filters_snapshot={},
+                status="running",
+            )
+            session.add(row)
+            await session.flush()
+            return row.id
+
+
+async def _enqueue(
+    queue: JobQueue,
+    suburb_id: int,
+    n: int = 1,
+    *,
+    run_id: int,
+) -> list[int]:
     ids: list[int] = []
     for _ in range(n):
         job = await queue.enqueue(
-            NewJob(suburb_id=suburb_id, category="forsale", filters={})
+            NewJob(run_id=run_id, suburb_id=suburb_id, category="forsale", filters={})
         )
         ids.append(job.id)
     return ids
@@ -217,7 +237,8 @@ async def test_drains_all_jobs_then_exits_on_shutdown_signal(session_factory):
     """
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    await _enqueue(queue, suburb_id, n=3)
+    run_id = await _seed_run(session_factory)
+    await _enqueue(queue, suburb_id, n=3, run_id=run_id)
 
     async def behavior(*_a, **_kw):
         return _empty_page()
@@ -250,7 +271,8 @@ async def test_concurrency_three_jobs_progress_in_parallel(session_factory):
     """AC: WORKER_CONCURRENCY=3 → three claimers active simultaneously."""
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    await _enqueue(queue, suburb_id, n=3)
+    run_id = await _seed_run(session_factory)
+    await _enqueue(queue, suburb_id, n=3, run_id=run_id)
 
     in_flight = 0
     saw_three = asyncio.Event()
@@ -295,7 +317,8 @@ async def test_transient_error_requeues_then_succeeds(session_factory):
     """AC: 5xx → requeue → second attempt succeeds → `succeeded`."""
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    [job_id] = await _enqueue(queue, suburb_id, n=1)
+    run_id = await _seed_run(session_factory)
+    [job_id] = await _enqueue(queue, suburb_id, n=1, run_id=run_id)
 
     attempts = 0
 
@@ -347,7 +370,8 @@ async def test_antibot_rotates_session_then_dead_letters_after_one_retry(
     """AC: AntiBotError → session.rotate() → retry once → still fails → dead-letter."""
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    [job_id] = await _enqueue(queue, suburb_id, n=1)
+    run_id = await _seed_run(session_factory)
+    [job_id] = await _enqueue(queue, suburb_id, n=1, run_id=run_id)
 
     async def behavior(*_a, **_kw):
         raise AntiBotError("blocked", status_code=403)
@@ -393,7 +417,8 @@ async def test_parse_error_dead_letters_immediately(session_factory):
     """AC: ParseError → status=deadletter, attempts=1 (no retry)."""
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    [job_id] = await _enqueue(queue, suburb_id, n=1)
+    run_id = await _seed_run(session_factory)
+    [job_id] = await _enqueue(queue, suburb_id, n=1, run_id=run_id)
 
     async def behavior(*_a, **_kw):
         raise ParseError("malformed content[]")
@@ -438,7 +463,8 @@ async def test_soft_expiry_sweep_invoked_only_on_successful_jobs(
     """AC: soft-expiry sweep runs once per success, never on a failed job."""
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    success_id, fail_id = await _enqueue(queue, suburb_id, n=2)
+    run_id = await _seed_run(session_factory)
+    success_id, fail_id = await _enqueue(queue, suburb_id, n=2, run_id=run_id)
 
     async def behavior(suburb, category, filters, page):
         # The first ID enqueued (lower id) succeeds; the second always
@@ -488,7 +514,8 @@ async def test_workers_do_not_double_claim_jobs(session_factory):
     exactly once; the queue's SKIP LOCKED is honoured at the worker layer."""
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    job_ids = await _enqueue(queue, suburb_id, n=6)
+    run_id = await _seed_run(session_factory)
+    job_ids = await _enqueue(queue, suburb_id, n=6, run_id=run_id)
 
     seen: list[int] = []
     seen_lock = asyncio.Lock()
@@ -537,7 +564,8 @@ async def test_paginates_until_has_next_false(session_factory):
     and reconcile every page before invoking the soft-expiry sweep."""
     suburb_id = await _seed_suburb(session_factory)
     queue = _make_queue(session_factory)
-    await _enqueue(queue, suburb_id, n=1)
+    run_id = await _seed_run(session_factory)
+    await _enqueue(queue, suburb_id, n=1, run_id=run_id)
 
     pages_seen: list[int] = []
 
