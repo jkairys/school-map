@@ -21,6 +21,10 @@ tasks:
     desc: Run Alembic migrations to head
     cmd: uv run alembic upgrade head
 
+  backfill-sale-dates:
+    desc: Backfill listing.sale_date for recentlysold rows created before slice 02
+    cmd: uv run python -m oth_scraper.scripts.backfill_sale_dates
+
   docker-up:
     desc: Start all services via docker-compose
     cmd: docker compose up --build
