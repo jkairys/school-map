@@ -3,8 +3,10 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
 
 from oth_scraper.db.engine import get_db
+from oth_scraper.db.models.suburb import Suburb
 from oth_scraper.services.suburb import resolve_suburb
 from oth_scraper.services.suburb_summary import SuburbSummary, SuburbSummaryService
 from oth_scraper.suburb_autocomplete import autocomplete as _autocomplete
@@ -70,6 +72,25 @@ async def resolve_endpoint(
             detail={"candidates": [m.model_dump() for m in result]},
         )
     return result
+
+
+@router.get("/{suburb_id}", response_model=ResolvedSuburb)
+async def get_suburb_endpoint(
+    suburb_id: int,
+    session: AsyncSession = Depends(get_db),
+) -> ResolvedSuburb:
+    """Return a single suburb by its database id.
+
+    Returns the same shape as POST /suburbs/resolve so the Run Detail page
+    can display ``"<name> <postcode>"`` group headers.
+
+    Returns **404** when the suburb does not exist.
+    """
+    result = await session.execute(select(Suburb).where(Suburb.id == suburb_id))
+    suburb = result.scalar_one_or_none()
+    if suburb is None:
+        raise HTTPException(status_code=404, detail=f"Suburb {suburb_id} not found")
+    return ResolvedSuburb.model_validate(suburb)
 
 
 @router.get("/{suburb_id}/summary", response_model=SuburbSummary)

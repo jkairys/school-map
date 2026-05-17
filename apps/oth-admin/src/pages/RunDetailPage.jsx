@@ -11,6 +11,7 @@ import {
 
 import { getRun, getRunJobs, retryFailed } from '../api/runs.js'
 import { runArea } from '../api/areas.js'
+import { getSuburb } from '../api/suburbs.js'
 import useAdaptivePoll from '../hooks/useAdaptivePoll.js'
 import RunStatusPill from '../components/RunStatusPill.jsx'
 import LivePill from '../components/LivePill.jsx'
@@ -258,11 +259,7 @@ export default function RunDetailPage() {
     if (unknownIds.length === 0) return
 
     Promise.allSettled(
-      unknownIds.map((sid) =>
-        fetch(`/suburbs/${sid}`)
-          .then((r) => (r.ok ? r.json() : null))
-          .catch(() => null)
-      )
+      unknownIds.map((sid) => getSuburb(sid).catch(() => null))
     ).then((results) => {
       setSuburbNames((prev) => {
         const next = { ...prev }
