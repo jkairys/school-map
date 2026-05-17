@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronLeft, ChevronRight, Search } from 'lucide-react'
+import { BedDouble, ChevronLeft, ChevronRight, Maximize2, Search } from 'lucide-react'
 import { listProperties } from '../api/properties.js'
 import { formatDate, formatPrice } from '../utils/format.js'
 import { timeAgo } from '../utils/time.js'
@@ -59,21 +59,6 @@ function CategoryPill({ category }) {
   return (
     <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${styles}`}>
       {label}
-    </span>
-  )
-}
-
-function StatusPill({ latestStatus }) {
-  const isOpen = latestStatus !== 'closed'
-  return (
-    <span
-      className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${
-        isOpen
-          ? 'bg-green-50 text-green-700 border-green-200'
-          : 'bg-neutral-100 text-neutral-500 border-neutral-200'
-      }`}
-    >
-      {isOpen ? 'open' : 'closed'}
     </span>
   )
 }
@@ -200,22 +185,33 @@ export default function PropertyTable({
             <tr className="bg-neutral-50 border-b border-neutral-100">
               <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Address</th>
               <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Category</th>
+              <th className="px-4 py-2.5 text-right text-xs font-medium text-neutral-500">
+                <span className="inline-flex items-center gap-1 justify-end">
+                  <BedDouble size={12} />
+                  Beds
+                </span>
+              </th>
+              <th className="px-4 py-2.5 text-right text-xs font-medium text-neutral-500">
+                <span className="inline-flex items-center gap-1 justify-end">
+                  <Maximize2 size={12} />
+                  Land
+                </span>
+              </th>
               <th className="px-4 py-2.5 text-right text-xs font-medium text-neutral-500">Latest price</th>
               <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Last observed / sold</th>
-              <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Status</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-neutral-100">
             {isLoading && rows.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-8 text-center text-sm text-neutral-400">
+                <td colSpan={6} className="px-4 py-8 text-center text-sm text-neutral-400">
                   Loading…
                 </td>
               </tr>
             )}
             {!isLoading && !error && rows.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-8 text-center text-sm text-neutral-400">
+                <td colSpan={6} className="px-4 py-8 text-center text-sm text-neutral-400">
                   No properties found.
                 </td>
               </tr>
@@ -237,6 +233,14 @@ export default function PropertyTable({
                     <span className="text-neutral-400">—</span>
                   )}
                 </td>
+                <td className="px-4 py-2.5 text-right tabular-nums text-neutral-600">
+                  {row.latest_bedrooms != null ? row.latest_bedrooms : <span className="text-neutral-400">—</span>}
+                </td>
+                <td className="px-4 py-2.5 text-right tabular-nums text-neutral-600">
+                  {row.latest_land_size_sqm != null
+                    ? `${row.latest_land_size_sqm} m²`
+                    : <span className="text-neutral-400">—</span>}
+                </td>
                 <td className="px-4 py-2.5 text-right tabular-nums text-neutral-800">
                   {formatPrice(row.latest_price)}
                 </td>
@@ -246,9 +250,6 @@ export default function PropertyTable({
                     : row.latest_observed_at
                       ? timeAgo(row.latest_observed_at)
                       : '—'}
-                </td>
-                <td className="px-4 py-2.5">
-                  <StatusPill latestStatus={row.latest_status} />
                 </td>
               </tr>
             ))}

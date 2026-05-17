@@ -418,7 +418,11 @@ async def test_properties_default_sort_is_observed_at_desc(api_client, session_f
 
 
 async def test_properties_list_includes_rollup_fields(api_client, session_factory):
-    """Each property in GET /properties has latest_price, latest_observed_at, etc."""
+    """Each property in GET /properties has latest_price, latest_observed_at, etc.
+
+    Includes latest_bedrooms and latest_land_size_sqm from the best snapshot.
+    The seed helper sets bedrooms=3 and land_size_sqm=600 on every snapshot.
+    """
     sub_id = await _seed_suburb(session_factory, "RollupSub", "4300")
     p_id, _, _ = await _seed_property_with_listing_snapshot(
         session_factory, suburb_id=sub_id, price=750_000
@@ -432,6 +436,9 @@ async def test_properties_list_includes_rollup_fields(api_client, session_factor
     assert row["latest_observed_at"] is not None
     assert row["latest_category"] == "forsale"
     assert row["latest_status"] == "Active"
+    # New fields: populated from the seeded snapshot (bedrooms=3, land_size_sqm=600)
+    assert row["latest_bedrooms"] == 3
+    assert row["latest_land_size_sqm"] == 600
 
 
 async def test_properties_list_rollup_null_when_no_snapshots(api_client, session_factory):
@@ -457,6 +464,9 @@ async def test_properties_list_rollup_null_when_no_snapshots(api_client, session
     assert row["latest_observed_at"] is None
     assert row["latest_category"] is None
     assert row["latest_status"] is None
+    # New fields: null when there is no snapshot
+    assert row["latest_bedrooms"] is None
+    assert row["latest_land_size_sqm"] is None
 
 
 # ---------------------------------------------------------------------------
@@ -623,3 +633,151 @@ async def test_property_detail_404_unknown(api_client):
     """GET /properties/{id} returns 404 for a property that doesn't exist."""
     r = await api_client.get("/properties/99999999")
     assert r.status_code == 404
+
+
+# ---------------------------------------------------------------------------
+# GET /properties + /properties/{id}: latest_bedrooms / latest_land_size_sqm
+# ---------------------------------------------------------------------------
+
+
+async def test_list_properties_includes_bedrooms_and_land(api_client, session_factory):
+    """GET /properties includes latest_bedrooms and latest_land_size_sqm.
+
+    When the snapshot has these populated they flow through the best_snap CTE
+    and appear on the rollup row. When no snapshot exists both are null.
+    """
+    sub_id = await _seed_suburb(session_factory, "BedsLandSub", "4500")
+
+    # Property with a snapshot that has bedrooms=4 and land_size_sqm=612
+    async with session_factory() as s:
+        async with s.begin():
+            prop = Property(
+                oth_property_id="beds-land-prop",
+                formatted_address="12 BedsLand St",
+                postcode="4500",
+                suburb_id=sub_id,
+            )
+            s.add(prop)
+            await s.flush()
+            prop_id = prop.id
+
+            listing = Listing(
+                property_id=prop_id,
+                suburb_id=sub_id,
+                category="forsale",
+                oth_listing_id="oth-beds-land",
+            )
+            s.add(listing)
+            await s.flush()
+
+            snap = ListingSnapshot(
+                listing_id=listing.id,
+                price=950_000,
+                title="Test beds/land",
+                blurb=None,
+                bedrooms=4,
+                bathrooms=2,
+                parking=2,
+                land_size_sqm=612,
+                property_type="House",
+                status="Active",
+                raw_payload={"id": "bl"},
+                changed_fields=["__initial__"],
+            )
+            s.add(snap)
+            await s.flush()
+
+    # Property with no listing (null rollup fields)
+    async with session_factory() as s:
+        async with s.begin():
+            null_prop = Property(
+                oth_property_id="no-beds-land-prop",
+                formatted_address="13 NoBeds St",
+                postcode="4500",
+                suburb_id=sub_id,
+            )
+            s.add(null_prop)
+            await s.flush()
+            null_prop_id = null_prop.id
+
+    r = await api_client.get(f"/properties?suburb={sub_id}")
+    assert r.status_code == 200
+    rows = r.json()
+
+    snap_row = next(row for row in rows if row["id"] == prop_id)
+    assert snap_row["latest_bedrooms"] == 4
+    assert snap_row["latest_land_size_sqm"] == 612
+
+    null_row = next(row for row in rows if row["id"] == null_prop_id)
+    assert null_row["latest_bedrooms"] is None
+    assert null_row["latest_land_size_sqm"] is None
+
+
+async def test_property_detail_includes_bedrooms_and_land(api_client, session_factory):
+    """GET /properties/{id} listings include latest_bedrooms and latest_land_size_sqm.
+
+    Populated when the listing has a snapshot; null when it does not.
+    """
+    sub_id = await _seed_suburb(session_factory, "DetailBedsLandSub", "4501")
+
+    async with session_factory() as s:
+        async with s.begin():
+            prop = Property(
+                oth_property_id="detail-beds-land-prop",
+                formatted_address="7 DetailBedsLand Ave",
+                postcode="4501",
+                suburb_id=sub_id,
+            )
+            s.add(prop)
+            await s.flush()
+            prop_id = prop.id
+
+            listing_with = Listing(
+                property_id=prop_id,
+                suburb_id=sub_id,
+                category="forsale",
+                oth_listing_id="oth-dbl-with",
+            )
+            s.add(listing_with)
+            await s.flush()
+            snap = ListingSnapshot(
+                listing_id=listing_with.id,
+                price=820_000,
+                title="Detail beds/land",
+                blurb=None,
+                bedrooms=3,
+                bathrooms=1,
+                parking=1,
+                land_size_sqm=405,
+                property_type="House",
+                status="Active",
+                raw_payload={"id": "dbl"},
+                changed_fields=["__initial__"],
+            )
+            s.add(snap)
+            await s.flush()
+            listing_with_id = listing_with.id
+
+            listing_no_snap = Listing(
+                property_id=prop_id,
+                suburb_id=sub_id,
+                category="forrent",
+                oth_listing_id="oth-dbl-nosnap",
+            )
+            s.add(listing_no_snap)
+            await s.flush()
+            listing_no_snap_id = listing_no_snap.id
+
+    r = await api_client.get(f"/properties/{prop_id}")
+    assert r.status_code == 200
+    body = r.json()
+
+    by_id = {lst["id"]: lst for lst in body["listings"]}
+
+    lst_with = by_id[listing_with_id]
+    assert lst_with["latest_bedrooms"] == 3
+    assert lst_with["latest_land_size_sqm"] == 405
+
+    lst_none = by_id[listing_no_snap_id]
+    assert lst_none["latest_bedrooms"] is None
+    assert lst_none["latest_land_size_sqm"] is None

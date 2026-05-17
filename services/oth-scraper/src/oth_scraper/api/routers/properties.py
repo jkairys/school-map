@@ -44,6 +44,8 @@ class PropertyWithRollup(BaseModel):
     latest_category: str | None
     latest_status: str | None
     latest_sale_date: date | None
+    latest_bedrooms: int | None
+    latest_land_size_sqm: int | None
 
 
 class ListingWithSnapshot(BaseModel):
@@ -64,6 +66,8 @@ class ListingWithSnapshot(BaseModel):
     closed_at: datetime | None
     closure_reason: str | None
     latest_snapshot: SnapshotSummary | None
+    latest_bedrooms: int | None
+    latest_land_size_sqm: int | None
 
 
 class PropertyDetail(BaseModel):
@@ -175,7 +179,9 @@ async def list_properties(
                 ls.listing_id,
                 ls.price,
                 ls.observed_at,
-                ls.status
+                ls.status,
+                ls.bedrooms,
+                ls.land_size_sqm
             FROM listing_snapshot ls
             ORDER BY ls.listing_id, ls.observed_at DESC, ls.id DESC
         ),
@@ -186,7 +192,9 @@ async def list_properties(
                 l.sale_date,
                 lsn.price,
                 lsn.observed_at,
-                lsn.status
+                lsn.status,
+                lsn.bedrooms,
+                lsn.land_size_sqm
             FROM listing l
             JOIN latest_snap lsn ON lsn.listing_id = l.id
             ORDER BY l.property_id, lsn.observed_at DESC
@@ -198,11 +206,13 @@ async def list_properties(
             p.postcode,
             p.suburb_id,
             p.first_seen_at,
-            bs.price       AS latest_price,
-            bs.observed_at AS latest_observed_at,
-            bs.category    AS latest_category,
-            bs.status      AS latest_status,
-            bs.sale_date   AS latest_sale_date
+            bs.price          AS latest_price,
+            bs.observed_at    AS latest_observed_at,
+            bs.category       AS latest_category,
+            bs.status         AS latest_status,
+            bs.sale_date      AS latest_sale_date,
+            bs.bedrooms       AS latest_bedrooms,
+            bs.land_size_sqm  AS latest_land_size_sqm
         FROM property p
         LEFT JOIN best_snap bs ON bs.property_id = p.id
         {where_clause}
@@ -238,7 +248,9 @@ async def get_property(
                 ls.listing_id,
                 ls.price,
                 ls.observed_at,
-                ls.status
+                ls.status,
+                ls.bedrooms,
+                ls.land_size_sqm
             FROM listing_snapshot ls
             ORDER BY ls.listing_id, ls.observed_at DESC, ls.id DESC
         )
@@ -255,9 +267,11 @@ async def get_property(
             l.last_seen_at,
             l.closed_at,
             l.closure_reason,
-            lsn.price       AS snap_price,
-            lsn.observed_at AS snap_observed_at,
-            lsn.status      AS snap_status
+            lsn.price          AS snap_price,
+            lsn.observed_at    AS snap_observed_at,
+            lsn.status         AS snap_status,
+            lsn.bedrooms       AS snap_bedrooms,
+            lsn.land_size_sqm  AS snap_land_size_sqm
         FROM listing l
         LEFT JOIN latest_snap lsn ON lsn.listing_id = l.id
         WHERE l.property_id = :property_id
@@ -292,6 +306,8 @@ async def get_property(
                 closed_at=d["closed_at"],
                 closure_reason=d["closure_reason"],
                 latest_snapshot=snap,
+                latest_bedrooms=d["snap_bedrooms"],
+                latest_land_size_sqm=d["snap_land_size_sqm"],
             )
         )
 
