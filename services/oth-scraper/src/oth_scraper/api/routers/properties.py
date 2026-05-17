@@ -1,5 +1,5 @@
 """REST endpoints for inspecting properties."""
-from datetime import datetime
+from datetime import date, datetime
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -43,6 +43,7 @@ class PropertyWithRollup(BaseModel):
     latest_observed_at: datetime | None
     latest_category: str | None
     latest_status: str | None
+    latest_sale_date: date | None
 
 
 class ListingWithSnapshot(BaseModel):
@@ -57,6 +58,7 @@ class ListingWithSnapshot(BaseModel):
     oth_listing_id: str | None
     agent_name: str | None
     agency_name: str | None
+    sale_date: date | None
     first_seen_at: datetime
     last_seen_at: datetime
     closed_at: datetime | None
@@ -181,6 +183,7 @@ async def list_properties(
             SELECT DISTINCT ON (l.property_id)
                 l.property_id,
                 l.category,
+                l.sale_date,
                 lsn.price,
                 lsn.observed_at,
                 lsn.status
@@ -198,7 +201,8 @@ async def list_properties(
             bs.price       AS latest_price,
             bs.observed_at AS latest_observed_at,
             bs.category    AS latest_category,
-            bs.status      AS latest_status
+            bs.status      AS latest_status,
+            bs.sale_date   AS latest_sale_date
         FROM property p
         LEFT JOIN best_snap bs ON bs.property_id = p.id
         {where_clause}
@@ -246,6 +250,7 @@ async def get_property(
             l.oth_listing_id,
             l.agent_name,
             l.agency_name,
+            l.sale_date,
             l.first_seen_at,
             l.last_seen_at,
             l.closed_at,
@@ -281,6 +286,7 @@ async def get_property(
                 oth_listing_id=d["oth_listing_id"],
                 agent_name=d["agent_name"],
                 agency_name=d["agency_name"],
+                sale_date=d["sale_date"],
                 first_seen_at=d["first_seen_at"],
                 last_seen_at=d["last_seen_at"],
                 closed_at=d["closed_at"],

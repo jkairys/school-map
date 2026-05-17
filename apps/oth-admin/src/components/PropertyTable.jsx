@@ -2,7 +2,7 @@ import { useEffect, useReducer, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Search } from 'lucide-react'
 import { listProperties } from '../api/properties.js'
-import { formatPrice } from '../utils/format.js'
+import { formatDate, formatPrice } from '../utils/format.js'
 import { timeAgo } from '../utils/time.js'
 
 // ---------------------------------------------------------------------------
@@ -201,7 +201,7 @@ export default function PropertyTable({
               <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Address</th>
               <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Category</th>
               <th className="px-4 py-2.5 text-right text-xs font-medium text-neutral-500">Latest price</th>
-              <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Last observed</th>
+              <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Last observed / sold</th>
               <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Status</th>
             </tr>
           </thead>
@@ -241,7 +241,11 @@ export default function PropertyTable({
                   {formatPrice(row.latest_price)}
                 </td>
                 <td className="px-4 py-2.5 text-neutral-500">
-                  {row.latest_observed_at ? timeAgo(row.latest_observed_at) : '—'}
+                  {row.latest_category === 'recentlysold' && row.latest_sale_date
+                    ? `sold ${formatDate(row.latest_sale_date)}`
+                    : row.latest_observed_at
+                      ? timeAgo(row.latest_observed_at)
+                      : '—'}
                 </td>
                 <td className="px-4 py-2.5">
                   <StatusPill latestStatus={row.latest_status} />

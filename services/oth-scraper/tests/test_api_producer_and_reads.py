@@ -4,6 +4,7 @@ Uses the postgres testcontainer (the queue, listings, and snapshots all rely
 on JSONB / postgis types that SQLite can't satisfy).
 """
 import asyncio
+from datetime import date
 
 import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
@@ -259,6 +260,95 @@ async def test_list_properties_filter_by_suburb(api_client, session_factory):
     assert r2.status_code == 200
     assert len(r2.json()) == 1
     assert r2.json()[0]["postcode"] == "4102"
+
+
+async def test_list_properties_latest_sale_date(api_client, session_factory):
+    """latest_sale_date is populated for recentlysold listings with a sale_date
+    and is null for other categories."""
+    sub_id = await _seed_suburb(session_factory, "SaleDateSub", "4110")
+
+    async with session_factory() as s:
+        async with s.begin():
+            sold_prop = Property(
+                oth_property_id="SOLD-1",
+                formatted_address="10 Sold St",
+                postcode="4110",
+                suburb_id=sub_id,
+            )
+            s.add(sold_prop)
+            await s.flush()
+            sold_listing = Listing(
+                property_id=sold_prop.id,
+                suburb_id=sub_id,
+                category="recentlysold",
+                oth_listing_id="oth-sold-1",
+                sale_date=date(2026, 4, 28),
+            )
+            s.add(sold_listing)
+            await s.flush()
+            s.add(
+                ListingSnapshot(
+                    listing_id=sold_listing.id,
+                    price=1050000,
+                    title="Sold house",
+                    blurb=None,
+                    bedrooms=4,
+                    bathrooms=2,
+                    parking=2,
+                    land_size_sqm=600,
+                    property_type="House",
+                    status="sold",
+                    raw_payload={"id": "sold-raw"},
+                    changed_fields=["__initial__"],
+                )
+            )
+
+            forsale_prop = Property(
+                oth_property_id="SALE-1",
+                formatted_address="20 Sale St",
+                postcode="4110",
+                suburb_id=sub_id,
+            )
+            s.add(forsale_prop)
+            await s.flush()
+            forsale_listing = Listing(
+                property_id=forsale_prop.id,
+                suburb_id=sub_id,
+                category="forsale",
+                oth_listing_id="oth-sale-1",
+            )
+            s.add(forsale_listing)
+            await s.flush()
+            s.add(
+                ListingSnapshot(
+                    listing_id=forsale_listing.id,
+                    price=900000,
+                    title="For sale house",
+                    blurb=None,
+                    bedrooms=3,
+                    bathrooms=2,
+                    parking=1,
+                    land_size_sqm=500,
+                    property_type="House",
+                    status="available",
+                    raw_payload={"id": "sale-raw"},
+                    changed_fields=["__initial__"],
+                )
+            )
+            await s.flush()
+
+    r = await api_client.get(f"/properties?suburb={sub_id}")
+    assert r.status_code == 200
+    rows = r.json()
+    by_address = {row["formatted_address"]: row for row in rows}
+
+    sold_row = by_address["10 Sold St"]
+    assert sold_row["latest_category"] == "recentlysold"
+    assert sold_row["latest_sale_date"] == "2026-04-28"
+
+    forsale_row = by_address["20 Sale St"]
+    assert forsale_row["latest_category"] == "forsale"
+    assert forsale_row["latest_sale_date"] is None
 
 
 # --------- /listings read ---------
