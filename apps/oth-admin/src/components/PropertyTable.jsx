@@ -24,6 +24,13 @@ const CATEGORY_LABELS = {
   recentlysold: 'Sold',
 }
 
+const CATEGORY_TABS = [
+  { value: null, label: 'All' },
+  { value: 'forsale', label: 'For sale' },
+  { value: 'forrent', label: 'For rent' },
+  { value: 'recentlysold', label: 'Sold' },
+]
+
 const CATEGORY_STYLES = {
   forsale: 'bg-sky-50 text-sky-700 border border-sky-200',
   forrent: 'bg-violet-50 text-violet-700 border border-violet-200',
@@ -69,25 +76,29 @@ function CategoryPill({ category }) {
 // ---------------------------------------------------------------------------
 
 /**
- * PropertyTable — paginated, sortable, searchable property table for a suburb.
+ * PropertyTable — paginated, sortable, searchable, category-filtered property table for a suburb.
  *
  * Props:
- *   suburbId       {number}    - suburb to filter by
- *   search         {string}    - committed search string (controlled via URL params)
- *   sort           {string}    - current sort key (controlled via URL params)
- *   page           {number}    - current page (1-indexed, controlled via URL params)
- *   onPageChange   {Function}  - called with new page number
- *   onSortChange   {Function}  - called with new sort value
- *   onSearchChange {Function}  - called with new debounced search string
+ *   suburbId          {number}    - suburb to filter by
+ *   category          {string|null} - active category filter: null | "forsale" | "forrent" | "recentlysold"
+ *   search            {string}    - committed search string (controlled via URL params)
+ *   sort              {string}    - current sort key (controlled via URL params)
+ *   page              {number}    - current page (1-indexed, controlled via URL params)
+ *   onPageChange      {Function}  - called with new page number
+ *   onSortChange      {Function}  - called with new sort value
+ *   onSearchChange    {Function}  - called with new debounced search string
+ *   onCategoryChange  {Function}  - called with new category value (null for "All")
  */
 export default function PropertyTable({
   suburbId,
+  category,
   search,
   sort,
   page,
   onPageChange,
   onSortChange,
   onSearchChange,
+  onCategoryChange,
 }) {
   const [state, dispatch] = useReducer(reducer, {
     rows: [],
@@ -126,6 +137,7 @@ export default function PropertyTable({
 
     listProperties({
       suburb: suburbId,
+      category: category || undefined,
       search: search || undefined,
       sort: sort || 'observed_at_desc',
       limit: PAGE_SIZE,
@@ -141,7 +153,7 @@ export default function PropertyTable({
       })
 
     return () => { cancelled = true }
-  }, [suburbId, search, sort, page])
+  }, [suburbId, category, search, sort, page])
 
   const { rows, isLoading, error, localSearch } = state
   const currentPage = page ?? 1
@@ -149,6 +161,28 @@ export default function PropertyTable({
 
   return (
     <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
+      {/* Category tabs */}
+      <div className="px-4 pt-3 pb-0 border-b border-neutral-100">
+        <div className="flex items-center gap-1">
+          {CATEGORY_TABS.map((tab) => {
+            const isActive = (tab.value ?? null) === (category ?? null)
+            return (
+              <button
+                key={String(tab.value)}
+                onClick={() => onCategoryChange(tab.value)}
+                className={
+                  isActive
+                    ? 'px-3 py-1.5 rounded text-xs font-medium bg-neutral-900 text-white'
+                    : 'px-3 py-1.5 rounded text-xs font-medium text-neutral-600 hover:bg-neutral-100'
+                }
+              >
+                {tab.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
       {/* Toolbar */}
       <div className="px-4 py-3 border-b border-neutral-100 flex items-center gap-3 flex-wrap">
         <div className="relative flex-1 min-w-48">

@@ -8,7 +8,7 @@ from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from oth_scraper.db.engine import get_db
-from oth_scraper.db.models.listing import Listing
+from oth_scraper.db.models.listing import LISTING_CATEGORY_VALUES, Listing
 from oth_scraper.db.models.listing_snapshot import ListingSnapshot
 from oth_scraper.db.models.property import Property
 
@@ -116,6 +116,12 @@ async def list_properties(
         default=None, description="Filter by suburb_id."
     ),
     postcode: str | None = Query(default=None),
+    category: str | None = Query(
+        default=None,
+        description=(
+            "Filter by latest_category: forsale | forrent | recentlysold."
+        ),
+    ),
     search: str | None = Query(
         default=None,
         description="Filter by formatted_address ILIKE %%search%%.",
@@ -139,6 +145,12 @@ async def list_properties(
     Sorting by price uses the latest snapshot's price. Properties with no
     snapshots sort last.
     """
+    if category is not None and category not in LISTING_CATEGORY_VALUES:
+        raise HTTPException(
+            status_code=422,
+            detail=f"category must be one of {list(LISTING_CATEGORY_VALUES)}",
+        )
+
     # Build the query as raw SQL so we can use DISTINCT ON cleanly.
     # The lateral CTE picks the single most-recent snapshot per listing,
     # then we pick the most-recent snapshot across all listings per property.
@@ -149,6 +161,9 @@ async def list_properties(
     #   2. best_snap CTE: DISTINCT ON (property_id) from latest_snap joined
     #      with listing, ordered by observed_at DESC → one row per property.
     #   3. Main SELECT joins property LEFT JOIN best_snap.
+    #
+    # The category filter (latest_category) is applied as a WHERE condition on
+    # the outer query after the JOIN, filtering on bs.category.
 
     filters: list[str] = []
     params: dict = {"limit": limit, "offset": offset}
@@ -164,6 +179,10 @@ async def list_properties(
     if search is not None:
         filters.append("p.formatted_address ILIKE :search")
         params["search"] = f"%{search}%"
+
+    if category is not None:
+        filters.append("bs.category = :category")
+        params["category"] = category
 
     where_clause = ("WHERE " + " AND ".join(filters)) if filters else ""
 

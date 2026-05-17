@@ -18,6 +18,7 @@ import { timeAgo } from '../utils/time.js'
 
 const DEFAULT_SORT = 'observed_at_desc'
 const DEFAULT_PAGE = 1
+const VALID_CATEGORIES = ['forsale', 'forrent', 'recentlysold']
 
 // ---------------------------------------------------------------------------
 // SuburbDetailPage
@@ -31,6 +32,8 @@ export default function SuburbDetailPage() {
   const page = parseInt(searchParams.get('page') ?? String(DEFAULT_PAGE), 10) || DEFAULT_PAGE
   const sort = searchParams.get('sort') ?? DEFAULT_SORT
   const q = searchParams.get('q') ?? ''
+  const catParam = searchParams.get('cat')
+  const category = VALID_CATEGORIES.includes(catParam) ? catParam : null
 
   // URL state writers — use functional update so we never lose other params
   function setPage(newPage) {
@@ -68,6 +71,20 @@ export default function SuburbDetailPage() {
         next.set('q', newQ)
       }
       // Reset to page 1 when search changes
+      next.delete('page')
+      return next
+    })
+  }
+
+  function setCategory(newCat) {
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev)
+      if (!newCat) {
+        next.delete('cat')
+      } else {
+        next.set('cat', newCat)
+      }
+      // Reset to page 1 when category changes
       next.delete('page')
       return next
     })
@@ -262,12 +279,14 @@ export default function SuburbDetailPage() {
         </h2>
         <PropertyTable
           suburbId={id ? parseInt(id, 10) : undefined}
+          category={category}
           search={q}
           sort={sort}
           page={page}
           onPageChange={setPage}
           onSortChange={setSort}
           onSearchChange={setSearch}
+          onCategoryChange={setCategory}
         />
       </div>
     </div>

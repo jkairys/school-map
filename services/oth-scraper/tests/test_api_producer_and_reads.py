@@ -351,6 +351,152 @@ async def test_list_properties_latest_sale_date(api_client, session_factory):
     assert forsale_row["latest_sale_date"] is None
 
 
+async def test_list_properties_filter_by_category(api_client, session_factory):
+    """category= param returns only properties whose latest_category matches."""
+    sub_id = await _seed_suburb(session_factory, "CatFilterSub", "4120")
+
+    async with session_factory() as s:
+        async with s.begin():
+            # forsale property
+            sale_prop = Property(
+                oth_property_id="CAT-SALE-1",
+                formatted_address="1 Sale Rd",
+                postcode="4120",
+                suburb_id=sub_id,
+            )
+            s.add(sale_prop)
+            await s.flush()
+            sale_listing = Listing(
+                property_id=sale_prop.id,
+                suburb_id=sub_id,
+                category="forsale",
+                oth_listing_id="oth-cat-sale",
+            )
+            s.add(sale_listing)
+            await s.flush()
+            s.add(
+                ListingSnapshot(
+                    listing_id=sale_listing.id,
+                    price=700000,
+                    title="For sale",
+                    blurb=None,
+                    bedrooms=3,
+                    bathrooms=2,
+                    parking=1,
+                    land_size_sqm=400,
+                    property_type="House",
+                    status="available",
+                    raw_payload={"id": "sale-cat"},
+                    changed_fields=["__initial__"],
+                )
+            )
+
+            # forrent property
+            rent_prop = Property(
+                oth_property_id="CAT-RENT-1",
+                formatted_address="2 Rent Rd",
+                postcode="4120",
+                suburb_id=sub_id,
+            )
+            s.add(rent_prop)
+            await s.flush()
+            rent_listing = Listing(
+                property_id=rent_prop.id,
+                suburb_id=sub_id,
+                category="forrent",
+                oth_listing_id="oth-cat-rent",
+            )
+            s.add(rent_listing)
+            await s.flush()
+            s.add(
+                ListingSnapshot(
+                    listing_id=rent_listing.id,
+                    price=500,
+                    title="For rent",
+                    blurb=None,
+                    bedrooms=2,
+                    bathrooms=1,
+                    parking=1,
+                    land_size_sqm=None,
+                    property_type="Apartment",
+                    status="available",
+                    raw_payload={"id": "rent-cat"},
+                    changed_fields=["__initial__"],
+                )
+            )
+
+            # recentlysold property
+            sold_prop = Property(
+                oth_property_id="CAT-SOLD-1",
+                formatted_address="3 Sold Rd",
+                postcode="4120",
+                suburb_id=sub_id,
+            )
+            s.add(sold_prop)
+            await s.flush()
+            sold_listing = Listing(
+                property_id=sold_prop.id,
+                suburb_id=sub_id,
+                category="recentlysold",
+                oth_listing_id="oth-cat-sold",
+                sale_date=date(2026, 1, 15),
+            )
+            s.add(sold_listing)
+            await s.flush()
+            s.add(
+                ListingSnapshot(
+                    listing_id=sold_listing.id,
+                    price=820000,
+                    title="Recently sold",
+                    blurb=None,
+                    bedrooms=4,
+                    bathrooms=2,
+                    parking=2,
+                    land_size_sqm=500,
+                    property_type="House",
+                    status="sold",
+                    raw_payload={"id": "sold-cat"},
+                    changed_fields=["__initial__"],
+                )
+            )
+            await s.flush()
+
+    # No filter — all three
+    r_all = await api_client.get(f"/properties?suburb={sub_id}")
+    assert r_all.status_code == 200
+    assert len(r_all.json()) == 3
+
+    # forsale filter
+    r_sale = await api_client.get(f"/properties?suburb={sub_id}&category=forsale")
+    assert r_sale.status_code == 200
+    rows = r_sale.json()
+    assert len(rows) == 1
+    assert rows[0]["latest_category"] == "forsale"
+    assert rows[0]["formatted_address"] == "1 Sale Rd"
+
+    # forrent filter
+    r_rent = await api_client.get(f"/properties?suburb={sub_id}&category=forrent")
+    assert r_rent.status_code == 200
+    rows = r_rent.json()
+    assert len(rows) == 1
+    assert rows[0]["latest_category"] == "forrent"
+    assert rows[0]["formatted_address"] == "2 Rent Rd"
+
+    # recentlysold filter
+    r_sold = await api_client.get(f"/properties?suburb={sub_id}&category=recentlysold")
+    assert r_sold.status_code == 200
+    rows = r_sold.json()
+    assert len(rows) == 1
+    assert rows[0]["latest_category"] == "recentlysold"
+    assert rows[0]["formatted_address"] == "3 Sold Rd"
+
+
+async def test_list_properties_invalid_category_returns_422(api_client):
+    """Unknown category value must return 422."""
+    r = await api_client.get("/properties?category=invalid")
+    assert r.status_code == 422
+
+
 # --------- /listings read ---------
 
 
