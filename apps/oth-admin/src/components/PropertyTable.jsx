@@ -1,9 +1,10 @@
 import { useEffect, useReducer, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { BedDouble, ChevronLeft, ChevronRight, Maximize2, Search } from 'lucide-react'
+import { BedDouble, ChevronLeft, ChevronRight, ExternalLink, Maximize2, Search } from 'lucide-react'
 import { listProperties } from '../api/properties.js'
 import { formatDate, formatPrice } from '../utils/format.js'
 import { timeAgo } from '../utils/time.js'
+import { othPropertyUrl } from '../utils/othUrl.js'
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -199,19 +200,20 @@ export default function PropertyTable({
               </th>
               <th className="px-4 py-2.5 text-right text-xs font-medium text-neutral-500">Latest price</th>
               <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500">Last observed / sold</th>
+              <th className="px-2 py-2.5 w-8" aria-label="OTH link" />
             </tr>
           </thead>
           <tbody className="divide-y divide-neutral-100">
             {isLoading && rows.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-4 py-8 text-center text-sm text-neutral-400">
+                <td colSpan={7} className="px-4 py-8 text-center text-sm text-neutral-400">
                   Loading…
                 </td>
               </tr>
             )}
             {!isLoading && !error && rows.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-4 py-8 text-center text-sm text-neutral-400">
+                <td colSpan={7} className="px-4 py-8 text-center text-sm text-neutral-400">
                   No properties found.
                 </td>
               </tr>
@@ -250,6 +252,35 @@ export default function PropertyTable({
                     : row.latest_observed_at
                       ? timeAgo(row.latest_observed_at)
                       : '—'}
+                </td>
+                <td className="px-2 py-2.5 text-center">
+                  {(() => {
+                    const url = othPropertyUrl({
+                      othPropertyId: row.oth_property_id,
+                      formattedAddress: row.formatted_address,
+                      postcode: row.postcode,
+                    })
+                    if (!url) {
+                      return (
+                        <span className="inline-flex text-neutral-200 cursor-not-allowed">
+                          <ExternalLink size={13} />
+                        </span>
+                      )
+                    }
+                    return (
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Open on onthehouse.com.au"
+                        aria-label="Open listing on On The House"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex text-neutral-400 hover:text-blue-600 transition-colors"
+                      >
+                        <ExternalLink size={13} />
+                      </a>
+                    )
+                  })()}
                 </td>
               </tr>
             ))}

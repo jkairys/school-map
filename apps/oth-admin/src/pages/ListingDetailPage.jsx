@@ -10,7 +10,7 @@
  */
 import { useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, RefreshCw } from 'lucide-react'
+import { ArrowLeft, ExternalLink, RefreshCw } from 'lucide-react'
 
 import { getListing, listSnapshots } from '../api/listings.js'
 import useAdaptivePoll from '../hooks/useAdaptivePoll.js'
@@ -18,6 +18,7 @@ import PriceChart from '../components/PriceChart.jsx'
 import RawPayloadViewer from '../components/RawPayloadViewer.jsx'
 import { formatPrice } from '../utils/format.js'
 import { timeAgo } from '../utils/time.js'
+import { othUrlFromRawPayload } from '../utils/othUrl.js'
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -162,6 +163,11 @@ export default function ListingDetailPage() {
   const closedAt = listing?.closed_at
   const isLoading = listingLoading || snapshotsLoading
 
+  // OTH URL: extract from the latest snapshot's raw_payload (contains the
+  // canonical othWebUrl from the OTH API). This avoids a second fetch for
+  // the property's formatted_address.
+  const othUrl = othUrlFromRawPayload(latestSnapshot?.raw_payload)
+
   return (
     <div className="flex flex-col gap-6">
       {/* Header */}
@@ -180,12 +186,30 @@ export default function ListingDetailPage() {
               <StatusPill closedAt={closedAt} />
             </div>
             {propertyId && (
-              <Link
-                to={`/properties/${propertyId}`}
-                className="mt-1 block text-base font-medium text-blue-600 hover:underline"
-              >
-                Property #{propertyId}
-              </Link>
+              <div className="mt-1 flex items-center gap-2">
+                <Link
+                  to={`/properties/${propertyId}`}
+                  className="text-base font-medium text-blue-600 hover:underline"
+                >
+                  Property #{propertyId}
+                </Link>
+                {othUrl ? (
+                  <a
+                    href={othUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Open on onthehouse.com.au"
+                    aria-label="Open listing on On The House"
+                    className="inline-flex text-neutral-400 hover:text-blue-600 transition-colors"
+                  >
+                    <ExternalLink size={14} />
+                  </a>
+                ) : (
+                  <span className="inline-flex text-neutral-200 cursor-not-allowed" aria-hidden="true">
+                    <ExternalLink size={14} />
+                  </span>
+                )}
+              </div>
             )}
             <p className="text-xs text-neutral-500 mt-0.5">Listing #{listing?.id}</p>
           </div>

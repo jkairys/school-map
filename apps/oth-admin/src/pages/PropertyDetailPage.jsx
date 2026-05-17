@@ -11,12 +11,13 @@
  */
 import { useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, RefreshCw } from 'lucide-react'
+import { ArrowLeft, ExternalLink, RefreshCw } from 'lucide-react'
 
 import { getProperty } from '../api/properties.js'
 import useAdaptivePoll from '../hooks/useAdaptivePoll.js'
 import { formatPrice } from '../utils/format.js'
 import { timeAgo } from '../utils/time.js'
+import { othListingUrl } from '../utils/othUrl.js'
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -75,61 +76,98 @@ function StatusPill({ closedAt }) {
 // ListingCard
 // ---------------------------------------------------------------------------
 
-function ListingCard({ listing }) {
+function ListingCard({ listing, property }) {
   const snap = listing.latest_snapshot
 
+  // Build OTH URL from listing + parent property data.
+  const othUrl = othListingUrl({
+    othListingId: listing.oth_listing_id,
+    othPropertyId: property?.oth_property_id,
+    category: listing.category,
+    formattedAddress: property?.formatted_address,
+    postcode: property?.postcode,
+  })
+
   return (
-    <Link
-      to={`/listings/${listing.id}`}
-      className="block bg-white rounded-lg border border-neutral-200 p-4 hover:border-blue-300 hover:shadow-sm transition-all"
-    >
-      <div className="flex items-start justify-between gap-3 flex-wrap">
-        {/* Left: category + status */}
-        <div className="flex items-center gap-2 flex-wrap">
-          <CategoryPill category={listing.category} />
-          <StatusPill closedAt={listing.closed_at} />
-          {listing.closure_reason && (
-            <span className="text-xs text-neutral-500">({listing.closure_reason})</span>
-          )}
+    // Wrap in a relative div so the OTH icon can sit outside the <Link>
+    // without creating an invalid nested-<a> structure.
+    <div className="relative">
+      <Link
+        to={`/listings/${listing.id}`}
+        className="block bg-white rounded-lg border border-neutral-200 p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+      >
+        <div className="flex items-start justify-between gap-3 flex-wrap">
+          {/* Left: category + status */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <CategoryPill category={listing.category} />
+            <StatusPill closedAt={listing.closed_at} />
+            {listing.closure_reason && (
+              <span className="text-xs text-neutral-500">({listing.closure_reason})</span>
+            )}
+          </div>
+
+          {/* Right: latest price + OTH icon (spacer so icon doesn't overlap price) */}
+          <div className="flex items-center gap-2">
+            {snap && snap.price != null && (
+              <span className="text-base font-semibold text-neutral-900 tabular-nums">
+                {formatPrice(snap.price)}
+              </span>
+            )}
+            {/* Placeholder to reserve space for the absolutely-positioned OTH icon */}
+            <span className="w-5 shrink-0" />
+          </div>
         </div>
 
-        {/* Right: latest price */}
-        {snap && snap.price != null && (
-          <span className="text-base font-semibold text-neutral-900 tabular-nums">
-            {formatPrice(snap.price)}
+        {/* Dates strip */}
+        <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
+          <div>
+            <p className="text-neutral-400 uppercase tracking-wide font-medium mb-0.5">First seen</p>
+            <p className="text-neutral-700">{fmtDate(listing.first_seen_at)}</p>
+            <p className="text-neutral-400">{timeAgo(listing.first_seen_at)}</p>
+          </div>
+          <div>
+            <p className="text-neutral-400 uppercase tracking-wide font-medium mb-0.5">Last seen</p>
+            <p className="text-neutral-700">{fmtDate(listing.last_seen_at)}</p>
+            <p className="text-neutral-400">{timeAgo(listing.last_seen_at)}</p>
+          </div>
+          <div>
+            <p className="text-neutral-400 uppercase tracking-wide font-medium mb-0.5">Closed</p>
+            <p className="text-neutral-700">{fmtDate(listing.closed_at)}</p>
+          </div>
+        </div>
+
+        {/* Latest snapshot summary */}
+        {snap && (
+          <div className="mt-3 flex items-center gap-3 text-xs text-neutral-600 flex-wrap">
+            {snap.status && (
+              <span className="bg-neutral-100 border border-neutral-200 px-2 py-0.5 rounded text-neutral-600">
+                {snap.status}
+              </span>
+            )}
+          </div>
+        )}
+      </Link>
+
+      {/* OTH external-link icon — positioned outside the Link to avoid nested <a> */}
+      <div className="absolute top-3.5 right-3.5">
+        {othUrl ? (
+          <a
+            href={othUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open on onthehouse.com.au"
+            aria-label="Open listing on On The House"
+            className="inline-flex text-neutral-400 hover:text-blue-600 transition-colors"
+          >
+            <ExternalLink size={13} />
+          </a>
+        ) : (
+          <span className="inline-flex text-neutral-200 cursor-not-allowed" aria-hidden="true">
+            <ExternalLink size={13} />
           </span>
         )}
       </div>
-
-      {/* Dates strip */}
-      <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
-        <div>
-          <p className="text-neutral-400 uppercase tracking-wide font-medium mb-0.5">First seen</p>
-          <p className="text-neutral-700">{fmtDate(listing.first_seen_at)}</p>
-          <p className="text-neutral-400">{timeAgo(listing.first_seen_at)}</p>
-        </div>
-        <div>
-          <p className="text-neutral-400 uppercase tracking-wide font-medium mb-0.5">Last seen</p>
-          <p className="text-neutral-700">{fmtDate(listing.last_seen_at)}</p>
-          <p className="text-neutral-400">{timeAgo(listing.last_seen_at)}</p>
-        </div>
-        <div>
-          <p className="text-neutral-400 uppercase tracking-wide font-medium mb-0.5">Closed</p>
-          <p className="text-neutral-700">{fmtDate(listing.closed_at)}</p>
-        </div>
-      </div>
-
-      {/* Latest snapshot summary */}
-      {snap && (
-        <div className="mt-3 flex items-center gap-3 text-xs text-neutral-600 flex-wrap">
-          {snap.status && (
-            <span className="bg-neutral-100 border border-neutral-200 px-2 py-0.5 rounded text-neutral-600">
-              {snap.status}
-            </span>
-          )}
-        </div>
-      )}
-    </Link>
+    </div>
   )
 }
 
@@ -276,7 +314,7 @@ export default function PropertyDetailPage() {
         ) : (
           <div className="flex flex-col gap-3">
             {listings.map((listing) => (
-              <ListingCard key={listing.id} listing={listing} />
+              <ListingCard key={listing.id} listing={listing} property={property} />
             ))}
           </div>
         )}
