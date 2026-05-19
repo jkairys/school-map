@@ -20,14 +20,15 @@ from listings_scraper.snapshot_diff import (
 
 @dataclass
 class FakeListing:
-    """Stand-in for OTHListing / ListingSnapshot.
+    """Stand-in for VendorListing / ListingSnapshot.
 
     Carries the material fields plus agent/agency to prove the diff ignores
-    them. Issue 05 will provide the real `OTHListing`; this fake satisfies
-    the `SnapshotLike` Protocol structurally.
+    them. Satisfies the `SnapshotLike` Protocol structurally.
     """
 
     price: int | None = 800_000
+    price_display: str | None = "800000"
+    price_kind: str | None = "price"
     title: str | None = "Lovely 3BR home"
     blurb: str | None = "Quiet street, north-facing."
     bedrooms: int | None = 3
@@ -48,6 +49,8 @@ def base() -> FakeListing:
 def test_material_fields_allow_list_is_exact():
     assert set(MATERIAL_FIELDS) == {
         "price",
+        "price_display",
+        "price_kind",
         "title",
         "blurb",
         "bedrooms",
@@ -63,6 +66,8 @@ def test_material_fields_allow_list_is_exact():
     "field,new_value",
     [
         ("price", 750_000),
+        ("price_display", "750000"),
+        ("price_kind", "auction"),
         ("title", "Lovely 4BR home"),
         ("blurb", "Different blurb."),
         ("bedrooms", 4),

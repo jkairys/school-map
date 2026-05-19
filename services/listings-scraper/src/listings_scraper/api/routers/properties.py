@@ -16,7 +16,7 @@ class PropertyRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
-    oth_property_id: str | None
+    external_property_id: str | None
     formatted_address: str
     postcode: str
     suburb_id: int

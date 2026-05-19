@@ -20,6 +20,8 @@ from listings_scraper.db.models import (
     ScrapeListSuburb,
     Suburb,
 )
+from listings_scraper.vendor import Vendor
+from listings_scraper.vendor_clients.base import PriceKind
 
 
 @pytest_asyncio.fixture
@@ -50,7 +52,8 @@ async def _seed_suburb(
                 name=name,
                 postcode=postcode,
                 state="QLD",
-                oth_slug=f"{name.lower().replace(' ', '-')}-qld-{postcode}",
+                slug=f"{name.lower().replace(' ', '-')}-qld-{postcode}",
+                source=Vendor.OTH,
             )
             s.add(row)
             await s.flush()
@@ -227,19 +230,22 @@ async def test_list_properties_filter_by_suburb(api_client, session_factory):
             s.add_all(
                 [
                     Property(
-                        oth_property_id="A-1",
+                        source=Vendor.OTH,
+                        external_property_id="A-1",
                         formatted_address="1 A St",
                         postcode="4101",
                         suburb_id=sub1,
                     ),
                     Property(
-                        oth_property_id="A-2",
+                        source=Vendor.OTH,
+                        external_property_id="A-2",
                         formatted_address="2 A St",
                         postcode="4101",
                         suburb_id=sub1,
                     ),
                     Property(
-                        oth_property_id="B-1",
+                        source=Vendor.OTH,
+                        external_property_id="B-1",
                         formatted_address="3 B St",
                         postcode="4102",
                         suburb_id=sub2,
@@ -281,7 +287,8 @@ async def _seed_property_listing_snapshot(
     async with factory() as s:
         async with s.begin():
             prop = Property(
-                oth_property_id=f"prop-{tag}",
+                source=Vendor.OTH,
+                external_property_id=f"prop-{tag}",
                 formatted_address=f"{tag} Test St ({category})",
                 postcode="4000",
                 suburb_id=suburb_id,
@@ -289,10 +296,11 @@ async def _seed_property_listing_snapshot(
             s.add(prop)
             await s.flush()
             listing = Listing(
+                source=Vendor.OTH,
                 property_id=prop.id,
                 suburb_id=suburb_id,
                 category=category,
-                oth_listing_id=f"oth-{prop.id}",
+                external_listing_id=f"oth-{prop.id}",
                 agent_name="Joe Agent",
                 agency_name="Acme Realty",
             )
@@ -496,30 +504,45 @@ async def test_e2e_run_drain_query(api_client, session_factory):
     # Drive a single worker against a stubbed OTH client that returns one
     # listing on page 0 of the forsale category and empty pages elsewhere.
     import httpx
+    from datetime import datetime, timezone
     from listings_scraper.oth_client import (
         Category,
         ListingFilters,
-        OTHListing,
         ResolvedSuburb,
         SearchPage,
     )
+    from listings_scraper.vendor import Vendor
+    from listings_scraper.vendor_clients.base import PriceKind, VendorListing
     from listings_scraper.queue import JobQueue
     from listings_scraper.worker_loop import run_worker
 
-    sample_payload = {
-        "oth_property_id": "PROP-E2E-1",
+    sample_raw_payload = {
+        "external_property_id": "PROP-E2E-1",
         "formatted_address": "10 E2E St",
         "postcode": "4300",
         "price": 875000,
         "title": "E2E house",
-        "blurb": "test",
-        "bedrooms": 4,
-        "bathrooms": 2,
-        "parking": 2,
-        "land_size_sqm": 700,
-        "property_type": "House",
-        "status": "available",
     }
+
+    def _make_e2e_listing() -> VendorListing:
+        return VendorListing(
+            source=Vendor.OTH,
+            external_property_id="PROP-E2E-1",
+            external_listing_id="PROP-E2E-1",
+            formatted_address="10 E2E St",
+            postcode="4300",
+            price=875000,
+            price_kind=PriceKind.PRICE,
+            raw_price_display="875000",
+            title="E2E house",
+            bedrooms=4,
+            bathrooms=2,
+            parking=2,
+            land_size_sqm=700.0,
+            property_type="House",
+            status="available",
+            observed_at=datetime.now(tz=timezone.utc),
+        )
 
     class _Session:
         def __init__(self) -> None:
@@ -544,10 +567,10 @@ async def test_e2e_run_drain_query(api_client, session_factory):
             http: httpx.AsyncClient,
         ) -> SearchPage:
             if category is Category.FORSALE and page == 0:
-                listing = OTHListing(**sample_payload)
+                listing = _make_e2e_listing()
                 return SearchPage(
                     listings=[listing],
-                    raw_payloads=[sample_payload],
+                    raw_payloads=[sample_raw_payload],
                     total=1,
                     page=0,
                     has_next=False,

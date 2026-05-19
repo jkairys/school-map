@@ -40,7 +40,7 @@ class ListingRead(BaseModel):
     property_id: int
     suburb_id: int
     category: str
-    oth_listing_id: str | None
+    external_listing_id: str | None
     agent_name: str | None
     agency_name: str | None
     first_seen_at: datetime

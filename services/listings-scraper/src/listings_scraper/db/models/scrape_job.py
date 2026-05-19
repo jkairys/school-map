@@ -69,7 +69,7 @@ class ScrapeJob(Base):
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
     source: Mapped[Vendor] = mapped_column(
-        _vendor_enum, nullable=False, default=Vendor.OTH, server_default="oth"
+        _vendor_enum, nullable=False, default=Vendor.OTH
     )
 
     __table_args__ = (

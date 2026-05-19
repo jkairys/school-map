@@ -40,6 +40,7 @@ from listings_scraper.db.models import (
     Property,
     Suburb,
 )
+from listings_scraper.vendor import Vendor
 
 
 _TRUNCATE_TABLES = (
@@ -192,7 +193,8 @@ async def _seed_suburb(
                 name=name,
                 postcode=postcode,
                 state=state,
-                oth_slug=f"{name.lower().replace(' ', '-')}-{postcode}",
+                slug=f"{name.lower().replace(' ', '-')}-{postcode}",
+                source=Vendor.OTH,
             )
             s.add(row)
             await s.flush()
@@ -337,7 +339,8 @@ async def test_listings_ls_show_history(
     async with session_factory_for_test() as s:
         async with s.begin():
             prop = Property(
-                oth_property_id="P-1",
+                source=Vendor.OTH,
+                external_property_id="P-1",
                 formatted_address="1 Main St",
                 postcode="4064",
                 suburb_id=sub_id,
@@ -345,10 +348,11 @@ async def test_listings_ls_show_history(
             s.add(prop)
             await s.flush()
             listing = Listing(
+                source=Vendor.OTH,
                 property_id=prop.id,
                 suburb_id=sub_id,
                 category="forsale",
-                oth_listing_id="L-1",
+                external_listing_id="L-1",
                 agent_name="Joe",
                 agency_name="Acme",
             )

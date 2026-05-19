@@ -5,9 +5,9 @@ campaigns) can attach to one property over time — the same house being
 relisted is a new Listing pointed at the same Property.
 
 Identification:
-- Primary natural key: `oth_property_id` (UNIQUE, nullable for safety on
-  pre-OTH inserts; reconciler always populates it).
-- Fallback: `(formatted_address, postcode)` UNIQUE.
+- Primary natural key: `(source, external_property_id)` partial unique index
+  WHERE external_property_id IS NOT NULL.
+- Fallback: `(source, formatted_address, postcode)` UNIQUE.
 """
 from datetime import datetime
 
@@ -17,9 +17,11 @@ from sqlalchemy import (
     DateTime,
     Enum,
     ForeignKey,
+    Index,
     Text,
     UniqueConstraint,
     func,
+    text,
 )
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -32,15 +34,24 @@ _vendor_enum = Enum("oth", "domain", name="vendor", create_type=False)
 class Property(Base):
     __tablename__ = "property"
     __table_args__ = (
-        UniqueConstraint("oth_property_id", name="uq_property_oth_property_id"),
+        # Partial unique index: (source, external_property_id) WHERE NOT NULL.
+        # Named as a "unique constraint" here; Alembic creates the index.
+        Index(
+            "uq_property_source_external_property_id",
+            "source",
+            "external_property_id",
+            unique=True,
+            postgresql_where=text("external_property_id IS NOT NULL"),
+        ),
         UniqueConstraint(
-            "formatted_address", "postcode", name="uq_property_address_postcode"
+            "source", "formatted_address", "postcode",
+            name="uq_property_source_address_postcode",
         ),
     )
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
 
-    oth_property_id: Mapped[str | None] = mapped_column(Text, nullable=True)
+    external_property_id: Mapped[str | None] = mapped_column(Text, nullable=True)
     formatted_address: Mapped[str] = mapped_column(Text, nullable=False)
     postcode: Mapped[str] = mapped_column(Text, nullable=False)
 
@@ -62,5 +73,5 @@ class Property(Base):
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
     source: Mapped[Vendor] = mapped_column(
-        _vendor_enum, nullable=False, default=Vendor.OTH, server_default="oth"
+        _vendor_enum, nullable=False, default=Vendor.OTH
     )

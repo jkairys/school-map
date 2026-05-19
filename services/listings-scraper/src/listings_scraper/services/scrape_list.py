@@ -95,7 +95,7 @@ class SuburbInList(BaseModel):
     name: str
     postcode: str
     state: str
-    oth_slug: str
+    slug: str
 
     model_config = ConfigDict(from_attributes=True)
 

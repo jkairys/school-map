@@ -57,7 +57,7 @@ async def listings_show_impl(*, listing_id: int) -> None:
     typer.echo(f"#{row['id']} {row['category']}")
     typer.echo(f"  property_id: {row['property_id']}")
     typer.echo(f"  suburb_id: {row['suburb_id']}")
-    typer.echo(f"  oth_listing_id: {row.get('oth_listing_id')}")
+    typer.echo(f"  external_listing_id: {row.get('external_listing_id')}")
     typer.echo(
         f"  agent: {row.get('agent_name')}  agency: {row.get('agency_name')}"
     )
