@@ -12,6 +12,7 @@ from listings_scraper.suburb_resolver import (
     NoMatchError,
     ResolvedSuburb,
 )
+from listings_scraper.vendor import Vendor
 
 router = APIRouter()
 
@@ -20,6 +21,7 @@ class ResolveRequest(BaseModel):
     name: str = Field(..., min_length=1)
     postcode: str | None = None
     state: str | None = None
+    source: Vendor = Vendor.OTH
 
 
 class CandidatesResponse(BaseModel):
@@ -37,7 +39,11 @@ async def resolve_endpoint(
 ) -> ResolvedSuburb:
     try:
         result = await resolve_suburb(
-            body.name, session=session, postcode=body.postcode, state=body.state
+            body.name,
+            session=session,
+            postcode=body.postcode,
+            state=body.state,
+            source=body.source,
         )
     except NoMatchError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e

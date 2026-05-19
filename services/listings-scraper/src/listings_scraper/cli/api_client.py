@@ -115,8 +115,14 @@ class CliApiClient:
             "DELETE", f"/scrape-lists/{list_id}/suburbs/{suburb_id}"
         )
 
-    async def list_run(self, list_id: int) -> dict[str, Any]:
-        r = await self._request("POST", f"/scrape-lists/{list_id}/run")
+    async def list_run(
+        self, list_id: int, *, source: str = "oth"
+    ) -> dict[str, Any]:
+        r = await self._request(
+            "POST",
+            f"/scrape-lists/{list_id}/run",
+            json={"source": source},
+        )
         return r.json()
 
     # --------- jobs ---------

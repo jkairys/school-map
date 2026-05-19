@@ -22,6 +22,7 @@ from listings_scraper.db.models.suburb import Suburb
 from listings_scraper.queue import JobQueue, NewJob
 from listings_scraper.services.suburb import resolve_suburb
 from listings_scraper.suburb_resolver import Match, ResolvedSuburb
+from listings_scraper.vendor import Vendor
 
 PRODUCER_CATEGORIES: tuple[str, ...] = ("forsale", "forrent", "recentlysold")
 """Categories the producer fans out for every suburb on a list run."""
@@ -281,12 +282,16 @@ async def run_list(
     session: AsyncSession,
     list_id: int,
     queue: JobQueue,
+    source: Vendor = Vendor.OTH,
 ) -> ScrapeListRunResult:
     """Fan out one ScrapeJob per (suburb × category) for the list.
 
     The list's filters are snapshotted into ``scrape_job.filters`` at
     enqueue time so editing the list afterwards doesn't mutate in-flight
     jobs' provenance. Returns the created job IDs in enqueue order.
+
+    ``source`` sets the vendor on every job created. Defaults to OTH for
+    backward compatibility with callers that do not pass a source.
 
     Raises:
         ScrapeListNotFoundError: list doesn't exist.
@@ -315,6 +320,7 @@ async def run_list(
                     category=category,
                     filters=dict(filters_snapshot),
                     scrape_list_id=list_id,
+                    source=source,
                 )
             )
             job_ids.append(job.id)

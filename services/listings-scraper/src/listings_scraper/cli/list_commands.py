@@ -132,7 +132,7 @@ def _handle_add_suburb_error(e: ApiError, name: str, list_id: int) -> None:
             )
             for m in cands:
                 typer.echo(
-                    f"  {m['name']}, {m['state']} {m['postcode']}  ({m.get('slug', m.get('oth_slug'))})",
+                    f"  {m['name']}, {m['state']} {m['postcode']}  ({m.get('slug')})",
                     err=True,
                 )
             raise typer.Exit(code=3) from e
@@ -154,11 +154,11 @@ def _handle_add_suburb_error(e: ApiError, name: str, list_id: int) -> None:
     raise typer.Exit(code=1) from e
 
 
-async def list_run_impl(*, target: str) -> None:
+async def list_run_impl(*, target: str, source: str = "oth") -> None:
     """Resolve `target` (numeric id or name) and POST .../run."""
     async with cli_api_client() as client:
         list_id = await resolve_list_id(client, target)
-        result = await client.list_run(list_id)
+        result = await client.list_run(list_id, source=source)
     typer.echo(
         f"Enqueued {result['count']} jobs for list {result['list_id']}: "
         f"{result['job_ids']}"

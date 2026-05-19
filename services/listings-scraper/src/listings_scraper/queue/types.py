@@ -4,6 +4,8 @@ from datetime import datetime
 from enum import Enum
 from typing import Any
 
+from listings_scraper.vendor import Vendor
+
 
 class ErrorClass(str, Enum):
     """Classification supplied by callers to ``JobQueue.fail()``.
@@ -34,6 +36,7 @@ class NewJob:
     category: str
     filters: dict[str, Any] = field(default_factory=dict)
     scrape_list_id: int | None = None
+    source: Vendor = Vendor.OTH
 
 
 @dataclass(slots=True)

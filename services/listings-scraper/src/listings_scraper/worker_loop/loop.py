@@ -1,4 +1,18 @@
-"""Worker loop implementation."""
+"""Worker loop implementation.
+
+The worker maintains a `VendorRegistry` — a dict mapping each Vendor to a
+(client, session) pair. When a job arrives, the worker looks at `job.source`
+to select the right client + session. Each vendor gets its own ScrapeSession
+(separate cookies / rotation state).
+
+For backward compatibility, jobs without a `source` field (legacy OTH rows)
+default to Vendor.OTH.
+
+Session lifecycle:
+  - Sessions are created once at worker startup and shared across all tasks
+    for that vendor (concurrency is per-vendor, not per-session).
+  - Rotation is managed within each session independently.
+"""
 
 import asyncio
 import logging
@@ -35,7 +49,7 @@ from listings_scraper.scrape_session import AntiBotError, ScrapeSession
 logger = logging.getLogger(__name__)
 
 
-class _OTHClientLike(Protocol):
+class _VendorClientLike(Protocol):
     async def search(
         self,
         suburb: ResolvedSuburb,
@@ -49,8 +63,13 @@ class _OTHClientLike(Protocol):
 class _ScrapeSessionLike(Protocol):
     async def http(self) -> httpx.AsyncClient: ...
 
+    async def page(self) -> object: ...
+
     async def rotate(self) -> None: ...
 
+
+# Backward compat alias — tests reference this name
+_OTHClientLike = _VendorClientLike
 
 SoftExpiryFn = Callable[..., Awaitable[int]]
 
@@ -66,6 +85,15 @@ def classify_exception(exc: BaseException) -> ErrorClass | None:
         return ErrorClass.ANTIBOT
     if isinstance(exc, (ParseError, pydantic.ValidationError)):
         return ErrorClass.PARSE
+    # Also handle Domain ParseError (different module, same concept)
+    try:
+        from listings_scraper.vendor_clients.domain.exceptions import (
+            ParseError as DomainParseError,
+        )
+        if isinstance(exc, DomainParseError):
+            return ErrorClass.PARSE
+    except ImportError:
+        pass
     if isinstance(exc, httpx.HTTPStatusError):
         sc = exc.response.status_code
         if 500 <= sc < 600:
@@ -103,12 +131,13 @@ async def _load_suburb(
         row = await session.scalar(select(Suburb).where(Suburb.id == suburb_id))
     if row is None:
         raise ParseError(f"job references unknown suburb_id={suburb_id}")
+    source = Vendor(row.source) if row.source else Vendor.OTH
     return ResolvedSuburb(
         id=row.id,
         name=row.name,
         postcode=row.postcode,
         state=row.state,
-        source=Vendor.OTH,
+        source=source,
         slug=row.slug,
         resolved_at=row.resolved_at,
     )
@@ -118,15 +147,22 @@ async def run_job(
     job: Job,
     *,
     session_factory: async_sessionmaker[AsyncSession],
-    oth_client: _OTHClientLike,
+    oth_client: _VendorClientLike,
     scrape_session: _ScrapeSessionLike,
     soft_expiry_sweep: SoftExpiryFn = run_soft_expiry_sweep,
+    # VendorRegistry: optional dict mapping Vendor → (client, session)
+    # When provided, overrides oth_client + scrape_session for non-OTH jobs.
+    vendor_registry: "dict[Vendor, tuple[_VendorClientLike, _ScrapeSessionLike]] | None" = None,
 ) -> None:
-    """Execute one job end-to-end: paginate OTH → reconcile → soft-expiry.
+    """Execute one job end-to-end: paginate vendor → reconcile → soft-expiry.
 
     The soft-expiry sweep runs only after the pagination loop has drained
     successfully. If any page raises, the sweep is skipped — a half-scraped
     feed must not close listings that simply weren't reached this run.
+
+    When `vendor_registry` is supplied, the client + session are selected by
+    `job.source`. This is the v3+ dispatch path; the `oth_client` /
+    `scrape_session` args remain for backward compatibility with existing tests.
     """
     if job.suburb_id is None:
         raise ParseError(f"job {job.id} has no suburb_id")
@@ -134,10 +170,21 @@ async def run_job(
     category = Category(job.category)
     filters = _filters_from_dict(job.filters or {})
 
+    # Dispatch: select client + session based on job.source
+    job_source = Vendor(job.source) if job.source else Vendor.OTH
+    active_client: _VendorClientLike
+    active_session: _ScrapeSessionLike
+    if vendor_registry is not None and job_source in vendor_registry:
+        active_client, active_session = vendor_registry[job_source]
+    else:
+        # Fall back to the OTH client + session (backward compat)
+        active_client = oth_client
+        active_session = scrape_session
+
     page_number = 0
     while True:
-        page = await oth_client.search(
-            suburb, category, filters, page_number, scrape_session
+        page = await active_client.search(
+            suburb, category, filters, page_number, active_session
         )
         if page.listings:
             await reconcile_batch(
@@ -160,12 +207,13 @@ async def worker_task(
     *,
     queue: JobQueue,
     session_factory: async_sessionmaker[AsyncSession],
-    oth_client: _OTHClientLike,
+    oth_client: _VendorClientLike,
     scrape_session: _ScrapeSessionLike,
     shutdown_event: asyncio.Event,
     poll_interval_s: float,
     soft_expiry_sweep: SoftExpiryFn = run_soft_expiry_sweep,
     task_name: str = "worker",
+    vendor_registry: "dict[Vendor, tuple[_VendorClientLike, _ScrapeSessionLike]] | None" = None,
 ) -> None:
     """One async task's lifetime: claim → run → success/fail until shutdown.
 
@@ -188,13 +236,22 @@ async def worker_task(
             continue
 
         logger.info(
-            "%s claimed job=%d suburb_id=%s category=%s attempt=%d",
+            "%s claimed job=%d suburb_id=%s category=%s source=%s attempt=%d",
             task_name,
             job.id,
             job.suburb_id,
             job.category,
+            job.source or "oth",
             job.attempts,
         )
+
+        # Determine the active session for this job's vendor (for rotate-on-antibot)
+        job_source = Vendor(job.source) if job.source else Vendor.OTH
+        if vendor_registry is not None and job_source in vendor_registry:
+            _, active_session = vendor_registry[job_source]
+        else:
+            active_session = scrape_session
+
         try:
             await run_job(
                 job,
@@ -202,6 +259,7 @@ async def worker_task(
                 oth_client=oth_client,
                 scrape_session=scrape_session,
                 soft_expiry_sweep=soft_expiry_sweep,
+                vendor_registry=vendor_registry,
             )
         except AntiBotError as exc:
             logger.warning(
@@ -211,7 +269,7 @@ async def worker_task(
                 exc,
             )
             try:
-                await scrape_session.rotate()
+                await active_session.rotate()
             except Exception:
                 logger.exception(
                     "%s job=%d session rotate failed", task_name, job.id
@@ -258,7 +316,7 @@ async def run_worker(
     *,
     queue: JobQueue | None = None,
     session_factory: async_sessionmaker[AsyncSession] | None = None,
-    oth_client: _OTHClientLike | None = None,
+    oth_client: _VendorClientLike | None = None,
     scrape_session: _ScrapeSessionLike | None = None,
     rate_limiter: RateLimiter | None = None,
     concurrency: int | None = None,
@@ -273,8 +331,8 @@ async def run_worker(
     Every dependency is injectable so integration tests can replace the
     `OTHApiClient` / `ScrapeSession` with stubs without spinning up
     camoufox or hitting OTH. In production, defaults wire up the real
-    `AsyncSessionLocal`, a fresh `RateLimiter`, and a single shared
-    `ScrapeSession`.
+    `AsyncSessionLocal`, a fresh `RateLimiter`, and per-vendor ScrapeSession
+    instances via the VendorRegistry pattern.
     """
     if concurrency is None:
         concurrency = settings.worker_concurrency
@@ -293,6 +351,30 @@ async def run_worker(
         session_cm = ScrapeSession(rate_limiter=rate_limiter)
         scrape_session = session_cm
     oth_client = oth_client or OTHApiClient()
+
+    # Build the VendorRegistry for source-aware dispatch.
+    # OTH uses the existing scrape_session (shared httpx path).
+    # Domain gets its own ScrapeSession with DOMAIN_CONFIG (browser page path).
+    domain_session_cm: ScrapeSession | None = None
+    vendor_registry: dict[Vendor, tuple[_VendorClientLike, _ScrapeSessionLike]]
+    try:
+        from listings_scraper.vendor_clients.domain import DomainApiClient
+        from listings_scraper.scrape_session.configs.domain import DOMAIN_CONFIG
+
+        domain_session_cm = ScrapeSession(
+            bootstrap_config=DOMAIN_CONFIG,
+            rate_limiter=rate_limiter,
+        )
+        vendor_registry = {
+            Vendor.OTH: (oth_client, scrape_session),
+            Vendor.DOMAIN: (DomainApiClient(), domain_session_cm),
+        }
+        logger.info("run_worker: VendorRegistry built for OTH + Domain")
+    except ImportError:
+        logger.warning(
+            "run_worker: Domain client not available — running OTH-only mode"
+        )
+        vendor_registry = {Vendor.OTH: (oth_client, scrape_session)}
 
     if shutdown_event is None:
         shutdown_event = asyncio.Event()
@@ -327,6 +409,7 @@ async def run_worker(
                 poll_interval_s=poll_interval_s,
                 soft_expiry_sweep=soft_expiry_sweep,
                 task_name=f"worker-{i}",
+                vendor_registry=vendor_registry,
             ),
             name=f"listings-worker-{i}",
         )
@@ -378,4 +461,6 @@ async def run_worker(
                 pass
         if owns_session and session_cm is not None:
             await session_cm.close()
+        if domain_session_cm is not None:
+            await domain_session_cm.close()
     logger.info("run_worker exited cleanly")

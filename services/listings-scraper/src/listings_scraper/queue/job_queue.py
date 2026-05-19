@@ -102,6 +102,7 @@ class JobQueue:
                     filters=dict(job.filters),
                     status="queued",
                     attempts=0,
+                    source=job.source,
                 )
                 session.add(row)
                 await session.flush()

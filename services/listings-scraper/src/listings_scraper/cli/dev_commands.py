@@ -9,6 +9,7 @@ imported by the worker, the API, or by tests.
 import asyncio
 import logging
 import time
+from datetime import datetime, timezone
 
 import httpx
 import typer
@@ -18,10 +19,11 @@ from listings_scraper.oth_client.payload import SEARCH_URL, build_search_payload
 from listings_scraper.oth_client.types import (
     Category,
     ListingFilters,
-    ResolvedSuburb,
 )
 from listings_scraper.rate_limiter import RateLimiter
 from listings_scraper.scrape_session import AntiBotError, ScrapeSession
+from listings_scraper.vendor import Vendor
+from listings_scraper.vendor_resolvers.base import ResolvedSuburb
 
 logger = logging.getLogger(__name__)
 
@@ -37,7 +39,23 @@ _SMOKE_PLAN: tuple[tuple[Category, int], ...] = (
     (Category.RECENTLYSOLD, 1),
 )
 
-_PADDINGTON = ResolvedSuburb(name="Paddington", postcode="4064", state="QLD")
+
+def _paddington_fixture() -> ResolvedSuburb:
+    """Synthetic Paddington fixture for the dev smoke command.
+
+    Not a real DB row — id=0 and resolved_at are placeholders so the
+    OTH search payload builder has something to work with without a DB
+    connection. Do not use outside this module.
+    """
+    return ResolvedSuburb(
+        id=0,
+        name="Paddington",
+        postcode="4064",
+        state="QLD",
+        source=Vendor.OTH,
+        slug="paddington-4064",
+        resolved_at=datetime.now(tz=timezone.utc),
+    )
 
 
 async def session_smoke_impl() -> int:
@@ -56,9 +74,10 @@ async def session_smoke_impl() -> int:
         f"rate_min={settings.rate_limit_min_interval}s "
         f"rate_max={settings.rate_limit_max_interval}s"
     )
+    paddington = _paddington_fixture()
     typer.echo(
-        f"smoke: target suburb={_PADDINGTON.name} {_PADDINGTON.state} "
-        f"{_PADDINGTON.postcode}"
+        f"smoke: target suburb={paddington.name} {paddington.state} "
+        f"{paddington.postcode}"
     )
 
     rate_limiter = RateLimiter()
@@ -73,7 +92,7 @@ async def session_smoke_impl() -> int:
 
         filters = ListingFilters()
         for idx, (category, page) in enumerate(_SMOKE_PLAN, start=1):
-            payload = build_search_payload(_PADDINGTON, category, filters, page)
+            payload = build_search_payload(paddington, category, filters, page)
             t0 = time.monotonic()
             try:
                 response = await client.post(SEARCH_URL, json=payload)
