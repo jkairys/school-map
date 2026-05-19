@@ -5,6 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from listings_scraper.db.engine import get_db, get_session_factory
 from listings_scraper.queue import JobQueue
+from listings_scraper.vendor import Vendor
 from listings_scraper.services.scrape_list import (
     AmbiguousSuburbError,
     ScrapeListCreate,
@@ -37,6 +38,17 @@ router = APIRouter()
 
 class CandidatesResponse(BaseModel):
     candidates: list[Match]
+
+
+class RunRequest(BaseModel):
+    """Optional body for POST /scrape-lists/{id}/run.
+
+    ``source`` selects which vendor the enqueued jobs will run against.
+    Defaults to OTH for backward compatibility with callers that POST with
+    an empty body.
+    """
+
+    source: Vendor = Vendor.OTH
 
 
 @router.post("", response_model=ScrapeListRead, status_code=status.HTTP_201_CREATED)
@@ -116,12 +128,13 @@ async def add_suburb_endpoint(
 @router.post("/{list_id}/run", response_model=ScrapeListRunResult)
 async def run_endpoint(
     list_id: int,
+    body: RunRequest = RunRequest(),
     session: AsyncSession = Depends(get_db),
     session_factory: async_sessionmaker[AsyncSession] = Depends(get_session_factory),
 ) -> ScrapeListRunResult:
     queue = JobQueue(session_factory)
     try:
-        return await run_list(session, list_id, queue)
+        return await run_list(session, list_id, queue, source=body.source)
     except ScrapeListNotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
 

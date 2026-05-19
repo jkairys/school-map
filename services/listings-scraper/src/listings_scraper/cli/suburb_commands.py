@@ -43,7 +43,7 @@ async def suburb_resolve_impl(
                     )
                     for m in candidates:
                         typer.echo(
-                            f"  {m['name']}, {m['state']} {m['postcode']}  ({m.get('slug', m.get('oth_slug'))})",
+                            f"  {m['name']}, {m['state']} {m['postcode']}  ({m.get('slug')})",
                             err=True,
                         )
                     raise typer.Exit(code=3) from e
@@ -80,7 +80,7 @@ def _candidates_from_detail(detail: Any) -> list[dict[str, Any]]:
 
 def _print_resolved(r: dict[str, Any]) -> None:
     typer.echo(f"{r['name']}, {r['state']} {r['postcode']}")
-    typer.echo(f"  slug: {r.get('slug', r.get('oth_slug'))}")
+    typer.echo(f"  slug: {r.get('slug')}")
     typer.echo(f"  id: {r['id']}")
 
 

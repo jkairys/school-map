@@ -10,6 +10,7 @@ import sys
 import typer
 
 from listings_scraper.cli.dev_commands import session_smoke
+from listings_scraper.vendor import Vendor
 from listings_scraper.cli.jobs_commands import jobs_ls_impl, jobs_show_impl
 from listings_scraper.cli.list_commands import (
     list_add_suburb_impl,
@@ -165,9 +166,16 @@ def list_rm_suburb(target: str, suburb: str) -> None:
 
 
 @list_app.command("run")
-def list_run(target: str) -> None:
+def list_run(
+    target: str,
+    source: Vendor = typer.Option(
+        Vendor.OTH,
+        "--source",
+        help="Vendor to run: oth or domain. Defaults to oth.",
+    ),
+) -> None:
     """Fan out scrape jobs for a list. `target` is an id or unique list name."""
-    asyncio.run(list_run_impl(target=target))
+    asyncio.run(list_run_impl(target=target, source=source.value))
 
 
 @jobs_app.command("ls")

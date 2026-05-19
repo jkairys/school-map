@@ -48,7 +48,7 @@ services/listings-scraper/
     ├── worker_loop/loop.py             # dispatches by job.source
     ├── services/                       # CRUD: scrape_list, suburb (each carries source)
     ├── cli/                            # `scraper` entrypoint; subcommands by source
-    └── api/                            # endpoints renamed to /v1/...; OTH /odin/... aliases for one release
+    └── api/                            # endpoints renamed to /v1/...; old unversioned paths kept as aliases for one release
 ```
 
 ### Vendor abstraction — signatures
@@ -303,7 +303,7 @@ Domain client + Akamai-aware session config + worker dispatch + live smoke + pub
   - `worker_loop.run_worker` accepts a `VendorRegistry` mapping `Vendor` → `(VendorClient, BootstrapConfig)`. `run_job` reads `job.source` and picks the client + session config. Each vendor gets its own `ScrapeSession` instance.
   - Live e2e `tests/e2e/test_live_domain.py` gated by `RUN_LIVE_DOMAIN_TESTS=1`. Existing OTH live test untouched.
   - Decision baked in here: `tags.tagText` only contributes `"Under offer"` / `"Sold"` to `status`; `"New"` / `"Updated"` are non-material noise (skipped from diff). Documented in the parser.
-  - CLI entrypoint `oth` → `scraper`. `scrape_lists run` learns `--source`. API: `/v1/scrape-lists`, `/v1/suburbs/resolve?source=oth|domain`, `/v1/jobs`. Old `/odin/*` paths and the `oth` CLI keep deprecation-aliased for one release. Env vars `OTH_*` → `LS_*` with pydantic-settings aliases. README rewrite.
+  - CLI entrypoint `oth` → `scraper`. `scrape_lists run` learns `--source`. API: `/v1/scrape-lists`, `/v1/suburbs/resolve?source=oth|domain`, `/v1/jobs`. Old unversioned paths (e.g. `/scrape-lists`, `/suburbs`) keep as deprecation aliases for one release alongside the new `/v1/...` canonical routes. Env vars `OTH_*` → `LS_*` with pydantic-settings aliases. README rewrite.
 - **Exit criteria:** unit tests parse the captured Paddington JSON into ≥18 `VendorListing` objects with sane field coverage; price normaliser passes a fixture-based table-test (`"Auction"`, `"Contact Agent"`, `"Offers over $X"`, `"Price Guide $X $Y"`, `"For Sale"`, `"EOI"`); live smoke produces ≥1 `listing_snapshot` row with `source='domain'`; both vendors driveable from the new CLI.
 - **Size estimate:** larger than PR 2, smaller than PR 1. The CLI/API rename is mostly mechanical; the Domain client + parser is the real work.
 
