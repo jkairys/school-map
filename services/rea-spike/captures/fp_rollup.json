@@ -1,0 +1,228 @@
+{
+  "winner": null,
+  "configs_run": [
+    "01_baseline",
+    "02_macos",
+    "03_macos_enau",
+    "04_headed_macos_enau",
+    "05_headed_geoip",
+    "06_no_humanize",
+    "07_google_warmup",
+    "08_virtual"
+  ],
+  "results": [
+    {
+      "name": "01_baseline",
+      "kwargs": {
+        "headless": "True",
+        "humanize": "True"
+      },
+      "special": null,
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": {
+        "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "referer": null,
+        "status": 429,
+        "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "title": "",
+        "html_size": 818,
+        "argonaut_typeof": "undefined",
+        "argonaut_dump_path": null,
+        "next_data_present": false,
+        "kasada_stub_detected": false,
+        "kpsdk_present": false,
+        "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_01_baseline/screenshot.png",
+        "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_01_baseline/body.html",
+        "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_01_baseline/navigator.json",
+        "error": null
+      },
+      "launch_error": null
+    },
+    {
+      "name": "02_macos",
+      "kwargs": {
+        "headless": "True",
+        "humanize": "True",
+        "os": "macos"
+      },
+      "special": null,
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": {
+        "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "referer": null,
+        "status": 429,
+        "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "title": "",
+        "html_size": 818,
+        "argonaut_typeof": "undefined",
+        "argonaut_dump_path": null,
+        "next_data_present": false,
+        "kasada_stub_detected": false,
+        "kpsdk_present": false,
+        "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_02_macos/screenshot.png",
+        "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_02_macos/body.html",
+        "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_02_macos/navigator.json",
+        "error": null
+      },
+      "launch_error": null
+    },
+    {
+      "name": "03_macos_enau",
+      "kwargs": {
+        "headless": "True",
+        "humanize": "True",
+        "os": "macos",
+        "locale": "en-AU"
+      },
+      "special": null,
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": {
+        "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "referer": null,
+        "status": 429,
+        "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "title": "",
+        "html_size": 818,
+        "argonaut_typeof": "undefined",
+        "argonaut_dump_path": null,
+        "next_data_present": false,
+        "kasada_stub_detected": false,
+        "kpsdk_present": false,
+        "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_03_macos_enau/screenshot.png",
+        "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_03_macos_enau/body.html",
+        "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_03_macos_enau/navigator.json",
+        "error": null
+      },
+      "launch_error": null
+    },
+    {
+      "name": "04_headed_macos_enau",
+      "kwargs": {
+        "headless": "False",
+        "humanize": "True",
+        "os": "macos",
+        "locale": "en-AU"
+      },
+      "special": null,
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": {
+        "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "referer": null,
+        "status": 429,
+        "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "title": "",
+        "html_size": 818,
+        "argonaut_typeof": "undefined",
+        "argonaut_dump_path": null,
+        "next_data_present": false,
+        "kasada_stub_detected": false,
+        "kpsdk_present": false,
+        "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_04_headed_macos_enau/screenshot.png",
+        "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_04_headed_macos_enau/body.html",
+        "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_04_headed_macos_enau/navigator.json",
+        "error": null
+      },
+      "launch_error": null
+    },
+    {
+      "name": "05_headed_geoip",
+      "kwargs": {
+        "headless": "False",
+        "humanize": "True",
+        "os": "macos",
+        "geoip": "True"
+      },
+      "special": null,
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": {
+        "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "referer": null,
+        "status": 429,
+        "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "title": "",
+        "html_size": 785,
+        "argonaut_typeof": "undefined",
+        "argonaut_dump_path": null,
+        "next_data_present": false,
+        "kasada_stub_detected": false,
+        "kpsdk_present": false,
+        "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_05_headed_geoip/screenshot.png",
+        "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_05_headed_geoip/body.html",
+        "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_05_headed_geoip/navigator.json",
+        "error": null
+      },
+      "launch_error": null
+    },
+    {
+      "name": "06_no_humanize",
+      "kwargs": {
+        "headless": "False",
+        "humanize": "False",
+        "os": "macos",
+        "geoip": "True"
+      },
+      "special": null,
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": {
+        "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "referer": null,
+        "status": 429,
+        "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "title": "",
+        "html_size": 784,
+        "argonaut_typeof": "undefined",
+        "argonaut_dump_path": null,
+        "next_data_present": false,
+        "kasada_stub_detected": false,
+        "kpsdk_present": false,
+        "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_06_no_humanize/screenshot.png",
+        "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_06_no_humanize/body.html",
+        "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_06_no_humanize/navigator.json",
+        "error": null
+      },
+      "launch_error": null
+    },
+    {
+      "name": "07_google_warmup",
+      "kwargs": {
+        "headless": "False",
+        "humanize": "True",
+        "os": "macos",
+        "locale": "en-AU"
+      },
+      "special": "warmup_google",
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": {
+        "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "referer": "https://www.google.com/search?q=realestate+paddington+brisbane",
+        "status": 429,
+        "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+        "title": "",
+        "html_size": 818,
+        "argonaut_typeof": "undefined",
+        "argonaut_dump_path": null,
+        "next_data_present": false,
+        "kasada_stub_detected": false,
+        "kpsdk_present": false,
+        "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_07_google_warmup/screenshot.png",
+        "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_07_google_warmup/body.html",
+        "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_07_google_warmup/navigator.json",
+        "error": null
+      },
+      "launch_error": null
+    },
+    {
+      "name": "08_virtual",
+      "kwargs": {
+        "headless": "virtual",
+        "humanize": "True",
+        "os": "macos"
+      },
+      "special": null,
+      "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+      "result": null,
+      "launch_error": "VirtualDisplayNotSupported('Virtual display is only supported on Linux.')",
+      "launch_traceback": "Traceback (most recent call last):\n  File \"/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/spike_fingerprint.py\", line 221, in run_config\n    async with AsyncCamoufox(**kwargs) as browser:\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/.venv/lib/python3.12/site-packages/camoufox/async_api.py\", line 31, in __aenter__\n    self.browser = await AsyncNewBrowser(_playwright, **self.launch_options)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/.venv/lib/python3.12/site-packages/camoufox/async_api.py\", line 82, in AsyncNewBrowser\n    kwargs['virtual_display'] = virtual_display.get()\n                                ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/.venv/lib/python3.12/site-packages/camoufox/virtdisplay.py\", line 84, in get\n    self.assert_linux()\n  File \"/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/.venv/lib/python3.12/site-packages/camoufox/virtdisplay.py\", line 146, in assert_linux\n    raise VirtualDisplayNotSupported(\"Virtual display is only supported on Linux.\")\ncamoufox.exceptions.VirtualDisplayNotSupported: Virtual display is only supported on Linux.\n"
+    }
+  ]
+}
