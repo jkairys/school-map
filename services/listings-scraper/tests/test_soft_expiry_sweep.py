@@ -5,7 +5,7 @@ category)` feed for longer than the configured window. Tests run against
 the shared Postgres test container (see conftest) and assert externally
 observable DB state.
 """
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 
 import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
@@ -19,7 +19,9 @@ from listings_scraper.listing_reconciler import (
     reconcile_batch,
     run_soft_expiry_sweep,
 )
-from listings_scraper.oth_client.types import Category, OTHListing
+from listings_scraper.vendor import Vendor
+from listings_scraper.vendor_clients.base import PriceKind, VendorListing
+from listings_scraper.vendor_clients.oth.types import Category
 
 WINDOW = timedelta(days=14)
 
@@ -33,7 +35,7 @@ async def _seed_suburb(
     name: str,
     postcode: str,
     state: str = "QLD",
-    oth_slug: str | None = None,
+    slug: str | None = None,
 ) -> int:
     async with session_factory() as session:
         async with session.begin():
@@ -41,7 +43,8 @@ async def _seed_suburb(
                 name=name,
                 postcode=postcode,
                 state=state,
-                oth_slug=oth_slug or f"{name.lower()}-{state.lower()}-{postcode}",
+                slug=slug or f"{name.lower()}-{state.lower()}-{postcode}",
+                source=Vendor.OTH,
             )
             session.add(row)
             await session.flush()
@@ -50,12 +53,14 @@ async def _seed_suburb(
 
 def _make_listing(
     *,
-    oth_property_id: str,
+    external_property_id: str,
     address: str,
     postcode: str = "4064",
-) -> OTHListing:
-    return OTHListing(
-        oth_property_id=oth_property_id,
+) -> VendorListing:
+    return VendorListing(
+        source=Vendor.OTH,
+        external_property_id=external_property_id,
+        external_listing_id=external_property_id,
         formatted_address=address,
         postcode=postcode,
         latitude=-27.4699,
@@ -67,15 +72,18 @@ def _make_listing(
         property_type="House",
         agent_name="Jane Agent",
         agency_name="Best Realty",
-        listing_url=f"https://onthehouse.com.au/listing/{oth_property_id}",
+        listing_url=f"https://onthehouse.com.au/listing/{external_property_id}",
         title="A house",
         status="ForSale",
         price=1_000_000,
+        price_kind=PriceKind.PRICE,
+        raw_price_display="1000000",
+        observed_at=datetime.now(tz=timezone.utc),
     )
 
 
-def _raw(listing: OTHListing) -> dict:
-    return {"oth_property_id": listing.oth_property_id}
+def _raw(listing: VendorListing) -> dict:
+    return {"external_property_id": listing.external_property_id}
 
 
 async def _backdate_last_seen(
@@ -104,7 +112,7 @@ async def test_sweep_closes_listing_outside_window(session_factory):
     suburb_id = await _seed_suburb(
         session_factory, name="Paddington", postcode="4064"
     )
-    listing = _make_listing(oth_property_id="PROP-1", address="1 Latrobe Tce")
+    listing = _make_listing(external_property_id="PROP-1", address="1 Latrobe Tce")
     await reconcile_batch(
         suburb_id,
         Category.FORSALE,
@@ -137,7 +145,7 @@ async def test_sweep_does_not_touch_listing_within_window(session_factory):
     suburb_id = await _seed_suburb(
         session_factory, name="Paddington", postcode="4064"
     )
-    listing = _make_listing(oth_property_id="PROP-1", address="1 Latrobe Tce")
+    listing = _make_listing(external_property_id="PROP-1", address="1 Latrobe Tce")
     await reconcile_batch(
         suburb_id,
         Category.FORSALE,
@@ -175,12 +183,12 @@ async def test_sweep_only_touches_matching_suburb_and_category(session_factory):
         session_factory, name="Toowong", postcode="4066"
     )
 
-    target = _make_listing(oth_property_id="PROP-A", address="1 A St")
+    target = _make_listing(external_property_id="PROP-A", address="1 A St")
     other_suburb_listing = _make_listing(
-        oth_property_id="PROP-B", address="2 B St"
+        external_property_id="PROP-B", address="2 B St"
     )
     other_category_listing = _make_listing(
-        oth_property_id="PROP-C", address="3 C St"
+        external_property_id="PROP-C", address="3 C St"
     )
 
     await reconcile_batch(
@@ -239,7 +247,7 @@ async def test_sweep_skips_already_closed_listings(session_factory):
     suburb_id = await _seed_suburb(
         session_factory, name="Paddington", postcode="4064"
     )
-    listing = _make_listing(oth_property_id="PROP-1", address="1 Latrobe Tce")
+    listing = _make_listing(external_property_id="PROP-1", address="1 Latrobe Tce")
     await reconcile_batch(
         suburb_id,
         Category.FORSALE,
@@ -285,8 +293,8 @@ async def test_seed_two_observe_one_advance_time_close_one(session_factory):
     suburb_id = await _seed_suburb(
         session_factory, name="Paddington", postcode="4064"
     )
-    seen = _make_listing(oth_property_id="PROP-SEEN", address="1 Seen St")
-    unseen = _make_listing(oth_property_id="PROP-UNSEEN", address="2 Unseen St")
+    seen = _make_listing(external_property_id="PROP-SEEN", address="1 Seen St")
+    unseen = _make_listing(external_property_id="PROP-UNSEEN", address="2 Unseen St")
 
     # Initial scrape: both listings present.
     await reconcile_batch(
@@ -325,13 +333,13 @@ async def test_seed_two_observe_one_advance_time_close_one(session_factory):
         rows = (
             await session.scalars(select(Listing).order_by(Listing.id))
         ).all()
-    by_property = {row.oth_listing_id: row for row in rows}
+    by_property = {row.external_listing_id: row for row in rows}
 
     seen_row = next(
-        r for r in rows if r.oth_listing_id and "PROP-SEEN" in r.oth_listing_id
+        r for r in rows if r.external_listing_id and "PROP-SEEN" in r.external_listing_id
     )
     unseen_row = next(
-        r for r in rows if r.oth_listing_id and "PROP-UNSEEN" in r.oth_listing_id
+        r for r in rows if r.external_listing_id and "PROP-UNSEEN" in r.external_listing_id
     )
     assert seen_row.closed_at is None
     assert unseen_row.closed_at is not None
@@ -351,7 +359,7 @@ async def test_failed_job_does_not_invoke_sweep(session_factory):
     suburb_id = await _seed_suburb(
         session_factory, name="Paddington", postcode="4064"
     )
-    listing = _make_listing(oth_property_id="PROP-1", address="1 Latrobe Tce")
+    listing = _make_listing(external_property_id="PROP-1", address="1 Latrobe Tce")
     await reconcile_batch(
         suburb_id,
         Category.FORSALE,
@@ -393,7 +401,7 @@ async def test_maintenance_endpoint_runs_sweep(session_factory, api_client):
     suburb_id = await _seed_suburb(
         session_factory, name="Paddington", postcode="4064"
     )
-    listing = _make_listing(oth_property_id="PROP-1", address="1 Latrobe Tce")
+    listing = _make_listing(external_property_id="PROP-1", address="1 Latrobe Tce")
     await reconcile_batch(
         suburb_id,
         Category.FORSALE,

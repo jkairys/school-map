@@ -12,7 +12,10 @@ _vendor_enum = Enum("oth", "domain", name="vendor", create_type=False)
 class Suburb(Base):
     __tablename__ = "suburb"
     __table_args__ = (
-        UniqueConstraint("name", "postcode", "state", name="uq_suburb_name_postcode_state"),
+        UniqueConstraint(
+            "source", "name", "postcode", "state",
+            name="uq_suburb_source_name_postcode_state",
+        ),
     )
 
     id: Mapped[int] = mapped_column(
@@ -23,10 +26,10 @@ class Suburb(Base):
     name: Mapped[str] = mapped_column(Text, nullable=False)
     postcode: Mapped[str] = mapped_column(Text, nullable=False)
     state: Mapped[str] = mapped_column(Text, nullable=False)
-    oth_slug: Mapped[str] = mapped_column(Text, nullable=False)
+    slug: Mapped[str] = mapped_column(Text, nullable=False)
     resolved_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
     source: Mapped[Vendor] = mapped_column(
-        _vendor_enum, nullable=False, default=Vendor.OTH, server_default="oth"
+        _vendor_enum, nullable=False, default=Vendor.OTH
     )

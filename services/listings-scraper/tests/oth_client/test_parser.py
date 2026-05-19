@@ -19,9 +19,9 @@ from pathlib import Path
 
 import pytest
 
-from listings_scraper.oth_client import Category
-from listings_scraper.oth_client.exceptions import ParseError
-from listings_scraper.oth_client.parser import parse_search_response
+from listings_scraper.vendor_clients.oth.types import Category
+from listings_scraper.vendor_clients.oth.exceptions import ParseError
+from listings_scraper.vendor_clients.oth.parser import parse_search_response
 from listings_scraper.vendor_clients.base import PriceKind
 
 
@@ -64,12 +64,24 @@ def test_parse_fixture_smoke(
         assert listing.formatted_address, "every record must have an address"
         assert listing.postcode, "every record must have a postcode"
         assert listing.title == listing.formatted_address
-        # price_kind is RENT_WEEKLY or UNKNOWN (contact agent) for forrent;
-        # PRICE or UNKNOWN (undisclosed) for forsale/recentlysold.
+        # price_kind must be one of the known values for the category.
         if category is Category.FORRENT:
-            assert listing.price_kind in {PriceKind.RENT_WEEKLY, PriceKind.UNKNOWN}
+            assert listing.price_kind in {
+                PriceKind.RENT_WEEKLY,
+                PriceKind.CONTACT,
+                PriceKind.UNKNOWN,
+            }
         else:
-            assert listing.price_kind in {PriceKind.PRICE, PriceKind.UNKNOWN}
+            # ForSale / RecentlySold: all classification outcomes are valid;
+            # just verify it's a recognised kind.
+            assert listing.price_kind in {
+                PriceKind.PRICE,
+                PriceKind.RANGE,
+                PriceKind.AUCTION,
+                PriceKind.EOI,
+                PriceKind.CONTACT,
+                PriceKind.UNKNOWN,
+            }
 
     # `status` is always one of the known values for the category.
     statuses = {l.status for l in result.listings}
@@ -131,14 +143,20 @@ def test_parse_recentlysold_first_record(oth_fixtures_dir: Path) -> None:
 def test_parse_forsale_includes_listing_with_dollar_displayprice(
     oth_fixtures_dir: Path,
 ) -> None:
-    """At least one ForSale fixture record exposes a parseable $ amount."""
+    """At least one ForSale fixture record exposes a parseable $ amount as PRICE kind."""
     body = _load_fixture(oth_fixtures_dir, "forsale_paddington_p0.json")
     page = parse_search_response(body, category=Category.FORSALE, page=0)
-    priced = [l for l in page.listings if l.price is not None]
-    assert priced, "expected at least one ForSale listing with a parseable price"
-    for l in priced:
+    # Only single-price listings (not range) — these have low >= _FORSALE_MIN_PRICE.
+    single_priced = [l for l in page.listings if l.price_kind is PriceKind.PRICE]
+    assert single_priced, "expected at least one ForSale listing with PRICE kind"
+    for l in single_priced:
+        assert l.price is not None
         assert l.price >= 100_000
-        assert l.price_kind is PriceKind.PRICE
+    # Range listings are also priced — both ends should be at or above the floor.
+    range_priced = [l for l in page.listings if l.price_kind is PriceKind.RANGE]
+    for l in range_priced:
+        assert l.price is not None and l.price >= 100_000
+        assert l.price_high is not None and l.price_high >= 100_000
 
 
 def test_parse_forsale_multi_agent_takes_first(oth_fixtures_dir: Path) -> None:
@@ -319,7 +337,7 @@ def test_forrent_weekly_rent_uses_listing_price() -> None:
     assert listing.price_kind is PriceKind.RENT_WEEKLY
 
 
-def test_forrent_missing_price_yields_none() -> None:
+def test_forrent_missing_price_yields_contact() -> None:
     rec = _minimal_sale_record()
     rec["category"] = "RentalListing"
     rec["listing"]["price"] = None
@@ -327,7 +345,7 @@ def test_forrent_missing_price_yields_none() -> None:
     page = parse_search_response(_wrap([rec]), category=Category.FORRENT, page=0)
     listing = page.listings[0]
     assert listing.price is None
-    assert listing.price_kind is PriceKind.UNKNOWN
+    assert listing.price_kind is PriceKind.CONTACT
 
 
 def test_recentlysold_pulls_price_and_agency_from_last_sale() -> None:

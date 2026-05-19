@@ -1,7 +1,7 @@
 """SQLAlchemy ORM model for the listing table.
 
 A `listing` is one marketing campaign for a property — it has a category
-(`forsale`/`forrent`/`recentlysold`), an OTH listing ID, and lifecycle
+(`forsale`/`forrent`/`recentlysold`), an external listing ID, and lifecycle
 timestamps. The same physical property can have multiple Listings over time.
 """
 from datetime import datetime
@@ -62,7 +62,7 @@ class Listing(Base):
 
     category: Mapped[str] = mapped_column(listing_category_enum, nullable=False)
 
-    oth_listing_id: Mapped[str | None] = mapped_column(Text, nullable=True)
+    external_listing_id: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     agent_name: Mapped[str | None] = mapped_column(Text, nullable=True)
     agency_name: Mapped[str | None] = mapped_column(Text, nullable=True)
@@ -79,10 +79,18 @@ class Listing(Base):
     closure_reason: Mapped[str | None] = mapped_column(closure_reason_enum, nullable=True)
 
     source: Mapped[Vendor] = mapped_column(
-        _vendor_enum, nullable=False, default=Vendor.OTH, server_default="oth"
+        _vendor_enum, nullable=False, default=Vendor.OTH
     )
 
     __table_args__ = (
+        # Partial unique index: (source, external_listing_id) WHERE NOT NULL.
+        Index(
+            "uq_listing_source_external_listing_id",
+            "source",
+            "external_listing_id",
+            unique=True,
+            postgresql_where=text("external_listing_id IS NOT NULL"),
+        ),
         # The reconciler's hot lookup: open listing for a (property, suburb, category).
         Index(
             "ix_listing_property_suburb_category_open",

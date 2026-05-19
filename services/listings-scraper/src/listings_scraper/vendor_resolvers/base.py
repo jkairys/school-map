@@ -23,8 +23,7 @@ class ResolvedSuburb(BaseModel):
     slug/URL format applies. The `slug` field carries the vendor-specific
     URL fragment (OTH: `"paddington-4064"`, Domain: `"paddington-qld-4064"`).
 
-    PR 2 renames `oth_slug` → `slug` in the DB; for PR 1 we map `oth_slug`
-    to `slug` at the Python level so the model is vendor-neutral.
+    PR 2 renamed `oth_slug` → `slug` in the DB; the model uses `slug` throughout.
     """
 
     model_config = ConfigDict(from_attributes=True)
@@ -33,8 +32,8 @@ class ResolvedSuburb(BaseModel):
     name: str
     postcode: str
     state: str
-    source: Vendor = Vendor.OTH   # default for backward-compat during PR 1
-    slug: Optional[str] = None    # vendor-specific slug; maps from oth_slug in PR 1
+    source: Vendor = Vendor.OTH
+    slug: Optional[str] = None    # vendor-specific slug fragment
 
     resolved_at: datetime
 

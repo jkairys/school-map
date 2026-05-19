@@ -9,26 +9,19 @@ The parser is defensive about missing fields: OTH omits `address.location`
 for some older sold properties, omits `landSize` for apartments, omits the
 `listing` block entirely for `RecentlySold` records, and so on. Anything
 optional in `VendorListing` may legitimately be `None`.
+
+Price parsing is delegated to `price_normaliser.parse_oth_listing()` which
+owns the OTH-specific regex and classification rules.
 """
 
-import re
 from datetime import datetime, timezone
 from typing import Any, Optional
 
+from listings_scraper.price_normaliser import parse_oth_listing
 from listings_scraper.vendor import Vendor
-from listings_scraper.vendor_clients.base import PriceKind, SearchPage, VendorListing
+from listings_scraper.vendor_clients.base import SearchPage, VendorListing
 from listings_scraper.vendor_clients.oth.exceptions import ParseError
 from listings_scraper.vendor_clients.oth.types import Category
-
-# A `$1,485,000` or `$699,000` style amount, as it appears inside a free-text
-# `displayPrice` for ForSale listings. We require at least one comma-separated
-# group (i.e. >= 1000) so noise like "Early $2m" doesn't parse to "$2".
-_DOLLAR_AMOUNT_RE = re.compile(r"\$\s*(\d{1,3}(?:,\d{3})+)")
-
-# Sale-price floor for ForSale listings parsed out of free-text. Anything
-# below this is almost certainly a parse mistake (e.g. "$2m" → 2) rather
-# than a real asking price.
-_FORSALE_MIN_PRICE = 100_000
 
 # `landSize` is reported in this unit by OTH for AU residential data. If a
 # different unit shows up we bail out — better to lose the field than emit
@@ -103,18 +96,16 @@ def _parse_listing(
     postcode = address.get("postCode") or ""
     location = address.get("location") or {}
 
-    raw_price_display, price, price_kind = _extract_price(item, category)
+    normalised = parse_oth_listing(item, category)
     agent_name, agency_name = _extract_agent_and_agency(item, category)
     status = _derive_status(item, category)
 
     external_property_id = str(oth_id)
     listing_url = _extract_oth_web_url(item.get("links"))
 
-    # TODO (PR 2): OTH doesn't surface a stable per-campaign listing ID on
-    # search-list responses. Until PR 2 introduces a real oth_listing_id
-    # field, we derive a deterministic external_listing_id from the property
-    # ID (unique per property, so per-campaign dedup is approximate). When PR
-    # 2 surfaces the real field, replace this with the OTH campaign ID.
+    # OTH doesn't surface a stable per-campaign listing ID on search-list
+    # responses. We derive a deterministic external_listing_id from the
+    # property ID (unique per property, so per-campaign dedup is approximate).
     external_listing_id = external_property_id
 
     return VendorListing(
@@ -137,57 +128,13 @@ def _parse_listing(
         agency_name=agency_name,
         title=formatted_address,
         status=status,
-        raw_price_display=raw_price_display,
-        price=price,
-        price_high=None,  # OTH search results don't expose price ranges; PR 2 revisit
-        price_kind=price_kind,
+        raw_price_display=normalised.display,
+        price=normalised.low,
+        price_high=normalised.high,
+        price_kind=normalised.kind,
         observed_at=observed_at,
     )
 
-
-def _extract_price(
-    item: dict[str, Any], category: Category
-) -> tuple[Optional[str], Optional[int], PriceKind]:
-    """Return (raw_price_display, price_int, price_kind) for the given item."""
-    if category is Category.RECENTLYSOLD:
-        last_sale = item.get("lastSale") or {}
-        price = _as_int_optional(last_sale.get("salePrice"))
-        display = str(price) if price is not None else None
-        kind = PriceKind.PRICE if price is not None else PriceKind.UNKNOWN
-        return display, price, kind
-
-    listing = item.get("listing") or {}
-    if category is Category.FORRENT:
-        # OTH gives us a clean integer weekly rent on rental listings; trust it.
-        price = _as_int_optional(listing.get("price"))
-        display_raw = listing.get("displayPrice")
-        display = display_raw if isinstance(display_raw, str) and display_raw else (
-            str(price) if price is not None else None
-        )
-        kind = PriceKind.RENT_WEEKLY if price is not None else PriceKind.UNKNOWN
-        return display, price, kind
-
-    # ForSale: most cards expose a free-text displayPrice ("For Sale",
-    # "Auction", "Offers over $2,450,000"). We extract a dollar figure when
-    # one is present; otherwise the price is genuinely undisclosed.
-    display_raw = listing.get("displayPrice")
-    display = display_raw if isinstance(display_raw, str) and display_raw else None
-    parsed = _parse_display_price(display)
-    if parsed is not None and parsed < _FORSALE_MIN_PRICE:
-        # Defensive: don't propagate a price that's almost certainly a
-        # parse artefact (e.g. "$2m" → 2).
-        parsed = None
-    kind = PriceKind.PRICE if parsed is not None else PriceKind.UNKNOWN
-    return display, parsed, kind
-
-
-def _parse_display_price(display: Optional[str]) -> Optional[int]:
-    if not display:
-        return None
-    match = _DOLLAR_AMOUNT_RE.search(display)
-    if not match:
-        return None
-    return int(match.group(1).replace(",", ""))
 
 
 def _extract_agent_and_agency(

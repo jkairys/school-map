@@ -124,7 +124,7 @@ async def _lookup_cached(
             postcode=row.postcode,
             state=row.state,
             source=Vendor.OTH,
-            slug=row.oth_slug,
+            slug=row.slug,
             resolved_at=row.resolved_at,
         )
     return None
@@ -144,7 +144,7 @@ async def _upsert(session: AsyncSession, match: Match) -> ResolvedSuburb:
             postcode=existing.postcode,
             state=existing.state,
             source=Vendor.OTH,
-            slug=existing.oth_slug,
+            slug=existing.slug,
             resolved_at=existing.resolved_at,
         )
 
@@ -152,7 +152,8 @@ async def _upsert(session: AsyncSession, match: Match) -> ResolvedSuburb:
         name=match.name,
         postcode=match.postcode,
         state=match.state,
-        oth_slug=match.slug or _build_slug(match.name, match.postcode),
+        slug=match.slug or _build_slug(match.name, match.postcode),
+        source=Vendor.OTH,
     )
     session.add(row)
     await session.commit()
@@ -163,7 +164,7 @@ async def _upsert(session: AsyncSession, match: Match) -> ResolvedSuburb:
         postcode=row.postcode,
         state=row.state,
         source=Vendor.OTH,
-        slug=row.oth_slug,
+        slug=row.slug,
         resolved_at=row.resolved_at,
     )
 

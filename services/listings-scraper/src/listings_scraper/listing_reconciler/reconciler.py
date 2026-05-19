@@ -6,7 +6,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from listings_scraper.db.models import Listing, ListingSnapshot, Property
-from listings_scraper.vendor_clients.base import VendorListing
+from listings_scraper.vendor_clients.base import PriceKind, VendorListing
 from listings_scraper.vendor_clients.oth.types import Category
 from listings_scraper.snapshot_diff import ChangedFields, diff
 
@@ -38,11 +38,9 @@ async def reconcile_batch(
     after this returns; we don't expose intermediate handles.
 
     The lookup key is `(source, external_property_id)` then falls back to
-    `(formatted_address, postcode)`. The `source` column has default 'oth'
-    via DB server_default so existing rows survive; PR 1 passes `Vendor.OTH`
-    explicitly. Column renames (`oth_property_id` → `external_property_id`,
-    `oth_listing_id` → `external_listing_id`) happen in PR 2's migration;
-    for PR 1 the DB columns still use the old names.
+    `(source, formatted_address, postcode)`. The `source` column has a
+    Python-level default of `Vendor.OTH`; the DB server_default was dropped
+    in migration 0007 to force writers to be explicit.
 
     Args:
         suburb_id: PK of the suburb the job is scraping.
@@ -122,10 +120,9 @@ async def reconcile_batch(
 class _ObservationView:
     """Wraps a VendorListing so it satisfies the snapshot_diff.SnapshotLike Protocol.
 
-    The Protocol fields (price, title, blurb, bedrooms, bathrooms, parking,
-    land_size_sqm, property_type, status) are read directly from the
-    VendorListing — except `blurb`, which the search API does not populate
-    in v1 (issue 27 in the PRD). We surface it as `None`.
+    The Protocol fields are read directly from the VendorListing — except
+    `blurb`, which the search API does not populate in v1 (issue 27 in the
+    PRD). We surface it as `None`.
     """
 
     __slots__ = ("_l",)
@@ -136,6 +133,14 @@ class _ObservationView:
     @property
     def price(self) -> int | None:
         return self._l.price
+
+    @property
+    def price_display(self) -> str | None:
+        return self._l.raw_price_display
+
+    @property
+    def price_kind(self) -> str | None:
+        return self._l.price_kind.value if self._l.price_kind else None
 
     @property
     def title(self) -> str | None:
@@ -181,18 +186,17 @@ async def _upsert_property(
     """Find or insert a Property row.
 
     Lookup order:
-    1. By `oth_property_id` (column name stays as-is in PR 1; renamed in PR 2).
-    2. Fallback by `(formatted_address, postcode)` — guards against the
-       vendor reissuing a propertyId for the same physical address.
+    1. By `(source, external_property_id)` — the primary natural key.
+    2. Fallback by `(source, formatted_address, postcode)` — guards against
+       the vendor reissuing a property ID for the same physical address.
 
     Returns the row and whether it was newly inserted.
     """
-    # NOTE: PR 1 keeps oth_property_id column name; PR 2 migration renames it
-    # to external_property_id. The ORM model will be updated in PR 2.
     if listing.external_property_id:
         existing = await session.scalar(
             select(Property).where(
-                Property.oth_property_id == listing.external_property_id
+                Property.source == listing.source,
+                Property.external_property_id == listing.external_property_id,
             )
         )
         if existing is not None:
@@ -201,19 +205,21 @@ async def _upsert_property(
 
     existing = await session.scalar(
         select(Property).where(
+            Property.source == listing.source,
             Property.formatted_address == listing.formatted_address,
             Property.postcode == listing.postcode,
         )
     )
     if existing is not None:
         # Backfill the property ID if we earlier inserted via the address fallback.
-        if existing.oth_property_id is None and listing.external_property_id:
-            existing.oth_property_id = listing.external_property_id
+        if existing.external_property_id is None and listing.external_property_id:
+            existing.external_property_id = listing.external_property_id
         _maybe_backfill_location(existing, listing)
         return existing, False
 
     prop = Property(
-        oth_property_id=listing.external_property_id,
+        source=listing.source,
+        external_property_id=listing.external_property_id,
         formatted_address=listing.formatted_address,
         postcode=listing.postcode,
         suburb_id=suburb_id,
@@ -263,12 +269,11 @@ async def _find_or_open_listing(
         return existing, False
 
     row = Listing(
+        source=listing.source,
         property_id=property_id,
         suburb_id=suburb_id,
         category=category.value,
-        # NOTE: PR 1 keeps oth_listing_id column name; PR 2 migration renames
-        # it to external_listing_id. Use external_listing_id from VendorListing.
-        oth_listing_id=listing.external_listing_id,
+        external_listing_id=listing.external_listing_id,
         agent_name=listing.agent_name,
         agency_name=listing.agency_name,
     )
@@ -299,6 +304,9 @@ async def _insert_snapshot(
     snapshot = ListingSnapshot(
         listing_id=listing_id,
         price=view.price,
+        price_display=view.price_display,
+        price_high=listing.price_high,
+        price_kind=listing.price_kind,
         title=view.title,
         blurb=view.blurb,
         bedrooms=view.bedrooms,

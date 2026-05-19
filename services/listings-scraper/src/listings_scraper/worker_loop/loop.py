@@ -109,7 +109,7 @@ async def _load_suburb(
         postcode=row.postcode,
         state=row.state,
         source=Vendor.OTH,
-        slug=row.oth_slug,
+        slug=row.slug,
         resolved_at=row.resolved_at,
     )
 

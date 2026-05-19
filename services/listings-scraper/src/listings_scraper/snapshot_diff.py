@@ -28,6 +28,8 @@ INITIAL_SENTINEL = "__initial__"
 
 MATERIAL_FIELDS: tuple[str, ...] = (
     "price",
+    "price_display",
+    "price_kind",
     "title",
     "blurb",
     "bedrooms",
@@ -48,6 +50,8 @@ class SnapshotLike(Protocol):
     """
 
     price: int | None
+    price_display: str | None
+    price_kind: str | None
     title: str | None
     blurb: str | None
     bedrooms: int | None

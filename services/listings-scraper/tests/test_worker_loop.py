@@ -15,6 +15,7 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from listings_scraper.db.models import Suburb
+from listings_scraper.vendor import Vendor
 from listings_scraper.oth_client import (
     Category,
     ListingFilters,
@@ -52,7 +53,8 @@ async def _seed_suburb(
                 name=name,
                 postcode=postcode,
                 state="QLD",
-                oth_slug=f"{name.lower()}-qld-{postcode}",
+                slug=f"{name.lower()}-qld-{postcode}",
+                source=Vendor.OTH,
             )
             session.add(row)
             await session.flush()

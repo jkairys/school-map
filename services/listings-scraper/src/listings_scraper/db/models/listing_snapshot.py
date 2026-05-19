@@ -15,6 +15,7 @@ from typing import Any
 from sqlalchemy import (
     BigInteger,
     DateTime,
+    Enum,
     ForeignKey,
     Index,
     Integer,
@@ -25,6 +26,13 @@ from sqlalchemy.dialects.postgresql import ARRAY, JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
 from listings_scraper.db.engine import Base
+from listings_scraper.vendor_clients.base import PriceKind
+
+_price_kind_enum = Enum(
+    "price", "range", "auction", "eoi", "contact", "rent_weekly", "unknown",
+    name="price_kind",
+    create_type=False,
+)
 
 
 class ListingSnapshot(Base):
@@ -43,6 +51,14 @@ class ListingSnapshot(Base):
     )
 
     price: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    price_display: Mapped[str | None] = mapped_column(Text, nullable=True)
+    price_high: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    price_kind: Mapped[PriceKind] = mapped_column(
+        _price_kind_enum,
+        nullable=False,
+        default=PriceKind.UNKNOWN,
+        server_default="unknown",
+    )
     title: Mapped[str | None] = mapped_column(Text, nullable=True)
     blurb: Mapped[str | None] = mapped_column(Text, nullable=True)
     bedrooms: Mapped[int | None] = mapped_column(Integer, nullable=True)

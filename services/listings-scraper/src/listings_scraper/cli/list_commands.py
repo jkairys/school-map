@@ -132,7 +132,7 @@ def _handle_add_suburb_error(e: ApiError, name: str, list_id: int) -> None:
             )
             for m in cands:
                 typer.echo(
-                    f"  {m['name']}, {m['state']} {m['postcode']}  ({m['oth_slug']})",
+                    f"  {m['name']}, {m['state']} {m['postcode']}  ({m.get('slug', m.get('oth_slug'))})",
                     err=True,
                 )
             raise typer.Exit(code=3) from e
