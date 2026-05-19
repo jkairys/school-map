@@ -1,0 +1,18 @@
+{
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:135.0) Gecko/20100101 Firefox/135.0",
+  "platform": "MacIntel",
+  "languages": [
+    "en-AU",
+    "en"
+  ],
+  "language": "en-AU",
+  "webdriver": false,
+  "hardwareConcurrency": 10,
+  "deviceMemory": null,
+  "screen": {
+    "w": 960,
+    "h": 540,
+    "dpr": 1
+  },
+  "timezone": "Australia/Brisbane"
+}

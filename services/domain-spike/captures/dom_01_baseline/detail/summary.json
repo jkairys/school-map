@@ -1,0 +1,46 @@
+{
+  "name": "01_baseline_detail",
+  "kwargs": {
+    "headless": "True",
+    "humanize": "True"
+  },
+  "result": {
+    "url": "https://www.domain.com.au/31-alma-street-paddington-qld-4064-2020841855",
+    "slug": "detail",
+    "status": 200,
+    "final_url": "https://www.domain.com.au/31-alma-street-paddington-qld-4064-2020841855",
+    "title": "31 Alma Street, Paddington QLD 4064 | Domain",
+    "html_size": 545175,
+    "next_data_present": true,
+    "next_data_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/domain-spike/captures/next_data_detail_2020841855.json",
+    "listing_dom_present": true,
+    "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/domain-spike/captures/dom_01_baseline/detail/screenshot.png",
+    "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/domain-spike/captures/dom_01_baseline/detail/body.html",
+    "navigator_path": null,
+    "all_cookie_names": [
+      "DEVICE_SESSIONID",
+      "searchSOI",
+      "bm_ss",
+      "bm_so",
+      "_dgidb",
+      "ppid",
+      "bm_lso",
+      "_abck",
+      "ak_bmsc",
+      "bm_mi",
+      "bm_sz",
+      "domain-mixpanel-id_ab0bde70050c3eabaaf8824402fa01e0",
+      "bm_s"
+    ],
+    "akamai_cookies": [
+      "bm_so",
+      "bm_lso",
+      "_abck",
+      "ak_bmsc",
+      "bm_mi",
+      "bm_sz"
+    ],
+    "sentinels": [],
+    "error": null
+  }
+}

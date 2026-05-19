@@ -1,0 +1,50 @@
+[
+  {
+    "phase": "request",
+    "method": "GET",
+    "url": "https://www.realestate.com.au/",
+    "resource_type": "document"
+  },
+  {
+    "phase": "response",
+    "status": 429,
+    "url": "https://www.realestate.com.au/",
+    "headers_subset": {
+      "content-type": "text/html; charset=utf-8",
+      "x-kpsdk-ct": "0aMLaarDX9WfitKYfkZpIueeo3b243GYfkDPmVYUTSdOcLlJfjeFkutqXLY7JrBXfEdbeTt1NvqneX8U6KD6sS553vbfrtloQGHbcIP8hxXL8vCsP7YyrHi5REUKYmuY22VeF1tiXlEHxSnbb90kqfdFf4oA3Cwgl4ww8iFVYLFrAJZQ6fitGpaNixfUrFkOnpxnxcHxHw6Ki9G71K",
+      "set-cookie": "Country=AU; path=/; domain=.realestate.com.au\new_bkt=40; Max-Age=2592000; Path=/; HttpOnly; Secure\nKP_UIDz-ssn=0aMLaarDX9WfitKYfkZpIueeo3b243GYfkDPmVYUTSdOcLlJfjeFkutqXLY7JrBXfEdbeTt1NvqneX8U6KD6sS553vbfrtloQGHbcIP8hxXL8vCsP7YyrHi5REUKYmuY22VeF1tiXlEHxSnbb90kqfdFf4oA3Cwgl4ww8iFVYLFrAJZQ6fitGpaNixfUrFkOnpxnxcHxHw6Ki9G71K; Max-Age=86400; Path=/; Expires=Tue, 19 May 2026 10:24:29 GMT; HttpOnly; Secure; SameSite=None\nKP_UIDz=0aMLaarDX9WfitKYfkZpIueeo3b243GYfkDPmVYUTSdOcLlJfjeFkutqXLY7JrBXfEdbeTt1NvqneX8U6KD6sS553vbfrtloQGHbcIP8hxXL8vCsP7YyrHi5REUKYmuY22VeF1tiXlEHxSnbb90kqfdFf4oA3Cwgl4ww8iFVYLFrAJZQ6fitGpaNixfUrFkOnpxnxcHxHw6Ki9G71K; Max-Age=86400; Path=/; Expires=Tue, 19 May 2026 10:24:29 GMT; HttpOnly"
+    }
+  },
+  {
+    "phase": "request",
+    "method": "GET",
+    "url": "https://www.realestate.com.au/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/ips.js?KP_UIDz=0aMLaarDX9WfitKYfkZpIueeo3b243GYfkDPmVYUTSdOcLlJfjeFkutqXLY7JrBXfEdbeTt1NvqneX8U6KD6sS553vbfrtloQGHbcIP8hxXL8vCsP7YyrHi5REUKYmuY22VeF1tiXlEHxSnbb90kqfdFf4oA3Cwgl4ww8iFVYLFrAJZQ6fitGpaNixfUrFkOnpxnxcHxHw6Ki9G71K&x-kpsdk-im=AAJf1_DuRjGRHZvjlVoBW0DDBnGvfMS2idsy-u56zgGq1O77tC68luuGqPsMIGOGaEJgylO8fxgTIO2pwsphYFD04MRX6nCL9C2tEg4wmaRBeeTPlBkxiuMq7niZqnEd68bhq7COp-1qECs8x653",
+    "resource_type": "script"
+  },
+  {
+    "phase": "response",
+    "status": 200,
+    "url": "https://www.realestate.com.au/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/ips.js?KP_UIDz=0aMLaarDX9WfitKYfkZpIueeo3b243GYfkDPmVYUTSdOcLlJfjeFkutqXLY7JrBXfEdbeTt1NvqneX8U6KD6sS553vbfrtloQGHbcIP8hxXL8vCsP7YyrHi5REUKYmuY22VeF1tiXlEHxSnbb90kqfdFf4oA3Cwgl4ww8iFVYLFrAJZQ6fitGpaNixfUrFkOnpxnxcHxHw6Ki9G71K&x-kpsdk-im=AAJf1_DuRjGRHZvjlVoBW0DDBnGvfMS2idsy-u56zgGq1O77tC68luuGqPsMIGOGaEJgylO8fxgTIO2pwsphYFD04MRX6nCL9C2tEg4wmaRBeeTPlBkxiuMq7niZqnEd68bhq7COp-1qECs8x653",
+    "headers_subset": {
+      "content-type": "application/javascript; charset=utf-8",
+      "x-kpsdk-ct": "0b3bpc28WWw8Gx62IgZtwlc3gOqKjkmAteUjjAKzlumVkQqBGNbSwsuT6ZMrwGDYqL4t0btBh17EzXlnL6p5dlebLjgKY0D6GqKyR0auzEshHE7yLqBn1k9SlLunj3Z9oRBC0QPgf8uUyFQdcjRgbC1kubxqjLDXaPqUY7F3OGaKI8SobEI9LJONkPK2lTzZhkoZZQBp2kDz6lxeU4",
+      "set-cookie": "KP_UIDz-ssn=0b3bpc28WWw8Gx62IgZtwlc3gOqKjkmAteUjjAKzlumVkQqBGNbSwsuT6ZMrwGDYqL4t0btBh17EzXlnL6p5dlebLjgKY0D6GqKyR0auzEshHE7yLqBn1k9SlLunj3Z9oRBC0QPgf8uUyFQdcjRgbC1kubxqjLDXaPqUY7F3OGaKI8SobEI9LJONkPK2lTzZhkoZZQBp2kDz6lxeU4; Max-Age=86400; Path=/; Expires=Tue, 19 May 2026 10:24:30 GMT; HttpOnly; Secure; SameSite=None\nKP_UIDz=0b3bpc28WWw8Gx62IgZtwlc3gOqKjkmAteUjjAKzlumVkQqBGNbSwsuT6ZMrwGDYqL4t0btBh17EzXlnL6p5dlebLjgKY0D6GqKyR0auzEshHE7yLqBn1k9SlLunj3Z9oRBC0QPgf8uUyFQdcjRgbC1kubxqjLDXaPqUY7F3OGaKI8SobEI9LJONkPK2lTzZhkoZZQBp2kDz6lxeU4; Max-Age=86400; Path=/; Expires=Tue, 19 May 2026 10:24:30 GMT; HttpOnly\nreauid=3da82d172d830000dee80a6a22010000f7ae0c00; expires=Mon, 31-Dec-2038 23:59:59 GMT; path=/; domain=.realestate.com.au\nCountry=AU; path=/; domain=.realestate.com.au"
+    }
+  },
+  {
+    "phase": "request",
+    "method": "POST",
+    "url": "https://www.realestate.com.au/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/tl",
+    "resource_type": "xhr"
+  },
+  {
+    "phase": "response",
+    "status": 200,
+    "url": "https://www.realestate.com.au/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/tl",
+    "headers_subset": {
+      "content-type": "text/plain",
+      "x-kpsdk-ct": "0EtDTGIj6duoBZ5P7hrADx1gYlwxk1m3i0SVbTJTvmdTVsvYdUd4f30DuDi94laBaxRlH7SS1oVydCVmdMQlLzeWkmtTuIR16Kv2OGEAZDQQAmTK79AITjVcUFEi5XjFsXX7OyWySbjEez6Db0Br8uWdkjNUr5qPcRweQNLswPNFRSZfHjF9yZxqKA6cNGIJy9CcTOOzLIKJhLn",
+      "set-cookie": "KP_UIDz-ssn=0EtDTGIj6duoBZ5P7hrADx1gYlwxk1m3i0SVbTJTvmdTVsvYdUd4f30DuDi94laBaxRlH7SS1oVydCVmdMQlLzeWkmtTuIR16Kv2OGEAZDQQAmTK79AITjVcUFEi5XjFsXX7OyWySbjEez6Db0Br8uWdkjNUr5qPcRweQNLswPNFRSZfHjF9yZxqKA6cNGIJy9CcTOOzLIKJhLn; Max-Age=86400; Path=/; Expires=Tue, 19 May 2026 10:24:31 GMT; HttpOnly; Secure; SameSite=None\nKP_UIDz=0EtDTGIj6duoBZ5P7hrADx1gYlwxk1m3i0SVbTJTvmdTVsvYdUd4f30DuDi94laBaxRlH7SS1oVydCVmdMQlLzeWkmtTuIR16Kv2OGEAZDQQAmTK79AITjVcUFEi5XjFsXX7OyWySbjEez6Db0Br8uWdkjNUr5qPcRweQNLswPNFRSZfHjF9yZxqKA6cNGIJy9CcTOOzLIKJhLn; Max-Age=86400; Path=/; Expires=Tue, 19 May 2026 10:24:31 GMT; HttpOnly\nCountry=AU; path=/; domain=.realestate.com.au"
+    }
+  }
+]
