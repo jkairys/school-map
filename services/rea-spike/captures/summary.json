@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "homepage",
+    "url": "https://www.realestate.com.au/",
+    "is_detail": false,
+    "status": 429,
+    "final_url": "https://www.realestate.com.au/",
+    "title": "",
+    "html_size": 772,
+    "argonaut_typeof": "undefined",
+    "argonaut_dump_path": null,
+    "next_data_present": false,
+    "next_data_dump_path": null,
+    "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/search_homepage.html",
+    "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/search_homepage.png",
+    "sentinels": [],
+    "kasada_cookies": [
+      "KP_UIDz-ssn",
+      "KP_UIDz"
+    ],
+    "all_cookie_names": [
+      "Country",
+      "ew_bkt",
+      "reauid",
+      "KP_UIDz-ssn",
+      "KP_UIDz"
+    ],
+    "first_detail_url": null,
+    "error": null
+  },
+  {
+    "slug": "paddington_4064",
+    "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+    "is_detail": false,
+    "status": 429,
+    "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+    "title": "",
+    "html_size": 818,
+    "argonaut_typeof": "undefined",
+    "argonaut_dump_path": null,
+    "next_data_present": false,
+    "next_data_dump_path": null,
+    "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/search_paddington_4064.html",
+    "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/search_paddington_4064.png",
+    "sentinels": [],
+    "kasada_cookies": [
+      "KP_UIDz-ssn",
+      "KP_UIDz"
+    ],
+    "all_cookie_names": [
+      "Country",
+      "ew_bkt",
+      "reauid",
+      "KFC",
+      "KP_UIDz-ssn",
+      "KP_UIDz"
+    ],
+    "first_detail_url": null,
+    "error": null
+  },
+  {
+    "slug": "carindale_4152",
+    "url": "https://www.realestate.com.au/buy/in-carindale,+qld+4152/list-1",
+    "is_detail": false,
+    "status": 429,
+    "final_url": "https://www.realestate.com.au/buy/in-carindale,+qld+4152/list-1",
+    "title": "",
+    "html_size": 816,
+    "argonaut_typeof": "undefined",
+    "argonaut_dump_path": null,
+    "next_data_present": false,
+    "next_data_dump_path": null,
+    "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/search_carindale_4152.html",
+    "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/search_carindale_4152.png",
+    "sentinels": [],
+    "kasada_cookies": [
+      "KP_UIDz-ssn",
+      "KP_UIDz"
+    ],
+    "all_cookie_names": [
+      "Country",
+      "ew_bkt",
+      "reauid",
+      "KFC",
+      "KP_UIDz-ssn",
+      "KP_UIDz"
+    ],
+    "first_detail_url": null,
+    "error": null
+  }
+]
