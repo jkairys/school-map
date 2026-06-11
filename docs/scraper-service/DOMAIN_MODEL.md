@@ -1,6 +1,8 @@
-# OTH scraper — domain model
+# listings-scraper — domain model
 
-Reference for the entities the service maintains. Grounded in the actual SQLAlchemy models at `services/oth-scraper/src/oth_scraper/db/models/` (not just PRD intent — the code is the truth).
+Reference for the entities the service maintains. Grounded in the actual SQLAlchemy models at `services/listings-scraper/src/listings_scraper/db/models/` (not just PRD intent — the code is the truth).
+
+> **Migration note (PR 2)**: OTH-specific column names were renamed to vendor-neutral names in migration `0007`. The column `oth_slug` is now `slug`, `oth_property_id` is `external_property_id`, and `oth_listing_id` is `external_listing_id`. Three new columns (`price_kind`, `price_display`, `price_high`) were added to `listing_snapshot`.
 
 ## Entity-relationship overview
 
@@ -56,10 +58,11 @@ A geographic locality, name-resolved via OTH's autocomplete and cached.
 | `name` | text NOT NULL | `"Mount Coolum"`, `"Maroochydore"` |
 | `postcode` | text NOT NULL | `"4573"` |
 | `state` | text NOT NULL | `"QLD"` |
-| `oth_slug` | text NOT NULL | OTH's URL slug, e.g. `"mount-coolum"` |
+| `source` | enum NOT NULL | `oth` (currently only OTH; extended in future PRs for other vendors) |
+| `slug` | text NULLABLE | Vendor-specific URL slug, e.g. `"mount-coolum"` (OTH) or `"paddington-qld-4064"` (Domain) |
 | `resolved_at` | timestamptz NOT NULL | set on insert via `func.now()` |
 
-**Constraints**: `UNIQUE (name, postcode, state)`.
+**Constraints**: `UNIQUE (source, name, postcode, state)`.
 
 **Lifecycle**: created lazily on first `POST /suburbs/resolve`. Never deleted in v1.
 
@@ -149,7 +152,8 @@ A physical address. Created once, exists forever — multiple listings attach to
 | Column | Type | Notes |
 |---|---|---|
 | `id` | bigint PK | |
-| `oth_property_id` | text NULLABLE | OTH's stable property identifier — UNIQUE when present |
+| `source` | enum NOT NULL | `oth` (vendor origin) |
+| `external_property_id` | text NULLABLE | Vendor-assigned stable property identifier (OTH: `othPropertyId`) |
 | `formatted_address` | text NOT NULL | `"12 Smith St, Mount Coolum, QLD 4573"` |
 | `postcode` | text NOT NULL | |
 | `suburb_id` | bigint FK NOT NULL | `→ suburb.id ON DELETE RESTRICT` |
@@ -157,10 +161,10 @@ A physical address. Created once, exists forever — multiple listings attach to
 | `first_seen_at` | timestamptz NOT NULL | |
 
 **Constraints**:
-- `UNIQUE (oth_property_id)` — primary natural key
-- `UNIQUE (formatted_address, postcode)` — fallback when `oth_property_id` is missing
+- Partial `UNIQUE (source, external_property_id) WHERE external_property_id IS NOT NULL` — primary natural key when vendor ID is present
+- `UNIQUE (source, formatted_address, postcode)` — fallback when `external_property_id` is missing
 
-**Reconciler upsert order**: try `oth_property_id` first; fall back to `(formatted_address, postcode)` if no OTH ID present.
+**Reconciler upsert order**: try `(source, external_property_id)` first; fall back to `(source, formatted_address, postcode)` if no external ID present.
 
 ---
 
@@ -174,7 +178,8 @@ A marketing campaign for a property — one of `forsale` / `forrent` / `recently
 | `property_id` | bigint FK NOT NULL | `→ property.id ON DELETE CASCADE` |
 | `suburb_id` | bigint FK NOT NULL | `→ suburb.id ON DELETE RESTRICT` (denormalised for query speed) |
 | `category` | enum NOT NULL | `forsale` / `forrent` / `recentlysold` |
-| `oth_listing_id` | text NULLABLE | |
+| `source` | enum NOT NULL | `oth` (vendor origin) |
+| `external_listing_id` | text NULLABLE | Vendor-assigned listing identifier (OTH: derived from `othPropertyId`) |
 | `agent_name` | text NULLABLE | mutable on the row (no snapshot) |
 | `agency_name` | text NULLABLE | mutable on the row (no snapshot) |
 | `first_seen_at` | timestamptz NOT NULL | |
@@ -184,12 +189,13 @@ A marketing campaign for a property — one of `forsale` / `forrent` / `recently
 
 **Indexes**:
 - **Hot reconciler lookup** — partial index on `(property_id, suburb_id, category) WHERE closed_at IS NULL`
+- Partial `UNIQUE (source, external_listing_id) WHERE external_listing_id IS NOT NULL`
 - `(suburb_id, category)` — read-side suburb queries
 - `(last_seen_at)` — soft-expiry sweep scan
 
 **Open / closed**: a listing is "open" iff `closed_at IS NULL`. v1 closes via soft expiry only — `last_seen_at < NOW() - 14d` flips to `closed_at = NOW(), closure_reason = 'unknown'` after a successful job.
 
-**Re-listing semantics**: a property re-listed gets a NEW listing row (new `oth_listing_id`, new `first_seen_at`) attached to the SAME `property_id`. Use this to count "how many times has 12 Smith St been listed".
+**Re-listing semantics**: a property re-listed gets a NEW listing row (new `external_listing_id`, new `first_seen_at`) attached to the SAME `property_id`. Use this to count "how many times has 12 Smith St been listed".
 
 ---
 
@@ -202,7 +208,10 @@ The time-tracking core. **Insert-only** — every row is an observation that mat
 | `id` | bigint PK | |
 | `listing_id` | bigint FK NOT NULL | `→ listing.id ON DELETE CASCADE` |
 | `observed_at` | timestamptz NOT NULL | |
-| `price` | int NULLABLE | sale price for `forsale`/`recentlysold`; weekly rent for `forrent` |
+| `price` | int NULLABLE | Numeric price: sale price (forsale/recentlysold) or weekly rent (forrent). Stores the **low** value for RANGE listings. |
+| `price_high` | int NULLABLE | Upper bound for RANGE price. NULL for all other kinds. |
+| `price_kind` | enum NOT NULL | Classification: `price` / `range` / `auction` / `eoi` / `contact` / `rent_weekly` / `unknown`. Default `unknown`. |
+| `price_display` | text NULLABLE | Raw vendor display string, e.g. `"Offers Over $1,485,000"` or `"$650 per week"` |
 | `title` | text NULLABLE | |
 | `blurb` | text NULLABLE | NULL in v1 — populated only when v2 visits detail pages |
 | `bedrooms` | int NULLABLE | |
@@ -210,8 +219,8 @@ The time-tracking core. **Insert-only** — every row is an observation that mat
 | `parking` | int NULLABLE | |
 | `land_size_sqm` | int NULLABLE | |
 | `property_type` | text NULLABLE | `"House"` / `"Townhouse"` / etc. |
-| `status` | text NULLABLE | OTH's status string (e.g. `"Active"`, `"UnderContract"`) |
-| `raw_payload` | jsonb NOT NULL | full OTH JSON for the listing — write-once |
+| `status` | text NULLABLE | Vendor status string (e.g. `"current"`, `"under_offer"`, `"sold"`) |
+| `raw_payload` | jsonb NOT NULL | full vendor JSON for the listing — write-once |
 | `changed_fields` | text[] NOT NULL | which material fields changed vs prior snapshot. First snapshot contains `__initial__` |
 
 **Indexes**:
@@ -219,7 +228,7 @@ The time-tracking core. **Insert-only** — every row is an observation that mat
 
 **Material fields** (the diff allow-list — agent/agency NOT included):
 ```
-price, title, blurb, bedrooms, bathrooms, parking,
+price, price_display, price_kind, title, blurb, bedrooms, bathrooms, parking,
 land_size_sqm, property_type, status
 ```
 
@@ -237,14 +246,14 @@ Agent/agency changes update the **listing** row, never produce a snapshot.
 For one listing returned by an OTH search batch in a `(suburb, category)` job:
 
 ```
-1. upsert property (oth_property_id, fallback address+postcode)
+1. upsert property (source, external_property_id; fallback source+address+postcode)
 2. find or open listing for (property_id, suburb_id, category) where closed_at IS NULL
 3. load latest listing_snapshot for this listing (or NULL)
 4. snapshot_diff(prev, new):
      - prev IS NULL → ChangedFields(["__initial__", ...])
      - identical    → None
      - changed      → ChangedFields([field, ...])
-5. if changed → INSERT listing_snapshot (full fields + raw_payload + changed_fields)
+5. if changed → INSERT listing_snapshot (full fields incl. price_kind/price_display/price_high + raw_payload + changed_fields)
 6. UPDATE listing SET last_seen_at = NOW(), agent_name = ?, agency_name = ?
 ```
 
@@ -273,7 +282,8 @@ ORDER BY observed_at;
 
 **What changed in the last 24h across all suburbs (excluding initial-observation noise):**
 ```sql
-SELECT s.observed_at, p.formatted_address, l.category, s.changed_fields, s.price
+SELECT s.observed_at, p.formatted_address, l.category,
+       s.changed_fields, s.price, s.price_kind, s.price_display
 FROM listing_snapshot s
 JOIN listing l ON s.listing_id = l.id
 JOIN property p ON l.property_id = p.id

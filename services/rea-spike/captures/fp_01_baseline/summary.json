@@ -1,0 +1,27 @@
+{
+  "name": "01_baseline",
+  "kwargs": {
+    "headless": "True",
+    "humanize": "True"
+  },
+  "special": null,
+  "target_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+  "result": {
+    "url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+    "referer": null,
+    "status": 429,
+    "final_url": "https://www.realestate.com.au/buy/in-paddington,+qld+4064/list-1",
+    "title": "",
+    "html_size": 818,
+    "argonaut_typeof": "undefined",
+    "argonaut_dump_path": null,
+    "next_data_present": false,
+    "kasada_stub_detected": false,
+    "kpsdk_present": false,
+    "screenshot_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_01_baseline/screenshot.png",
+    "html_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_01_baseline/body.html",
+    "navigator_path": "/Users/jethro/github/jkairys/school-map-worktrees/domain/services/rea-spike/captures/fp_01_baseline/navigator.json",
+    "error": null
+  },
+  "launch_error": null
+}

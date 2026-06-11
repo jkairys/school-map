@@ -13,9 +13,9 @@ includes:
   property-scraper:
     taskfile: ./services/property-scraper/Taskfile.yml
     dir: ./services/property-scraper
-  oth-scraper:
-    taskfile: ./services/oth-scraper/Taskfile.yml
-    dir: ./services/oth-scraper
+  listings-scraper:
+    taskfile: ./services/listings-scraper/Taskfile.yml
+    dir: ./services/listings-scraper
 
 tasks:
   install:
@@ -25,4 +25,4 @@ tasks:
       - task: parcel-analytics:install
       - task: school-scraper:install
       - task: property-scraper:install
-      - task: oth-scraper:install
+      - task: listings-scraper:install

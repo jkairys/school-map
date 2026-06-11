@@ -1,0 +1,34 @@
+version: '3'
+
+tasks:
+  install:
+    desc: Install dependencies using uv
+    cmd: uv sync
+
+  run:
+    desc: Start the API server locally (outside Docker)
+    cmd: uv run python -m listings_scraper.api.entrypoint
+
+  worker:
+    desc: Start the worker locally (outside Docker)
+    cmd: uv run python -m listings_scraper.worker
+
+  test:
+    desc: Run the test suite
+    cmd: uv run pytest
+
+  migrate:
+    desc: Run Alembic migrations to head
+    cmd: uv run alembic upgrade head
+
+  backfill-sale-dates:
+    desc: Backfill listing.sale_date for recentlysold rows created before slice 02
+    cmd: uv run python -m oth_scraper.scripts.backfill_sale_dates
+
+  docker-up:
+    desc: Start all services via docker-compose
+    cmd: docker compose up --build
+
+  docker-down:
+    desc: Stop all services and remove volumes
+    cmd: docker compose down -v
