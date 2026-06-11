@@ -34,6 +34,7 @@ class NewJob:
 
     suburb_id: int | None
     category: str
+    run_id: int
     filters: dict[str, Any] = field(default_factory=dict)
     scrape_list_id: int | None = None
     source: Vendor = Vendor.OTH
@@ -44,6 +45,7 @@ class Job:
     """A persisted job row, returned by every public queue method."""
 
     id: int
+    run_id: int
     scrape_list_id: int | None
     suburb_id: int | None
     category: str

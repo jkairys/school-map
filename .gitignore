@@ -43,3 +43,6 @@ services/parcel-analytics/output/*
 
 # Jupyter notebook checkpoints
 **/.ipynb_checkpoints/
+
+# oth-admin SPA build output (produced by `task build` in apps/oth-admin/)
+services/oth-scraper/static/

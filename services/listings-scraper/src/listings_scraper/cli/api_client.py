@@ -116,13 +116,29 @@ class CliApiClient:
         )
 
     async def list_run(
-        self, list_id: int, *, source: str = "oth"
+        self,
+        list_id: int,
+        *,
+        trigger_source: str = "api",
+        suburb_ids: list[int] | None = None,
+        categories: list[str] | None = None,
+        source: str = "oth",
     ) -> dict[str, Any]:
+        body: dict[str, Any] = {"trigger_source": trigger_source, "source": source}
+        if suburb_ids:
+            body["suburb_ids"] = suburb_ids
+        if categories:
+            body["categories"] = categories
         r = await self._request(
             "POST",
             f"/scrape-lists/{list_id}/run",
-            json={"source": source},
+            json=body,
         )
+        return r.json()
+
+    async def run_retry_failed(self, run_id: int) -> dict[str, Any]:
+        """POST /scrape-runs/{run_id}/retry-failed."""
+        r = await self._request("POST", f"/scrape-runs/{run_id}/retry-failed")
         return r.json()
 
     # --------- jobs ---------

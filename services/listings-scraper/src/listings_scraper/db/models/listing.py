@@ -4,10 +4,11 @@ A `listing` is one marketing campaign for a property — it has a category
 (`forsale`/`forrent`/`recentlysold`), an external listing ID, and lifecycle
 timestamps. The same physical property can have multiple Listings over time.
 """
-from datetime import datetime
+from datetime import date, datetime
 
 from sqlalchemy import (
     BigInteger,
+    Date,
     DateTime,
     Enum,
     ForeignKey,
@@ -66,6 +67,13 @@ class Listing(Base):
 
     agent_name: Mapped[str | None] = mapped_column(Text, nullable=True)
     agency_name: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    sale_date: Mapped[date | None] = mapped_column(Date, nullable=True)
+    """Settled-sale date for recentlysold listings; always NULL for forsale/forrent.
+
+    Populated on first observation from OTH raw_payload['lastSale']['eventDate'].
+    Never overwritten once set — only the INSERT path in the reconciler writes it.
+    """
 
     first_seen_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()

@@ -67,8 +67,9 @@ _TRUNCATE_TABLES = (
     "listing",
     "property",
     "scrape_list_suburb",
-    "scrape_list",
     "scrape_job",
+    "scrape_run",
+    "scrape_list",
     "suburb",
 )
 

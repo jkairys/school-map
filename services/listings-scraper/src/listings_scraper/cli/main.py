@@ -21,6 +21,7 @@ from listings_scraper.cli.list_commands import (
     list_run_impl,
     list_show_impl,
     list_update_impl,
+    run_retry_failed_impl,
 )
 from listings_scraper.cli.listings_commands import (
     listings_history_impl,
@@ -36,12 +37,14 @@ list_app = typer.Typer(help="Scrape list commands")
 jobs_app = typer.Typer(help="Job commands")
 listings_app = typer.Typer(help="Listing commands")
 dev_app = typer.Typer(help="Developer-only smoke / diagnostic commands")
+run_app = typer.Typer(help="Scrape run commands")
 
 app.add_typer(suburb_app, name="suburb")
 app.add_typer(list_app, name="list")
 app.add_typer(jobs_app, name="jobs")
 app.add_typer(listings_app, name="listings")
 app.add_typer(dev_app, name="dev")
+app.add_typer(run_app, name="run")
 
 
 @dev_app.command("session-smoke")
@@ -168,14 +171,52 @@ def list_rm_suburb(target: str, suburb: str) -> None:
 @list_app.command("run")
 def list_run(
     target: str,
+    suburb: list[str] = typer.Option(
+        [],
+        "--suburb",
+        help=(
+            "Narrow to this suburb (by name within the list). "
+            "Repeatable: --suburb=Noosa --suburb=Nambour"
+        ),
+    ),
+    category: list[str] = typer.Option(
+        [],
+        "--category",
+        help=(
+            "Narrow to this category: forsale | forrent | recentlysold. "
+            "Repeatable."
+        ),
+    ),
     source: Vendor = typer.Option(
         Vendor.OTH,
         "--source",
         help="Vendor to run: oth or domain. Defaults to oth.",
     ),
 ) -> None:
-    """Fan out scrape jobs for a list. `target` is an id or unique list name."""
-    asyncio.run(list_run_impl(target=target, source=source.value))
+    """Fan out scrape jobs for a list.
+
+    `target` is an id or unique list name.  Use --suburb (repeatable) to
+    scope the run to specific suburbs; use --category (repeatable) to scope
+    to specific categories.  Omit both for a full fanout.
+    """
+    asyncio.run(
+        list_run_impl(
+            target=target,
+            suburb_names=suburb or None,
+            categories=category or None,
+            source=source.value,
+        )
+    )
+
+
+@run_app.command("retry-failed")
+def run_retry_failed(run_id: int) -> None:
+    """Re-enqueue failed/deadletter jobs from a previous run as a NEW run.
+
+    The original run is never mutated.  Returns the new run id and job ids.
+    Exits non-zero if the run has no failed jobs.
+    """
+    asyncio.run(run_retry_failed_impl(run_id=run_id))
 
 
 @jobs_app.command("ls")

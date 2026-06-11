@@ -4,6 +4,10 @@ claim_next() uses a single ``UPDATE ... FROM (SELECT ... FOR UPDATE SKIP LOCKED)
 CTE so the queued→running transition is atomic and immune to thundering-herd
 double-claims. The same query also picks up ``running`` jobs whose
 ``claimed_at`` is older than the configured reclaim TTL.
+
+Every terminal transition (complete, fail→deadletter) calls
+``ScrapeRunFinalizer.recompute(run_id)`` after committing the job state write,
+so the parent run's status is kept consistent.
 """
 import logging
 from datetime import datetime, timezone
@@ -56,6 +60,11 @@ class JobQueue:
 
     Construct with an ``async_sessionmaker`` so tests can inject a sessionmaker
     bound to a throwaway test container.
+
+    If a ``ScrapeRunFinalizer`` is injected (via ``finalizer=``), every
+    terminal job transition calls ``finalizer.recompute(run_id)`` after the
+    state write commits.  The finalizer is optional so existing unit tests that
+    construct ``JobQueue`` without one continue to work without modification.
     """
 
     def __init__(
@@ -66,6 +75,7 @@ class JobQueue:
         max_retries_transient: int | None = None,
         max_retries_antibot: int | None = None,
         max_retries_parse: int | None = None,
+        finalizer=None,
     ) -> None:
         self._session_factory = session_factory
         self._reclaim_ttl_seconds = (
@@ -90,12 +100,14 @@ class JobQueue:
                 else settings.queue_retry_max_parse
             ),
         }
+        self._finalizer = finalizer
 
     async def enqueue(self, job: NewJob) -> Job:
         """Insert a job in `queued` status and return the persisted row."""
         async with self._session_factory() as session:
             async with session.begin():
                 row = ScrapeJob(
+                    run_id=job.run_id,
                     scrape_list_id=job.scrape_list_id,
                     suburb_id=job.suburb_id,
                     category=job.category,
@@ -114,6 +126,9 @@ class JobQueue:
         Returns the claimed Job, or None if no claimable job exists. Safe to
         call concurrently — each row is claimed by exactly one caller thanks
         to ``SELECT ... FOR UPDATE SKIP LOCKED``.
+
+        When a stale running job is reclaimed its parent run's status is
+        flipped back to ``running`` via the finalizer (if configured).
         """
         async with self._session_factory() as session:
             async with session.begin():
@@ -130,10 +145,18 @@ class JobQueue:
                         select(ScrapeJob).where(ScrapeJob.id == job_id)
                     )
                 ).scalar_one()
-                return _to_job(fetched)
+                job = _to_job(fetched)
+
+        # If this was a reclaim of a previously-terminal run, recompute so the
+        # run flips back to 'running'.
+        if self._finalizer is not None:
+            await self._finalizer.recompute(job.run_id)
+
+        return job
 
     async def complete(self, job_id: int) -> None:
         """Mark a job succeeded. Idempotent — a second call is a no-op."""
+        run_id: int | None = None
         async with self._session_factory() as session:
             async with session.begin():
                 row = (
@@ -147,8 +170,12 @@ class JobQueue:
                     raise UnknownJobError(f"job {job_id} not found")
                 if row.status == "succeeded":
                     return
+                run_id = row.run_id
                 row.status = "succeeded"
                 row.completed_at = datetime.now(timezone.utc)
+
+        if self._finalizer is not None and run_id is not None:
+            await self._finalizer.recompute(run_id)
 
     async def fail(
         self, job_id: int, error_class: ErrorClass, message: str
@@ -158,8 +185,12 @@ class JobQueue:
         Increments ``attempts``; transitions to ``deadletter`` when
         ``attempts`` exceeds the per-class retry limit, otherwise back to
         ``queued`` so a later ``claim_next()`` will pick it up again.
+
+        Calls the finalizer only when the job goes terminal (deadletter).
         """
         max_retries = self._max_retries[error_class]
+        terminal = False
+        run_id: int | None = None
         async with self._session_factory() as session:
             async with session.begin():
                 row = (
@@ -171,6 +202,7 @@ class JobQueue:
                 ).scalar_one_or_none()
                 if row is None:
                     raise UnknownJobError(f"job {job_id} not found")
+                run_id = row.run_id
                 row.attempts += 1
                 row.last_error_class = error_class.value
                 row.last_error_message = message
@@ -178,6 +210,7 @@ class JobQueue:
                 if row.attempts > max_retries:
                     row.status = "deadletter"
                     row.completed_at = datetime.now(timezone.utc)
+                    terminal = True
                     logger.info(
                         "job %s dead-lettered after %d attempts (%s)",
                         job_id,
@@ -194,12 +227,20 @@ class JobQueue:
                         error_class.value,
                     )
                 await session.flush()
-                return _to_job(row)
+                result = _to_job(row)
+
+        # Only invoke the finalizer when the job is terminal (deadletter).
+        # A re-queued job is not terminal — it will be processed again.
+        if terminal and self._finalizer is not None and run_id is not None:
+            await self._finalizer.recompute(run_id)
+
+        return result
 
 
 def _to_job(row: ScrapeJob) -> Job:
     return Job(
         id=row.id,
+        run_id=row.run_id,
         scrape_list_id=row.scrape_list_id,
         suburb_id=row.suburb_id,
         category=row.category,

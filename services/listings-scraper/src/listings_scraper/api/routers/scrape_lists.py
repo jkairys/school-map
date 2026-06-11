@@ -1,4 +1,6 @@
 """REST endpoints for scrape-list CRUD."""
+from typing import Literal
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
@@ -26,6 +28,7 @@ from listings_scraper.services.scrape_list import (
     run_list,
     update_list,
 )
+from listings_scraper.services.scrape_list_summary import AreaSummary, ScrapeListSummaryService
 from listings_scraper.suburb_resolver import (
     AutocompleteUnavailableError,
     Match,
@@ -40,14 +43,25 @@ class CandidatesResponse(BaseModel):
     candidates: list[Match]
 
 
-class RunRequest(BaseModel):
+class RunBody(BaseModel):
     """Optional body for POST /scrape-lists/{id}/run.
 
+    ``trigger_source`` defaults to ``'api'`` so callers that send no body
+    still get the right provenance label.
+
+    ``suburb_ids`` and ``categories`` are optional narrowing filters:
+    - If ``suburb_ids`` is None/empty, all suburbs in the list are used.
+    - If ``categories`` is None/empty, all three categories are used.
+    - 422 if suburb_ids contains ids not in the list, or categories contains
+      unknown values.
+
     ``source`` selects which vendor the enqueued jobs will run against.
-    Defaults to OTH for backward compatibility with callers that POST with
-    an empty body.
+    Defaults to OTH for backward compatibility.
     """
 
+    trigger_source: Literal["api", "cli", "scheduler", "retry"] = "api"
+    suburb_ids: list[int] | None = None
+    categories: list[Literal["forsale", "forrent", "recentlysold"]] | None = None
     source: Vendor = Vendor.OTH
 
 
@@ -128,13 +142,36 @@ async def add_suburb_endpoint(
 @router.post("/{list_id}/run", response_model=ScrapeListRunResult)
 async def run_endpoint(
     list_id: int,
-    body: RunRequest = RunRequest(),
+    body: RunBody = RunBody(),
     session: AsyncSession = Depends(get_db),
     session_factory: async_sessionmaker[AsyncSession] = Depends(get_session_factory),
 ) -> ScrapeListRunResult:
     queue = JobQueue(session_factory)
     try:
-        return await run_list(session, list_id, queue, source=body.source)
+        return await run_list(
+            session,
+            list_id,
+            queue,
+            trigger_source=body.trigger_source,
+            suburb_ids=body.suburb_ids or None,
+            categories=[c for c in body.categories] if body.categories else None,
+            source=body.source,
+        )
+    except ScrapeListNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
+
+
+@router.get("/{list_id}/summary", response_model=AreaSummary)
+async def get_summary_endpoint(
+    list_id: int,
+    session: AsyncSession = Depends(get_db),
+) -> AreaSummary:
+    """Return the full area summary for the dashboard and area detail page."""
+    try:
+        svc = ScrapeListSummaryService(session)
+        return await svc.summary(list_id)
     except ScrapeListNotFoundError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
 

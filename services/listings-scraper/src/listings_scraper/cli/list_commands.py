@@ -154,13 +154,62 @@ def _handle_add_suburb_error(e: ApiError, name: str, list_id: int) -> None:
     raise typer.Exit(code=1) from e
 
 
-async def list_run_impl(*, target: str, source: str = "oth") -> None:
-    """Resolve `target` (numeric id or name) and POST .../run."""
+async def list_run_impl(
+    *,
+    target: str,
+    suburb_names: list[str] | None = None,
+    categories: list[str] | None = None,
+    source: str = "oth",
+) -> None:
+    """Resolve `target` (numeric id or name) and POST .../run.
+
+    When ``suburb_names`` is provided each name is resolved to a suburb id
+    within the list.  Unknown names cause a non-zero exit.
+    ``categories`` may be a subset of forsale/forrent/recentlysold.
+    """
     async with cli_api_client() as client:
         list_id = await resolve_list_id(client, target)
-        result = await client.list_run(list_id, source=source)
+
+        suburb_ids: list[int] | None = None
+        if suburb_names:
+            suburb_ids = []
+            for name in suburb_names:
+                sid = await resolve_suburb_in_list(client, list_id, name)
+                suburb_ids.append(sid)
+
+        try:
+            result = await client.list_run(
+                list_id,
+                trigger_source="cli",
+                suburb_ids=suburb_ids,
+                categories=categories or None,
+                source=source,
+            )
+        except ApiError as e:
+            typer.echo(
+                f"Run failed ({e.status_code}): {detail_message(e.detail)}",
+                err=True,
+            )
+            raise typer.Exit(code=1) from e
     typer.echo(
-        f"Enqueued {result['count']} jobs for list {result['list_id']}: "
+        f"Enqueued {result['count']} jobs (run {result['run_id']}) "
+        f"for list {result['list_id']}: {result['job_ids']}"
+    )
+
+
+async def run_retry_failed_impl(*, run_id: int) -> None:
+    """POST /scrape-runs/{run_id}/retry-failed."""
+    async with cli_api_client() as client:
+        try:
+            result = await client.run_retry_failed(run_id)
+        except ApiError as e:
+            typer.echo(
+                f"Retry failed ({e.status_code}): {detail_message(e.detail)}",
+                err=True,
+            )
+            raise typer.Exit(code=1) from e
+    typer.echo(
+        f"Retried {result['count']} jobs as new run {result['run_id']}: "
         f"{result['job_ids']}"
     )
 
@@ -218,4 +267,5 @@ __all__ = [
     "list_run_impl",
     "list_show_impl",
     "list_update_impl",
+    "run_retry_failed_impl",
 ]

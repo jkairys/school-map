@@ -10,7 +10,7 @@ Adding a suburb to a list goes through ``listings_scraper.suburb_resolver.resolv
 which the API layer turns into a 409 with a candidate list.
 """
 from datetime import datetime
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 from sqlalchemy import delete, select
@@ -18,6 +18,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from listings_scraper.db.models.scrape_list import ScrapeList, ScrapeListSuburb
+from listings_scraper.db.models.scrape_run import ScrapeRun
 from listings_scraper.db.models.suburb import Suburb
 from listings_scraper.queue import JobQueue, NewJob
 from listings_scraper.services.suburb import resolve_suburb
@@ -115,6 +116,7 @@ class ScrapeListRunResult(BaseModel):
     """Return shape for `POST /scrape-lists/{id}/run`."""
 
     list_id: int
+    run_id: int
     job_ids: list[int]
     count: int
 
@@ -282,51 +284,55 @@ async def run_list(
     session: AsyncSession,
     list_id: int,
     queue: JobQueue,
+    trigger_source: Literal["api", "cli", "scheduler", "retry"] = "api",
+    *,
+    suburb_ids: list[int] | None = None,
+    categories: list[str] | None = None,
     source: Vendor = Vendor.OTH,
 ) -> ScrapeListRunResult:
     """Fan out one ScrapeJob per (suburb × category) for the list.
 
-    The list's filters are snapshotted into ``scrape_job.filters`` at
-    enqueue time so editing the list afterwards doesn't mutate in-flight
-    jobs' provenance. Returns the created job IDs in enqueue order.
+    Creates a ``scrape_run`` row in the same transaction as the job rows so
+    the fanout is atomic.  The list's filters are snapshotted into both the
+    run and each job so editing the list afterwards doesn't mutate in-flight
+    provenance. Returns the created run and job IDs in enqueue order.
+
+    Parameters
+    ----------
+    suburb_ids:
+        Optional narrowing — only fan out for these suburb ids.  Must be a
+        subset of the ids attached to the list.  None/empty → all suburbs.
+    categories:
+        Optional narrowing — only fan out for these category strings.
+        None/empty → all three categories.
 
     ``source`` sets the vendor on every job created. Defaults to OTH for
     backward compatibility with callers that do not pass a source.
 
     Raises:
         ScrapeListNotFoundError: list doesn't exist.
+        ValueError: suburb_ids not in list, or unknown categories.
     """
-    row = await session.get(ScrapeList, list_id)
-    if row is None:
-        raise ScrapeListNotFoundError(f"scrape_list {list_id} not found")
+    from listings_scraper.services.run_producer import create_run
 
-    filters_snapshot: dict[str, Any] = dict(row.filters or {})
-
-    suburb_ids_stmt = (
-        select(ScrapeListSuburb.suburb_id)
-        .where(ScrapeListSuburb.scrape_list_id == list_id)
-        .order_by(ScrapeListSuburb.suburb_id)
-    )
-    suburb_ids = list(
-        (await session.execute(suburb_ids_stmt)).scalars().all()
-    )
-
-    job_ids: list[int] = []
-    for suburb_id in suburb_ids:
-        for category in PRODUCER_CATEGORIES:
-            job = await queue.enqueue(
-                NewJob(
-                    suburb_id=suburb_id,
-                    category=category,
-                    filters=dict(filters_snapshot),
-                    scrape_list_id=list_id,
-                    source=source,
-                )
-            )
-            job_ids.append(job.id)
+    try:
+        result = await create_run(
+            session,
+            list_id,
+            queue,
+            suburb_ids=suburb_ids,
+            categories=categories,
+            trigger_source=trigger_source,
+            source=source,
+        )
+    except LookupError as e:
+        raise ScrapeListNotFoundError(str(e)) from e
 
     return ScrapeListRunResult(
-        list_id=list_id, job_ids=job_ids, count=len(job_ids)
+        list_id=result.list_id or list_id,
+        run_id=result.run_id,
+        job_ids=result.job_ids,
+        count=result.count,
     )
 
 
