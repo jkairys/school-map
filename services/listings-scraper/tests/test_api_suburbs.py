@@ -1,4 +1,4 @@
-"""REST endpoint tests for /suburbs/resolve."""
+"""REST endpoint tests for /suburbs/resolve and /suburbs/{id}."""
 
 import json
 from pathlib import Path
@@ -77,3 +77,30 @@ async def test_resolve_endpoint_idempotent_cached(api_client, httpx_mock):
     assert first.json()["id"] == second.json()["id"]
     # Only one HTTP call should have been made to OTH.
     assert len(httpx_mock.get_requests()) == 1
+
+
+async def test_get_suburb_200(api_client, httpx_mock):
+    """GET /suburbs/{id} returns the suburb DTO after it has been resolved."""
+    httpx_mock.add_response(
+        url="https://www.onthehouse.com.au/odin/api/locations?query=Little+Mountain",
+        json=_fixture("little_mountain.json"),
+    )
+    resolved = await api_client.post("/suburbs/resolve", json={"name": "Little Mountain"})
+    assert resolved.status_code == 200
+    suburb_id = resolved.json()["id"]
+
+    r = await api_client.get(f"/suburbs/{suburb_id}")
+    assert r.status_code == 200
+    body = r.json()
+    assert body["id"] == suburb_id
+    assert body["name"] == "LITTLE MOUNTAIN"
+    assert body["postcode"] == "4551"
+    assert body["state"] == "QLD"
+    assert body["slug"] == "little-mountain-4551"
+    assert "resolved_at" in body
+
+
+async def test_get_suburb_404(api_client):
+    """GET /suburbs/{id} returns 404 for an unknown id."""
+    r = await api_client.get("/suburbs/99999")
+    assert r.status_code == 404
