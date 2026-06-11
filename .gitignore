@@ -46,3 +46,5 @@ services/parcel-analytics/output/*
 
 # oth-admin SPA build output (produced by `task build` in apps/oth-admin/)
 services/oth-scraper/static/
+
+.claude/worktrees
