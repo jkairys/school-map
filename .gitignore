@@ -37,3 +37,4 @@ services/parcel-analytics/data/processed/*
 !services/parcel-analytics/data/processed/.gitkeep
 services/parcel-analytics/output/*
 !services/parcel-analytics/output/.gitkeep
+services/parcel-analytics/notebooks/.ipynb_checkpoints/
